@@ -1,0 +1,146 @@
+Owner,Player,Position,Price,Standard name,Position,Conc,Spend rank,Actual,Top Starter Bonus,Actual Among Drafted,Count drafted positions,Differential Actual,Differential Among Drafted,Differential Among Drafted w Bonus
+Luke,New England DST,DST,3,New England,DST,LukeNew England,7,1,20,1,14,6,6,26
+Bryan,Pittsburgh,DST,1,Pittsburgh,DST,BryanPittsburgh,13,2,19,2,13,11,11,30
+Krista,Vikings,DST,6,Minnesota,DST,KristaMinnesota,3,4,17,3,16,-1,0,17
+Patrick,Baltimore DST,DST,3,Baltimore,DST,PatrickBaltimore,7,5,16,4,13,2,3,19
+Duncan,LA Rams,DST,7,LA Rams,DST,DuncanLA Rams,2,7,14,5,11,-5,-3,11
+Bryan,Buffalo Bills,DST,1,Buffalo,DST,BryanBuffalo,13,8,13,6,13,5,7,20
+Kevin,New Orleans DST,DST,1,New Orleans,DST,KJNew Orleans,13,9,12,7,14,4,6,18
+Kevin,Philadelphia DST,DST,2,Philadelphia,DST,KJPhiladelphia,11,13,8,8,14,-2,3,11
+David Casstevens,Dallas DST,DST,3,Dallas,DST,DavidDallas,7,16,5,9,17,-9,-2,3
+Scott Gunter,Denver,DST,5,Denver,DST,ScottDenver,5,17,4,10,16,-12,-5,-1
+Benjamin,Seattle DST,DST,2,Seattle,DST,BenSeattle,11,18,3,11,14,-7,0,3
+Mark,Jacksonville,DST,6,Jacksonville,DST,MarkJacksonville,3,19,2,12,17,-16,-9,-7
+Mark,Cleveland DST,DST,4,Cleveland,DST,MarkCleveland,6,20,1,13,17,-14,-7,-6
+Krista,Chicago,DST,13,Chicago,DST,KristaChicago,1,21,,14,16,-20,-13,-13
+Benjamin,Houston DST,DST,1,Houston,DST,BenHouston,13,27,,15,14,-14,-2,-2
+Luke,LA Chargers DEF,DST,3,LA Chargers,DST,LukeLA Chargers,7,28,,16,14,-21,-9,-9
+Scott Gunter,Oakland DST,DST,1,Las Vegas,DST,ScottOakland,13,29,,17,16,-16,-4,-4
+Patrick,Lamar Jackson,QB,17,Lamar Jackson,QB,PatrickLamar Jackson,6,1,20,1,13,5,5,25
+Bryan,Russell Wilson,QB,15,Russell Wilson,QB,BryanRussell Wilson,8,3,18,2,13,5,6,24
+David Casstevens,Dak Prescott,QB,9,Dak Prescott,QB,DavidDak Prescott,12,3,18,3,17,9,9,27
+Luke,Deshaun Watson,QB,44,Deshaun Watson,QB,LukeDeshaun Watson,2,4,17,4,14,-2,-2,15
+Duncan,Jameis Winston,QB,14,Jameis Winston,QB,DuncanJameis Winston,11,5,16,5,11,6,6,22
+Bryan,Kyler Murray,QB,9,Kyler Murray,QB,BryanKyler Murray,12,6,15,6,13,6,6,21
+Duncan,Patrick Mahomes,QB,50,Patrick Mahomes,QB,DuncanPatrick Mahomes,1,7,14,7,11,-6,-6,8
+David Casstevens,Josh Allen,QB,2,Josh Allen,QB,DavidJosh Allen,22,8,13,8,17,14,14,27
+Mark,Aaron Rodgers,QB,40,Aaron Rodgers,QB,MarkAaron Rodgers,3,9,12,9,17,-6,-6,6
+Scott Gunter,Carson Wentz,QB,17,Carson Wentz,QB,ScottCarson Wentz,6,10,11,10,16,-4,-4,7
+Scott Gunter,Matt Ryan,QB,27,Matt Ryan,QB,ScottMatt Ryan,4,11,10,11,16,-7,-7,3
+Luke,Tom Brady,QB,9,Tom Brady,QB,LukeTom Brady,12,12,9,12,14,0,0,9
+Krista,Jared Goff,QB,23,Jared Goff,QB,KristaJared Goff,5,13,8,13,16,-8,-8,0
+David Casstevens,Jimmy Garrapolo,QB,3,Jimmy Garoppolo,QB,DavidJimmy Garoppolo,20,14,7,14,17,6,6,13
+Kevin,Derek Carr,QB,1,Derek Carr,QB,KJDerek Carr,24,15,6,15,14,9,9,15
+Krista,Philip Rivers,QB,9,Philip Rivers,QB,KristaPhilip Rivers,12,17,4,16,16,-5,-4,0
+Kevin,Kirk Cousins,QB,4,Kirk Cousins,QB,KJKirk Cousins,18,18,3,17,14,0,1,4
+Benjamin,Baker Mayfield,QB,27,Baker Mayfield,QB,BenBaker Mayfield,4,19,2,18,14,-15,-14,-12
+Benjamin,Drew Brees,QB,15,Drew Brees,QB,BenDrew Brees,8,22,,19,14,-14,-11,-11
+Kevin,Mitch Trubisky,QB,4,Mitch Trubisky,QB,KJMitch Trubisky,18,26,,20,14,-8,-2,-2
+Mark,Sam Darnold,QB,3,Sam Darnold,QB,MarkSam Darnold,20,27,,21,17,-7,-1,-1
+Scott Gunter,Matthew Stafford,QB,2,Matthew Stafford,QB,ScottMatthew Stafford,22,29,,22,16,-7,0,0
+Krista,Joe Flacco,QB,1,Joe Flacco,QB,KristaJoe Flacco,24,33,,23,16,-9,1,1
+Patrick,Jacoby Brisset,QB,1,Jacoby Brisset,QB,PatrickJacoby Brisset,24,37,,24,13,-13,0,0
+Patrick,Cam Newton,QB,15,Cam Newton,QB,PatrickCam Newton,8,49,,25,13,-41,-17,-17
+Mark,Ben Roethlisberg,QB,9,Ben Roethlisberger,QB,MarkBen Roethlisberger,12,52,,26,17,-40,-14,-14
+Duncan,Christian McCaffrey,RB,57,Christian McCaffrey,RB,DuncanChristian McCaffrey,3,1,20,1,11,2,2,22
+Scott Gunter,Derrick Henry,RB,13,Derrick Henry,RB,ScottDerrick Henry,16,2,19,2,16,14,14,33
+Mark,Aaron Jones,RB,12,Aaron Jones,RB,MarkAaron Jones,18,3,18,3,17,15,15,33
+Bryan,Zeke Elliott,RB,52,Ezekiel Elliott,RB,BryanEzekiel Elliott,4,4,17,4,13,0,0,17
+Patrick,Dalvin Cook,RB,33,Dalvin Cook,RB,PatrickDalvin Cook,9,5,16,5,13,4,4,20
+David Casstevens,Austin Ekeler,RB,7,Austin Ekeler,RB,DavidAustin Ekeler,24,6,15,6,17,18,18,33
+Mark,Nick Chubb,RB,43,Nick Chubb,RB,MarkNick Chubb,6,7,14,7,17,-1,-1,13
+Scott Gunter,Leonard Fournette,RB,25,Leonard Fournette,RB,ScottLeonard Fournette,12,8,13,8,16,4,4,17
+Krista,Mark Ingram,RB,4,Mark Ingram,RB,KristaMark Ingram,27,9,12,9,16,18,18,30
+Bryan,Saquon Barkley,RB,64,Saquon Barkley,RB,BryanSaquon Barkley,1,10,11,10,13,-9,-9,2
+Patrick,Chris Carson,RB,11,Chris Carson,RB,PatrickChris Carson,19,11,10,11,13,8,8,18
+Benjamin,Joe Mixon,RB,30,Joe Mixon,RB,BenJoe Mixon,11,12,9,12,14,-1,-1,8
+Benjamin,Alvin Kamara,RB,59,Alvin Kamara,RB,BenAlvin Kamara,2,13,8,13,14,-11,-11,-3
+Kevin,Todd Gurley,RB,33,Todd Gurley,RB,KJTodd Gurley,9,14,7,14,14,-5,-5,2
+Krista,Miles Sanders,RB,5,Miles Sanders,RB,KristaMiles Sanders,25,15,6,15,16,10,10,16
+Bryan,Kenyan Drake,RB,1,Kenyan Drake,RB,BryanKenyan Drake,36,16,5,16,13,20,20,25
+Krista,Josh Jacobs,RB,13,Josh Jacobs,RB,KristaJosh Jacobs,16,17,4,17,16,-1,-1,3
+Scott Gunter,Le'Veon Bell,RB,37,Le'Veon Bell,RB,ScottLe'Veon Bell,7,18,3,18,16,-11,-11,-8
+Luke,Phillip Lindsay,RB,5,Phillip Lindsay,RB,LukePhillip Lindsay,25,19,2,19,14,6,6,8
+Kevin,Marlon Mack,RB,4,Marlon Mack,RB,KJMarlon Mack,27,20,1,20,14,7,7,8
+Duncan,Devonta Freeman,RB,11,Devonta Freeman,RB,DuncanDevonta Freeman,19,21,,21,11,-2,-2,-2
+Benjamin,James White,RB,4,James White,RB,BenJames White,27,22,,22,14,5,5,5
+David Casstevens,David Montgomery,RB,16,David Montgomery,RB,DavidDavid Montgomery,15,23,,23,17,-8,-8,-8
+Scott Gunter,Melvin Gordon,RB,18,Melvin Gordon,RB,ScottMelvin Gordon,13,24,,24,16,-11,-11,-11
+David Casstevens,Sony Michel,RB,9,Sony Michel,RB,DavidSony Michel,23,28,,25,17,-5,-2,-2
+David Casstevens,Latavius Murray,RB,3,Latavius Murray,RB,DavidLatavius Murray,31,30,,26,17,1,5,5
+Bryan,Devin Singletary,RB,1,Devin Singletary,RB,BryanDevin Singletary,36,31,,27,13,5,9,9
+Patrick,Duke Johnson,RB,2,Duke Johnson,RB,PatrickDuke Johnson,35,32,,28,13,3,7,7
+Patrick,James Conner,RB,34,James Conner,RB,PatrickJames Conner,8,33,,29,13,-25,-21,-21
+Mark,Jamaal Williams,RB,1,Jamaal Williams,RB,MarkJamaal Williams,36,34,,30,17,2,6,6
+Luke,Damien Williams,RB,18,Damien Williams,RB,LukeDamien Williams,13,35,,31,14,-22,-18,-18
+Luke,David Johnson,RB,47,David Johnson,RB,LukeDavid Johnson,5,36,,32,14,-31,-27,-27
+Benjamin,Tevon Coleman,RB,1,Tevin Coleman,RB,BenTevin Coleman,36,36,,33,14,0,3,3
+David Casstevens,Tarik Cohen,RB,1,Tarik Cohen,RB,DavidTarik Cohen,36,38,,34,17,-2,2,2
+Benjamin,LeSean McCoy,RB,1,LeSean McCoy,RB,BenLeSean McCoy,36,43,,35,14,-7,1,1
+David Casstevens,Matt Breida,RB,1,Matt Breida,RB,DavidMatt Breida,36,44,,36,17,-8,0,0
+Krista,Frank Old AF Gore,RB,3,Frank Gore,RB,KristaFrank Gore,31,47,,37,16,-16,-6,-6
+Krista,Tony Pollard,RB,10,Tony Pollard,RB,KristaTony Pollard,22,50,,38,16,-28,-16,-16
+Kevin,Kerryon Johnson,RB,11,Kerryon Johnson,RB,KJKerryon Johnson,19,52,,39,14,-33,-20,-20
+Scott Gunter,Jaylen Samuels,RB,1,Jaylen Samuels,RB,ScottJaylen Samuels,36,53,,40,16,-17,-4,-4
+Kevin,Alexander Mattison,RB,1,Alexander Mattison,RB,KJAlexander Mattison,36,58,,41,14,-22,-5,-5
+Mark,Darrius Guice,RB,3,Darrius Guice,RB,MarkDarrius Guice,31,68,,42,17,-37,-11,-11
+Duncan,Ito Smith,RB,1,Ito Smith,RB,DuncanIto Smith,36,84,,43,11,-48,-7,-7
+Mark,Darwin Thompson,RB,4,Darwin Thompson,RB,MarkDarwin Thompson,27,88,,44,17,-61,-17,-17
+David Casstevens,Darrell Henderson,RB,3,Darrell Henderson,RB,DavidDarrell Henderson,31,95,,45,17,-64,-14,-14
+Kevin,Travis Kelce,TE,37,Travis Kelce,TE,KJTravis Kelce,1,1,10,1,14,0,0,10
+David Casstevens,George Kittle,TE,31,George Kittle,TE,DavidGeorge Kittle,2,2,9,2,17,0,0,9
+Krista,Zach Ertz,TE,23,Zach Ertz,TE,KristaZach Ertz,3,5,6,3,16,-2,0,6
+Scott Gunter,Austin Hooper,TE,2,Austin Hooper,TE,ScottAustin Hooper,8,6,5,4,16,2,4,9
+Bryan,Jared Cook,TE,1,Jared Cook,TE,BryanJared Cook,11,7,4,5,13,4,6,10
+Luke,Hunter Henry,TE,10,Hunter Henry,TE,LukeHunter Henry,5,8,3,6,14,-3,-1,2
+Scott Gunter,Evan Engram,TE,8,Evan Engram,TE,ScottEvan Engram,6,19,,7,16,-13,-1,-1
+Mark,Jimmy Graham,TE,2,Jimmy Graham,TE,MarkJimmy Graham,8,21,,8,17,-13,0,0
+Patrick,O.J. Howard,TE,11,O.J. Howard,TE,PatrickO.J. Howard,4,29,,9,13,-25,-5,-5
+Duncan,Vance McDonald,TE,6,Vance McDonald,TE,DuncanVance McDonald,7,32,,10,11,-25,-3,-3
+Benjamin,David Njoku,TE,2,David Njoku,TE,BenDavid Njoku,8,90,,11,14,-82,-3,-3
+Kevin,Michael Thomas,WR,42,Michael Thomas,WR,KJMichael Thomas,7,1,30,1,14,6,6,36
+David Casstevens,Chris Godwin,WR,16,Chris Godwin,WR,DavidChris Godwin,15,2,29,2,17,13,13,42
+Krista,Julio Jones,WR,45,Julio Jones,WR,KristaJulio Jones,4,3,28,3,16,1,1,29
+Benjamin,Cooper Kupp,WR,12,Cooper Kupp,WR,BenCooper Kupp,20,4,27,4,14,16,16,43
+Patrick,DeAndre Hopkins,WR,51,DeAndre Hopkins,WR,PatrickDeAndre Hopkins,1,5,26,5,13,-4,-4,22
+Duncan,Kenny Golladay,WR,13,Kenny Golladay,WR,DuncanKenny Golladay,17,6,25,6,11,11,11,36
+Kevin,Devante Adams,WR,47,Davante Adams,WR,KJDavante Adams,2,7,24,7,14,-5,-5,19
+Duncan,Keenan Allen,WR,27,Keenan Allen,WR,DuncanKeenan Allen,9,8,23,8,11,1,1,24
+Benjamin,Amari Cooper,WR,19,Amari Cooper,WR,BenAmari Cooper,12,9,22,9,14,3,3,25
+Duncan,Julian Edelman,WR,13,Julian Edelman,WR,DuncanJulian Edelman,17,10,21,10,11,7,7,28
+Patrick,Allen Robinson,WR,9,Allen Robinson,WR,PatrickAllen Robinson,28,11,20,11,13,17,17,37
+Luke,Mike Evans,WR,40,Mike Evans,WR,LukeMike Evans,8,12,19,12,14,-4,-4,15
+Scott Gunter,Jarvis Landry,WR,2,Jarvis Landry,WR,ScottJarvis Landry,39,13,18,13,16,26,26,44
+Bryan,Tyler Lockett,WR,9,Tyler Lockett,WR,BryanTyler Lockett,28,14,17,14,13,14,14,31
+Bryan,Robert Woods,WR,13,Robert Woods,WR,BryanRobert Woods,17,15,16,15,13,2,2,18
+Patrick,DJ Moore,WR,10,DJ Moore,WR,PatrickDJ Moore,25,17,14,16,13,8,9,23
+Scott Gunter,Stefon Diggs,WR,17,Stefon Diggs,WR,ScottStefon Diggs,14,21,10,17,16,-7,-3,7
+Benjamin,Michael Gallup,WR,1,Michael Gallup,WR,BenMichael Gallup,41,22,9,18,14,19,23,32
+Bryan,Tyler Boyd,WR,8,Tyler Boyd,WR,BryanTyler Boyd,30,23,8,19,13,7,11,19
+Mark,Odell Beckham Jr,WR,45,Odell Beckham Jr.,WR,MarkOdell Beckham Jr.,4,25,6,20,17,-21,-16,-10
+Scott Gunter,Calvin Ridley,WR,14,Calvin Ridley,WR,ScottCalvin Ridley,16,26,5,21,16,-10,-5,0
+Patrick,Marvin Jones,WR,3,Marvin Jones,WR,PatrickMarvin Jones,35,29,2,22,13,6,13,15
+David Casstevens,Tyreek Hill,WR,47,Tyreek Hill,WR,DavidTyreek Hill,2,30,1,23,17,-28,-21,-20
+Krista,Emmanuel Sanders,WR,10,Emmanuel Sanders,WR,KristaEmmanuel Sanders,25,33,,24,16,-8,1,1
+Krista,Mike Williams,WR,10,Mike Williams,WR,KristaMike Williams,25,37,,25,16,-12,0,0
+Luke,Robbie Anderson,WR,3,Robbie Anderson,WR,LukeRobbie Anderson,35,39,,26,14,-4,9,9
+Luke,Christian Kirk,WR,5,Christian Kirk,WR,LukeChristian Kirk,33,40,,27,14,-7,6,6
+Krista,Dede Westbrook,WR,6,Dede Westbrook,WR,KristaDede Westbrook,32,45,,28,16,-13,4,4
+Mark,Sammy Watkins,WR,4,Sammy Watkins,WR,MarkSammy Watkins,34,51,,29,17,-17,5,5
+Mark,Sterling Shephard,WR,2,Sterling Shepard,WR,MarkSterling Shepard,39,52,,30,17,-13,9,9
+Luke,Will Fuller,WR,11,Will Fuller V,WR,LukeWill Fuller V,23,54,,31,14,-31,-8,-8
+Kevin,TY Hilton,WR,12,T.Y. Hilton,WR,KJT.Y. Hilton,20,58,,32,14,-38,-12,-12
+Mark,Alshon Jeffery,WR,7,Alshon Jeffery,WR,MarkAlshon Jeffery,31,60,,33,17,-29,-2,-2
+Krista,Brandin Cooks,WR,19,Brandin Cooks,WR,KristaBrandin Cooks,12,61,,34,16,-49,-22,-22
+Benjamin,Adam Thielen,WR,26,Adam Thielen,WR,BenAdam Thielen,10,62,,35,14,-52,-25,-25
+Luke,Corey Davis,WR,1,Corey Davis,WR,LukeCorey Davis,41,63,,36,14,-22,5,5
+David Casstevens,Juju Smith Schuster,WR,45,JuJu Smith-Schuster,WR,DavidJuJu Smith-Schuster,4,65,,37,17,-61,-33,-33
+David Casstevens,Mecole Hardman,WR,1,Mecole Hardman,WR,DavidMecole Hardman,41,66,,38,17,-25,3,3
+Duncan,Anthony Miller,WR,1,Anthony Miller,WR,DuncanAnthony Miller,41,67,,39,11,-26,2,2
+David Casstevens,Marquez Valdez-Scantling,WR,3,Marquez Valdes-Scantling,WR,DavidMarquez Valdes-Scantling,35,79,,40,17,-44,-5,-5
+Scott Gunter,Josh Gordon,WR,11,Josh Gordon,WR,ScottJosh Gordon,23,89,,41,16,-66,-18,-18
+Mark,Geronimo Allison,WR,3,Geronimo Allison,WR,MarkGeronimo Allison,35,91,,42,17,-56,-7,-7
+Luke,DeSean Jackson,WR,1,DeSean Jackson,WR,LukeDeSean Jackson,41,126,,43,14,-85,-2,-2
+Kevin,Dante Pettis,WR,1,Dante Pettis,WR,KJDante Pettis,41,136,,44,14,-95,-3,-3
+Bryan,Antonio Brown,WR,25,Antonio Brown,WR,BryanAntonio Brown,11,149,,45,13,-138,-34,-34
+Mark,AJ Green,WR,12,A.J. Green,WR,MarkA.J. Green,20,150,,46,17,-130,-26,-26

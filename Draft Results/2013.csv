@@ -1,0 +1,101 @@
+Owner,Player,Standard name,,Position,Price,Spend rank,Actual,Top Starter Bonus,Actual Among Drafted,Count drafted positions,Differential Actual,Differential Among Drafted,Differential Among Drafted w Bonus
+Bryan,Seattle Seahawks,Seattle,BryanSeattle,DEF,12,1,1,8,1,15,0,0,8
+Mark,San Francisco 49ers,San Francisco,MarkSan Francisco,DEF,5,3,6,3,2,15,-3,1,4
+Duncan,Chicago Bears,Chicago,DuncanChicago,DEF,1,4,20,,3,14,-16,1,1
+Scott Gunter,Atlanta Falcons,Atlanta,ScottAtlanta,DEF,1,4,30,,4,13,-26,0,0
+Luke,Houston Texans,Houston,LukeHouston,DEF,8,2,32,,5,15,-30,-3,-3
+Mark,Stephen Gostkowski,Stephen Gostkowski,MarkStephen Gostkowski,K,1,1,1,8,1,15,0,0,8
+Duncan,Matt Bryant,Matt Bryant,DuncanMatt Bryant,K,1,1,21,,2,14,-20,-1,-1
+Krista,Peyton Manning,Peyton Manning,KristaPeyton Manning,QB,19,3,1,12,1,9,2,2,14
+Mark,Drew Brees,Drew Brees,MarkDrew Brees,QB,25,2,2,11,2,15,0,0,11
+Patrick,Cam Newton,Cam Newton,PatrickCam Newton,QB,9,6,3,10,3,9,3,3,13
+Luke,Andrew Luck,Andrew Luck,LukeAndrew Luck,QB,2,12,4,9,4,15,8,8,17
+Bryan,Matthew Stafford,Matthew Stafford,BryanMatthew Stafford,QB,4,9,7,6,5,15,2,4,10
+Mark,Russell Wilson,Russell Wilson,MarkRussell Wilson,QB,4,9,8,5,6,15,1,3,8
+Kevin,Colin Kapernick,Colin Kaepernick,KJColin Kaepernick,QB,6,8,9,4,7,10,-1,1,5
+Luke,Tony Romo,Tony Romo,LukeTony Romo,QB,1,13,10,3,8,15,3,5,8
+Duncan,Tom Brady,Tom Brady,DuncanTom Brady,QB,8,7,14,,9,14,-7,-2,-2
+Scott Gunter,Matt Ryan,Matt Ryan,ScottMatt Ryan,QB,15,4,15,,10,13,-11,-6,-6
+Patrick,RG3,Robert Griffin III,PatrickRobert Griffin III,QB,11,5,18,,11,9,-13,-6,-6
+Duncan,Eli Manning,Eli Manning,DuncanEli Manning,QB,1,13,21,,12,14,-8,1,1
+Bryan,Aaron Rodgers,Aaron Rodgers,BryanAaron Rodgers,QB,30,1,22,,13,15,-21,-12,-12
+Scott Gunter,Michael Vick,Michael Vick,ScottMichael Vick,QB,3,11,36,,14,13,-25,-3,-3
+Bryan,Jamaal Charles,Jamaal Charles,BryanJamaal Charles,RB,73,4,1,16,1,15,3,3,19
+Scott Gunter,LeSean McCoy,LeSean McCoy,ScottLeSean McCoy,RB,63,8,2,15,2,13,6,6,21
+Duncan,Matt Forte,Matt Forte,DuncanMatt Forte,RB,50,11,3,14,3,14,8,8,22
+Patrick,Marshawn Lynch,Marshawn Lynch,PatrickMarshawn Lynch,RB,69,7,4,13,4,9,3,3,16
+Bryan,Eddie Lacy,Eddie Lacy,BryanEddie Lacy,RB,3,22,6,11,5,15,16,17,28
+Bryan,DeMarco Murray,DeMarco Murray,BryanDeMarco Murray,RB,8,16,7,10,6,15,9,10,20
+Krista,Adrian Peterson,Adrian Peterson,KristaAdrian Peterson,RB,109,1,8,9,7,9,-7,-6,3
+Bryan,Chris Johnson,Chris Johnson,BryanChris Johnson,RB,16,15,9,8,8,15,6,7,15
+Scott Gunter,Reggie Bush,Reggie Bush,ScottReggie Bush,RB,8,16,11,6,9,13,5,7,13
+Bryan,Frank Gore,Frank Gore,BryanFrank Gore,RB,5,18,13,4,10,15,5,8,12
+Mark,LaVeon Bell,Le'Veon Bell,MarkLe'Veon Bell,RB,1,25,14,3,11,15,11,14,17
+Mark,Alfred Morris,Alfred Morris,MarkAlfred Morris,RB,62,9,15,2,12,15,-6,-3,-1
+Krista,Giovani Bernard,Giovani Bernard,KristaGiovani Bernard,RB,3,22,16,1,13,9,6,9,10
+Mark,Maurice Jones Drew,Maurice Jones-Drew,MarkMaurice Jones-Drew,RB,30,12,20,,14,15,-8,-2,-2
+Kevin,Rashard Mendenhall,Rashard Mendenhall,KJRashard Mendenhall,RB,1,25,25,,15,10,0,10,10
+Kevin,CJ Spiller,C.J. Spiller,KJC.J. Spiller,RB,72,6,27,,16,10,-21,-10,-10
+Scott Gunter,Ray Rice,Ray Rice,ScottRay Rice,RB,62,9,28,,17,13,-19,-8,-8
+Kevin,Stevan Ridley,Stevan Ridley,KJStevan Ridley,RB,19,14,30,,18,10,-16,-4,-4
+Krista,Steven Jackson,Steven Jackson,KristaSteven Jackson,RB,26,13,32,,19,9,-19,-6,-6
+Luke,Ben Tate,Ben Tate,LukeBen Tate,RB,1,25,33,,20,15,-8,5,5
+Patrick,Trent Richardson,Trent Richardson,PatrickTrent Richardson,RB,73,4,34,,21,9,-30,-17,-17
+Luke,Darren Sproles,Darren Sproles,LukeDarren Sproles,RB,1,25,36,,22,15,-11,3,3
+Scott Gunter,Chris Ivory,Chris Ivory,ScottChris Ivory,RB,1,25,37,,23,13,-12,2,2
+Luke,Lamar Miller,Lamar Miller,LukeLamar Miller,RB,4,20,38,,24,15,-18,-4,-4
+Luke,Montee Ball,Montee Ball,LukeMontee Ball,RB,2,24,42,,25,15,-18,-1,-1
+Luke,Arian Foster,Arian Foster,LukeArian Foster,RB,83,2,44,,26,15,-42,-24,-24
+Duncan,Darren McFadden,Darren McFadden,DuncanDarren McFadden,RB,4,20,47,,27,14,-27,-7,-7
+Kevin,Andre Brown,Andre Brown,KJAndre Brown,RB,1,25,51,,28,10,-26,-3,-3
+Duncan,Doug Martin,Doug Martin,DuncanDoug Martin,RB,81,3,57,,29,14,-54,-26,-26
+Mark,Daryl Richardson,Daryl Richardson,MarkDaryl Richardson,RB,1,25,77,,30,15,-52,-5,-5
+Bryan,David Wilson,David Wilson,BryanDavid Wilson,RB,5,18,97,,31,15,-79,-13,-13
+Luke,Jimmy Graham,Jimmy Graham,LukeJimmy Graham,TE,25,1,1,8,1,15,0,0,8
+Bryan,Vernon Davis,Vernon Davis,BryanVernon Davis,TE,4,5,2,7,2,15,3,3,10
+Krista,Tony Gonzalez,Tony Gonzalez,KristaTony Gonzalez,TE,6,3,4,5,3,9,-1,0,5
+Mark,Jason Witten,Jason Witten,MarkJason Witten,TE,6,3,6,3,4,15,-3,-1,2
+Patrick,Greg Olsen,Greg Olsen,PatrickGreg Olsen,TE,3,6,8,1,5,9,-2,1,2
+Luke,Antonio Gates,Antonio Gates,LukeAntonio Gates,TE,1,8,9,,6,15,-1,2,2
+Kevin,Jared Cook,Jared Cook,KJJared Cook,TE,1,8,11,,7,10,-3,1,1
+Bryan,Rob Gronkowski,Rob Gronkowski,BryanRob Gronkowski,TE,9,2,15,,8,15,-13,-6,-6
+Scott Gunter,Kyle Rudolph,Kyle Rudolph,ScottKyle Rudolph,TE,3,6,36,,9,13,-30,-3,-3
+Duncan,Owen Daniels,Owen Daniels,DuncanOwen Daniels,TE,1,8,39,,10,14,-31,-2,-2
+Mark,Josh Gordon,Josh Gordon,MarkJosh Gordon,WR,1,29,1,24,1,15,28,28,52
+Bryan,Demaryius Thomas,Demaryius Thomas,BryanDemaryius Thomas,WR,21,7,2,23,2,15,5,5,28
+Luke,Calvin Johnson,Calvin Johnson,LukeCalvin Johnson,WR,63,1,3,22,3,15,-2,-2,20
+Kevin,AJ Green,A.J. Green,KJA.J. Green,WR,43,2,4,21,4,10,-2,-2,19
+Duncan,Brandon Marshall,Brandon Marshall,DuncanBrandon Marshall,WR,33,4,5,20,5,14,-1,-1,19
+Bryan,Antonio Brown,Antonio Brown,BryanAntonio Brown,WR,5,19,6,19,6,15,13,13,32
+Kevin,Dez Bryant,Dez Bryant,KJDez Bryant,WR,40,3,7,18,7,10,-4,-4,14
+Scott Gunter,Eric Decker,Eric Decker,ScottEric Decker,WR,2,26,9,16,8,13,17,18,34
+Luke,DeSean Jackson,DeSean Jackson,LukeDeSean Jackson,WR,1,29,10,15,9,15,19,20,35
+Bryan,Jordy Nelson,Jordy Nelson,BryanJordy Nelson,WR,1,29,11,14,10,15,18,19,33
+Patrick,Andre Johnson,Andre Johnson,PatrickAndre Johnson,WR,14,11,12,13,11,9,-1,0,13
+Patrick,Pierre Garcon,Pierre Garcon,PatrickPierre Garcon,WR,5,19,13,12,12,9,6,7,19
+Patrick,Vincent Jackson,Vincent Jackson,PatrickVincent Jackson,WR,11,15,14,11,13,9,1,2,13
+Duncan,Anquan Boldin,Anquan Boldin,DuncanAnquan Boldin,WR,1,29,15,10,14,14,14,15,25
+Krista,Larry Fitzgerald,Larry Fitzgerald,KristaLarry Fitzgerald,WR,21,7,16,9,15,9,-9,-8,1
+Duncan,T.Y. Hilton,T.Y. Hilton,DuncanT.Y. Hilton,WR,2,26,19,6,16,14,7,10,16
+Scott Gunter,Torrey Smith,Torrey Smith,ScottTorrey Smith,WR,7,17,20,5,17,13,-3,0,5
+Luke,Wes Welker,Wes Welker,LukeWes Welker,WR,4,22,23,2,18,15,-1,4,6
+Patrick,Mike Wallace,Mike Wallace,PatrickMike Wallace,WR,5,19,25,,19,9,-6,0,0
+Duncan,Marques Colston,Marques Colston,DuncanMarques Colston,WR,10,16,28,,20,14,-12,-4,-4
+Kevin,Victor Cruz,Victor Cruz,KJVictor Cruz,WR,16,10,29,,21,10,-19,-11,-11
+Krista,Golden Tate,Golden Tate,KristaGolden Tate,WR,1,29,29,,22,9,0,7,7
+Krista,Greg Jennings,Greg Jennings,KristaGreg Jennings,WR,2,26,40,,23,9,-14,3,3
+Bryan,Steve Smith (CAR),Steve Smith Sr.,BryanSteve Smith Sr.,WR,4,22,43,,24,15,-21,-2,-2
+Scott Gunter,Dwayne Bowe,Dwayne Bowe,ScottDwayne Bowe,WR,12,14,44,,25,13,-30,-11,-11
+Scott Gunter,James Jones,James Jones,ScottJames Jones,WR,1,29,44,,26,13,-15,3,3
+Mark,Cecil Shorts,Cecil Shorts,MarkCecil Shorts,WR,3,24,47,,27,15,-23,-3,-3
+Luke,Tavon Austin,Tavon Austin,LukeTavon Austin,WR,1,29,52,,28,15,-23,1,1
+Duncan,Hakeem Nicks,Hakeem Nicks,DuncanHakeem Nicks,WR,6,18,54,,29,14,-36,-11,-11
+Scott Gunter,Roddy White,Roddy White,ScottRoddy White,WR,22,6,55,,30,13,-49,-24,-24
+Luke,Stevie Johnson,Stevie Johnson,LukeStevie Johnson,WR,3,24,58,,31,15,-34,-7,-7
+Mark,Danny Amendola,Danny Amendola,MarkDanny Amendola,WR,13,12,60,,32,15,-48,-20,-20
+Mark,Randall Cobb,Randall Cobb,MarkRandall Cobb,WR,17,9,61,,33,15,-52,-24,-24
+Mark,Julio Jones,Julio Jones,MarkJulio Jones,WR,30,5,65,,34,15,-60,-29,-29
+Krista,Reggie Wayne,Reggie Wayne,KristaReggie Wayne,WR,13,12,67,,35,9,-55,-23,-23
+Duncan,Mike Williams Seahawks,Mike Williams,DuncanMike Williams (TBB),WR,1,29,70,,36,14,-41,-7,-7
+Kevin,Vincent Brown,Vincent Brown,KJVincent Brown,WR,1,29,85,,37,10,-56,-8,-8
+Mark,Miles Austin,Miles Austin,MarkMiles Austin,WR,1,29,109,,38,15,-80,-9,-9
