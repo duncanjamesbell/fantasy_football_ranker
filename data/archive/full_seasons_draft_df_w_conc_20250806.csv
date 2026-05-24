@@ -1,0 +1,1652 @@
+Year,Owner,Player,Position,Price,Actual,standard_player,standard_player_conc,player_id,position_rank,spend_rank,position_rank_normalized,differential,top_pos_bonus,draft_score,owner_normalized,conc
+2012,Duncan,Bears Defense,DEF,21000,1,Chicago,ChicagoDEF,chicago,1.0,3,1,2,8.0,10.0,Duncan,2012Duncanchicago
+2012,Mark,49ers Defense,DEF,350000,6,San Francisco,San FranciscoDEF,san-francisco,6.0,1,2,-1,3.0,2.0,Mark,2012Marksan-francisco
+2012,Luke,Houston D,DEF,10000,7,Houston,HoustonDEF,houston,7.0,5,3,2,2.0,4.0,Luke,2012Lukehouston
+2012,Krista,Packers,DEF,1000,14,Green Bay,Green BayDEF,green-bay,14.0,6,4,2,0.0,2.0,Krista,2012Kristagreen-bay
+2012,Bryan,Lions Defense,DEF,73000,29,Detroit,DetroitDEF,detroit,29.0,2,5,-3,0.0,-3.0,Bryan,2012Bryandetroit
+2012,Patrick,Philly Defense,DEF,20000,32,Philadelphia,PhiladelphiaDEF,philadelphia,32.0,4,6,-2,0.0,-2.0,Patrick,2012Patrickphiladelphia
+2012,Scott Gunter,Steven Goskowski,K,60000,2,Stephen Gostkowski,Stephen GostkowskiK,7867,2.0,2,1,1,7.0,8.0,Scott Gunter,2012Scott Gunter7867
+2012,Luke,Matt Prader,K,1000,7,Matt Prater,Matt PraterK,8565,7.0,6,2,4,2.0,6.0,Luke,2012Luke8565
+2012,Duncan,David Akers,K,100000,8,David Akers,David AkersK,4587,8.0,1,3,-2,1.0,-1.0,Duncan,2012Duncan4587
+2012,Krista,"Janiikowski, Sebastien",K,50000,11,Sebastian Janikowski,Sebastian JanikowskiK,5046,11.0,3,4,-1,0.0,-1.0,Krista,2012Krista5046
+2012,Mark,Mason Crosby,K,50000,14,Mason Crosby,Mason CrosbyK,8447,14.0,3,5,-2,0.0,-2.0,Mark,2012Mark8447
+2012,Kevin,Alex Henery,K,4000,17,Alex Henery,Alex HeneryK,24907,17.0,5,6,-1,0.0,-1.0,Kevin,2012Kevin24907
+2012,Bryan,Gerret Hartley,K,1000,18,Garrett Hartley,Garrett HartleyK,9222,18.0,6,7,-1,0.0,-1.0,Bryan,2012Bryan9222
+2012,Kevin,Drew Brees,QB,2900000,1,Drew Brees,Drew BreesQB,5479,1.0,5,1,4,8.0,12.0,Kevin,2012Kevin5479
+2012,Duncan,Aaron Rogers,QB,4000000,2,Aaron Rodgers,Aaron RodgersQB,7200,2.0,1,2,-1,7.0,6.0,Duncan,2012Duncan7200
+2012,Scott Gunter,Tom Brady,QB,3600000,3,Tom Brady,Tom BradyQB,5228,3.0,2,3,-1,6.0,5.0,Scott Gunter,2012Scott Gunter5228
+2012,Patrick,Cam Newton,QB,3300000,4,Cam Newton,Cam NewtonQB,24788,4.0,3,4,-1,5.0,4.0,Patrick,2012Patrick24788
+2012,Patrick,RG3,QB,220000,5,Robert Griffin III,Robert Griffin IIIQB,25712,5.0,9,5,4,4.0,8.0,Patrick,2012Patrick25712
+2012,Bryan,Payton Manning,QB,350000,6,Peyton Manning,Peyton ManningQB,4256,6.0,6,6,0,3.0,3.0,Bryan,2012Bryan4256
+2012,Krista,Matt Ryan,QB,36000,7,Matt Ryan,Matt RyanQB,8780,7.0,11,7,4,2.0,6.0,Krista,2012Krista8780
+2012,Mark,Tony Romo,QB,350000,8,Tony Romo,Tony RomoQB,6624,8.0,6,8,-2,1.0,-1.0,Mark,2012Mark6624
+2012,Krista,Matthew Stafford,QB,3200000,11,Matthew Stafford,Matthew StaffordQB,9265,11.0,4,9,-5,0.0,-5.0,Krista,2012Krista9265
+2012,Bryan,Eli Manning,QB,60000,15,Eli Manning,Eli ManningQB,6760,15.0,10,10,0,0.0,0.0,Bryan,2012Bryan6760
+2012,Duncan,Ben Rothlesburger,QB,6000,18,Ben Roethlisberger,Ben RoethlisbergerQB,6770,18.0,12,11,1,0.0,1.0,Duncan,2012Duncan6770
+2012,Luke,Michael Vick,QB,250000,27,Mike Vick,Mike VickQB,5448,27.0,8,12,-4,0.0,-4.0,Luke,2012Luke5448
+2012,Scott Gunter,Adrian Peterson,RB,2500000,1,Adrian Peterson,Adrian PetersonRB,8261,1.0,6,1,5,16.0,21.0,Scott Gunter,2012Scott Gunter8261
+2012,Luke,Doug Martin,RB,200000,2,Doug Martin,Doug MartinRB,25741,2.0,16,2,14,15.0,29.0,Luke,2012Luke25741
+2012,Luke,Arian Foster,RB,5000000,3,Arian Foster,Arian FosterRB,9527,3.0,1,3,-2,14.0,12.0,Luke,2012Luke9527
+2012,Kevin,Marshawn Lynch,RB,1000000,4,Marshawn Lynch,Marshawn LynchRB,8266,4.0,12,4,8,13.0,21.0,Kevin,2012Kevin8266
+2012,Duncan,Ray Rice,RB,4000000,6,Ray Rice,Ray RiceRB,8832,6.0,2,5,-3,11.0,8.0,Duncan,2012Duncan8832
+2012,Kevin,CJ Spiller,RB,4000,7,C.J. Spiller,C.J. SpillerRB,23984,7.0,27,6,21,10.0,31.0,Kevin,2012Kevin23984
+2012,Patrick,Jamaal Charles,RB,900000,8,Jamaal Charles,Jamaal CharlesRB,8850,8.0,13,7,6,9.0,15.0,Patrick,2012Patrick8850
+2012,Mark,Trent Richardson,RB,1500000,9,Trent Richardson,Trent RichardsonRB,25713,9.0,11,8,3,8.0,11.0,Mark,2012Mark25713
+2012,Luke,Frank Gore,RB,50000,10,Frank Gore,Frank GoreRB,7241,10.0,20,9,11,7.0,18.0,Luke,2012Luke7241
+2012,Bryan,Matt Forte,RB,1700000,12,Matt Forte,Matt ForteRB,8821,12.0,9,10,-1,5.0,4.0,Bryan,2012Bryan8821
+2012,Krista,Chris Johnson,RB,3500000,13,Chris Johnson,Chris JohnsonRB,8801,13.0,5,11,-6,4.0,-2.0,Krista,2012Krista8801
+2012,Kevin,Reggie Bush,RB,35000,14,Reggie Bush,Reggie BushRB,7751,14.0,22,12,10,3.0,13.0,Kevin,2012Kevin7751
+2012,Duncan,Shonn Green,RB,2000,15,Shonn Greene,Shonn GreeneRB,9329,15.0,28,13,15,2.0,17.0,Duncan,2012Duncan9329
+2012,Kevin,Steven Jackson,RB,150000,16,Steven Jackson,Steven JacksonRB,6783,16.0,17,14,3,1.0,4.0,Kevin,2012Kevin6783
+2012,Bryan,Amahd Bradshaw,RB,40000,17,Ahmad Bradshaw,Ahmad BradshawRB,8504,17.0,21,15,6,0.0,6.0,Bryan,2012Bryan8504
+2012,Kevin,Benjarvis Green Ellis,RB,1000,18,BenJarvus Green-Ellis,BenJarvus Green-EllisRB,9039,18.0,29,16,13,0.0,13.0,Kevin,2012Kevin9039
+2012,Patrick,LeSean McCoy,RB,4000000,20,LeSean McCoy,LeSean McCoyRB,9317,20.0,2,17,-15,0.0,-15.0,Patrick,2012Patrick9317
+2012,Scott Gunter,Ryan Matthews,RB,2100000,20,Ryan Mathews,Ryan MathewsRB,23987,20.0,8,17,-9,0.0,-9.0,Scott Gunter,2012Scott Gunter23987
+2012,Duncan,Darren Sproles,RB,100000,21,Darren Sproles,Darren SprolesRB,7306,21.0,19,18,1,0.0,1.0,Duncan,2012Duncan7306
+2012,Duncan,Michael Turner,RB,150000,22,Michael Turner,Michael TurnerRB,6913,22.0,17,19,-2,0.0,-2.0,Duncan,2012Duncan6913
+2012,Mark,DeMarco Murray,RB,1700000,26,DeMarco Murray,DeMarco MurrayRB,24858,26.0,9,20,-11,0.0,-11.0,Mark,2012Mark24858
+2012,Luke,Darren McFadden,RB,2400000,27,Darren McFadden,Darren McFaddenRB,8781,27.0,7,21,-14,0.0,-14.0,Luke,2012Luke8781
+2012,Scott Gunter,Isaac Redman,RB,35000,30,Isaac Redman,Isaac RedmanRB,9674,30.0,22,22,0,0.0,0.0,Scott Gunter,2012Scott Gunter9674
+2012,Patrick,Roy Helu,RB,10000,36,Roy Helu,Roy HeluRB,24892,36.0,24,23,1,0.0,1.0,Patrick,2012Patrick24892
+2012,Krista,Fred Jackson,RB,800000,39,Fred Jackson,Fred JacksonRB,8063,39.0,14,24,-10,0.0,-10.0,Krista,2012Krista8063
+2012,Krista,Michael Bush,RB,1000,42,Michael Bush,Michael BushRB,8354,42.0,29,25,4,0.0,4.0,Krista,2012Krista8354
+2012,Luke,Ben Tate,RB,219000,45,Ben Tate,Ben TateRB,24033,45.0,15,26,-11,0.0,-11.0,Luke,2012Luke24033
+2012,Krista,Beanie Wells,RB,5000,45,Beanie Wells,Beanie WellsRB,9295,45.0,26,26,0,0.0,0.0,Krista,2012Krista9295
+2012,Bryan,Maurice Jones Drew,RB,3600000,49,Maurice Jones-Drew,Maurice Jones-DrewRB,7809,49.0,4,27,-23,0.0,-23.0,Bryan,2012Bryan7809
+2012,Bryan,Peyton Hillis,RB,10000,90,Peyton Hillis,Peyton HillisRB,9004,90.0,24,28,-4,0.0,-4.0,Bryan,2012Bryan9004
+2012,Kevin,Willis McGahey,RB,1000,126,Willis McGahee,Willis McGaheeRB,6359,126.0,29,29,0,0.0,0.0,Kevin,2012Kevin6359
+2012,Kevin,Jimmy Graham,TE,2000000,1,Jimmy Graham,Jimmy GrahamTE,24070,1.0,2,1,1,8.0,9.0,Kevin,2012Kevin24070
+2012,Bryan,Rob Gronkowski,TE,2500000,2,Rob Gronkowski,Rob GronkowskiTE,24017,2.0,1,2,-1,7.0,6.0,Bryan,2012Bryan24017
+2012,Mark,Jason Witten,TE,250000,5,Jason Witten,Jason WittenTE,6405,5.0,4,3,1,4.0,5.0,Mark,2012Mark6405
+2012,Duncan,Aaron Hernandez,TE,130000,6,Aaron Hernandez,Aaron HernandezTE,24088,6.0,5,4,1,3.0,4.0,Duncan,2012Duncan24088
+2012,Scott Gunter,Antonio Gates,TE,300000,12,Antonio Gates,Antonio GatesTE,6663,12.0,3,5,-2,0.0,-2.0,Scott Gunter,2012Scott Gunter6663
+2012,Patrick,Vernon Davis,TE,40000,15,Vernon Davis,Vernon DavisTE,7755,15.0,8,6,2,0.0,2.0,Patrick,2012Patrick7755
+2012,Luke,Jeremichael Finley,TE,60000,18,Jermichael Finley,Jermichael FinleyTE,8868,18.0,7,7,0,0.0,0.0,Luke,2012Luke8868
+2012,Krista,Fred Davis,TE,130000,44,Fred Davis,Fred DavisTE,8825,44.0,5,8,-3,0.0,-3.0,Krista,2012Krista8825
+2012,Mark,Calvin Johnson,WR,4000000,1,Calvin Johnson,Calvin JohnsonWR,8256,1.0,1,1,0,24.0,24.0,Mark,2012Mark8256
+2012,Mark,Brandon Marshall,WR,1100000,2,Brandon Marshall,Brandon MarshallWR,7868,2.0,7,2,5,23.0,28.0,Mark,2012Mark7868
+2012,Mark,Dez Bryant,WR,700000,3,Dez Bryant,Dez BryantWR,23999,3.0,9,3,6,22.0,28.0,Mark,2012Mark23999
+2012,Luke,AJ Green,WR,700000,4,A.J. Green,A.J. GreenWR,24791,4.0,9,4,5,21.0,26.0,Luke,2012Luke24791
+2012,Luke,Damarious Thomas,WR,400000,5,Demaryius Thomas,Demaryius ThomasWR,23997,5.0,17,5,12,20.0,32.0,Luke,2012Luke23997
+2012,Krista,Vincent Jackson,WR,125000,6,Vincent Jackson,Vincent JacksonWR,7237,6.0,23,6,17,19.0,36.0,Krista,2012Krista7237
+2012,Bryan,Eric Decker,WR,36000,7,Eric Decker,Eric DeckerWR,24062,7.0,26,7,19,18.0,37.0,Bryan,2012Bryan24062
+2012,Duncan,Andre Johnson,WR,1200000,8,Andre Johnson,Andre JohnsonWR,6339,8.0,5,8,-3,17.0,14.0,Duncan,2012Duncan6339
+2012,Scott Gunter,Julio Jones,WR,1300000,9,Julio Jones,Julio JonesWR,24793,9.0,4,9,-5,16.0,11.0,Scott Gunter,2012Scott Gunter24793
+2012,Kevin,Roddy White,WR,1200000,10,Roddy White,Roddy WhiteWR,7203,10.0,5,10,-5,15.0,10.0,Kevin,2012Kevin7203
+2012,Bryan,Marques Colston,WR,450000,11,Marques Colston,Marques ColstonWR,8001,11.0,14,11,3,14.0,17.0,Bryan,2012Bryan8001
+2012,Krista,Wes Welker,WR,650000,12,Wes Welker,Wes WelkerWR,7027,12.0,11,12,-1,13.0,12.0,Krista,2012Krista7027
+2012,Krista,Victor Cruz,WR,1500000,13,Victor Cruz,Victor CruzWR,24553,13.0,3,13,-10,12.0,2.0,Krista,2012Krista24553
+2012,Luke,Reggie Wayne,WR,10000,15,Reggie Wayne,Reggie WayneWR,5477,15.0,28,14,14,10.0,24.0,Luke,2012Luke5477
+2012,Bryan,Steve Smith,WR,450000,19,Steve Smith Sr.,Steve Smith Sr.WR,5521,19.0,14,15,-1,6.0,5.0,Bryan,2012Bryan5521
+2012,Duncan,Steve Johnson,WR,30000,21,Stevie Johnson,Stevie JohnsonWR,9001,21.0,27,16,11,4.0,15.0,Duncan,2012Duncan9001
+2012,Kevin,Torrey Smith,WR,1000,24,Torrey Smith,Torrey SmithWR,24845,24.0,32,17,15,1.0,16.0,Kevin,2012Kevin24845
+2012,Kevin,Mike Wallace,WR,500000,25,Mike Wallace,Mike WallaceWR,9348,25.0,13,18,-5,0.0,-5.0,Kevin,2012Kevin9348
+2012,Luke,Miles Austin,WR,250000,26,Miles Austin,Miles AustinWR,8021,26.0,18,19,-1,0.0,-1.0,Luke,2012Luke8021
+2012,Patrick,Jeremy Maclin,WR,250000,27,Jeremy Maclin,Jeremy MaclinWR,9283,27.0,18,20,-2,0.0,-2.0,Patrick,2012Patrick9283
+2012,Bryan,Brandon Lloyd,WR,180000,28,Brandon Lloyd,Brandon LloydWR,6460,28.0,21,21,0,0.0,0.0,Bryan,2012Bryan6460
+2012,Bryan,Jordy Nelsonl,WR,550000,30,Jordy Nelson,Jordy NelsonWR,8813,30.0,12,22,-10,0.0,-10.0,Bryan,2012Bryan8813
+2012,Duncan,Percy Harvin,WR,250000,40,Percy Harvin,Percy HarvinWR,9286,40.0,18,23,-5,0.0,-5.0,Duncan,2012Duncan9286
+2012,Scott Gunter,Antonio Brown,WR,55000,41,Antonio Brown,Antonio BrownWR,24171,41.0,24,24,0,0.0,0.0,Scott Gunter,2012Scott Gunter24171
+2012,Kevin,Larry Fitzgerald,WR,2200000,43,Larry Fitzgerald,Larry FitzgeraldWR,6762,43.0,2,25,-23,0.0,-23.0,Kevin,2012Kevin6762
+2012,Patrick,Dwayne Bowe,WR,160000,48,Dwayne Bowe,Dwayne BoweWR,8277,48.0,22,26,-4,0.0,-4.0,Patrick,2012Patrick8277
+2012,Luke,Hakeem Nicks,WR,450000,54,Hakeem Nicks,Hakeem NicksWR,9293,54.0,14,27,-13,0.0,-13.0,Luke,2012Luke9293
+2012,Scott Gunter,Kenny Britt,WR,50000,57,Kenny Britt,Kenny BrittWR,9294,57.0,25,28,-3,0.0,-3.0,Scott Gunter,2012Scott Gunter9294
+2012,Duncan,DeSean Jackson,WR,5000,58,DeSean Jackson,DeSean JacksonWR,8826,58.0,30,29,1,0.0,1.0,Duncan,2012Duncan8826
+2012,Patrick,Greg Jennings,WR,1100000,69,Greg Jennings,Greg JenningsWR,7801,69.0,7,30,-23,0.0,-23.0,Patrick,2012Patrick7801
+2012,Kevin,Titus Young,WR,4000,75,Titus Young,Titus YoungWR,24831,75.0,31,31,0,0.0,0.0,Kevin,2012Kevin24831
+2012,Duncan,Robert Meachem,WR,6000,101,Robert Meachem,Robert MeachemWR,8281,101.0,29,32,-3,0.0,-3.0,Duncan,2012Duncan8281
+2013,Bryan,Seattle Seahawks,DEF,12,1,Seattle,SeattleDEF,seattle,1.0,1,1,0,8.0,8.0,Bryan,2013Bryanseattle
+2013,Mark,San Francisco 49ers,DEF,5,6,San Francisco,San FranciscoDEF,san-francisco,6.0,3,2,1,3.0,4.0,Mark,2013Marksan-francisco
+2013,Duncan,Chicago Bears,DEF,1,20,Chicago,ChicagoDEF,chicago,20.0,4,3,1,0.0,1.0,Duncan,2013Duncanchicago
+2013,Scott Gunter,Atlanta Falcons,DEF,1,30,Atlanta,AtlantaDEF,atlanta,30.0,4,4,0,0.0,0.0,Scott Gunter,2013Scott Gunteratlanta
+2013,Luke,Houston Texans,DEF,8,32,Houston,HoustonDEF,houston,32.0,2,5,-3,0.0,-3.0,Luke,2013Lukehouston
+2013,Mark,Stephen Gostkowski,K,1,1,Stephen Gostkowski,Stephen GostkowskiK,7867,1.0,1,1,0,8.0,8.0,Mark,2013Mark7867
+2013,Duncan,Matt Bryant,K,1,21,Matt Bryant,Matt BryantK,6243,21.0,1,2,-1,0.0,-1.0,Duncan,2013Duncan6243
+2013,Krista,Peyton Manning,QB,19,1,Peyton Manning,Peyton ManningQB,4256,1.0,3,1,2,8.0,10.0,Krista,2013Krista4256
+2013,Mark,Drew Brees,QB,25,2,Drew Brees,Drew BreesQB,5479,2.0,2,2,0,7.0,7.0,Mark,2013Mark5479
+2013,Patrick,Cam Newton,QB,9,3,Cam Newton,Cam NewtonQB,24788,3.0,6,3,3,6.0,9.0,Patrick,2013Patrick24788
+2013,Luke,Andrew Luck,QB,2,4,Andrew Luck,Andrew LuckQB,25711,4.0,12,4,8,5.0,13.0,Luke,2013Luke25711
+2013,Bryan,Matthew Stafford,QB,4,7,Matthew Stafford,Matthew StaffordQB,9265,7.0,9,5,4,2.0,6.0,Bryan,2013Bryan9265
+2013,Mark,Russell Wilson,QB,4,8,Russell Wilson,Russell WilsonQB,25785,8.0,9,6,3,1.0,4.0,Mark,2013Mark25785
+2013,Kevin,Colin Kapernick,QB,6,9,Colin Kaepernick,Colin KaepernickQB,24823,9.0,8,7,1,0.0,1.0,Kevin,2013Kevin24823
+2013,Luke,Tony Romo,QB,1,10,Tony Romo,Tony RomoQB,6624,10.0,13,8,5,0.0,5.0,Luke,2013Luke6624
+2013,Duncan,Tom Brady,QB,8,14,Tom Brady,Tom BradyQB,5228,14.0,7,9,-2,0.0,-2.0,Duncan,2013Duncan5228
+2013,Scott Gunter,Matt Ryan,QB,15,15,Matt Ryan,Matt RyanQB,8780,15.0,4,10,-6,0.0,-6.0,Scott Gunter,2013Scott Gunter8780
+2013,Patrick,RG3,QB,11,18,Robert Griffin III,Robert Griffin IIIQB,25712,18.0,5,11,-6,0.0,-6.0,Patrick,2013Patrick25712
+2013,Duncan,Eli Manning,QB,1,21,Eli Manning,Eli ManningQB,6760,21.0,13,12,1,0.0,1.0,Duncan,2013Duncan6760
+2013,Bryan,Aaron Rodgers,QB,30,22,Aaron Rodgers,Aaron RodgersQB,7200,22.0,1,13,-12,0.0,-12.0,Bryan,2013Bryan7200
+2013,Scott Gunter,Michael Vick,QB,3,36,Mike Vick,Mike VickQB,5448,36.0,11,14,-3,0.0,-3.0,Scott Gunter,2013Scott Gunter5448
+2013,Bryan,Jamaal Charles,RB,73,1,Jamaal Charles,Jamaal CharlesRB,8850,1.0,4,1,3,16.0,19.0,Bryan,2013Bryan8850
+2013,Scott Gunter,LeSean McCoy,RB,63,2,LeSean McCoy,LeSean McCoyRB,9317,2.0,8,2,6,15.0,21.0,Scott Gunter,2013Scott Gunter9317
+2013,Duncan,Matt Forte,RB,50,3,Matt Forte,Matt ForteRB,8821,3.0,11,3,8,14.0,22.0,Duncan,2013Duncan8821
+2013,Patrick,Marshawn Lynch,RB,69,4,Marshawn Lynch,Marshawn LynchRB,8266,4.0,7,4,3,13.0,16.0,Patrick,2013Patrick8266
+2013,Bryan,Eddie Lacy,RB,3,6,Eddie Lacy,Eddie LacyRB,26684,6.0,22,5,17,11.0,28.0,Bryan,2013Bryan26684
+2013,Bryan,DeMarco Murray,RB,8,7,DeMarco Murray,DeMarco MurrayRB,24858,7.0,16,6,10,10.0,20.0,Bryan,2013Bryan24858
+2013,Krista,Adrian Peterson,RB,109,8,Adrian Peterson,Adrian PetersonRB,8261,8.0,1,7,-6,9.0,3.0,Krista,2013Krista8261
+2013,Bryan,Chris Johnson,RB,16,9,Chris Johnson,Chris JohnsonRB,8801,9.0,15,8,7,8.0,15.0,Bryan,2013Bryan8801
+2013,Scott Gunter,Reggie Bush,RB,8,11,Reggie Bush,Reggie BushRB,7751,11.0,16,9,7,6.0,13.0,Scott Gunter,2013Scott Gunter7751
+2013,Bryan,Frank Gore,RB,5,13,Frank Gore,Frank GoreRB,7241,13.0,18,10,8,4.0,12.0,Bryan,2013Bryan7241
+2013,Mark,LaVeon Bell,RB,1,14,Le'Veon Bell,Le'Veon BellRB,26671,14.0,25,11,14,3.0,17.0,Mark,2013Mark26671
+2013,Mark,Alfred Morris,RB,62,15,Alfred Morris,Alfred MorrisRB,25883,15.0,9,12,-3,2.0,-1.0,Mark,2013Mark25883
+2013,Krista,Giovani Bernard,RB,3,16,Giovani Bernard,Giovani BernardRB,26660,16.0,22,13,9,1.0,10.0,Krista,2013Krista26660
+2013,Mark,Maurice Jones Drew,RB,30,20,Maurice Jones-Drew,Maurice Jones-DrewRB,7809,20.0,12,14,-2,0.0,-2.0,Mark,2013Mark7809
+2013,Kevin,Rashard Mendenhall,RB,1,25,Rashard Mendenhall,Rashard MendenhallRB,8800,25.0,25,15,10,0.0,10.0,Kevin,2013Kevin8800
+2013,Kevin,CJ Spiller,RB,72,27,C.J. Spiller,C.J. SpillerRB,23984,27.0,6,16,-10,0.0,-10.0,Kevin,2013Kevin23984
+2013,Scott Gunter,Ray Rice,RB,62,28,Ray Rice,Ray RiceRB,8832,28.0,9,17,-8,0.0,-8.0,Scott Gunter,2013Scott Gunter8832
+2013,Kevin,Stevan Ridley,RB,19,30,Stevan Ridley,Stevan RidleyRB,24860,30.0,14,18,-4,0.0,-4.0,Kevin,2013Kevin24860
+2013,Krista,Steven Jackson,RB,26,32,Steven Jackson,Steven JacksonRB,6783,32.0,13,19,-6,0.0,-6.0,Krista,2013Krista6783
+2013,Luke,Ben Tate,RB,1,33,Ben Tate,Ben TateRB,24033,33.0,25,20,5,0.0,5.0,Luke,2013Luke24033
+2013,Patrick,Trent Richardson,RB,73,34,Trent Richardson,Trent RichardsonRB,25713,34.0,4,21,-17,0.0,-17.0,Patrick,2013Patrick25713
+2013,Luke,Darren Sproles,RB,1,36,Darren Sproles,Darren SprolesRB,7306,36.0,25,22,3,0.0,3.0,Luke,2013Luke7306
+2013,Scott Gunter,Chris Ivory,RB,1,37,Chris Ivory,Chris IvoryRB,24400,37.0,25,23,2,0.0,2.0,Scott Gunter,2013Scott Gunter24400
+2013,Luke,Lamar Miller,RB,4,38,Lamar Miller,Lamar MillerRB,25807,38.0,20,24,-4,0.0,-4.0,Luke,2013Luke25807
+2013,Luke,Montee Ball,RB,2,42,Montee Ball,Montee BallRB,26681,42.0,24,25,-1,0.0,-1.0,Luke,2013Luke26681
+2013,Luke,Arian Foster,RB,83,44,Arian Foster,Arian FosterRB,9527,44.0,2,26,-24,0.0,-24.0,Luke,2013Luke9527
+2013,Duncan,Darren McFadden,RB,4,47,Darren McFadden,Darren McFaddenRB,8781,47.0,20,27,-7,0.0,-7.0,Duncan,2013Duncan8781
+2013,Kevin,Andre Brown,RB,1,51,Andre Brown,Andre BrownRB,9393,51.0,25,28,-3,0.0,-3.0,Kevin,2013Kevin9393
+2013,Duncan,Doug Martin,RB,81,57,Doug Martin,Doug MartinRB,25741,57.0,3,29,-26,0.0,-26.0,Duncan,2013Duncan25741
+2013,Mark,Daryl Richardson,RB,1,77,Daryl Richardson,Daryl RichardsonRB,25962,77.0,25,30,-5,0.0,-5.0,Mark,2013Mark25962
+2013,Bryan,David Wilson,RB,5,97,David Wilson,David WilsonRB,25742,97.0,18,31,-13,0.0,-13.0,Bryan,2013Bryan25742
+2013,Luke,Jimmy Graham,TE,25,1,Jimmy Graham,Jimmy GrahamTE,24070,1.0,1,1,0,8.0,8.0,Luke,2013Luke24070
+2013,Bryan,Vernon Davis,TE,4,2,Vernon Davis,Vernon DavisTE,7755,2.0,5,2,3,7.0,10.0,Bryan,2013Bryan7755
+2013,Krista,Tony Gonzalez,TE,6,4,Tony Gonzalez,Tony GonzalezTE,3950,4.0,3,3,0,5.0,5.0,Krista,2013Krista3950
+2013,Mark,Jason Witten,TE,6,6,Jason Witten,Jason WittenTE,6405,6.0,3,4,-1,3.0,2.0,Mark,2013Mark6405
+2013,Patrick,Greg Olsen,TE,3,8,Greg Olsen,Greg OlsenTE,8285,8.0,6,5,1,1.0,2.0,Patrick,2013Patrick8285
+2013,Luke,Antonio Gates,TE,1,9,Antonio Gates,Antonio GatesTE,6663,9.0,8,6,2,0.0,2.0,Luke,2013Luke6663
+2013,Kevin,Jared Cook,TE,1,11,Jared Cook,Jared CookTE,9353,11.0,8,7,1,0.0,1.0,Kevin,2013Kevin9353
+2013,Bryan,Rob Gronkowski,TE,9,15,Rob Gronkowski,Rob GronkowskiTE,24017,15.0,2,8,-6,0.0,-6.0,Bryan,2013Bryan24017
+2013,Scott Gunter,Kyle Rudolph,TE,3,36,Kyle Rudolph,Kyle RudolphTE,24830,36.0,6,9,-3,0.0,-3.0,Scott Gunter,2013Scott Gunter24830
+2013,Duncan,Owen Daniels,TE,1,39,Owen Daniels,Owen DanielsTE,7847,39.0,8,10,-2,0.0,-2.0,Duncan,2013Duncan7847
+2013,Mark,Josh Gordon,WR,1,1,Josh Gordon,Josh GordonWR,26561,1.0,29,1,28,24.0,52.0,Mark,2013Mark26561
+2013,Bryan,Demaryius Thomas,WR,21,2,Demaryius Thomas,Demaryius ThomasWR,23997,2.0,7,2,5,23.0,28.0,Bryan,2013Bryan23997
+2013,Luke,Calvin Johnson,WR,63,3,Calvin Johnson,Calvin JohnsonWR,8256,3.0,1,3,-2,22.0,20.0,Luke,2013Luke8256
+2013,Kevin,AJ Green,WR,43,4,A.J. Green,A.J. GreenWR,24791,4.0,2,4,-2,21.0,19.0,Kevin,2013Kevin24791
+2013,Duncan,Brandon Marshall,WR,33,5,Brandon Marshall,Brandon MarshallWR,7868,5.0,4,5,-1,20.0,19.0,Duncan,2013Duncan7868
+2013,Bryan,Antonio Brown,WR,5,6,Antonio Brown,Antonio BrownWR,24171,6.0,19,6,13,19.0,32.0,Bryan,2013Bryan24171
+2013,Kevin,Dez Bryant,WR,40,7,Dez Bryant,Dez BryantWR,23999,7.0,3,7,-4,18.0,14.0,Kevin,2013Kevin23999
+2013,Scott Gunter,Eric Decker,WR,2,9,Eric Decker,Eric DeckerWR,24062,9.0,26,8,18,16.0,34.0,Scott Gunter,2013Scott Gunter24062
+2013,Luke,DeSean Jackson,WR,1,10,DeSean Jackson,DeSean JacksonWR,8826,10.0,29,9,20,15.0,35.0,Luke,2013Luke8826
+2013,Bryan,Jordy Nelson,WR,1,11,Jordy Nelson,Jordy NelsonWR,8813,11.0,29,10,19,14.0,33.0,Bryan,2013Bryan8813
+2013,Patrick,Andre Johnson,WR,14,12,Andre Johnson,Andre JohnsonWR,6339,12.0,11,11,0,13.0,13.0,Patrick,2013Patrick6339
+2013,Patrick,Pierre Garcon,WR,5,13,Pierre Garcon,Pierre GarconWR,8982,13.0,19,12,7,12.0,19.0,Patrick,2013Patrick8982
+2013,Patrick,Vincent Jackson,WR,11,14,Vincent Jackson,Vincent JacksonWR,7237,14.0,15,13,2,11.0,13.0,Patrick,2013Patrick7237
+2013,Duncan,Anquan Boldin,WR,1,15,Anquan Boldin,Anquan BoldinWR,6390,15.0,29,14,15,10.0,25.0,Duncan,2013Duncan6390
+2013,Krista,Larry Fitzgerald,WR,21,16,Larry Fitzgerald,Larry FitzgeraldWR,6762,16.0,7,15,-8,9.0,1.0,Krista,2013Krista6762
+2013,Duncan,T.Y. Hilton,WR,2,19,T.Y. Hilton,T.Y. HiltonWR,25802,19.0,26,16,10,6.0,16.0,Duncan,2013Duncan25802
+2013,Scott Gunter,Torrey Smith,WR,7,20,Torrey Smith,Torrey SmithWR,24845,20.0,17,17,0,5.0,5.0,Scott Gunter,2013Scott Gunter24845
+2013,Luke,Wes Welker,WR,4,23,Wes Welker,Wes WelkerWR,7027,23.0,22,18,4,2.0,6.0,Luke,2013Luke7027
+2013,Patrick,Mike Wallace,WR,5,25,Mike Wallace,Mike WallaceWR,9348,25.0,19,19,0,0.0,0.0,Patrick,2013Patrick9348
+2013,Duncan,Marques Colston,WR,10,28,Marques Colston,Marques ColstonWR,8001,28.0,16,20,-4,0.0,-4.0,Duncan,2013Duncan8001
+2013,Kevin,Victor Cruz,WR,16,29,Victor Cruz,Victor CruzWR,24553,29.0,10,21,-11,0.0,-11.0,Kevin,2013Kevin24553
+2013,Krista,Golden Tate,WR,1,29,Golden Tate,Golden TateWR,24035,29.0,29,21,8,0.0,8.0,Krista,2013Krista24035
+2013,Krista,Greg Jennings,WR,2,40,Greg Jennings,Greg JenningsWR,7801,40.0,26,22,4,0.0,4.0,Krista,2013Krista7801
+2013,Bryan,Steve Smith (CAR),WR,4,43,Steve Smith Sr.,Steve Smith Sr.WR,5521,43.0,22,23,-1,0.0,-1.0,Bryan,2013Bryan5521
+2013,Scott Gunter,Dwayne Bowe,WR,12,44,Dwayne Bowe,Dwayne BoweWR,8277,44.0,14,24,-10,0.0,-10.0,Scott Gunter,2013Scott Gunter8277
+2013,Scott Gunter,James Jones,WR,1,44,James Jones,James JonesWR,8332,44.0,29,24,5,0.0,5.0,Scott Gunter,2013Scott Gunter8332
+2013,Mark,Cecil Shorts,WR,3,47,Cecil Shorts III,Cecil Shorts IIIWR,24901,47.0,24,25,-1,0.0,-1.0,Mark,2013Mark24901
+2013,Luke,Tavon Austin,WR,1,52,Tavon Austin,Tavon AustinWR,26631,52.0,29,26,3,0.0,3.0,Luke,2013Luke26631
+2013,Duncan,Hakeem Nicks,WR,6,54,Hakeem Nicks,Hakeem NicksWR,9293,54.0,18,27,-9,0.0,-9.0,Duncan,2013Duncan9293
+2013,Scott Gunter,Roddy White,WR,22,55,Roddy White,Roddy WhiteWR,7203,55.0,6,28,-22,0.0,-22.0,Scott Gunter,2013Scott Gunter7203
+2013,Luke,Stevie Johnson,WR,3,58,Stevie Johnson,Stevie JohnsonWR,9001,58.0,24,29,-5,0.0,-5.0,Luke,2013Luke9001
+2013,Mark,Danny Amendola,WR,13,60,Danny Amendola,Danny AmendolaWR,9037,60.0,12,30,-18,0.0,-18.0,Mark,2013Mark9037
+2013,Mark,Randall Cobb,WR,17,61,Randall Cobb,Randall CobbWR,24851,61.0,9,31,-22,0.0,-22.0,Mark,2013Mark24851
+2013,Mark,Julio Jones,WR,30,65,Julio Jones,Julio JonesWR,24793,65.0,5,32,-27,0.0,-27.0,Mark,2013Mark24793
+2013,Krista,Reggie Wayne,WR,13,67,Reggie Wayne,Reggie WayneWR,5477,67.0,12,33,-21,0.0,-21.0,Krista,2013Krista5477
+2013,Duncan,Mike Williams Seahawks,WR,1,70,Mike Williams Seahawks,Mike Williams SeahawksWR,7186,70.0,29,34,-5,0.0,-5.0,Duncan,2013Duncan7186
+2013,Kevin,Vincent Brown,WR,1,85,Vincent Brown,Vincent BrownWR,24869,85.0,29,35,-6,0.0,-6.0,Kevin,2013Kevin24869
+2013,Mark,Miles Austin,WR,1,109,Miles Austin,Miles AustinWR,8021,109.0,29,36,-7,0.0,-7.0,Mark,2013Mark8021
+2014,Luke,Seattle,DEF,12,4.0,Seattle,SeattleDEF,seattle,4.0,1,1,0,7.0,7.0,Luke,2014Lukeseattle
+2014,Mark,Rams,DEF,5,6.0,Los Angeles (LAR),Los Angeles (LAR)DEF,la-rams,6.0,3,2,1,5.0,6.0,Mark,2014Markla-rams
+2014,David Casstevens,Cardinals,DEF,3,8.0,Arizona,ArizonaDEF,arizona,8.0,4,3,1,3.0,4.0,David Casstevens,2014David Casstevensarizona
+2014,Luke,SF,DEF,6,15.0,San Francisco,San FranciscoDEF,san-francisco,15.0,2,4,-2,0.0,-2.0,Luke,2014Lukesan-francisco
+2014,Bryan,Broncos,DEF,2,16.0,Denver,DenverDEF,denver,16.0,6,5,1,0.0,1.0,Bryan,2014Bryandenver
+2014,Kevin,Carolina,DEF,3,19.0,Carolina,CarolinaDEF,carolina,19.0,4,6,-2,0.0,-2.0,Kevin,2014Kevincarolina
+2014,Krista,Kansas City,DEF,1,22.0,Kansas City,Kansas CityDEF,kansas-city,22.0,8,7,1,0.0,1.0,Krista,2014Kristakansas-city
+2014,Patrick,Tampa,DEF,1,23.0,Tampa Bay,Tampa BayDEF,tampa-bay,23.0,8,8,0,0.0,0.0,Patrick,2014Patricktampa-bay
+2014,Duncan,Bengals,DEF,2,24.0,Cincinnati,CincinnatiDEF,cincinnati,24.0,6,9,-3,0.0,-3.0,Duncan,2014Duncancincinnati
+2014,Krista,Stephen Gostkoswki,K,3,1.0,Stephen Gostkowski,Stephen GostkowskiK,7867,1.0,2,1,1,10.0,11.0,Krista,2014Krista7867
+2014,Kevin,Mason Crosby,K,1,7.0,Mason Crosby,Mason CrosbyK,8447,7.0,3,2,1,4.0,5.0,Kevin,2014Kevin8447
+2014,Duncan,Phil Dawson,K,1,18.0,Phil Dawson,Phil DawsonK,4269,18.0,3,3,0,0.0,0.0,Duncan,2014Duncan4269
+2014,Mark,Matt Prater,K,6,28.0,Matt Prater,Matt PraterK,8565,28.0,1,4,-3,0.0,-3.0,Mark,2014Mark8565
+2014,David Casstevens,Aaron Rogers,QB,40,1.0,Aaron Rodgers,Aaron RodgersQB,7200,1.0,1,1,0,10.0,10.0,David Casstevens,2014David Casstevens7200
+2014,Patrick,Andrew Luck,QB,10,2.0,Andrew Luck,Andrew LuckQB,25711,2.0,6,2,4,9.0,13.0,Patrick,2014Patrick25711
+2014,Patrick,Russell Wilson,QB,1,3.0,Russell Wilson,Russell WilsonQB,25785,3.0,14,3,11,8.0,19.0,Patrick,2014Patrick25785
+2014,Krista,Peyton Manning*,QB,23,4.0,Peyton Manning,Peyton ManningQB,4256,4.0,3,4,-1,7.0,6.0,Krista,2014Krista4256
+2014,Mark,Drew Brees,QB,33,6.0,Drew Brees,Drew BreesQB,5479,6.0,2,5,-3,5.0,2.0,Mark,2014Mark5479
+2014,Benjamin,Matt Ryan,QB,7,7.0,Matt Ryan,Matt RyanQB,8780,7.0,8,6,2,4.0,6.0,Benjamin,2014Benjamin8780
+2014,Krista,Tom Brady,QB,5,9.0,Tom Brady,Tom BradyQB,5228,9.0,10,7,3,2.0,5.0,Krista,2014Krista5228
+2014,Benjamin,Tony Romo,QB,3,11.0,Tony Romo,Tony RomoQB,6624,11.0,12,8,4,0.0,4.0,Benjamin,2014Benjamin6624
+2014,Luke,Philip Rivers,QB,1,12.0,Philip Rivers,Philip RiversQB,6763,12.0,14,9,5,0.0,5.0,Luke,2014Luke6763
+2014,Scott Gunter,Jay Cutler,QB,7,14.0,Jay Cutler,Jay CutlerQB,7760,14.0,8,10,-2,0.0,-2.0,Scott Gunter,2014Scott Gunter7760
+2014,Duncan,Matthew Stafford,QB,19,15.0,Matthew Stafford,Matthew StaffordQB,9265,15.0,4,11,-7,0.0,-7.0,Duncan,2014Duncan9265
+2014,David Casstevens,Colin Kaepernick,QB,1,16.0,Colin Kaepernick,Colin KaepernickQB,24823,16.0,14,12,2,0.0,2.0,David Casstevens,2014David Casstevens24823
+2014,Kevin,Cam Newton,QB,10,17.0,Cam Newton,Cam NewtonQB,24788,17.0,6,13,-7,0.0,-7.0,Kevin,2014Kevin24788
+2014,Bryan,Nick Foles,QB,5,29.0,Nick Foles,Nick FolesQB,25798,29.0,10,14,-4,0.0,-4.0,Bryan,2014Bryan25798
+2014,Bryan,RG3,QB,17,36.0,Robert Griffin III,Robert Griffin IIIQB,25712,36.0,5,15,-10,0.0,-10.0,Bryan,2014Bryan25712
+2014,Krista,Johnny Manziel,QB,3,53.0,Johnny Manziel,Johnny ManzielQB,27550,53.0,12,16,-4,0.0,-4.0,Krista,2014Krista27550
+2014,Patrick,DeMarco Murray,RB,35,1.0,DeMarco Murray,DeMarco MurrayRB,24858,1.0,14,1,13,20.0,33.0,Patrick,2014Patrick24858
+2014,Kevin,Le'Veon Bell*,RB,36,2.0,Le'Veon Bell,Le'Veon BellRB,26671,2.0,9,2,7,19.0,26.0,Kevin,2014Kevin26671
+2014,Krista,Marshawn Lynch,RB,49,3.0,Marshawn Lynch,Marshawn LynchRB,8266,3.0,5,3,2,18.0,20.0,Krista,2014Krista8266
+2014,Kevin,Adrian Peterson,RB,74,,Adrian Peterson,Adrian PetersonRB,8261,4.0,3,4,-1,17.0,16.0,Kevin,2014Kevin8261
+2014,Duncan,Matt Forte*,RB,60,4.0,Matt Forte,Matt ForteRB,8821,4.0,4,4,0,17.0,17.0,Duncan,2014Duncan8821
+2014,Luke,Arian Foster,RB,41,5.0,Arian Foster,Arian FosterRB,9527,5.0,6,5,1,16.0,17.0,Luke,2014Luke9527
+2014,Luke,Eddie Lacy*,RB,36,6.0,Eddie Lacy,Eddie LacyRB,26684,6.0,9,6,3,15.0,18.0,Luke,2014Luke26684
+2014,Bryan,Jamaal Charles*,RB,88,7.0,Jamaal Charles,Jamaal CharlesRB,8850,7.0,1,7,-6,14.0,8.0,Bryan,2014Bryan8850
+2014,Bryan,Lamar Miller,RB,7,9.0,Lamar Miller,Lamar MillerRB,25807,9.0,24,8,16,12.0,28.0,Bryan,2014Bryan25807
+2014,Scott Gunter,LeSean McCoy*,RB,76,12.0,LeSean McCoy,LeSean McCoyRB,9317,12.0,2,9,-7,9.0,2.0,Scott Gunter,2014Scott Gunter9317
+2014,Duncan,Alfred Morris,RB,39,13.0,Alfred Morris,Alfred MorrisRB,25883,13.0,7,10,-3,8.0,5.0,Duncan,2014Duncan25883
+2014,Duncan,Joique Bell,RB,7,14.0,Joique Bell,Joique BellRB,24262,14.0,24,11,13,7.0,20.0,Duncan,2014Duncan24262
+2014,Patrick,Frank Gore,RB,11,17.0,Frank Gore,Frank GoreRB,7241,17.0,22,12,10,4.0,14.0,Patrick,2014Patrick7241
+2014,Patrick,Giovani Bernard,RB,36,18.0,Giovani Bernard,Giovani BernardRB,26660,18.0,9,13,-4,3.0,-1.0,Patrick,2014Patrick26660
+2014,David Casstevens,Andre Ellington,RB,38,20.0,Andre Ellington,Andre EllingtonRB,26810,20.0,8,14,-6,1.0,-5.0,David Casstevens,2014David Casstevens26810
+2014,David Casstevens,Fred Jackson,RB,2,22.0,Fred Jackson,Fred JacksonRB,8063,22.0,34,15,19,0.0,19.0,David Casstevens,2014David Casstevens8063
+2014,Scott Gunter,Steven Jackson,RB,3,23.0,Steven Jackson,Steven JacksonRB,6783,23.0,29,16,13,0.0,13.0,Scott Gunter,2014Scott Gunter6783
+2014,David Casstevens,Shane Vereen,RB,8,27.0,Shane Vereen,Shane VereenRB,24843,27.0,23,17,6,0.0,6.0,David Casstevens,2014David Casstevens24843
+2014,Luke,Rashad Jennings,RB,17,31.0,Rashad Jennings,Rashad JenningsRB,9514,31.0,19,18,1,0.0,1.0,Luke,2014Luke9514
+2014,Duncan,Terrence West,RB,3,33.0,Terrance West,Terrance WestRB,27622,33.0,29,19,10,0.0,10.0,Duncan,2014Duncan27622
+2014,Krista,Chris Johnson,RB,7,34.0,Chris Johnson,Chris JohnsonRB,8801,34.0,24,20,4,0.0,4.0,Krista,2014Krista8801
+2014,David Casstevens,Trent Richardson,RB,3,35.0,Trent Richardson,Trent RichardsonRB,25713,35.0,29,21,8,0.0,8.0,David Casstevens,2014David Casstevens25713
+2014,David Casstevens,Darren McFadden,RB,5,39.0,Darren McFadden,Darren McFaddenRB,8781,39.0,27,22,5,0.0,5.0,David Casstevens,2014David Casstevens8781
+2014,Mark,Bishop Sankey,RB,18,43.0,Bishop Sankey,Bishop SankeyRB,27582,43.0,18,23,-5,0.0,-5.0,Mark,2014Mark27582
+2014,Benjamin,Pierre Thomas,RB,1,45.0,Pierre Thomas,Pierre ThomasRB,8561,45.0,35,24,11,0.0,11.0,Benjamin,2014Benjamin8561
+2014,Krista,Doug Martin,RB,13,48.0,Doug Martin,Doug MartinRB,25741,48.0,21,25,-4,0.0,-4.0,Krista,2014Krista25741
+2014,Kevin,Ben Tate,RB,3,50.0,Ben Tate,Ben TateRB,24033,50.0,29,26,3,0.0,3.0,Kevin,2014Kevin24033
+2014,Scott Gunter,Reggie Bush*,RB,36,51.0,Reggie Bush,Reggie BushRB,7751,51.0,9,27,-18,0.0,-18.0,Scott Gunter,2014Scott Gunter7751
+2014,Benjamin,Toby Gerhart,RB,24,55.0,Toby Gerhart,Toby GerhartRB,24026,55.0,16,28,-12,0.0,-12.0,Benjamin,2014Benjamin24026
+2014,Bryan,Ryan Matthews,RB,14,60.0,Ryan Mathews,Ryan MathewsRB,23987,60.0,20,29,-9,0.0,-9.0,Bryan,2014Bryan23987
+2014,Bryan,CJ Spiller,RB,23,65.0,C.J. Spiller,C.J. SpillerRB,23984,65.0,17,30,-13,0.0,-13.0,Bryan,2014Bryan23984
+2014,Luke,Stevan Ridley,RB,4,71.0,Stevan Ridley,Stevan RidleyRB,24860,71.0,28,31,-3,0.0,-3.0,Luke,2014Luke24860
+2014,Benjamin,Zac Stacy,RB,28,74.0,Zac Stacy,Zac StacyRB,26783,74.0,15,32,-17,0.0,-17.0,Benjamin,2014Benjamin26783
+2014,Kevin,Maurice Jones-Drew,RB,1,99.0,Maurice Jones-Drew,Maurice Jones-DrewRB,7809,99.0,35,33,2,0.0,2.0,Kevin,2014Kevin7809
+2014,David Casstevens,Christian Michael,RB,1,100.0,Christine Michael,Christine MichaelRB,26685,100.0,35,34,1,0.0,1.0,David Casstevens,2014David Casstevens26685
+2014,Mark,Montee Ball*,RB,36,111.0,Montee Ball,Montee BallRB,26681,111.0,9,35,-26,0.0,-26.0,Mark,2014Mark26681
+2014,Scott Gunter,Ray Rice,RB,3,125.0,Ray Rice,Ray RiceRB,8832,125.0,29,36,-7,0.0,-7.0,Scott Gunter,2014Scott Gunter8832
+2014,Bryan,Rob Gronkowski*,TE,12,1.0,Rob Gronkowski,Rob GronkowskiTE,24017,1.0,4,1,3,10.0,13.0,Bryan,2014Bryan24017
+2014,Luke,Jimmy Graham*,TE,30,3.0,Jimmy Graham,Jimmy GrahamTE,24070,3.0,1,2,-1,8.0,7.0,Luke,2014Luke24070
+2014,Krista,Greg Olsen,TE,7,4.0,Greg Olsen,Greg OlsenTE,8285,4.0,7,3,4,7.0,11.0,Krista,2014Krista8285
+2014,Kevin,Julius Thomas*,TE,12,7.0,Julius Thomas,Julius ThomasTE,24916,7.0,4,4,0,4.0,4.0,Kevin,2014Kevin24916
+2014,Scott Gunter,Jason Witten,TE,10,10.0,Jason Witten,Jason WittenTE,6405,10.0,6,5,1,1.0,2.0,Scott Gunter,2014Scott Gunter6405
+2014,Benjamin,Zach Ertz,TE,1,14.0,Zach Ertz,Zach ErtzTE,26658,14.0,11,6,5,0.0,5.0,Benjamin,2014Benjamin26658
+2014,Mark,Jordan Cameron,TE,15,24.0,Jordan Cameron,Jordan CameronTE,24889,24.0,2,7,-5,0.0,-5.0,Mark,2014Mark24889
+2014,Duncan,Jordan Reed,TE,6,29.0,Jordan Reed,Jordan ReedTE,26708,29.0,8,8,0,0.0,0.0,Duncan,2014Duncan26708
+2014,Patrick,Vernon Davis,TE,14,35.0,Vernon Davis,Vernon DavisTE,7755,35.0,3,9,-6,0.0,-6.0,Patrick,2014Patrick7755
+2014,David Casstevens,Kyle Rudolph,TE,3,36.0,Kyle Rudolph,Kyle RudolphTE,24830,36.0,9,10,-1,0.0,-1.0,David Casstevens,2014David Casstevens24830
+2014,Kevin,Ladarius Green,TE,1,52.0,Ladarius Green,Ladarius GreenTE,25820,52.0,11,11,0,0.0,0.0,Kevin,2014Kevin25820
+2014,David Casstevens,Dennis Pitta,TE,3,65.0,Dennis Pitta,Dennis PittaTE,24089,65.0,9,12,-3,0.0,-3.0,David Casstevens,2014David Casstevens24089
+2014,Patrick,Antonio Brown,WR,27,1.0,Antonio Brown,Antonio BrownWR,24171,1.0,9,1,8,30.0,38.0,Patrick,2014Patrick24171
+2014,Duncan,Demaryius Thomas*,WR,25,2.0,Demaryius Thomas,Demaryius ThomasWR,23997,2.0,12,2,10,29.0,39.0,Duncan,2014Duncan23997
+2014,Scott Gunter,Jordy Nelson,WR,33,3.0,Jordy Nelson,Jordy NelsonWR,8813,3.0,6,3,3,28.0,31.0,Scott Gunter,2014Scott Gunter8813
+2014,David Casstevens,Dez Bryant,WR,49,4.0,Dez Bryant,Dez BryantWR,23999,4.0,2,4,-2,27.0,25.0,David Casstevens,2014David Casstevens23999
+2014,Mark,Randall Cobb,WR,27,6.0,Randall Cobb,Randall CobbWR,24851,6.0,9,5,4,25.0,29.0,Mark,2014Mark24851
+2014,Bryan,Emmanuel Sanders,WR,9,7.0,Emmanuel Sanders,Emmanuel SandersWR,24057,7.0,27,6,21,24.0,45.0,Bryan,2014Bryan24057
+2014,Krista,Julio Jones,WR,47,8.0,Julio Jones,Julio JonesWR,24793,8.0,3,7,-4,23.0,19.0,Krista,2014Krista24793
+2014,Krista,Jeremy Maclin,WR,11,9.0,Jeremy Maclin,Jeremy MaclinWR,9283,9.0,25,8,17,22.0,39.0,Krista,2014Krista9283
+2014,Benjamin,Mike Evans,WR,4,10.0,Mike Evans,Mike EvansWR,27535,10.0,36,9,27,21.0,48.0,Benjamin,2014Benjamin27535
+2014,Mark,Alshon Jeffrey*,WR,18,11.0,Alshon Jeffery,Alshon JefferyWR,25755,11.0,18,10,8,20.0,28.0,Mark,2014Mark25755
+2014,David Casstevens,TY Hilton,WR,18,12.0,T.Y. Hilton,T.Y. HiltonWR,25802,12.0,18,11,7,19.0,26.0,David Casstevens,2014David Casstevens25802
+2014,Bryan,Golden Tate,WR,7,13.0,Golden Tate,Golden TateWR,24035,13.0,30,12,18,18.0,36.0,Bryan,2014Bryan24035
+2014,Benjamin,Calvin Johnson,WR,60,14.0,Calvin Johnson,Calvin JohnsonWR,8256,14.0,1,13,-12,17.0,5.0,Benjamin,2014Benjamin8256
+2014,Kevin,DeAndre Hopkins,WR,1,15.0,DeAndre Hopkins,DeAndre HopkinsWR,26650,15.0,41,14,27,16.0,43.0,Kevin,2014Kevin26650
+2014,Mark,DeSean Jackson,WR,28,16.0,DeSean Jackson,DeSean JacksonWR,8826,16.0,7,15,-8,15.0,7.0,Mark,2014Mark8826
+2014,Scott Gunter,Mike Wallace,WR,7,18.0,Mike Wallace,Mike WallaceWR,9348,18.0,30,16,14,13.0,27.0,Scott Gunter,2014Scott Gunter9348
+2014,Luke,Torrey Smith,WR,16,19.0,Torrey Smith,Torrey SmithWR,24845,19.0,20,17,3,12.0,15.0,Luke,2014Luke24845
+2014,Luke,Julian Edelman,WR,8,21.0,Julian Edelman,Julian EdelmanWR,9496,21.0,29,18,11,10.0,21.0,Luke,2014Luke9496
+2014,Benjamin,AJ Green,WR,46,24.0,A.J. Green,A.J. GreenWR,24791,24.0,4,19,-15,7.0,-8.0,Benjamin,2014Benjamin24791
+2014,Bryan,Sammy Watkins,WR,7,26.0,Sammy Watkins,Sammy WatkinsWR,27532,26.0,30,20,10,5.0,15.0,Bryan,2014Bryan27532
+2014,Duncan,Roddy White,WR,28,27.0,Roddy White,Roddy WhiteWR,7203,27.0,7,21,-14,4.0,-10.0,Duncan,2014Duncan7203
+2014,Duncan,Eric Decker,WR,2,28.0,Eric Decker,Eric DeckerWR,24062,28.0,40,22,18,3.0,21.0,Duncan,2014Duncan24062
+2014,Bryan,Michael Floyd,WR,9,30.0,Michael Floyd,Michael FloydWR,25723,30.0,27,23,4,1.0,5.0,Bryan,2014Bryan25723
+2014,Krista,Marques Colston,WR,11,33.0,Marques Colston,Marques ColstonWR,8001,33.0,25,24,1,0.0,1.0,Krista,2014Krista8001
+2014,Kevin,Brandon Marshall,WR,39,34.0,Brandon Marshall,Brandon MarshallWR,7868,34.0,5,25,-20,0.0,-20.0,Kevin,2014Kevin7868
+2014,Patrick,Rueben Randle,WR,4,35.0,Rueben Randle,Rueben RandleWR,25773,35.0,36,26,10,0.0,10.0,Patrick,2014Patrick25773
+2014,Duncan,Kendall Wright,WR,7,36.0,Kendall Wright,Kendall WrightWR,25730,36.0,30,27,3,0.0,3.0,Duncan,2014Duncan25730
+2014,Patrick,Vincent Jackson,WR,26,39.0,Vincent Jackson,Vincent JacksonWR,7237,39.0,11,28,-17,0.0,-17.0,Patrick,2014Patrick7237
+2014,David Casstevens,Terrence Williams,WR,7,40.0,Terrance Williams,Terrance WilliamsWR,26697,40.0,30,29,1,0.0,1.0,David Casstevens,2014David Casstevens26697
+2014,David Casstevens,Andre Johnson,WR,15,41.0,Andre Johnson,Andre JohnsonWR,6339,41.0,21,30,-9,0.0,-9.0,David Casstevens,2014David Casstevens6339
+2014,Patrick,Keenan Allen,WR,15,48.0,Keenan Allen,Keenan AllenWR,26699,48.0,21,31,-10,0.0,-10.0,Patrick,2014Patrick26699
+2014,Mark,Michael Crabtree,WR,14,51.0,Michael Crabtree,Michael CrabtreeWR,9274,51.0,24,32,-8,0.0,-8.0,Mark,2014Mark9274
+2014,Benjamin,Pierre Garcon,WR,22,54.0,Pierre Garcon,Pierre GarconWR,8982,54.0,14,33,-19,0.0,-19.0,Benjamin,2014Benjamin8982
+2014,Patrick,Larry Fitzgerald,WR,19,55.0,Larry Fitzgerald,Larry FitzgeraldWR,6762,55.0,17,34,-17,0.0,-17.0,Patrick,2014Patrick6762
+2014,Luke,Reggie Wayne,WR,7,56.0,Reggie Wayne,Reggie WayneWR,5477,56.0,30,35,-5,0.0,-5.0,Luke,2014Luke5477
+2014,Kevin,Brandin Cooks,WR,3,57.0,Brandin Cooks,Brandin CooksWR,27548,57.0,39,36,3,0.0,3.0,Kevin,2014Kevin27548
+2014,Scott Gunter,Percy Harvin,WR,25,58.0,Percy Harvin,Percy HarvinWR,9286,58.0,12,37,-25,0.0,-25.0,Scott Gunter,2014Scott Gunter9286
+2014,Luke,Riley Cooper,WR,1,64.0,Riley Cooper,Riley CooperWR,24135,64.0,41,38,3,0.0,3.0,Luke,2014Luke24135
+2014,Patrick,Justin Hunter,WR,1,69.0,Justin Hunter,Justin HunterWR,26657,69.0,41,39,2,0.0,2.0,Patrick,2014Patrick26657
+2014,Kevin,Cecil Shorts,WR,1,71.0,Cecil Shorts III,Cecil Shorts IIIWR,24901,71.0,41,40,1,0.0,1.0,Kevin,2014Kevin24901
+2014,Kevin,Cordarrelle Patterson,WR,15,81.0,Cordarrelle Patterson,Cordarrelle PattersonWR,26652,81.0,21,41,-20,0.0,-20.0,Kevin,2014Kevin26652
+2014,Krista,Wes Welker,WR,20,83.0,Wes Welker,Wes WelkerWR,7027,83.0,16,42,-26,0.0,-26.0,Krista,2014Krista7027
+2014,Luke,Victor Cruz,WR,21,97.0,Victor Cruz,Victor CruzWR,24553,97.0,15,43,-28,0.0,-28.0,Luke,2014Luke24553
+2014,Benjamin,Josh Gordon,WR,4,106.0,Josh Gordon,Josh GordonWR,26561,106.0,36,44,-8,0.0,-8.0,Benjamin,2014Benjamin26561
+2014,Duncan,Marvin Jones,WR,1,111.0,Marvin Jones,Marvin JonesWR,25876,111.0,41,45,-4,0.0,-4.0,Duncan,2014Duncan25876
+2015,Krista,Arizona Cardinals,DEF,1,4,Arizona,ArizonaDEF,arizona,4.0,5,1,4,7.0,11.0,Krista,2015Kristaarizona
+2015,Luke,Houston,DEF,5,5,Houston,HoustonDEF,houston,5.0,1,2,-1,6.0,5.0,Luke,2015Lukehouston
+2015,Benjamin,Seahawks,DEF,4,6,Seattle,SeattleDEF,seattle,6.0,2,3,-1,5.0,4.0,Benjamin,2015Benjaminseattle
+2015,Duncan,Los Angeles (LAR),DEF,2,10,Los Angeles (LAR),Los Angeles (LAR)DEF,la-rams,10.0,4,4,0,1.0,1.0,Duncan,2015Duncanla-rams
+2015,Patrick,Buffalo Bills,DEF,3,20,Buffalo,BuffaloDEF,buffalo,20.0,3,5,-2,0.0,-2.0,Patrick,2015Patrickbuffalo
+2015,Duncan,Stephen Gostkowski,K,4,1,Stephen Gostkowski,Stephen GostkowskiK,7867,1.0,1,1,0,10.0,10.0,Duncan,2015Duncan7867
+2015,Luke,Adam Vinatieri,K,2,9,Adam Vinatieri,Adam VinatieriK,3727,9.0,2,2,0,2.0,2.0,Luke,2015Luke3727
+2015,Patrick,Cam Newton,QB,1,1,Cam Newton,Cam NewtonQB,24788,1.0,11,1,10,10.0,20.0,Patrick,2015Patrick24788
+2015,Benjamin,Russell Wilson,QB,15,2,Russell Wilson,Russell WilsonQB,25785,2.0,3,2,1,9.0,10.0,Benjamin,2015Benjamin25785
+2015,Luke,Tom Brady,QB,3,3,Tom Brady,Tom BradyQB,5228,3.0,10,3,7,8.0,15.0,Luke,2015Luke5228
+2015,Duncan,Aaron Rodgers,QB,37,5,Aaron Rodgers,Aaron RodgersQB,7200,5.0,1,4,-3,6.0,3.0,Duncan,2015Duncan7200
+2015,David Casstevens,Drew Brees,QB,15,7,Drew Brees,Drew BreesQB,5479,7.0,3,5,-2,4.0,2.0,David Casstevens,2015David Casstevens5479
+2015,Mark,Eli Manning,QB,7,11,Eli Manning,Eli ManningQB,6760,11.0,8,6,2,0.0,2.0,Mark,2015Mark6760
+2015,Kevin,Matt Ryan,QB,11,19,Matt Ryan,Matt RyanQB,8780,19.0,5,7,-2,0.0,-2.0,Kevin,2015Kevin8780
+2015,Krista,Ben Roethlisberger,QB,10,21,Ben Roethlisberger,Ben RoethlisbergerQB,6770,21.0,6,8,-2,0.0,-2.0,Krista,2015Krista6770
+2015,Bryan,Andrew Luck,QB,37,27,Andrew Luck,Andrew LuckQB,25711,27.0,1,9,-8,0.0,-8.0,Bryan,2015Bryan25711
+2015,Mark,Peyton Manning,QB,10,30,Peyton Manning,Peyton ManningQB,4256,30.0,6,10,-4,0.0,-4.0,Mark,2015Mark4256
+2015,Patrick,Tony Romo,QB,6,39,Tony Romo,Tony RomoQB,6624,39.0,9,11,-2,0.0,-2.0,Patrick,2015Patrick6624
+2015,Benjamin,Adrian Peterson,RB,71,2,Adrian Peterson,Adrian PetersonRB,8261,2.0,1,1,0,19.0,19.0,Benjamin,2015Benjamin8261
+2015,Benjamin,Doug Martin,RB,11,3,Doug Martin,Doug MartinRB,25741,3.0,20,2,18,18.0,36.0,Benjamin,2015Benjamin25741
+2015,Patrick,Lamar Miller,RB,30,5,Lamar Miller,Lamar MillerRB,25807,5.0,11,3,8,16.0,24.0,Patrick,2015Patrick25807
+2015,David Casstevens,Danny Woodhead,RB,1,6,Danny Woodhead,Danny WoodheadRB,9560,6.0,37,4,33,15.0,48.0,David Casstevens,2015David Casstevens9560
+2015,Mark,Todd Gurley,RB,7,7,Todd Gurley,Todd GurleyRB,28398,7.0,26,5,21,14.0,35.0,Mark,2015Mark28398
+2015,Kevin,Matt Forte,RB,38,8,Matt Forte,Matt ForteRB,8821,8.0,9,6,3,13.0,16.0,Kevin,2015Kevin8821
+2015,Duncan,Chris Ivory,RB,9,10,Chris Ivory,Chris IvoryRB,24400,10.0,24,7,17,11.0,28.0,Duncan,2015Duncan24400
+2015,Mark,Latavius Murray,RB,20,11,Latavius Murray,Latavius MurrayRB,26804,11.0,14,8,6,10.0,16.0,Mark,2015Mark26804
+2015,David Casstevens,Darren McFadden,RB,1,12,Darren McFadden,Darren McFaddenRB,8781,12.0,37,9,28,9.0,37.0,David Casstevens,2015David Casstevens8781
+2015,Patrick,Mark Ingram,RB,19,13,Mark Ingram II,Mark Ingram IIRB,24815,13.0,16,10,6,8.0,14.0,Patrick,2015Patrick24815
+2015,Scott Gunter,Frank Gore,RB,20,14,Frank Gore,Frank GoreRB,7241,14.0,14,11,3,7.0,10.0,Scott Gunter,2015Scott Gunter7241
+2015,David Casstevens,LeSean McCoy,RB,34,15,LeSean McCoy,LeSean McCoyRB,9317,15.0,10,12,-2,6.0,4.0,David Casstevens,2015David Casstevens9317
+2015,Krista,DeMarco Murray,RB,50,16,DeMarco Murray,DeMarco MurrayRB,24858,16.0,7,13,-6,5.0,-1.0,Krista,2015Krista24858
+2015,Krista,Gio Bernard,RB,3,17,Giovani Bernard,Giovani BernardRB,26660,17.0,33,14,19,4.0,23.0,Krista,2015Krista26660
+2015,Mark,Jeremy Hill,RB,45,18,Jeremy Hill,Jeremy HillRB,27583,18.0,8,15,-7,3.0,-4.0,Mark,2015Mark27583
+2015,Patrick,Jonathan Stewart,RB,11,19,Jonathan Stewart,Jonathan StewartRB,8790,19.0,20,16,4,2.0,6.0,Patrick,2015Patrick8790
+2015,Kevin,Rashad Jennings,RB,3,21,Rashad Jennings,Rashad JenningsRB,9514,21.0,33,17,16,0.0,16.0,Kevin,2015Kevin9514
+2015,Krista,James Starks,RB,1,23,James Starks,James StarksRB,24169,23.0,37,18,19,0.0,19.0,Krista,2015Krista24169
+2015,Duncan,TJ Yeldon,RB,9,24,T.J. Yeldon,T.J. YeldonRB,28424,24.0,24,19,5,0.0,5.0,Duncan,2015Duncan28424
+2015,Krista,Eddie Lacy,RB,68,28,Eddie Lacy,Eddie LacyRB,26684,28.0,2,20,-18,0.0,-18.0,Krista,2015Krista26684
+2015,David Casstevens,Ryan Matthews ,RB,5,29,Ryan Mathews,Ryan MathewsRB,23987,29.0,30,21,9,0.0,9.0,David Casstevens,2015David Casstevens23987
+2015,Luke,CJ Anderson,RB,54,30,C.J. Anderson,C.J. AndersonRB,26878,30.0,6,22,-16,0.0,-16.0,Luke,2015Luke26878
+2015,David Casstevens,Isiah Crowell,RB,1,31,Isaiah Crowell,Isaiah CrowellRB,28014,31.0,37,23,14,0.0,14.0,David Casstevens,2015David Casstevens28014
+2015,Bryan,Joseph Randle,RB,10,32,Joseph Randle,Joseph RandleRB,26774,32.0,22,24,-2,0.0,-2.0,Bryan,2015Bryan26774
+2015,Kevin,Shane Vereen,RB,3,33,Shane Vereen,Shane VereenRB,24843,33.0,33,25,8,0.0,8.0,Kevin,2015Kevin24843
+2015,Patrick,LeGarrette Blount,RB,7,36,LeGarrette Blount,LeGarrette BlountRB,24318,36.0,26,26,0,0.0,0.0,Patrick,2015Patrick24318
+2015,Benjamin,Justin Forsett,RB,30,39,Justin Forsett,Justin ForsettRB,9010,39.0,11,27,-16,0.0,-16.0,Benjamin,2015Benjamin9010
+2015,Mark,Ameer Abdullah,RB,10,43,Ameer Abdullah,Ameer AbdullahRB,28442,43.0,22,28,-6,0.0,-6.0,Mark,2015Mark28442
+2015,Duncan,Le'Veon Bell,RB,65,46,Le'Veon Bell,Le'Veon BellRB,26671,46.0,4,29,-25,0.0,-25.0,Duncan,2015Duncan26671
+2015,Scott Gunter,Melvin Gordon,RB,14,48,Melvin Gordon,Melvin GordonRB,28403,48.0,18,30,-12,0.0,-12.0,Scott Gunter,2015Scott Gunter28403
+2015,Bryan,Alfred Morris,RB,22,49,Alfred Morris,Alfred MorrisRB,25883,49.0,13,31,-18,0.0,-18.0,Bryan,2015Bryan25883
+2015,David Casstevens,Joique Bell,RB,2,50,Joique Bell,Joique BellRB,24262,50.0,36,32,4,0.0,4.0,David Casstevens,2015David Casstevens24262
+2015,Luke,Jamaal Charles,RB,66,51,Jamaal Charles,Jamaal CharlesRB,8850,51.0,3,33,-30,0.0,-30.0,Luke,2015Luke8850
+2015,Bryan,Carlos Hyde,RB,14,55,Carlos Hyde,Carlos HydeRB,27585,55.0,18,34,-16,0.0,-16.0,Bryan,2015Bryan27585
+2015,Kevin,Marshawn Lynch,RB,63,56,Marshawn Lynch,Marshawn LynchRB,8266,56.0,5,35,-30,0.0,-30.0,Kevin,2015Kevin8266
+2015,Mark,Tre Mason,RB,4,59,Tre Mason,Tre MasonRB,27603,59.0,31,36,-5,0.0,-5.0,Mark,2015Mark27603
+2015,Patrick,Arian Foster,RB,6,60,Arian Foster,Arian FosterRB,9527,60.0,28,37,-9,0.0,-9.0,Patrick,2015Patrick9527
+2015,Bryan,Andre Ellington,RB,17,62,Andre Ellington,Andre EllingtonRB,26810,62.0,17,38,-21,0.0,-21.0,Bryan,2015Bryan26810
+2015,Kevin,CJ Spiller,RB,6,64,C.J. Spiller,C.J. SpillerRB,23984,64.0,28,39,-11,0.0,-11.0,Kevin,2015Kevin23984
+2015,Patrick,Bishop Sankey,RB,4,70,Bishop Sankey,Bishop SankeyRB,27582,70.0,31,40,-9,0.0,-9.0,Patrick,2015Patrick27582
+2015,Luke,Rob Gronkowski,TE,39,1,Rob Gronkowski,Rob GronkowskiTE,24017,1.0,1,1,0,10.0,10.0,Luke,2015Luke24017
+2015,Krista,Greg Olsen,TE,24,5,Greg Olsen,Greg OlsenTE,8285,5.0,3,2,1,6.0,7.0,Krista,2015Krista8285
+2015,Bryan,Travis Kelce,TE,19,7,Travis Kelce,Travis KelceTE,26686,7.0,4,3,1,4.0,5.0,Bryan,2015Bryan26686
+2015,Patrick,Zach Ertz,TE,1,9,Zach Ertz,Zach ErtzTE,26658,9.0,7,4,3,2.0,5.0,Patrick,2015Patrick26658
+2015,David Casstevens,Jimmy Graham,TE,29,16,Jimmy Graham,Jimmy GrahamTE,24070,16.0,2,5,-3,0.0,-3.0,David Casstevens,2015David Casstevens24070
+2015,Duncan,Martellus Bennett,TE,6,22,Martellus Bennett,Martellus BennettTE,8838,22.0,5,6,-1,0.0,-1.0,Duncan,2015Duncan8838
+2015,Kevin,Jordan Cameron,TE,3,23,Jordan Cameron,Jordan CameronTE,24889,23.0,6,7,-1,0.0,-1.0,Kevin,2015Kevin24889
+2015,Patrick,Antonio Brown,WR,48,1,Antonio Brown,Antonio BrownWR,24171,1.0,5,1,4,30.0,34.0,Patrick,2015Patrick24171
+2015,Scott Gunter,Julio Jones,WR,70,2,Julio Jones,Julio JonesWR,24793,2.0,1,2,-1,29.0,28.0,Scott Gunter,2015Scott Gunter24793
+2015,Bryan,Brandon Marshall,WR,18,3,Brandon Marshall,Brandon MarshallWR,7868,3.0,18,3,15,28.0,43.0,Bryan,2015Bryan7868
+2015,Duncan,DeAndre Hopkins,WR,28,4,DeAndre Hopkins,DeAndre HopkinsWR,26650,4.0,15,4,11,27.0,38.0,Duncan,2015Duncan26650
+2015,Mark,Odell Beckham Jr,WR,45,5,Odell Beckham Jr.,Odell Beckham Jr.WR,27540,5.0,7,5,2,26.0,28.0,Mark,2015Mark27540
+2015,Patrick,Allen Robinson,WR,9,6,Allen Robinson II,Allen Robinson IIWR,27589,6.0,26,6,20,25.0,45.0,Patrick,2015Patrick27589
+2015,David Casstevens,AJ Green,WR,38,7,A.J. Green,A.J. GreenWR,24791,7.0,9,7,2,24.0,26.0,David Casstevens,2015David Casstevens24791
+2015,Duncan,Larry Fitzgerald ,WR,2,9,Larry Fitzgerald,Larry FitzgeraldWR,6762,9.0,36,8,28,22.0,50.0,Duncan,2015Duncan6762
+2015,Krista,Jarvis Landry,WR,14,10,Jarvis Landry,Jarvis LandryWR,27591,10.0,21,9,12,21.0,33.0,Krista,2015Krista27591
+2015,Scott Gunter,Demaryius Thomas,WR,50,11,Demaryius Thomas,Demaryius ThomasWR,23997,11.0,3,10,-7,20.0,13.0,Scott Gunter,2015Scott Gunter23997
+2015,Duncan,Brandin Cooks,WR,30,12,Brandin Cooks,Brandin CooksWR,27548,12.0,14,11,3,19.0,22.0,Duncan,2015Duncan27548
+2015,Mark,Eric Decker,WR,7,13,Eric Decker,Eric DeckerWR,24062,13.0,28,12,16,18.0,34.0,Mark,2015Mark24062
+2015,Krista,Jeremy Maclin,WR,13,14,Jeremy Maclin,Jeremy MaclinWR,9283,14.0,22,13,9,17.0,26.0,Krista,2015Krista9283
+2015,Bryan,Emmanuel Sanders,WR,24,16,Emmanuel Sanders,Emmanuel SandersWR,24057,16.0,16,14,2,15.0,17.0,Bryan,2015Bryan24057
+2015,Luke,Sammy Watkins,WR,7,17,Sammy Watkins,Sammy WatkinsWR,27532,17.0,28,15,13,14.0,27.0,Luke,2015Luke27532
+2015,Mark,Jordan Matthews,WR,32,18,Jordan Matthews,Jordan MatthewsWR,27570,18.0,12,16,-4,13.0,9.0,Mark,2015Mark27570
+2015,Kevin,TY Hilton,WR,34,20,T.Y. Hilton,T.Y. HiltonWR,25802,20.0,10,17,-7,11.0,4.0,Kevin,2015Kevin25802
+2015,Kevin,Mike Evans,WR,31,21,Mike Evans,Mike EvansWR,27535,21.0,13,18,-5,10.0,5.0,Kevin,2015Kevin27535
+2015,Luke,Amari Cooper,WR,19,22,Amari Cooper,Amari CooperWR,28392,22.0,17,19,-2,9.0,7.0,Luke,2015Luke28392
+2015,Duncan,John Brown,WR,4,23,John Brown,John BrownWR,27619,23.0,32,20,12,8.0,20.0,Duncan,2015Duncan27619
+2015,Patrick,Calvin Johnson,WR,53,24,Calvin Johnson,Calvin JohnsonWR,8256,24.0,2,21,-19,7.0,-12.0,Patrick,2015Patrick8256
+2015,Scott Gunter,Randall Cobb,WR,46,25,Randall Cobb,Randall CobbWR,24851,25.0,6,22,-16,6.0,-10.0,Scott Gunter,2015Scott Gunter24851
+2015,Bryan,Golden Tate,WR,13,27,Golden Tate,Golden TateWR,24035,27.0,22,23,-1,4.0,3.0,Bryan,2015Bryan24035
+2015,Duncan,Martavis Bryant,WR,4,34,Martavis Bryant,Martavis BryantWR,27646,34.0,32,24,8,0.0,8.0,Duncan,2015Duncan27646
+2015,Mark,Julian Edelman,WR,10,36,Julian Edelman,Julian EdelmanWR,9496,36.0,25,25,0,0.0,0.0,Mark,2015Mark9496
+2015,David Casstevens,Alshon Jeffrey,WR,40,40,Alshon Jeffery,Alshon JefferyWR,25755,40.0,8,26,-18,0.0,-18.0,David Casstevens,2015David Casstevens25755
+2015,Krista,Andre Johnson,WR,15,41,Andre Johnson,Andre JohnsonWR,6339,41.0,20,27,-7,0.0,-7.0,Krista,2015Krista6339
+2015,Bryan,Keenan Allen,WR,18,42,Keenan Allen,Keenan AllenWR,26699,42.0,18,28,-10,0.0,-10.0,Bryan,2015Bryan26699
+2015,Bryan,Torrey Smith,WR,1,48,Torrey Smith,Torrey SmithWR,24845,48.0,38,29,9,0.0,9.0,Bryan,2015Bryan24845
+2015,Mark,Steve Smith Sr.,WR,3,51,Steve Smith Sr.,Steve Smith Sr.WR,5521,51.0,35,30,5,0.0,5.0,Mark,2015Mark5521
+2015,Benjamin,VIncent Jackson,WR,8,56,Vincent Jackson,Vincent JacksonWR,7237,56.0,27,31,-4,0.0,-4.0,Benjamin,2015Benjamin7237
+2015,Benjamin,DeSean Jackson,WR,11,57,DeSean Jackson,DeSean JacksonWR,8826,57.0,24,32,-8,0.0,-8.0,Benjamin,2015Benjamin8826
+2015,Patrick,Devin Funchess,WR,1,58,Devin Funchess,Devin FunchessWR,28429,58.0,38,33,5,0.0,5.0,Patrick,2015Patrick28429
+2015,David Casstevens,Davante Adams,WR,33,63,Davante Adams,Davante AdamsWR,27581,63.0,11,34,-23,0.0,-23.0,David Casstevens,2015David Casstevens27581
+2015,Kevin,Mike Wallace,WR,4,65,Mike Wallace,Mike WallaceWR,9348,65.0,32,35,-3,0.0,-3.0,Kevin,2015Kevin9348
+2015,Kevin,Roddy White,WR,2,66,Roddy White,Roddy WhiteWR,7203,66.0,36,36,0,0.0,0.0,Kevin,2015Kevin7203
+2015,Patrick,Kendall Wright,WR,1,67,Kendall Wright,Kendall WrightWR,25730,67.0,38,37,1,0.0,1.0,Patrick,2015Patrick25730
+2015,Kevin,Kenny Stills,WR,1,70,Kenny Stills,Kenny StillsWR,26767,70.0,38,38,0,0.0,0.0,Kevin,2015Kevin26767
+2015,Benjamin,Dez Bryant,WR,50,73,Dez Bryant,Dez BryantWR,23999,73.0,3,39,-36,0.0,-36.0,Benjamin,2015Benjamin23999
+2015,Krista,Harry Douglas,WR,1,74,Harry Douglas,Harry DouglasWR,8861,74.0,38,40,-2,0.0,-2.0,Krista,2015Krista8861
+2015,Bryan,Nelson Agholor,WR,7,88,Nelson Agholor,Nelson AgholorWR,28408,88.0,28,41,-13,0.0,-13.0,Bryan,2015Bryan28408
+2015,David Casstevens,Victor Cruz,WR,1,99,Victor Cruz,Victor CruzWR,24553,99.0,38,42,-4,0.0,-4.0,David Casstevens,2015David Casstevens24553
+2015,Luke,Charles Johnson,WR,5,101,Charles Johnson,Charles JohnsonWR,26839,101.0,31,43,-12,0.0,-12.0,Luke,2015Luke26839
+2015,Kevin,Kevin White,WR,1,102,Kevin White,Kevin WhiteWR,28395,102.0,38,44,-6,0.0,-6.0,Kevin,2015Kevin28395
+2016,Duncan,DEN,DEF,2,1,Denver,DenverDEF,denver,1.0,2,1,1,10.0,11.0,Duncan,2016Duncandenver
+2016,Mark,SEA,DEF,5,12,Seattle,SeattleDEF,seattle,12.0,1,2,-1,0.0,-1.0,Mark,2016Markseattle
+2016,Luke,HOU,DEF,1,23,Houston,HoustonDEF,houston,23.0,3,3,0,0.0,0.0,Luke,2016Lukehouston
+2016,Scott Gunter,Aaron Rodgers,QB,43,1,Aaron Rodgers,Aaron RodgersQB,7200,1.0,1,1,0,20.0,20.0,Scott Gunter,2016Scott Gunter7200
+2016,Patrick,Matt Ryan,QB,5,2,Matt Ryan,Matt RyanQB,8780,2.0,19,2,17,19.0,36.0,Patrick,2016Patrick8780
+2016,Bryan,Drew Brees,QB,31,3,Drew Brees,Drew BreesQB,5479,3.0,5,3,2,18.0,20.0,Bryan,2016Bryan5479
+2016,David Casstevens,Andrew Luck,QB,38,4,Andrew Luck,Andrew LuckQB,25711,4.0,3,4,-1,17.0,16.0,David Casstevens,2016David Casstevens25711
+2016,Mark,Kirk Cousins,QB,12,5,Kirk Cousins,Kirk CousinsQB,25812,5.0,12,5,7,16.0,23.0,Mark,2016Mark25812
+2016,Krista,Dak Prescott,QB,4,6,Dak Prescott,Dak PrescottQB,29369,6.0,21,6,15,15.0,30.0,Krista,2016Krista29369
+2016,Luke,Tyrod Taylor,QB,15,7,Tyrod Taylor,Tyrod TaylorQB,24967,7.0,9,7,2,14.0,16.0,Luke,2016Luke24967
+2016,Benjamin,Matthew Stafford,QB,13,8,Matthew Stafford,Matthew StaffordQB,9265,8.0,11,8,3,13.0,16.0,Benjamin,2016Benjamin9265
+2016,Duncan,Blake Bortles,QB,11,9,Blake Bortles,Blake BortlesQB,27531,9.0,15,9,6,12.0,18.0,Duncan,2016Duncan27531
+2016,Bryan,Russell Wilson,QB,41,10,Russell Wilson,Russell WilsonQB,25785,10.0,2,10,-8,11.0,3.0,Bryan,2016Bryan25785
+2016,Luke,Derek Carr,QB,11,11,Derek Carr,Derek CarrQB,27564,11.0,15,11,4,10.0,14.0,Luke,2016Luke27564
+2016,Duncan,Marcus Mariota,QB,12,12,Marcus Mariota,Marcus MariotaQB,28390,12.0,12,12,0,9.0,9.0,Duncan,2016Duncan28390
+2016,Benjamin,Andy Dalton,QB,4,13,Andy Dalton,Andy DaltonQB,24822,13.0,21,13,8,8.0,16.0,Benjamin,2016Benjamin24822
+2016,Patrick,Cam Newton,QB,38,14,Cam Newton,Cam NewtonQB,24788,14.0,3,14,-11,7.0,-4.0,Patrick,2016Patrick24788
+2016,David Casstevens,Jameis Winston,QB,14,15,Jameis Winston,Jameis WinstonQB,28389,15.0,10,15,-5,6.0,1.0,David Casstevens,2016David Casstevens28389
+2016,Kevin,Philip Rivers,QB,11,16,Philip Rivers,Philip RiversQB,6763,16.0,15,16,-1,5.0,4.0,Kevin,2016Kevin6763
+2016,Mark,Tom Brady,QB,20,17,Tom Brady,Tom BradyQB,5228,17.0,6,17,-11,4.0,-7.0,Mark,2016Mark5228
+2016,Scott Gunter,Ben Roethlisberger,QB,19,18,Ben Roethlisberger,Ben RoethlisbergerQB,6770,18.0,7,18,-11,3.0,-8.0,Scott Gunter,2016Scott Gunter6770
+2016,Krista,Carson Palmer,QB,16,19,Carson Palmer,Carson PalmerQB,6337,19.0,8,19,-11,2.0,-9.0,Krista,2016Krista6337
+2016,Mark,Joe Flacco,QB,2,20,Joe Flacco,Joe FlaccoQB,8795,20.0,24,20,4,1.0,5.0,Mark,2016Mark8795
+2016,Bryan,Alex Smith,QB,1,21,Alex Smith,Alex SmithQB,7177,21.0,26,21,5,0.0,5.0,Bryan,2016Bryan7177
+2016,Kevin,Eli Manning,QB,12,22,Eli Manning,Eli ManningQB,6760,22.0,12,22,-10,0.0,-10.0,Kevin,2016Kevin6760
+2016,Benjamin,Sam Bradford,QB,1,23,Sam Bradford,Sam BradfordQB,23976,23.0,26,23,3,0.0,3.0,Benjamin,2016Benjamin23976
+2016,David Casstevens,Ryan Tannehill,QB,5,26,Ryan Tannehill,Ryan TannehillQB,25718,26.0,19,24,-5,0.0,-5.0,David Casstevens,2016David Casstevens25718
+2016,Duncan,Brock Osweiler,QB,1,28,Brock Osweiler,Brock OsweilerQB,25767,28.0,26,25,1,0.0,1.0,Duncan,2016Duncan25767
+2016,Patrick,Ryan Fitzpatrick,QB,2,29,Ryan Fitzpatrick,Ryan FitzpatrickQB,7426,29.0,24,26,-2,0.0,-2.0,Patrick,2016Patrick7426
+2016,Luke,RG3,QB,6,35,Robert Griffin III,Robert Griffin IIIQB,25712,35.0,18,27,-9,0.0,-9.0,Luke,2016Luke25712
+2016,Kevin,Jay Cutler,QB,4,39,Jay Cutler,Jay CutlerQB,7760,39.0,21,28,-7,0.0,-7.0,Kevin,2016Kevin7760
+2016,Krista,Teddy Bridgewater,QB,1,50,Teddy Bridgewater,Teddy BridgewaterQB,27560,50.0,26,29,-3,0.0,-3.0,Krista,2016Krista27560
+2016,Krista,David Johnson,RB,43,1,David Johnson,David JohnsonRB,28474,1.0,4,1,3,20.0,23.0,Krista,2016Krista28474
+2016,Scott Gunter,Ezekiel Elliott,RB,43,2,Ezekiel Elliott,Ezekiel ElliottRB,29238,2.0,4,2,2,19.0,21.0,Scott Gunter,2016Scott Gunter29238
+2016,Duncan,Le'Veon Bell,RB,46,3,Le'Veon Bell,Le'Veon BellRB,26671,3.0,1,3,-2,18.0,16.0,Duncan,2016Duncan26671
+2016,Luke,LeSean McCoy,RB,23,4,LeSean McCoy,LeSean McCoyRB,9317,4.0,12,4,8,17.0,25.0,Luke,2016Luke9317
+2016,Benjamin,DeMarco Murray,RB,8,5,DeMarco Murray,DeMarco MurrayRB,24858,5.0,18,5,13,16.0,29.0,Benjamin,2016Benjamin24858
+2016,Scott Gunter,Devonta Freeman,RB,40,6,Devonta Freeman,Devonta FreemanRB,27631,6.0,7,6,1,15.0,16.0,Scott Gunter,2016Scott Gunter27631
+2016,David Casstevens,Melvin Gordon,RB,6,7,Melvin Gordon,Melvin GordonRB,28403,7.0,20,7,13,14.0,27.0,David Casstevens,2016David Casstevens28403
+2016,Scott Gunter,LeGarrette Blount,RB,1,8,LeGarrette Blount,LeGarrette BlountRB,24318,8.0,35,8,27,13.0,40.0,Scott Gunter,2016Scott Gunter24318
+2016,Kevin,Mark Ingram,RB,34,10,Mark Ingram II,Mark Ingram IIRB,24815,10.0,9,9,0,11.0,11.0,Kevin,2016Kevin24815
+2016,Bryan,Frank Gore,RB,4,12,Frank Gore,Frank GoreRB,7241,12.0,25,10,15,9.0,24.0,Bryan,2016Bryan7241
+2016,Patrick,Latavius Murray,RB,13,13,Latavius Murray,Latavius MurrayRB,26804,13.0,16,11,5,8.0,13.0,Patrick,2016Patrick26804
+2016,Mark,Carlos Hyde,RB,18,16,Carlos Hyde,Carlos HydeRB,27585,16.0,14,12,2,5.0,7.0,Mark,2016Mark27585
+2016,Luke,Lamar Miller,RB,45,17,Lamar Miller,Lamar MillerRB,25807,17.0,3,13,-10,4.0,-6.0,Luke,2016Luke25807
+2016,Bryan,Todd Gurley,RB,42,18,Todd Gurley,Todd GurleyRB,28398,18.0,6,14,-8,3.0,-5.0,Bryan,2016Bryan28398
+2016,Krista,Matt Forte,RB,12,21,Matt Forte,Matt ForteRB,8821,21.0,17,15,2,0.0,2.0,Krista,2016Krista8821
+2016,David Casstevens,Jeremy Hill,RB,5,22,Jeremy Hill,Jeremy HillRB,27583,22.0,22,16,6,0.0,6.0,David Casstevens,2016David Casstevens27583
+2016,Patrick,Jonathan Stewart,RB,7,24,Jonathan Stewart,Jonathan StewartRB,8790,24.0,19,17,2,0.0,2.0,Patrick,2016Patrick8790
+2016,Bryan,Ryan Matthews,RB,3,26,Ryan Mathews,Ryan MathewsRB,23987,26.0,29,18,11,0.0,11.0,Bryan,2016Bryan23987
+2016,Luke,Christine Michael,RB,3,32,Christine Michael,Christine MichaelRB,26685,32.0,29,19,10,0.0,10.0,Luke,2016Luke26685
+2016,Mark,Rashad Jennings,RB,5,33,Rashad Jennings,Rashad JenningsRB,9514,33.0,22,20,2,0.0,2.0,Mark,2016Mark9514
+2016,Duncan,Duke Johnson,RB,3,35,Duke Johnson,Duke JohnsonRB,28465,35.0,29,21,8,0.0,8.0,Duncan,2016Duncan28465
+2016,Kevin,TJ Yeldon,RB,3,40,T.J. Yeldon,T.J. YeldonRB,28424,40.0,29,22,7,0.0,7.0,Kevin,2016Kevin28424
+2016,David Casstevens,Giovani Bernard,RB,5,41,Giovani Bernard,Giovani BernardRB,26660,41.0,22,23,-1,0.0,-1.0,David Casstevens,2016David Casstevens26660
+2016,David Casstevens,Derrick Henry,RB,3,43,Derrick Henry,Derrick HenryRB,29279,43.0,29,24,5,0.0,5.0,David Casstevens,2016David Casstevens29279
+2016,Bryan,CJ Anderson,RB,19,44,C.J. Anderson,C.J. AndersonRB,26878,44.0,13,25,-12,0.0,-12.0,Bryan,2016Bryan26878
+2016,Duncan,Deangelo Williams,RB,4,47,DeAngelo Williams,DeAngelo WilliamsRB,7776,47.0,25,26,-1,0.0,-1.0,Duncan,2016Duncan7776
+2016,Benjamin,Doug Martin,RB,30,52,Doug Martin,Doug MartinRB,25741,52.0,10,27,-17,0.0,-17.0,Benjamin,2016Benjamin25741
+2016,Benjamin,Matt Jones,RB,4,57,Matt Jones,Matt JonesRB,28483,57.0,25,28,-3,0.0,-3.0,Benjamin,2016Benjamin28483
+2016,Mark,Thomas Rawls,RB,17,59,Thomas Rawls,Thomas RawlsRB,28714,59.0,15,29,-14,0.0,-14.0,Mark,2016Mark28714
+2016,David Casstevens,Jeremy Langford,RB,6,61,Jeremy Langford,Jeremy LangfordRB,28494,61.0,20,30,-10,0.0,-10.0,David Casstevens,2016David Casstevens28494
+2016,Duncan,Charles Sims,RB,1,64,Charles Sims,Charles SimsRB,27597,64.0,35,31,4,0.0,4.0,Duncan,2016Duncan27597
+2016,Benjamin,Dion Lewis,RB,1,71,Dion Lewis,Dion LewisRB,24936,71.0,35,32,3,0.0,3.0,Benjamin,2016Benjamin24936
+2016,Patrick,Eddie Lacy,RB,29,75,Eddie Lacy,Eddie LacyRB,26684,75.0,11,33,-22,0.0,-22.0,Patrick,2016Patrick26684
+2016,Luke,Arian Foster,RB,4,97,Arian Foster,Arian FosterRB,9527,97.0,25,34,-9,0.0,-9.0,Luke,2016Luke9527
+2016,Krista,Danny Woodhead,RB,3,98,Danny Woodhead,Danny WoodheadRB,9560,98.0,29,35,-6,0.0,-6.0,Krista,2016Krista9560
+2016,Benjamin,Jamaal Charles,RB,39,114,Jamaal Charles,Jamaal CharlesRB,8850,114.0,8,36,-28,0.0,-28.0,Benjamin,2016Benjamin8850
+2016,Kevin,Adrian Peterson,RB,46,125,Adrian Peterson,Adrian PetersonRB,8261,125.0,1,37,-36,0.0,-36.0,Kevin,2016Kevin8261
+2016,Patrick,Travis Kelce,TE,7,1,Travis Kelce,Travis KelceTE,26686,1.0,5,1,4,10.0,14.0,Patrick,2016Patrick26686
+2016,Krista,Greg Olsen,TE,13,2,Greg Olsen,Greg OlsenTE,8285,2.0,3,2,1,9.0,10.0,Krista,2016Krista8285
+2016,Duncan,Delanie Walker,TE,3,5,Delanie Walker,Delanie WalkerTE,7924,5.0,7,3,4,6.0,10.0,Duncan,2016Duncan7924
+2016,Kevin,Jordan Reed,TE,18,9,Jordan Reed,Jordan ReedTE,26708,9.0,2,4,-2,2.0,0.0,Kevin,2016Kevin26708
+2016,Mark,Coby Fleener,TE,10,15,Coby Fleener,Coby FleenerTE,25744,15.0,4,5,-1,0.0,-1.0,Mark,2016Mark25744
+2016,Bryan,Gary Barnidge,TE,5,19,Gary Barnidge,Gary BarnidgeTE,8907,19.0,6,6,0,0.0,0.0,Bryan,2016Bryan8907
+2016,Scott Gunter,Rob Gronkowski,TE,38,23,Rob Gronkowski,Rob GronkowskiTE,24017,23.0,1,7,-6,0.0,-6.0,Scott Gunter,2016Scott Gunter24017
+2016,Luke,Tyler Eifert,TE,2,25,Tyler Eifert,Tyler EifertTE,26644,25.0,8,8,0,0.0,0.0,Luke,2016Luke26644
+2016,Benjamin,Julius Thomas,TE,2,33,Julius Thomas,Julius ThomasTE,24916,33.0,8,9,-1,0.0,-1.0,Benjamin,2016Benjamin24916
+2016,Kevin,Mike Evans,WR,37,1,Mike Evans,Mike EvansWR,27535,1.0,8,1,7,30.0,37.0,Kevin,2016Kevin27535
+2016,Mark,Jordy Nelson,WR,35,2,Jordy Nelson,Jordy NelsonWR,8813,2.0,9,2,7,29.0,36.0,Mark,2016Mark8813
+2016,Krista,Antonio Brown,WR,54,3,Antonio Brown,Antonio BrownWR,24171,3.0,1,3,-2,28.0,26.0,Krista,2016Krista24171
+2016,Duncan,OBJ,WR,51,4,Odell Beckham Jr.,Odell Beckham Jr.WR,27540,4.0,3,4,-1,27.0,26.0,Duncan,2016Duncan27540
+2016,Mark,TY Hilton,WR,25,5,T.Y. Hilton,T.Y. HiltonWR,25802,5.0,16,5,11,26.0,37.0,Mark,2016Mark25802
+2016,Duncan,Julio Jones,WR,54,6,Julio Jones,Julio JonesWR,24793,6.0,1,6,-5,25.0,20.0,Duncan,2016Duncan24793
+2016,David Casstevens,Michael Thomas,WR,1,7,Michael Thomas,Michael ThomasWR,29281,7.0,44,7,37,24.0,61.0,David Casstevens,2016David Casstevens29281
+2016,Kevin,Brandin Cooks,WR,29,8,Brandin Cooks,Brandin CooksWR,27548,8.0,14,8,6,23.0,29.0,Kevin,2016Kevin27548
+2016,Bryan,Doug Baldwin,WR,10,9,Doug Baldwin,Doug BaldwinWR,25105,9.0,27,9,18,22.0,40.0,Bryan,2016Bryan25105
+2016,Patrick,Michael Crabtree,WR,1,11,Michael Crabtree,Michael CrabtreeWR,9274,11.0,44,10,34,20.0,54.0,Patrick,2016Patrick9274
+2016,Mark,Amari Cooper,WR,30,12,Amari Cooper,Amari CooperWR,28392,12.0,13,11,2,19.0,21.0,Mark,2016Mark28392
+2016,Krista,Larry Fitzgerald,WR,10,13,Larry Fitzgerald,Larry FitzgeraldWR,6762,13.0,27,12,15,18.0,33.0,Krista,2016Krista6762
+2016,Benjamin,Jarvis Landry,WR,17,14,Jarvis Landry,Jarvis LandryWR,27591,14.0,21,13,8,17.0,25.0,Benjamin,2016Benjamin27591
+2016,Mark,Julian Edelman,WR,18,16,Julian Edelman,Julian EdelmanWR,9496,16.0,19,14,5,15.0,20.0,Mark,2016Mark9496
+2016,Patrick,Demaryius Thomas,WR,26,17,Demaryius Thomas,Demaryius ThomasWR,23997,17.0,15,15,0,14.0,14.0,Patrick,2016Patrick23997
+2016,Krista,Golden Tate,WR,15,19,Golden Tate,Golden TateWR,24035,19.0,23,16,7,12.0,19.0,Krista,2016Krista24035
+2016,Bryan,Emmanuel Sanders,WR,5,22,Emmanuel Sanders,Emmanuel SandersWR,24057,22.0,31,17,14,9.0,23.0,Bryan,2016Bryan24057
+2016,Luke,Kelvin Benjamin,WR,13,24,Kelvin Benjamin,Kelvin BenjaminWR,27556,24.0,25,18,7,7.0,14.0,Luke,2016Luke27556
+2016,David Casstevens,Allen Robinson,WR,44,29,Allen Robinson II,Allen Robinson IIWR,27589,29.0,5,19,-14,2.0,-12.0,David Casstevens,2016David Casstevens27589
+2016,Benjamin,DeAndre Hopkins,WR,43,30,DeAndre Hopkins,DeAndre HopkinsWR,26650,30.0,6,20,-14,1.0,-13.0,Benjamin,2016Benjamin26650
+2016,Duncan,Willie Snead,WR,3,31,Willie Snead,Willie SneadWR,28026,31.0,36,21,15,0.0,15.0,Duncan,2016Duncan28026
+2016,Bryan,DeSean Jackson,WR,4,32,DeSean Jackson,DeSean JacksonWR,8826,32.0,33,22,11,0.0,11.0,Bryan,2016Bryan8826
+2016,Luke,AJ Green,WR,50,33,A.J. Green,A.J. GreenWR,24791,33.0,4,23,-19,0.0,-19.0,Luke,2016Luke24791
+2016,David Casstevens,Dez Bryant,WR,43,35,Dez Bryant,Dez BryantWR,23999,35.0,6,24,-18,0.0,-18.0,David Casstevens,2016David Casstevens23999
+2016,Kevin,Stefon Diggs,WR,3,36,Stefon Diggs,Stefon DiggsWR,28534,36.0,36,25,11,0.0,11.0,Kevin,2016Kevin28534
+2016,Patrick,Sterling Shepard,WR,3,38,Sterling Shepard,Sterling ShepardWR,29274,38.0,36,26,10,0.0,10.0,Patrick,2016Patrick29274
+2016,David Casstevens,Marvin Jones,WR,5,41,Marvin Jones,Marvin JonesWR,25876,41.0,31,27,4,0.0,4.0,David Casstevens,2016David Casstevens25876
+2016,Bryan,Jordan Matthews,WR,6,44,Jordan Matthews,Jordan MatthewsWR,27570,44.0,30,28,2,0.0,2.0,Bryan,2016Bryan27570
+2016,Patrick,Brandon Marshall,WR,35,48,Brandon Marshall,Brandon MarshallWR,7868,48.0,9,29,-20,0.0,-20.0,Patrick,2016Patrick7868
+2016,Kevin,DeVante Parker,WR,3,49,DeVante Parker,DeVante ParkerWR,28402,49.0,36,30,6,0.0,6.0,Kevin,2016Kevin28402
+2016,Patrick,Alshon Jeffrey,WR,34,50,Alshon Jeffery,Alshon JefferyWR,25755,50.0,11,31,-20,0.0,-20.0,Patrick,2016Patrick25755
+2016,Krista,Mohamed Sanu,WR,4,53,Mohamed Sanu,Mohamed SanuWR,25793,53.0,33,32,1,0.0,1.0,Krista,2016Krista25793
+2016,Scott Gunter,Tavon Austin,WR,1,54,Tavon Austin,Tavon AustinWR,26631,54.0,44,33,11,0.0,11.0,Scott Gunter,2016Scott Gunter26631
+2016,Krista,Randall Cobb,WR,25,55,Randall Cobb,Randall CobbWR,24851,55.0,16,34,-18,0.0,-18.0,Krista,2016Krista24851
+2016,Luke,Tyler Lockett,WR,4,60,Tyler Lockett,Tyler LockettWR,28457,60.0,33,35,-2,0.0,-2.0,Luke,2016Luke28457
+2016,Duncan,Michael Floyd,WR,9,66,Michael Floyd,Michael FloydWR,25723,66.0,29,36,-7,0.0,-7.0,Duncan,2016Duncan25723
+2016,Bryan,Jeremy Maclin,WR,18,71,Jeremy Maclin,Jeremy MaclinWR,9283,71.0,19,37,-18,0.0,-18.0,Bryan,2016Bryan9283
+2016,Benjamin,John Brown,WR,3,73,John Brown,John BrownWR,27619,73.0,36,38,-2,0.0,-2.0,Benjamin,2016Benjamin27619
+2016,Luke,Donte Moncrief,WR,17,77,Donte Moncrief,Donte MoncriefWR,27618,77.0,21,39,-18,0.0,-18.0,Luke,2016Luke27618
+2016,Luke,Allen Hurns,WR,3,78,Allen Hurns,Allen HurnsWR,27874,78.0,36,40,-4,0.0,-4.0,Luke,2016Luke27874
+2016,Benjamin,Devin Funchess,WR,1,85,Devin Funchess,Devin FunchessWR,28429,85.0,44,41,3,0.0,3.0,Benjamin,2016Benjamin28429
+2016,David Casstevens,Sammy Watkins,WR,25,87,Sammy Watkins,Sammy WatkinsWR,27532,87.0,16,42,-26,0.0,-26.0,David Casstevens,2016David Casstevens27532
+2016,Scott Gunter,Steve Smith,WR,1,95,Steve Smith Sr.,Steve Smith Sr.WR,5521,95.0,44,43,1,0.0,1.0,Scott Gunter,2016Scott Gunter5521
+2016,Mark,Torrey Smith,WR,2,99,Torrey Smith,Torrey SmithWR,24845,99.0,43,44,-1,0.0,-1.0,Mark,2016Mark24845
+2016,Bryan,Eric Decker,WR,11,115,Eric Decker,Eric DeckerWR,24062,115.0,26,45,-19,0.0,-19.0,Bryan,2016Bryan24062
+2016,Luke,Kevin White,WR,3,126,Kevin White,Kevin WhiteWR,28395,126.0,36,46,-10,0.0,-10.0,Luke,2016Luke28395
+2016,Mark,Markus Wheaton,WR,1,145,Markus Wheaton,Markus WheatonWR,26702,145.0,44,47,-3,0.0,-3.0,Mark,2016Mark26702
+2016,Benjamin,Keenan Allen,WR,34,164,Keenan Allen,Keenan AllenWR,26699,164.0,11,48,-37,0.0,-37.0,Benjamin,2016Benjamin26699
+2016,Scott Gunter,Josh Gordon,WR,14,200,Josh Gordon,Josh GordonWR,26561,200.0,24,49,-25,0.0,-25.0,Scott Gunter,2016Scott Gunter26561
+2017,Bryan,Seattle D,DEF,1,9,Seattle,SeattleDEF,seattle,9.0,3,1,2,2.0,4.0,Bryan,2017Bryanseattle
+2017,Patrick,Vikings D,DEF,1,10,Minnesota,MinnesotaDEF,minnesota,10.0,3,2,1,1.0,2.0,Patrick,2017Patrickminnesota
+2017,Mark,Denver D,DEF,4,11,Denver,DenverDEF,denver,11.0,1,3,-2,0.0,-2.0,Mark,2017Markdenver
+2017,Benjamin,Panthers D,DEF,2,13,Carolina,CarolinaDEF,carolina,13.0,2,4,-2,0.0,-2.0,Benjamin,2017Benjamincarolina
+2017,David Casstevens,Kansas City D,DEF,1,17,Kansas City,Kansas CityDEF,kansas-city,17.0,3,5,-2,0.0,-2.0,David Casstevens,2017David Casstevenskansas-city
+2017,Scott Gunter,Atlanta D,DEF,1,24,Atlanta,AtlantaDEF,atlanta,24.0,3,6,-3,0.0,-3.0,Scott Gunter,2017Scott Gunteratlanta
+2017,Luke,Houston D,DEF,1,27,Houston,HoustonDEF,houston,27.0,3,7,-4,0.0,-4.0,Luke,2017Lukehouston
+2017,Patrick,Russell Wilson,QB,23,1,Russell Wilson,Russell WilsonQB,25785,1.0,6,1,5,20.0,25.0,Patrick,2017Patrick25785
+2017,David Casstevens,Cam Newton,QB,27,2,Cam Newton,Cam NewtonQB,24788,2.0,4,2,2,19.0,21.0,David Casstevens,2017David Casstevens24788
+2017,David Casstevens,Alex Smith,QB,1,3,Alex Smith,Alex SmithQB,7177,3.0,21,3,18,18.0,36.0,David Casstevens,2017David Casstevens7177
+2017,Bryan,Tom Brady,QB,40,4,Tom Brady,Tom BradyQB,5228,4.0,2,4,-2,17.0,15.0,Bryan,2017Bryan5228
+2017,Krista,Carson Wentz,QB,7,5,Carson Wentz,Carson WentzQB,29236,5.0,17,5,12,16.0,28.0,Krista,2017Krista29236
+2017,Duncan,Kirk Cousins,QB,16,6,Kirk Cousins,Kirk CousinsQB,25812,6.0,8,6,2,15.0,17.0,Duncan,2017Duncan25812
+2017,Kevin,Matthew Stafford,QB,10,7,Matthew Stafford,Matthew StaffordQB,9265,7.0,14,7,7,14.0,21.0,Kevin,2017Kevin9265
+2017,Mark,Philip Rivers,QB,14,8,Philip Rivers,Philip RiversQB,6763,8.0,9,8,1,13.0,14.0,Mark,2017Mark6763
+2017,Mark,Dak Prescott,QB,12,9,Dak Prescott,Dak PrescottQB,29369,9.0,13,9,4,12.0,16.0,Mark,2017Mark29369
+2017,Bryan,Drew Brees,QB,31,10,Drew Brees,Drew BreesQB,5479,10.0,3,10,-7,11.0,4.0,Bryan,2017Bryan5479
+2017,Mark,Ben Rapelessburger,QB,8,11,Ben Roethlisberger,Ben RoethlisbergerQB,6770,11.0,15,11,4,10.0,14.0,Mark,2017Mark6770
+2017,Luke,Blake Bortles,QB,1,12,Blake Bortles,Blake BortlesQB,27531,12.0,21,12,9,9.0,18.0,Luke,2017Luke27531
+2017,Patrick,Tyrod Taylor,QB,5,15,Tyrod Taylor,Tyrod TaylorQB,24967,15.0,19,13,6,6.0,12.0,Patrick,2017Patrick24967
+2017,Scott Gunter,Matt Ryan,QB,21,16,Matt Ryan,Matt RyanQB,8780,16.0,7,14,-7,5.0,-2.0,Scott Gunter,2017Scott Gunter8780
+2017,Krista,Marcus Mariotta,QB,25,17,Marcus Mariota,Marcus MariotaQB,28390,17.0,5,15,-10,4.0,-6.0,Krista,2017Krista28390
+2017,Patrick,Andy Dalton,QB,8,18,Andy Dalton,Andy DaltonQB,24822,18.0,15,16,-1,3.0,2.0,Patrick,2017Patrick24822
+2017,Kevin,Derek Carr,QB,13,21,Derek Carr,Derek CarrQB,27564,21.0,10,17,-7,0.0,-7.0,Kevin,2017Kevin27564
+2017,Benjamin,Jameis Winston,QB,13,22,Jameis Winston,Jameis WinstonQB,28389,22.0,10,18,-8,0.0,-8.0,Benjamin,2017Benjamin28389
+2017,Duncan,Eli Manning,QB,6,23,Eli Manning,Eli ManningQB,6760,23.0,18,19,-1,0.0,-1.0,Duncan,2017Duncan6760
+2017,Luke,Jay Cutler,QB,1,27,Jay Cutler,Jay CutlerQB,7760,27.0,21,20,1,0.0,1.0,Luke,2017Luke7760
+2017,Duncan,Carson Palmer,QB,5,28,Carson Palmer,Carson PalmerQB,6337,28.0,19,21,-2,0.0,-2.0,Duncan,2017Duncan6337
+2017,Scott Gunter,Aaron Rodgers,QB,49,29,Aaron Rodgers,Aaron RodgersQB,7200,29.0,1,22,-21,0.0,-21.0,Scott Gunter,2017Scott Gunter7200
+2017,Benjamin,Andrew Luck,QB,13,40,Andrew Luck,Andrew LuckQB,25711,40.0,10,23,-13,0.0,-13.0,Benjamin,2017Benjamin25711
+2017,Duncan,Todd Gurley,RB,34,1,Todd Gurley,Todd GurleyRB,28398,1.0,10,1,9,20.0,29.0,Duncan,2017Duncan28398
+2017,Patrick,Le'Veon Bell,RB,66,2,Le'Veon Bell,Le'Veon BellRB,26671,2.0,2,2,0,19.0,19.0,Patrick,2017Patrick26671
+2017,Duncan,Kareem Hunt,RB,8,4,Kareem Hunt,Kareem HuntRB,30199,4.0,21,3,18,17.0,35.0,Duncan,2017Duncan30199
+2017,Benjamin,Melvin Gordon,RB,44,5,Melvin Gordon,Melvin GordonRB,28403,5.0,5,4,1,16.0,17.0,Benjamin,2017Benjamin28403
+2017,Bryan,Mark Ingram,RB,7,6,Mark Ingram II,Mark Ingram IIRB,24815,6.0,23,5,18,15.0,33.0,Bryan,2017Bryan24815
+2017,Kevin,LeSean McCoy,RB,50,7,LeSean McCoy,LeSean McCoyRB,9317,7.0,3,6,-3,14.0,11.0,Kevin,2017Kevin9317
+2017,Patrick,Leonard Fournette,RB,18,8,Leonard Fournette,Leonard FournetteRB,30117,8.0,12,7,5,13.0,18.0,Patrick,2017Patrick30117
+2017,Mark,Carlos Hyde,RB,19,9,Carlos Hyde,Carlos HydeRB,27585,9.0,11,8,3,12.0,15.0,Mark,2017Mark27585
+2017,Mark,Zeke Elliott,RB,40,10,Ezekiel Elliott,Ezekiel ElliottRB,29238,10.0,8,9,-1,11.0,10.0,Mark,2017Mark29238
+2017,Krista,Jordan Howard,RB,42,11,Jordan Howard,Jordan HowardRB,29384,11.0,7,10,-3,10.0,7.0,Krista,2017Krista29384
+2017,Krista,Christian McCaffrey,RB,18,12,Christian McCaffrey,Christian McCaffreyRB,30121,12.0,12,11,1,9.0,10.0,Krista,2017Krista30121
+2017,Benjamin,Devonta Freeman,RB,46,14,Devonta Freeman,Devonta FreemanRB,27631,14.0,4,12,-8,7.0,-1.0,Benjamin,2017Benjamin27631
+2017,Mark,Lamar Miller,RB,17,15,Lamar Miller,Lamar MillerRB,25807,15.0,15,13,2,6.0,8.0,Mark,2017Mark25807
+2017,David Casstevens,Duke Johnson,RB,1,16,Duke Johnson,Duke JohnsonRB,28465,16.0,35,14,21,5.0,26.0,David Casstevens,2017David Casstevens28465
+2017,David Casstevens,C.J. Anderson,RB,15,17,C.J. Anderson,C.J. AndersonRB,26878,17.0,17,15,2,4.0,6.0,David Casstevens,2017David Casstevens26878
+2017,Bryan,Frank Gore,RB,1,18,Frank Gore,Frank GoreRB,7241,18.0,35,16,19,3.0,22.0,Bryan,2017Bryan7241
+2017,Luke,Marshawn Lynch,RB,15,20,Marshawn Lynch,Marshawn LynchRB,8266,20.0,17,17,0,1.0,1.0,Luke,2017Luke8266
+2017,Scott Gunter,Tevin Coleman,RB,5,22,Tevin Coleman,Tevin ColemanRB,28461,22.0,30,18,12,0.0,12.0,Scott Gunter,2017Scott Gunter28461
+2017,Kevin,DeMarco Murray,RB,44,23,DeMarco Murray,DeMarco MurrayRB,24858,23.0,5,19,-14,0.0,-14.0,Kevin,2017Kevin24858
+2017,Patrick,Bilal Powell,RB,8,26,Bilal Powell,Bilal PowellRB,24913,26.0,21,20,1,0.0,1.0,Patrick,2017Patrick24913
+2017,Bryan,Isaiah Crowell,RB,18,27,Isaiah Crowell,Isaiah CrowellRB,28014,27.0,12,21,-9,0.0,-9.0,Bryan,2017Bryan28014
+2017,Scott Gunter,Derick Henry,RB,7,29,Derrick Henry,Derrick HenryRB,29279,29.0,23,22,1,0.0,1.0,Scott Gunter,2017Scott Gunter29279
+2017,Mark,Joe Mixon,RB,7,33,Joe Mixon,Joe MixonRB,30161,33.0,23,23,0,0.0,0.0,Mark,2017Mark30161
+2017,Luke,Jay Ajayi,RB,36,34,Jay Ajayi,Jay AjayiRB,28537,34.0,9,24,-15,0.0,-15.0,Luke,2017Luke28537
+2017,Luke,Jonathan Stewart,RB,2,38,Jonathan Stewart,Jonathan StewartRB,8790,38.0,31,25,6,0.0,6.0,Luke,2017Luke8790
+2017,Luke,Ameer Abdullah,RB,6,39,Ameer Abdullah,Ameer AbdullahRB,28442,39.0,26,26,0,0.0,0.0,Luke,2017Luke28442
+2017,Mark,Ty Montgomery,RB,12,51,Ty Montgomery,Ty MontgomeryRB,28482,51.0,20,27,-7,0.0,-7.0,Mark,2017Mark28482
+2017,Luke,Adrian Peterson,RB,2,54,Adrian Peterson,Adrian PetersonRB,8261,54.0,31,28,3,0.0,3.0,Luke,2017Luke8261
+2017,Patrick,Doug Martin,RB,6,58,Doug Martin,Doug MartinRB,25741,58.0,26,29,-3,0.0,-3.0,Patrick,2017Patrick25741
+2017,Scott Gunter,Mike Gillislee,RB,6,63,Mike Gillislee,Mike GillisleeRB,26787,63.0,26,30,-4,0.0,-4.0,Scott Gunter,2017Scott Gunter26787
+2017,David Casstevens,Dalvin Cook,RB,16,67,Dalvin Cook,Dalvin CookRB,30154,67.0,16,31,-15,0.0,-15.0,David Casstevens,2017David Casstevens30154
+2017,Benjamin,Jaquizz Rogers,RB,1,77,Jacquizz Rodgers,Jacquizz RodgersRB,24932,77.0,35,32,3,0.0,3.0,Benjamin,2017Benjamin24932
+2017,Scott Gunter,Rob Kelley,RB,2,82,Rob Kelley,Rob KelleyRB,29694,82.0,31,33,-2,0.0,-2.0,Scott Gunter,2017Scott Gunter29694
+2017,David Casstevens,Thomas Rawls,RB,1,89,Thomas Rawls,Thomas RawlsRB,28714,89.0,35,34,1,0.0,1.0,David Casstevens,2017David Casstevens28714
+2017,Benjamin,Eddie Lacy,RB,1,90,Eddie Lacy,Eddie LacyRB,26684,90.0,35,35,0,0.0,0.0,Benjamin,2017Benjamin26684
+2017,David Casstevens,Terrance West,RB,1,91,Terrance West,Terrance WestRB,27622,91.0,35,36,-1,0.0,-1.0,David Casstevens,2017David Casstevens27622
+2017,Bryan,Paul Perkins,RB,2,96,Paul Perkins,Paul PerkinsRB,29383,96.0,31,37,-6,0.0,-6.0,Bryan,2017Bryan29383
+2017,David Casstevens,Jeremy Hill,RB,1,102,Jeremy Hill,Jeremy HillRB,27583,102.0,35,38,-3,0.0,-3.0,David Casstevens,2017David Casstevens27583
+2017,Bryan,James Conner,RB,1,104,James Conner,James ConnerRB,30218,104.0,35,39,-4,0.0,-4.0,Bryan,2017Bryan30218
+2017,Krista,David Johnson,RB,69,112,David Johnson,David JohnsonRB,28474,112.0,1,40,-39,0.0,-39.0,Krista,2017Krista28474
+2017,Scott Gunter,Danny Woodhead,RB,6,115,Danny Woodhead,Danny WoodheadRB,9560,115.0,26,41,-15,0.0,-15.0,Scott Gunter,2017Scott Gunter9560
+2017,Scott Gunter,Spencer Ware,RB,1,124,Spencer Ware,Spencer WareRB,26817,124.0,35,42,-7,0.0,-7.0,Scott Gunter,2017Scott Gunter26817
+2017,Mark,Darren Mcfadden,RB,13,125,Darren McFadden,Darren McFaddenRB,8781,125.0,19,43,-24,0.0,-24.0,Mark,2017Mark8781
+2017,David Casstevens,Rob Gronkowski,TE,34,1,Rob Gronkowski,Rob GronkowskiTE,24017,1.0,1,1,0,10.0,10.0,David Casstevens,2017David Casstevens24017
+2017,Scott Gunter,Travis Kelce,TE,18,2,Travis Kelce,Travis KelceTE,26686,2.0,2,2,0,9.0,9.0,Scott Gunter,2017Scott Gunter26686
+2017,Mark,Zach Ertz,TE,3,3,Zach Ertz,Zach ErtzTE,26658,3.0,9,3,6,8.0,14.0,Mark,2017Mark26658
+2017,Scott Gunter,Delanie Walker,TE,3,5,Delanie Walker,Delanie WalkerTE,7924,5.0,9,4,5,6.0,11.0,Scott Gunter,2017Scott Gunter7924
+2017,Luke,Jimmy Graham,TE,17,6,Jimmy Graham,Jimmy GrahamTE,24070,6.0,3,5,-2,5.0,3.0,Luke,2017Luke24070
+2017,Duncan,Kyle Rudolph,TE,7,8,Kyle Rudolph,Kyle RudolphTE,24830,8.0,6,6,0,3.0,3.0,Duncan,2017Duncan24830
+2017,Kevin,Hunter Henry,TE,7,14,Hunter Henry,Hunter HenryTE,29269,14.0,6,7,-1,0.0,-1.0,Kevin,2017Kevin29269
+2017,Luke,Martellus Bennett,TE,2,34,Martellus Bennett,Martellus BennettTE,8838,34.0,11,8,3,0.0,3.0,Luke,2017Luke8838
+2017,Krista,Jordan Reed,TE,17,37,Jordan Reed,Jordan ReedTE,26708,37.0,3,9,-6,0.0,-6.0,Krista,2017Krista26708
+2017,Patrick,Greg Olsen,TE,13,49,Greg Olsen,Greg OlsenTE,8285,49.0,5,10,-5,0.0,-5.0,Patrick,2017Patrick8285
+2017,Benjamin,Tyler Eifert,TE,5,90,Tyler Eifert,Tyler EifertTE,26644,90.0,8,11,-3,0.0,-3.0,Benjamin,2017Benjamin26644
+2017,Duncan,Antonio Brown,WR,59,1,Antonio Brown,Antonio BrownWR,24171,1.0,1,1,0,30.0,30.0,Duncan,2017Duncan24171
+2017,Scott Gunter,DeAndre Hopkins,WR,23,2,DeAndre Hopkins,DeAndre HopkinsWR,26650,2.0,13,2,11,29.0,40.0,Scott Gunter,2017Scott Gunter26650
+2017,Benjamin,Keenan Allen,WR,19,3,Keenan Allen,Keenan AllenWR,26699,3.0,15,3,12,28.0,40.0,Benjamin,2017Benjamin26699
+2017,Luke,Julio Jones,WR,52,4,Julio Jones,Julio JonesWR,24793,4.0,3,4,-1,27.0,26.0,Luke,2017Luke24793
+2017,Patrick,Tyreek Hill,WR,11,5,Tyreek Hill,Tyreek HillWR,29399,5.0,21,5,16,26.0,42.0,Patrick,2017Patrick29399
+2017,Luke,Michael Thomas,WR,50,6,Michael Thomas,Michael ThomasWR,29281,6.0,4,6,-2,25.0,23.0,Luke,2017Luke29281
+2017,Bryan,Larry Fitz,WR,6,7,Larry Fitzgerald,Larry FitzgeraldWR,6762,7.0,29,7,22,24.0,46.0,Bryan,2017Bryan6762
+2017,Kevin,Jarvis Landry,WR,5,8,Jarvis Landry,Jarvis LandryWR,27591,8.0,32,8,24,23.0,47.0,Kevin,2017Kevin27591
+2017,Krista,Adam Thielen,WR,1,9,Adam Thielen,Adam ThielenWR,27277,9.0,39,9,30,22.0,52.0,Krista,2017Krista27277
+2017,David Casstevens,Marvin Jones,WR,1,10,Marvin Jones,Marvin JonesWR,25876,10.0,39,10,29,21.0,50.0,David Casstevens,2017David Casstevens25876
+2017,Kevin,Brandin Cooks,WR,35,11,Brandin Cooks,Brandin CooksWR,27548,11.0,10,11,-1,20.0,19.0,Kevin,2017Kevin27548
+2017,Bryan,AJ Green,WR,48,12,A.J. Green,A.J. GreenWR,24791,12.0,7,12,-5,19.0,14.0,Bryan,2017Bryan24791
+2017,Benjamin,Doug Baldwin,WR,30,13,Doug Baldwin,Doug BaldwinWR,25105,13.0,12,13,-1,18.0,17.0,Benjamin,2017Benjamin25105
+2017,Benjamin,Davante Adams,WR,10,14,Davante Adams,Davante AdamsWR,27581,14.0,23,14,9,17.0,26.0,Benjamin,2017Benjamin27581
+2017,Duncan,Golden Tate,WR,9,15,Golden Tate,Golden TateWR,24035,15.0,24,15,9,16.0,25.0,Duncan,2017Duncan24035
+2017,David Casstevens,Mike Evans,WR,57,16,Mike Evans,Mike EvansWR,27535,16.0,2,16,-14,15.0,1.0,David Casstevens,2017David Casstevens27535
+2017,Patrick,Demaryius Thomas,WR,21,19,Demaryius Thomas,Demaryius ThomasWR,23997,19.0,14,17,-3,12.0,9.0,Patrick,2017Patrick23997
+2017,Bryan,Stefon Diggs,WR,9,20,Stefon Diggs,Stefon DiggsWR,28534,20.0,24,18,6,11.0,17.0,Bryan,2017Bryan28534
+2017,Mark,Alshon Jeffery,WR,14,21,Alshon Jeffery,Alshon JefferyWR,25755,21.0,17,19,-2,10.0,8.0,Mark,2017Mark25755
+2017,David Casstevens,Dez Bryant,WR,44,24,Dez Bryant,Dez BryantWR,23999,24.0,8,20,-12,7.0,-5.0,David Casstevens,2017David Casstevens23999
+2017,Bryan,TY Hilton,WR,32,25,T.Y. Hilton,T.Y. HiltonWR,25802,25.0,11,21,-10,6.0,-4.0,Bryan,2017Bryan25802
+2017,Krista,Michael Crabtree,WR,14,31,Michael Crabtree,Michael CrabtreeWR,9274,31.0,17,22,-5,0.0,-5.0,Krista,2017Krista9274
+2017,Kevin,Amari Cooper,WR,36,34,Amari Cooper,Amari CooperWR,28392,34.0,9,23,-14,0.0,-14.0,Kevin,2017Kevin28392
+2017,Duncan,Jamison Crowder,WR,6,36,Jamison Crowder,Jamison CrowderWR,28493,36.0,29,24,5,0.0,5.0,Duncan,2017Duncan28493
+2017,Bryan,Randall Cobb,WR,2,39,Randall Cobb,Randall CobbWR,24851,39.0,36,25,11,0.0,11.0,Bryan,2017Bryan24851
+2017,Benjamin,Sammy Watkins,WR,12,40,Sammy Watkins,Sammy WatkinsWR,27532,40.0,20,26,-6,0.0,-6.0,Benjamin,2017Benjamin27532
+2017,Patrick,Tyrell Williams,WR,3,42,Tyrell Williams,Tyrell WilliamsWR,28691,42.0,34,27,7,0.0,7.0,Patrick,2017Patrick28691
+2017,Luke,Kelvin Benjamin,WR,8,47,Kelvin Benjamin,Kelvin BenjaminWR,27556,47.0,26,28,-2,0.0,-2.0,Luke,2017Luke27556
+2017,Mark,Martavis Bryant,WR,14,49,Martavis Bryant,Martavis BryantWR,27646,49.0,17,29,-12,0.0,-12.0,Mark,2017Mark27646
+2017,Scott Gunter,Jordy Nelson,WR,49,50,Jordy Nelson,Jordy NelsonWR,8813,50.0,6,30,-24,0.0,-24.0,Scott Gunter,2017Scott Gunter8813
+2017,Mark,Davante Parker,WR,8,51,DeVante Parker,DeVante ParkerWR,28402,51.0,26,31,-5,0.0,-5.0,Mark,2017Mark28402
+2017,Patrick,Emmanuel Sanders,WR,5,60,Emmanuel Sanders,Emmanuel SandersWR,24057,60.0,32,32,0,0.0,0.0,Patrick,2017Patrick24057
+2017,Scott Gunter,Chris Hogan,WR,7,61,Chris Hogan,Chris HoganWR,25178,61.0,28,33,-5,0.0,-5.0,Scott Gunter,2017Scott Gunter25178
+2017,Luke,Eric Decker,WR,1,62,Eric Decker,Eric DeckerWR,24062,62.0,39,34,5,0.0,5.0,Luke,2017Luke24062
+2017,Scott Gunter,Jeremy Maclin,WR,2,66,Jeremy Maclin,Jeremy MaclinWR,9283,66.0,36,35,1,0.0,1.0,Scott Gunter,2017Scott Gunter9283
+2017,Patrick,Pierre Garcon,WR,1,73,Pierre Garcon,Pierre GarconWR,8982,73.0,39,36,3,0.0,3.0,Patrick,2017Patrick8982
+2017,Krista,Cole Beasley,WR,1,75,Cole Beasley,Cole BeasleyWR,26060,75.0,39,37,2,0.0,2.0,Krista,2017Krista26060
+2017,Luke,Donte Moncrief,WR,1,80,Donte Moncrief,Donte MoncriefWR,27618,80.0,39,38,1,0.0,1.0,Luke,2017Luke27618
+2017,Duncan,OBJ,WR,50,84,Odell Beckham Jr.,Odell Beckham Jr.WR,27540,84.0,4,39,-35,0.0,-35.0,Duncan,2017Duncan27540
+2017,Benjamin,Zay Jones,WR,1,88,Zay Jones,Zay JonesWR,30150,88.0,39,40,-1,0.0,-1.0,Benjamin,2017Benjamin30150
+2017,Benjamin,Corey Davis,WR,3,92,Corey Davis,Corey DavisWR,30118,92.0,34,41,-7,0.0,-7.0,Benjamin,2017Benjamin30118
+2017,Mark,Terrelle Pryor,WR,15,107,Terrelle Pryor,Terrelle PryorWR,25681,107.0,16,42,-26,0.0,-26.0,Mark,2017Mark25681
+2017,Krista,Brandon Marshall,WR,6,127,Brandon Marshall,Brandon MarshallWR,7868,127.0,29,43,-14,0.0,-14.0,Krista,2017Krista7868
+2017,Bryan,Willie Snead,WR,2,154,Willie Snead,Willie SneadWR,28026,154.0,36,44,-8,0.0,-8.0,Bryan,2017Bryan28026
+2017,Patrick,Allen Robinson,WR,11,164,Allen Robinson II,Allen Robinson IIWR,27589,164.0,21,45,-24,0.0,-24.0,Patrick,2017Patrick27589
+2018,Patrick,Chicago,DEF,2,1,Chicago,ChicagoDEF,chicago,1.0,8,1,7,20.0,27.0,Patrick,2018Patrickchicago
+2018,Benjamin,Houston DST,DEF,3,2,Houston,HoustonDEF,houston,2.0,7,2,5,19.0,24.0,Benjamin,2018Benjaminhouston
+2018,Mark,Minnesota DST,DEF,8,3,Minnesota,MinnesotaDEF,minnesota,3.0,1,3,-2,18.0,16.0,Mark,2018Markminnesota
+2018,Scott Gunter,Baltimore,DEF,2,4,Baltimore,BaltimoreDEF,baltimore,4.0,8,4,4,17.0,21.0,Scott Gunter,2018Scott Gunterbaltimore
+2018,Luke,Los Angeles (LAR),DEF,8,5,Los Angeles (LAR),Los Angeles (LAR)DEF,la-rams,5.0,1,5,-4,16.0,12.0,Luke,2018Lukela-rams
+2018,Duncan,New England (NE),DEF,1,6,New England,New EnglandDEF,new-england,6.0,11,6,5,15.0,20.0,Duncan,2018Duncannew-england
+2018,David Casstevens,Denver,DEF,4,7,Denver,DenverDEF,denver,7.0,6,7,-1,14.0,13.0,David Casstevens,2018David Casstevensdenver
+2018,Mark,Jacksonville DST,DEF,7,8,Jacksonville,JacksonvilleDEF,jacksonville,8.0,3,8,-5,13.0,8.0,Mark,2018Markjacksonville
+2018,Duncan,New Orleans (NO),DEF,2,14,New Orleans,New OrleansDEF,new-orleans,14.0,8,9,-1,7.0,6.0,Duncan,2018Duncannew-orleans
+2018,David Casstevens,Los Angeles (LAC),DEF,5,15,Los Angeles (LAC),Los Angeles (LAC)DEF,la-chargers,15.0,4,10,-6,6.0,0.0,David Casstevens,2018David Casstevensla-chargers
+2018,Patrick,Seattle,DEF,1,18,Seattle,SeattleDEF,seattle,18.0,11,11,0,3.0,3.0,Patrick,2018Patrickseattle
+2018,Bryan,Kansas City (KC),DEF,1,19,Kansas City,Kansas CityDEF,kansas-city,19.0,11,12,-1,2.0,1.0,Bryan,2018Bryankansas-city
+2018,Kevin,Philadelphia,DEF,5,20,Philadelphia,PhiladelphiaDEF,philadelphia,20.0,4,13,-9,1.0,-8.0,Kevin,2018Kevinphiladelphia
+2018,Scott Gunter,New York (NYJ),DEF,1,21,New York (NYJ),New York (NYJ)DEF,ny-jets,21.0,11,14,-3,0.0,-3.0,Scott Gunter,2018Scott Gunterny-jets
+2018,Bryan,Carolina (CAR),DEF,1,26,Carolina,CarolinaDEF,carolina,26.0,11,15,-4,0.0,-4.0,Bryan,2018Bryancarolina
+2018,Krista,Atlanta (ATL),DEF,1,30,Atlanta,AtlantaDEF,atlanta,30.0,11,16,-5,0.0,-5.0,Krista,2018Kristaatlanta
+2018,David Casstevens,Patrick Mahomes,QB,7,1,Patrick Mahomes,Patrick MahomesQB,30123,1.0,16,1,15,20.0,35.0,David Casstevens,2018David Casstevens30123
+2018,Scott Gunter,Matt Ryan,QB,13,2,Matt Ryan,Matt RyanQB,8780,2.0,7,2,5,19.0,24.0,Scott Gunter,2018Scott Gunter8780
+2018,Luke,Deshaun Watson,QB,26,3,Deshaun Watson,Deshaun WatsonQB,30125,3.0,4,3,1,18.0,19.0,Luke,2018Luke30125
+2018,Mark,Ben Roethlisberger,QB,7,4,Ben Roethlisberger,Ben RoethlisbergerQB,6770,4.0,16,4,12,17.0,29.0,Mark,2018Mark6770
+2018,Kevin,Andrew Luck,QB,11,5,Andrew Luck,Andrew LuckQB,25711,5.0,9,5,4,16.0,20.0,Kevin,2018Kevin25711
+2018,Luke,Aaron Rodgers,QB,45,6,Aaron Rodgers,Aaron RodgersQB,7200,6.0,1,6,-5,15.0,10.0,Luke,2018Luke7200
+2018,Patrick,Jared Goff,QB,3,7,Jared Goff,Jared GoffQB,29235,7.0,20,7,13,14.0,27.0,Patrick,2018Patrick29235
+2018,Bryan,Russell Wilson,QB,27,8,Russell Wilson,Russell WilsonQB,25785,8.0,3,8,-5,13.0,8.0,Bryan,2018Bryan25785
+2018,Duncan,Drew Brees,QB,16,9,Drew Brees,Drew BreesQB,5479,9.0,6,9,-3,12.0,9.0,Duncan,2018Duncan5479
+2018,Bryan,Cam Newton,QB,25,10,Cam Newton,Cam NewtonQB,24788,10.0,5,10,-5,11.0,6.0,Bryan,2018Bryan24788
+2018,Benjamin,Dak Prescot,QB,2,11,Dak Prescott,Dak PrescottQB,29369,11.0,21,11,10,10.0,20.0,Benjamin,2018Benjamin29369
+2018,David Casstevens,Kirk Cousins,QB,8,12,Kirk Cousins,Kirk CousinsQB,25812,12.0,14,12,2,9.0,11.0,David Casstevens,2018David Casstevens25812
+2018,Duncan,Philip Rivers,QB,11,13,Philip Rivers,Philip RiversQB,6763,13.0,9,13,-4,8.0,4.0,Duncan,2018Duncan6763
+2018,Scott Gunter,Tom Brady,QB,28,14,Tom Brady,Tom BradyQB,5228,14.0,2,14,-12,7.0,-5.0,Scott Gunter,2018Scott Gunter5228
+2018,Duncan,Mitch Trubisky,QB,1,15,Mitch Trubisky,Mitch TrubiskyQB,30115,15.0,24,15,9,6.0,15.0,Duncan,2018Duncan30115
+2018,Benjamin,Derek Carr,QB,7,20,Derek Carr,Derek CarrQB,27564,20.0,16,16,0,1.0,1.0,Benjamin,2018Benjamin27564
+2018,Mark,Matthew Stafford,QB,10,21,Matthew Stafford,Matthew StaffordQB,9265,21.0,11,17,-6,0.0,-6.0,Mark,2018Mark9265
+2018,David Casstevens,Jameis Winston,QB,4,22,Jameis Winston,Jameis WinstonQB,28389,22.0,19,18,1,0.0,1.0,David Casstevens,2018David Casstevens28389
+2018,Kevin,Carson Wentz,QB,13,23,Carson Wentz,Carson WentzQB,29236,23.0,7,19,-12,0.0,-12.0,Kevin,2018Kevin29236
+2018,Patrick,Marcus Mariota,QB,10,24,Marcus Mariota,Marcus MariotaQB,28390,24.0,11,20,-9,0.0,-9.0,Patrick,2018Patrick28390
+2018,Krista,Blake Bortles,QB,2,25,Blake Bortles,Blake BortlesQB,27531,25.0,21,21,0,0.0,0.0,Krista,2018Krista27531
+2018,Patrick,Alex Smith,QB,8,31,Alex Smith,Alex SmithQB,7177,31.0,14,22,-8,0.0,-8.0,Patrick,2018Patrick7177
+2018,Krista,Jimmy Garoppolo,QB,10,40,Jimmy Garoppolo,Jimmy GaroppoloQB,27590,40.0,11,23,-12,0.0,-12.0,Krista,2018Krista27590
+2018,Mark,Tyrod Taylor,QB,2,41,Tyrod Taylor,Tyrod TaylorQB,24967,41.0,21,24,-3,0.0,-3.0,Mark,2018Mark24967
+2018,Scott Gunter,Saquon Barkley,RB,56,1,Saquon Barkley,Saquon BarkleyRB,30972,1.0,5,1,4,20.0,24.0,Scott Gunter,2018Scott Gunter30972
+2018,Duncan,Todd Gurley,RB,65,2,Todd Gurley,Todd GurleyRB,28398,2.0,1,2,-1,19.0,18.0,Duncan,2018Duncan28398
+2018,Duncan,Christian McCaffrey,RB,34,3,Christian McCaffrey,Christian McCaffreyRB,30121,3.0,12,3,9,18.0,27.0,Duncan,2018Duncan30121
+2018,Luke,Alvin Kamara,RB,55,4,Alvin Kamara,Alvin KamaraRB,30180,4.0,6,4,2,17.0,19.0,Luke,2018Luke30180
+2018,David Casstevens,Ezekiel Elliott,RB,62,5,Ezekiel Elliott,Ezekiel ElliottRB,29238,5.0,2,5,-3,16.0,13.0,David Casstevens,2018David Casstevens29238
+2018,Krista,Melvin Gordon,RB,50,7,Melvin Gordon,Melvin GordonRB,28403,7.0,7,6,1,14.0,15.0,Krista,2018Krista28403
+2018,Mark,Joe Mixon,RB,32,9,Joe Mixon,Joe MixonRB,30161,9.0,13,7,6,12.0,18.0,Mark,2018Mark30161
+2018,Benjamin,David Johnson,RB,60,10,David Johnson,David JohnsonRB,28474,10.0,4,8,-4,11.0,7.0,Benjamin,2018Benjamin28474
+2018,Kevin,Kareem Hunt,RB,40,11,Kareem Hunt,Kareem HuntRB,30199,11.0,9,9,0,10.0,10.0,Kevin,2018Kevin30199
+2018,Krista,Chris Carson,RB,2,14,Chris Carson,Chris CarsonRB,30362,14.0,32,10,22,7.0,29.0,Krista,2018Krista30362
+2018,David Casstevens,Derrick Henry,RB,12,15,Derrick Henry,Derrick HenryRB,29279,15.0,19,11,8,6.0,14.0,David Casstevens,2018David Casstevens29279
+2018,Mark,Nick Chubb,RB,6,16,Nick Chubb,Nick ChubbRB,31005,16.0,27,12,15,5.0,20.0,Mark,2018Mark31005
+2018,Krista,Adrian Peterson,RB,2,17,Adrian Peterson,Adrian PetersonRB,8261,17.0,32,13,19,4.0,23.0,Krista,2018Krista8261
+2018,Bryan,Kenyan Drake,RB,13,18,Kenyan Drake,Kenyan DrakeRB,29307,18.0,18,14,4,3.0,7.0,Bryan,2018Bryan29307
+2018,Scott Gunter,Tevin Coleman,RB,1,19,Tevin Coleman,Tevin ColemanRB,28461,19.0,36,15,21,2.0,23.0,Scott Gunter,2018Scott Gunter28461
+2018,Patrick,Jordan Howard,RB,26,20,Jordan Howard,Jordan HowardRB,29384,20.0,14,16,-2,1.0,-1.0,Patrick,2018Patrick29384
+2018,Bryan,Marlon Mack,RB,1,21,Marlon Mack,Marlon MackRB,30256,21.0,36,17,19,0.0,19.0,Bryan,2018Bryan30256
+2018,Mark,Lamar Miller,RB,10,22,Lamar Miller,Lamar MillerRB,25807,22.0,21,18,3,0.0,3.0,Mark,2018Mark25807
+2018,Luke,Sony Michel,RB,3,28,Sony Michel,Sony MichelRB,31001,28.0,29,19,10,0.0,10.0,Luke,2018Luke31001
+2018,Benjamin,Dalvin Cook,RB,39,29,Dalvin Cook,Dalvin CookRB,30154,29.0,10,20,-10,0.0,-10.0,Benjamin,2018Benjamin30154
+2018,Mark,Dion Lewis,RB,10,30,Dion Lewis,Dion LewisRB,24936,30.0,21,21,0,0.0,0.0,Mark,2018Mark24936
+2018,Bryan,Mark Ingram,RB,9,31,Mark Ingram II,Mark Ingram IIRB,24815,31.0,25,22,3,0.0,3.0,Bryan,2018Bryan24815
+2018,David Casstevens,Isaiah Crowell,RB,10,32,Isaiah Crowell,Isaiah CrowellRB,28014,32.0,21,23,-2,0.0,-2.0,David Casstevens,2018David Casstevens28014
+2018,David Casstevens,Kerryon Johnson,RB,6,34,Kerryon Johnson,Kerryon JohnsonRB,31013,34.0,27,24,3,0.0,3.0,David Casstevens,2018David Casstevens31013
+2018,Krista,LeSean McCoy,RB,15,39,LeSean McCoy,LeSean McCoyRB,9317,39.0,16,25,-9,0.0,-9.0,Krista,2018Krista9317
+2018,Patrick,Leonard Fournette,RB,43,40,Leonard Fournette,Leonard FournetteRB,30117,40.0,8,26,-18,0.0,-18.0,Patrick,2018Patrick30117
+2018,Benjamin,Jamaal Williams,RB,3,43,Jamaal Williams,Jamaal WilliamsRB,30247,43.0,29,27,2,0.0,2.0,Benjamin,2018Benjamin30247
+2018,Bryan,Alex Collins,RB,11,45,Alex Collins,Alex CollinsRB,29405,45.0,20,28,-8,0.0,-8.0,Bryan,2018Bryan29405
+2018,Scott Gunter,Royce Freeman,RB,15,46,Royce Freeman,Royce FreemanRB,31041,46.0,16,29,-13,0.0,-13.0,Scott Gunter,2018Scott Gunter31041
+2018,Mark,Carlos Hyde,RB,10,47,Carlos Hyde,Carlos HydeRB,27585,47.0,21,30,-9,0.0,-9.0,Mark,2018Mark27585
+2018,Krista,Marshawn Lynch,RB,8,60,Marshawn Lynch,Marshawn LynchRB,8266,60.0,26,31,-5,0.0,-5.0,Krista,2018Krista8266
+2018,Patrick,Rashaad Penny,RB,2,65,Rashaad Penny,Rashaad PennyRB,30997,65.0,32,32,0,0.0,0.0,Patrick,2018Patrick30997
+2018,Patrick,Rex Burkhead,RB,2,79,Rex Burkhead,Rex BurkheadRB,26813,79.0,32,33,-1,0.0,-1.0,Patrick,2018Patrick26813
+2018,Patrick,Jay Ajayi,RB,3,82,Jay Ajayi,Jay AjayiRB,28537,82.0,29,34,-5,0.0,-5.0,Patrick,2018Patrick28537
+2018,Duncan,Ronald Jones II,RB,1,96,Ronald Jones II,Ronald Jones IIRB,31008,96.0,36,35,1,0.0,1.0,Duncan,2018Duncan31008
+2018,Scott Gunter,Devonta Freeman,RB,35,110,Devonta Freeman,Devonta FreemanRB,27631,110.0,11,36,-25,0.0,-25.0,Scott Gunter,2018Scott Gunter27631
+2018,Kevin,LeVeon Bell,RB,62,111,Le'Veon Bell,Le'Veon BellRB,26671,111.0,2,37,-35,0.0,-35.0,Kevin,2018Kevin26671
+2018,Luke,Jerick McKinnon,RB,24,111,Jerick McKinnon,Jerick McKinnonRB,27624,111.0,15,37,-22,0.0,-22.0,Luke,2018Luke27624
+2018,Kevin,Travis Kelce,TE,17,1,Travis Kelce,Travis KelceTE,26686,1.0,2,1,1,10.0,11.0,Kevin,2018Kevin26686
+2018,Benjamin,Zach Ertz,TE,12,2,Zach Ertz,Zach ErtzTE,26658,2.0,3,2,1,9.0,10.0,Benjamin,2018Benjamin26658
+2018,Scott Gunter,Kyle Rudolph,TE,3,7,Kyle Rudolph,Kyle RudolphTE,24830,7.0,9,3,6,4.0,10.0,Scott Gunter,2018Scott Gunter24830
+2018,Patrick,Trey Burton,TE,1,8,Trey Burton,Trey BurtonTE,27789,8.0,11,4,7,3.0,10.0,Patrick,2018Patrick27789
+2018,Krista,David Njoku,TE,5,9,David Njoku,David NjokuTE,30142,9.0,6,5,1,2.0,3.0,Krista,2018Krista30142
+2018,Bryan,Rob Gronkowski,TE,28,10,Rob Gronkowski,Rob GronkowskiTE,24017,10.0,1,6,-5,1.0,-4.0,Bryan,2018Bryan24017
+2018,Duncan,Evan Engram,TE,5,12,Evan Engram,Evan EngramTE,30136,12.0,6,7,-1,0.0,-1.0,Duncan,2018Duncan30136
+2018,Luke,Jimmy Graham,TE,8,13,Jimmy Graham,Jimmy GrahamTE,24070,13.0,4,8,-4,0.0,-4.0,Luke,2018Luke24070
+2018,David Casstevens,Jordan Reed,TE,3,15,Jordan Reed,Jordan ReedTE,26708,15.0,9,9,0,0.0,0.0,David Casstevens,2018David Casstevens26708
+2018,David Casstevens,Greg Olsen,TE,6,24,Greg Olsen,Greg OlsenTE,8285,24.0,5,10,-5,0.0,-5.0,David Casstevens,2018David Casstevens8285
+2018,Mark,Delanie Walker,TE,4,44,Delanie Walker,Delanie WalkerTE,7924,44.0,8,11,-3,0.0,-3.0,Mark,2018Mark7924
+2018,Scott Gunter,Tyreek Hill,WR,25,1,Tyreek Hill,Tyreek HillWR,29399,1.0,12,1,11,30.0,41.0,Scott Gunter,2018Scott Gunter29399
+2018,Bryan,DeAndre Hopkins,WR,48,2,DeAndre Hopkins,DeAndre HopkinsWR,26650,2.0,2,2,0,29.0,29.0,Bryan,2018Bryan26650
+2018,Benjamin,Julio Jones,WR,43,3,Julio Jones,Julio JonesWR,24793,3.0,4,3,1,28.0,29.0,Benjamin,2018Benjamin24793
+2018,Krista,Davante Adams,WR,34,4,Davante Adams,Davante AdamsWR,27581,4.0,7,4,3,27.0,30.0,Krista,2018Krista27581
+2018,Krista,Antonio Brown,WR,57,5,Antonio Brown,Antonio BrownWR,24171,5.0,1,5,-4,26.0,22.0,Krista,2018Krista24171
+2018,Kevin,Michael Thomas,WR,39,6,Michael Thomas,Michael ThomasWR,29281,6.0,6,6,0,25.0,25.0,Kevin,2018Kevin29281
+2018,Bryan,Adam Thielen,WR,23,7,Adam Thielen,Adam ThielenWR,27277,7.0,13,7,6,24.0,30.0,Bryan,2018Bryan27277
+2018,David Casstevens,Mike Evans,WR,32,8,Mike Evans,Mike EvansWR,27535,8.0,8,8,0,23.0,23.0,David Casstevens,2018David Casstevens27535
+2018,Bryan,JuJu Smith-Schuster,WR,12,9,JuJu Smith-Schuster,JuJu Smith-SchusterWR,30175,9.0,21,9,12,22.0,34.0,Bryan,2018Bryan30175
+2018,Patrick,Keenan Allen,WR,40,10,Keenan Allen,Keenan AllenWR,26699,10.0,5,10,-5,21.0,16.0,Patrick,2018Patrick26699
+2018,Luke,Robert Woods,WR,1,11,Robert Woods,Robert WoodsWR,26664,11.0,42,11,31,20.0,51.0,Luke,2018Luke26664
+2018,David Casstevens,Stefon Diggs,WR,26,12,Stefon Diggs,Stefon DiggsWR,28534,12.0,10,12,-2,19.0,17.0,David Casstevens,2018David Casstevens28534
+2018,Krista,Brandin Cooks,WR,9,13,Brandin Cooks,Brandin CooksWR,27548,13.0,25,13,12,18.0,30.0,Krista,2018Krista27548
+2018,Benjamin,T.Y. Hilton,WR,21,14,T.Y. Hilton,T.Y. HiltonWR,25802,14.0,15,14,1,17.0,18.0,Benjamin,2018Benjamin25802
+2018,Duncan,Odell Beckham Jr.,WR,47,16,Odell Beckham Jr.,Odell Beckham Jr.WR,27540,16.0,3,15,-12,15.0,3.0,Duncan,2018Duncan27540
+2018,Mark,Amari Cooper,WR,26,18,Amari Cooper,Amari CooperWR,28392,18.0,10,16,-6,13.0,7.0,Mark,2018Mark28392
+2018,Luke,Jarvis Landry,WR,14,19,Jarvis Landry,Jarvis LandryWR,27591,19.0,19,17,2,12.0,14.0,Luke,2018Luke27591
+2018,David Casstevens,Calvin Ridley,WR,5,21,Calvin Ridley,Calvin RidleyWR,30996,21.0,30,18,12,10.0,22.0,David Casstevens,2018David Casstevens30996
+2018,Scott Gunter,Julian Edelman,WR,8,22,Julian Edelman,Julian EdelmanWR,9496,22.0,26,19,7,9.0,16.0,Scott Gunter,2018Scott Gunter9496
+2018,Krista,Emmanuel Sanders,WR,3,23,Emmanuel Sanders,Emmanuel SandersWR,24057,23.0,35,20,15,8.0,23.0,Krista,2018Krista24057
+2018,Duncan,Mike Williams,WR,1,25,Mike Williams (LAC),Mike Williams (LAC)WR,30120,25.0,42,21,21,6.0,27.0,Duncan,2018Duncan30120
+2018,Duncan,Corey Davis,WR,10,26,Corey Davis,Corey DavisWR,30118,26.0,23,22,1,5.0,6.0,Duncan,2018Duncan30118
+2018,Benjamin,Alshon Jeffery,WR,8,27,Alshon Jeffery,Alshon JefferyWR,25755,27.0,26,23,3,4.0,7.0,Benjamin,2018Benjamin25755
+2018,Mark,Sterling Shepard,WR,4,28,Sterling Shepard,Sterling ShepardWR,29274,28.0,33,24,9,3.0,12.0,Mark,2018Mark29274
+2018,Patrick,Larry Fitzgerald,WR,18,31,Larry Fitzgerald,Larry FitzgeraldWR,6762,31.0,16,25,-9,0.0,-9.0,Patrick,2018Patrick6762
+2018,Krista,Nelson Algalor,WR,2,36,Nelson Agholor,Nelson AgholorWR,28408,36.0,39,26,13,0.0,13.0,Krista,2018Krista28408
+2018,Benjamin,Robby Anderson,WR,1,38,Robbie Anderson,Robbie AndersonWR,29785,38.0,42,27,15,0.0,15.0,Benjamin,2018Benjamin29785
+2018,Luke,Allen Robinson,WR,12,39,Allen Robinson II,Allen Robinson IIWR,27589,39.0,21,28,-7,0.0,-7.0,Luke,2018Luke27589
+2018,Mark,Demaryius Thomas,WR,15,40,Demaryius Thomas,Demaryius ThomasWR,23997,40.0,18,29,-11,0.0,-11.0,Mark,2018Mark23997
+2018,Mark,A.J. Green,WR,32,41,A.J. Green,A.J. GreenWR,24791,41.0,8,30,-22,0.0,-22.0,Mark,2018Mark24791
+2018,Scott Gunter,Jordy Nelson,WR,3,42,Jordy Nelson,Jordy NelsonWR,8813,42.0,35,31,4,0.0,4.0,Scott Gunter,2018Scott Gunter8813
+2018,Mark,Josh Gordon,WR,17,45,Josh Gordon,Josh GordonWR,26561,45.0,17,32,-15,0.0,-15.0,Mark,2018Mark26561
+2018,Bryan,Tyrell Williams,WR,1,46,Tyrell Williams,Tyrell WilliamsWR,28691,46.0,42,33,9,0.0,9.0,Bryan,2018Bryan28691
+2018,Patrick,Doug Baldwin,WR,23,49,Doug Baldwin,Doug BaldwinWR,25105,49.0,13,34,-21,0.0,-21.0,Patrick,2018Patrick25105
+2018,David Casstevens,Cooper Kupp,WR,3,51,Cooper Kupp,Cooper KuppWR,30182,51.0,35,35,0,0.0,0.0,David Casstevens,2018David Casstevens30182
+2018,Scott Gunter,Michael Crabtree,WR,6,55,Michael Crabtree,Michael CrabtreeWR,9274,55.0,29,36,-7,0.0,-7.0,Scott Gunter,2018Scott Gunter9274
+2018,Kevin,Devin Funchess,WR,3,59,Devin Funchess,Devin FunchessWR,28429,59.0,35,37,-2,0.0,-2.0,Kevin,2018Kevin28429
+2018,Patrick,Marvin Jones,WR,5,62,Marvin Jones,Marvin JonesWR,25876,62.0,30,38,-8,0.0,-8.0,Patrick,2018Patrick25876
+2018,Duncan,Sammy Watkins,WR,5,63,Sammy Watkins,Sammy WatkinsWR,27532,63.0,30,39,-9,0.0,-9.0,Duncan,2018Duncan27532
+2018,Luke,Will Fuller,WR,4,66,Will Fuller V,Will Fuller VWR,29255,66.0,33,40,-7,0.0,-7.0,Luke,2018Luke29255
+2018,Patrick,Chris Hogan,WR,13,68,Chris Hogan,Chris HoganWR,25178,68.0,20,41,-21,0.0,-21.0,Patrick,2018Patrick25178
+2018,Kevin,Golden Tate,WR,10,93,Golden Tate,Golden TateWR,24035,93.0,23,42,-19,0.0,-19.0,Kevin,2018Kevin24035
+2018,David Casstevens,Marquise Goodwin,WR,7,100,Marquise Goodwin,Marquise GoodwinWR,26701,100.0,28,43,-15,0.0,-15.0,David Casstevens,2018David Casstevens26701
+2018,Scott Gunter,Jamison Crowder,WR,2,101,Jamison Crowder,Jamison CrowderWR,28493,101.0,39,44,-5,0.0,-5.0,Scott Gunter,2018Scott Gunter28493
+2018,Benjamin,Kelvin Benjamin,WR,1,102,Kelvin Benjamin,Kelvin BenjaminWR,27556,102.0,42,45,-3,0.0,-3.0,Benjamin,2018Benjamin27556
+2018,Duncan,Pierre Garcon,WR,1,103,Pierre Garcon,Pierre GarconWR,8982,103.0,42,46,-4,0.0,-4.0,Duncan,2018Duncan8982
+2018,Scott Gunter,Dez Bryant,WR,2,104,Dez Bryant,Dez BryantWR,23999,104.0,39,47,-8,0.0,-8.0,Scott Gunter,2018Scott Gunter23999
+2019,Luke,New England DST,DEF,3,1,New England,New EnglandDEF,new-england,1.0,7,1,6,20.0,26.0,Luke,2019Lukenew-england
+2019,Bryan,Pittsburgh,DEF,1,2,Pittsburgh,PittsburghDEF,pittsburgh,2.0,13,2,11,19.0,30.0,Bryan,2019Bryanpittsburgh
+2019,Krista,Vikings,DEF,6,4,Minnesota,MinnesotaDEF,minnesota,4.0,3,3,0,17.0,17.0,Krista,2019Kristaminnesota
+2019,Patrick,Baltimore DST,DEF,3,5,Baltimore,BaltimoreDEF,baltimore,5.0,7,4,3,16.0,19.0,Patrick,2019Patrickbaltimore
+2019,Duncan,LA Rams,DEF,7,7,Los Angeles (LAR),Los Angeles (LAR)DEF,la-rams,7.0,2,5,-3,14.0,11.0,Duncan,2019Duncanla-rams
+2019,Bryan,Buffalo Bills,DEF,1,8,Buffalo,BuffaloDEF,buffalo,8.0,13,6,7,13.0,20.0,Bryan,2019Bryanbuffalo
+2019,Kevin,New Orleans DST,DEF,1,9,New Orleans,New OrleansDEF,new-orleans,9.0,13,7,6,12.0,18.0,Kevin,2019Kevinnew-orleans
+2019,Kevin,Philadelphia DST,DEF,2,13,Philadelphia,PhiladelphiaDEF,philadelphia,13.0,11,8,3,8.0,11.0,Kevin,2019Kevinphiladelphia
+2019,David Casstevens,Dallas DST,DEF,3,16,Dallas,DallasDEF,dallas,16.0,7,9,-2,5.0,3.0,David Casstevens,2019David Casstevensdallas
+2019,Scott Gunter,Denver,DEF,5,17,Denver,DenverDEF,denver,17.0,5,10,-5,4.0,-1.0,Scott Gunter,2019Scott Gunterdenver
+2019,Benjamin,Seattle DST,DEF,2,18,Seattle,SeattleDEF,seattle,18.0,11,11,0,3.0,3.0,Benjamin,2019Benjaminseattle
+2019,Mark,Jacksonville,DEF,6,19,Jacksonville,JacksonvilleDEF,jacksonville,19.0,3,12,-9,2.0,-7.0,Mark,2019Markjacksonville
+2019,Mark,Cleveland DST,DEF,4,20,Cleveland,ClevelandDEF,cleveland,20.0,6,13,-7,1.0,-6.0,Mark,2019Markcleveland
+2019,Krista,Chicago,DEF,13,21,Chicago,ChicagoDEF,chicago,21.0,1,14,-13,0.0,-13.0,Krista,2019Kristachicago
+2019,Benjamin,Houston DST,DEF,1,27,Houston,HoustonDEF,houston,27.0,13,15,-2,0.0,-2.0,Benjamin,2019Benjaminhouston
+2019,Luke,LA Chargers DEF,DEF,3,28,Los Angeles (LAC),Los Angeles (LAC)DEF,la-chargers,28.0,7,16,-9,0.0,-9.0,Luke,2019Lukela-chargers
+2019,Scott Gunter,Oakland DST,DEF,1,29,Las Vegas,Las VegasDEF,las-vegas,29.0,13,17,-4,0.0,-4.0,Scott Gunter,2019Scott Gunterlas-vegas
+2019,Patrick,Lamar Jackson,QB,17,1,Lamar Jackson,Lamar JacksonQB,31002,1.0,7,1,6,20.0,26.0,Patrick,2019Patrick31002
+2019,Bryan,Russell Wilson,QB,15,3,Russell Wilson,Russell WilsonQB,25785,3.0,9,2,7,18.0,25.0,Bryan,2019Bryan25785
+2019,David Casstevens,Dak Prescott,QB,9,3,Dak Prescott,Dak PrescottQB,29369,3.0,13,2,11,18.0,29.0,David Casstevens,2019David Casstevens29369
+2019,Luke,Deshaun Watson,QB,44,4,Deshaun Watson,Deshaun WatsonQB,30125,4.0,2,3,-1,17.0,16.0,Luke,2019Luke30125
+2019,Duncan,Jameis Winston,QB,14,5,Jameis Winston,Jameis WinstonQB,28389,5.0,12,4,8,16.0,24.0,Duncan,2019Duncan28389
+2019,Bryan,Kyler Murray,QB,9,6,Kyler Murray,Kyler MurrayQB,31833,6.0,13,5,8,15.0,23.0,Bryan,2019Bryan31833
+2019,Duncan,Patrick Mahomes,QB,50,7,Patrick Mahomes,Patrick MahomesQB,30123,7.0,1,6,-5,14.0,9.0,Duncan,2019Duncan30123
+2019,David Casstevens,Josh Allen,QB,2,8,Josh Allen,Josh AllenQB,30977,8.0,22,7,15,13.0,28.0,David Casstevens,2019David Casstevens30977
+2019,Mark,Aaron Rodgers,QB,40,9,Aaron Rodgers,Aaron RodgersQB,7200,9.0,3,8,-5,12.0,7.0,Mark,2019Mark7200
+2019,Scott Gunter,Carson Wentz,QB,17,10,Carson Wentz,Carson WentzQB,29236,10.0,7,9,-2,11.0,9.0,Scott Gunter,2019Scott Gunter29236
+2019,Scott Gunter,Matt Ryan,QB,27,11,Matt Ryan,Matt RyanQB,8780,11.0,4,10,-6,10.0,4.0,Scott Gunter,2019Scott Gunter8780
+2019,Luke,Tom Brady,QB,9,12,Tom Brady,Tom BradyQB,5228,12.0,13,11,2,9.0,11.0,Luke,2019Luke5228
+2019,Krista,Jared Goff,QB,23,13,Jared Goff,Jared GoffQB,29235,13.0,6,12,-6,8.0,2.0,Krista,2019Krista29235
+2019,David Casstevens,Jimmy Garrapolo,QB,3,14,Jimmy Garoppolo,Jimmy GaroppoloQB,27590,14.0,20,13,7,7.0,14.0,David Casstevens,2019David Casstevens27590
+2019,Kevin,Derek Carr,QB,1,15,Derek Carr,Derek CarrQB,27564,15.0,24,14,10,6.0,16.0,Kevin,2019Kevin27564
+2019,Krista,Philip Rivers,QB,9,17,Philip Rivers,Philip RiversQB,6763,17.0,13,15,-2,4.0,2.0,Krista,2019Krista6763
+2019,Kevin,Kirk Cousins,QB,4,18,Kirk Cousins,Kirk CousinsQB,25812,18.0,18,16,2,3.0,5.0,Kevin,2019Kevin25812
+2019,Benjamin,Baker Mayfield,QB,27,19,Baker Mayfield,Baker MayfieldQB,30971,19.0,4,17,-13,2.0,-11.0,Benjamin,2019Benjamin30971
+2019,Benjamin,Drew Brees,QB,15,22,Drew Brees,Drew BreesQB,5479,22.0,9,18,-9,0.0,-9.0,Benjamin,2019Benjamin5479
+2019,Kevin,Mitch Trubisky,QB,4,26,Mitch Trubisky,Mitch TrubiskyQB,30115,26.0,18,19,-1,0.0,-1.0,Kevin,2019Kevin30115
+2019,Mark,Sam Darnold,QB,3,27,Sam Darnold,Sam DarnoldQB,30973,27.0,20,20,0,0.0,0.0,Mark,2019Mark30973
+2019,Scott Gunter,Matthew Stafford,QB,2,29,Matthew Stafford,Matthew StaffordQB,9265,29.0,22,21,1,0.0,1.0,Scott Gunter,2019Scott Gunter9265
+2019,Krista,Joe Flacco,QB,1,33,Joe Flacco,Joe FlaccoQB,8795,33.0,24,22,2,0.0,2.0,Krista,2019Krista8795
+2019,Patrick,Jacoby Brisset,QB,1,37,Jacoby Brissett,Jacoby BrissettQB,29325,37.0,24,23,1,0.0,1.0,Patrick,2019Patrick29325
+2019,Patrick,Cam Newton,QB,15,49,Cam Newton,Cam NewtonQB,24788,49.0,9,24,-15,0.0,-15.0,Patrick,2019Patrick24788
+2019,Mark,Ben Roethlisberg,QB,9,52,Ben Roethlisberger,Ben RoethlisbergerQB,6770,52.0,13,25,-12,0.0,-12.0,Mark,2019Mark6770
+2019,Duncan,Christian McCaffrey,RB,57,1,Christian McCaffrey,Christian McCaffreyRB,30121,1.0,3,1,2,20.0,22.0,Duncan,2019Duncan30121
+2019,Scott Gunter,Derrick Henry,RB,13,2,Derrick Henry,Derrick HenryRB,29279,2.0,16,2,14,19.0,33.0,Scott Gunter,2019Scott Gunter29279
+2019,Mark,Aaron Jones,RB,12,3,Aaron Jones,Aaron JonesRB,30295,3.0,18,3,15,18.0,33.0,Mark,2019Mark30295
+2019,Bryan,Zeke Elliott,RB,52,4,Ezekiel Elliott,Ezekiel ElliottRB,29238,4.0,4,4,0,17.0,17.0,Bryan,2019Bryan29238
+2019,Patrick,Dalvin Cook,RB,33,5,Dalvin Cook,Dalvin CookRB,30154,5.0,9,5,4,16.0,20.0,Patrick,2019Patrick30154
+2019,David Casstevens,Austin Ekeler,RB,7,6,Austin Ekeler,Austin EkelerRB,30423,6.0,24,6,18,15.0,33.0,David Casstevens,2019David Casstevens30423
+2019,Mark,Nick Chubb,RB,43,7,Nick Chubb,Nick ChubbRB,31005,7.0,6,7,-1,14.0,13.0,Mark,2019Mark31005
+2019,Scott Gunter,Leonard Fournette,RB,25,8,Leonard Fournette,Leonard FournetteRB,30117,8.0,12,8,4,13.0,17.0,Scott Gunter,2019Scott Gunter30117
+2019,Krista,Mark Ingram,RB,4,9,Mark Ingram II,Mark Ingram IIRB,24815,9.0,27,9,18,12.0,30.0,Krista,2019Krista24815
+2019,Bryan,Saquon Barkley,RB,64,10,Saquon Barkley,Saquon BarkleyRB,30972,10.0,1,10,-9,11.0,2.0,Bryan,2019Bryan30972
+2019,Patrick,Chris Carson,RB,11,11,Chris Carson,Chris CarsonRB,30362,11.0,19,11,8,10.0,18.0,Patrick,2019Patrick30362
+2019,Benjamin,Joe Mixon,RB,30,12,Joe Mixon,Joe MixonRB,30161,12.0,11,12,-1,9.0,8.0,Benjamin,2019Benjamin30161
+2019,Benjamin,Alvin Kamara,RB,59,13,Alvin Kamara,Alvin KamaraRB,30180,13.0,2,13,-11,8.0,-3.0,Benjamin,2019Benjamin30180
+2019,Kevin,Todd Gurley,RB,33,14,Todd Gurley,Todd GurleyRB,28398,14.0,9,14,-5,7.0,2.0,Kevin,2019Kevin28398
+2019,Krista,Miles Sanders,RB,5,15,Miles Sanders,Miles SandersRB,31885,15.0,25,15,10,6.0,16.0,Krista,2019Krista31885
+2019,Bryan,Kenyan Drake,RB,1,16,Kenyan Drake,Kenyan DrakeRB,29307,16.0,36,16,20,5.0,25.0,Bryan,2019Bryan29307
+2019,Krista,Josh Jacobs,RB,13,17,Josh Jacobs,Josh JacobsRB,31856,17.0,16,17,-1,4.0,3.0,Krista,2019Krista31856
+2019,Scott Gunter,Le'Veon Bell,RB,37,18,Le'Veon Bell,Le'Veon BellRB,26671,18.0,7,18,-11,3.0,-8.0,Scott Gunter,2019Scott Gunter26671
+2019,Luke,Phillip Lindsay,RB,5,19,Phillip Lindsay,Phillip LindsayRB,31379,19.0,25,19,6,2.0,8.0,Luke,2019Luke31379
+2019,Kevin,Marlon Mack,RB,4,20,Marlon Mack,Marlon MackRB,30256,20.0,27,20,7,1.0,8.0,Kevin,2019Kevin30256
+2019,Duncan,Devonta Freeman,RB,11,21,Devonta Freeman,Devonta FreemanRB,27631,21.0,19,21,-2,0.0,-2.0,Duncan,2019Duncan27631
+2019,Benjamin,James White,RB,4,22,James White,James WhiteRB,27658,22.0,27,22,5,0.0,5.0,Benjamin,2019Benjamin27658
+2019,David Casstevens,David Montgomery,RB,16,23,David Montgomery,David MontgomeryRB,31905,23.0,15,23,-8,0.0,-8.0,David Casstevens,2019David Casstevens31905
+2019,Scott Gunter,Melvin Gordon,RB,18,24,Melvin Gordon,Melvin GordonRB,28403,24.0,13,24,-11,0.0,-11.0,Scott Gunter,2019Scott Gunter28403
+2019,David Casstevens,Sony Michel,RB,9,28,Sony Michel,Sony MichelRB,31001,28.0,23,25,-2,0.0,-2.0,David Casstevens,2019David Casstevens31001
+2019,David Casstevens,Latavius Murray,RB,3,30,Latavius Murray,Latavius MurrayRB,26804,30.0,31,26,5,0.0,5.0,David Casstevens,2019David Casstevens26804
+2019,Bryan,Devin Singletary,RB,1,31,Devin Singletary,Devin SingletaryRB,31906,31.0,36,27,9,0.0,9.0,Bryan,2019Bryan31906
+2019,Patrick,Duke Johnson,RB,2,32,Duke Johnson,Duke JohnsonRB,28465,32.0,35,28,7,0.0,7.0,Patrick,2019Patrick28465
+2019,Patrick,James Conner,RB,34,33,James Conner,James ConnerRB,30218,33.0,8,29,-21,0.0,-21.0,Patrick,2019Patrick30218
+2019,Mark,Jamaal Williams,RB,1,34,Jamaal Williams,Jamaal WilliamsRB,30247,34.0,36,30,6,0.0,6.0,Mark,2019Mark30247
+2019,Luke,Damien Williams,RB,18,35,Damien Williams,Damien WilliamsRB,28115,35.0,13,31,-18,0.0,-18.0,Luke,2019Luke28115
+2019,Luke,David Johnson,RB,47,36,David Johnson,David JohnsonRB,28474,36.0,5,32,-27,0.0,-27.0,Luke,2019Luke28474
+2019,Benjamin,Tevon Coleman,RB,1,36,Tevin Coleman,Tevin ColemanRB,28461,36.0,36,32,4,0.0,4.0,Benjamin,2019Benjamin28461
+2019,David Casstevens,Tarik Cohen,RB,1,38,Tarik Cohen,Tarik CohenRB,30232,38.0,36,33,3,0.0,3.0,David Casstevens,2019David Casstevens30232
+2019,Benjamin,LeSean McCoy,RB,1,43,LeSean McCoy,LeSean McCoyRB,9317,43.0,36,34,2,0.0,2.0,Benjamin,2019Benjamin9317
+2019,David Casstevens,Matt Breida,RB,1,44,Matt Breida,Matt BreidaRB,30552,44.0,36,35,1,0.0,1.0,David Casstevens,2019David Casstevens30552
+2019,Krista,Frank Old AF Gore,RB,3,47,Frank Gore,Frank GoreRB,7241,47.0,31,36,-5,0.0,-5.0,Krista,2019Krista7241
+2019,Krista,Tony Pollard,RB,10,50,Tony Pollard,Tony PollardRB,31960,50.0,22,37,-15,0.0,-15.0,Krista,2019Krista31960
+2019,Kevin,Kerryon Johnson,RB,11,52,Kerryon Johnson,Kerryon JohnsonRB,31013,52.0,19,38,-19,0.0,-19.0,Kevin,2019Kevin31013
+2019,Scott Gunter,Jaylen Samuels,RB,1,53,Jaylen Samuels,Jaylen SamuelsRB,31135,53.0,36,39,-3,0.0,-3.0,Scott Gunter,2019Scott Gunter31135
+2019,Kevin,Alexander Mattison,RB,1,58,Alexander Mattison,Alexander MattisonRB,31934,58.0,36,40,-4,0.0,-4.0,Kevin,2019Kevin31934
+2019,Mark,Darrius Guice,RB,3,68,Derrius Guice,Derrius GuiceRB,31029,68.0,31,41,-10,0.0,-10.0,Mark,2019Mark31029
+2019,Duncan,Ito Smith,RB,1,84,Ito Smith,Ito SmithRB,31096,84.0,36,42,-6,0.0,-6.0,Duncan,2019Duncan31096
+2019,Mark,Darwin Thompson,RB,4,88,Darwin Thompson,Darwin ThompsonRB,32046,88.0,27,43,-16,0.0,-16.0,Mark,2019Mark32046
+2019,David Casstevens,Darrell Henderson,RB,3,95,Darrell Henderson,Darrell HendersonRB,31902,95.0,31,44,-13,0.0,-13.0,David Casstevens,2019David Casstevens31902
+2019,Kevin,Travis Kelce,TE,37,1,Travis Kelce,Travis KelceTE,26686,1.0,1,1,0,10.0,10.0,Kevin,2019Kevin26686
+2019,David Casstevens,George Kittle,TE,31,2,George Kittle,George KittleTE,30259,2.0,2,2,0,9.0,9.0,David Casstevens,2019David Casstevens30259
+2019,Krista,Zach Ertz,TE,23,5,Zach Ertz,Zach ErtzTE,26658,5.0,3,3,0,6.0,6.0,Krista,2019Krista26658
+2019,Scott Gunter,Austin Hooper,TE,2,6,Austin Hooper,Austin HooperTE,29315,6.0,8,4,4,5.0,9.0,Scott Gunter,2019Scott Gunter29315
+2019,Bryan,Jared Cook,TE,1,7,Jared Cook,Jared CookTE,9353,7.0,11,5,6,4.0,10.0,Bryan,2019Bryan9353
+2019,Luke,Hunter Henry,TE,10,8,Hunter Henry,Hunter HenryTE,29269,8.0,5,6,-1,3.0,2.0,Luke,2019Luke29269
+2019,Scott Gunter,Evan Engram,TE,8,19,Evan Engram,Evan EngramTE,30136,19.0,6,7,-1,0.0,-1.0,Scott Gunter,2019Scott Gunter30136
+2019,Mark,Jimmy Graham,TE,2,21,Jimmy Graham,Jimmy GrahamTE,24070,21.0,8,8,0,0.0,0.0,Mark,2019Mark24070
+2019,Patrick,O.J. Howard,TE,11,29,O.J. Howard,O.J. HowardTE,30132,29.0,4,9,-5,0.0,-5.0,Patrick,2019Patrick30132
+2019,Duncan,Vance McDonald,TE,6,32,Vance McDonald,Vance McDonaldTE,26678,32.0,7,10,-3,0.0,-3.0,Duncan,2019Duncan26678
+2019,Benjamin,David Njoku,TE,2,90,David Njoku,David NjokuTE,30142,90.0,8,11,-3,0.0,-3.0,Benjamin,2019Benjamin30142
+2019,Kevin,Michael Thomas,WR,42,1,Michael Thomas,Michael ThomasWR,29281,1.0,7,1,6,30.0,36.0,Kevin,2019Kevin29281
+2019,David Casstevens,Chris Godwin,WR,16,2,Chris Godwin,Chris GodwinWR,30197,2.0,15,2,13,29.0,42.0,David Casstevens,2019David Casstevens30197
+2019,Krista,Julio Jones,WR,45,3,Julio Jones,Julio JonesWR,24793,3.0,4,3,1,28.0,29.0,Krista,2019Krista24793
+2019,Benjamin,Cooper Kupp,WR,12,4,Cooper Kupp,Cooper KuppWR,30182,4.0,20,4,16,27.0,43.0,Benjamin,2019Benjamin30182
+2019,Patrick,DeAndre Hopkins,WR,51,5,DeAndre Hopkins,DeAndre HopkinsWR,26650,5.0,1,5,-4,26.0,22.0,Patrick,2019Patrick26650
+2019,Duncan,Kenny Golladay,WR,13,6,Kenny Golladay,Kenny GolladayWR,30209,6.0,17,6,11,25.0,36.0,Duncan,2019Duncan30209
+2019,Kevin,Devante Adams,WR,47,7,Davante Adams,Davante AdamsWR,27581,7.0,2,7,-5,24.0,19.0,Kevin,2019Kevin27581
+2019,Duncan,Keenan Allen,WR,27,8,Keenan Allen,Keenan AllenWR,26699,8.0,9,8,1,23.0,24.0,Duncan,2019Duncan26699
+2019,Benjamin,Amari Cooper,WR,19,9,Amari Cooper,Amari CooperWR,28392,9.0,12,9,3,22.0,25.0,Benjamin,2019Benjamin28392
+2019,Duncan,Julian Edelman,WR,13,10,Julian Edelman,Julian EdelmanWR,9496,10.0,17,10,7,21.0,28.0,Duncan,2019Duncan9496
+2019,Patrick,Allen Robinson,WR,9,11,Allen Robinson II,Allen Robinson IIWR,27589,11.0,28,11,17,20.0,37.0,Patrick,2019Patrick27589
+2019,Luke,Mike Evans,WR,40,12,Mike Evans,Mike EvansWR,27535,12.0,8,12,-4,19.0,15.0,Luke,2019Luke27535
+2019,Scott Gunter,Jarvis Landry,WR,2,13,Jarvis Landry,Jarvis LandryWR,27591,13.0,39,13,26,18.0,44.0,Scott Gunter,2019Scott Gunter27591
+2019,Bryan,Tyler Lockett,WR,9,14,Tyler Lockett,Tyler LockettWR,28457,14.0,28,14,14,17.0,31.0,Bryan,2019Bryan28457
+2019,Bryan,Robert Woods,WR,13,15,Robert Woods,Robert WoodsWR,26664,15.0,17,15,2,16.0,18.0,Bryan,2019Bryan26664
+2019,Patrick,DJ Moore,WR,10,17,DJ Moore,DJ MooreWR,30994,17.0,25,16,9,14.0,23.0,Patrick,2019Patrick30994
+2019,Scott Gunter,Stefon Diggs,WR,17,21,Stefon Diggs,Stefon DiggsWR,28534,21.0,14,17,-3,10.0,7.0,Scott Gunter,2019Scott Gunter28534
+2019,Benjamin,Michael Gallup,WR,1,22,Michael Gallup,Michael GallupWR,31051,22.0,41,18,23,9.0,32.0,Benjamin,2019Benjamin31051
+2019,Bryan,Tyler Boyd,WR,8,23,Tyler Boyd,Tyler BoydWR,29288,23.0,30,19,11,8.0,19.0,Bryan,2019Bryan29288
+2019,Mark,Odell Beckham Jr,WR,45,25,Odell Beckham Jr.,Odell Beckham Jr.WR,27540,25.0,4,20,-16,6.0,-10.0,Mark,2019Mark27540
+2019,Scott Gunter,Calvin Ridley,WR,14,26,Calvin Ridley,Calvin RidleyWR,30996,26.0,16,21,-5,5.0,0.0,Scott Gunter,2019Scott Gunter30996
+2019,Patrick,Marvin Jones,WR,3,29,Marvin Jones,Marvin JonesWR,25876,29.0,35,22,13,2.0,15.0,Patrick,2019Patrick25876
+2019,David Casstevens,Tyreek Hill,WR,47,30,Tyreek Hill,Tyreek HillWR,29399,30.0,2,23,-21,1.0,-20.0,David Casstevens,2019David Casstevens29399
+2019,Krista,Emmanuel Sanders,WR,10,33,Emmanuel Sanders,Emmanuel SandersWR,24057,33.0,25,24,1,0.0,1.0,Krista,2019Krista24057
+2019,Krista,Mike Williams,WR,10,37,Mike Williams (LAC),Mike Williams (LAC)WR,30120,37.0,25,25,0,0.0,0.0,Krista,2019Krista30120
+2019,Luke,Robbie Anderson,WR,3,39,Robbie Anderson,Robbie AndersonWR,29785,39.0,35,26,9,0.0,9.0,Luke,2019Luke29785
+2019,Luke,Christian Kirk,WR,5,40,Christian Kirk,Christian KirkWR,31017,40.0,33,27,6,0.0,6.0,Luke,2019Luke31017
+2019,Krista,Dede Westbrook,WR,6,45,Dede Westbrook,Dede WestbrookWR,30223,45.0,32,28,4,0.0,4.0,Krista,2019Krista30223
+2019,Mark,Sammy Watkins,WR,4,51,Sammy Watkins,Sammy WatkinsWR,27532,51.0,34,29,5,0.0,5.0,Mark,2019Mark27532
+2019,Mark,Sterling Shephard,WR,2,52,Sterling Shepard,Sterling ShepardWR,29274,52.0,39,30,9,0.0,9.0,Mark,2019Mark29274
+2019,Luke,Will Fuller,WR,11,54,Will Fuller V,Will Fuller VWR,29255,54.0,23,31,-8,0.0,-8.0,Luke,2019Luke29255
+2019,Kevin,TY Hilton,WR,12,58,T.Y. Hilton,T.Y. HiltonWR,25802,58.0,20,32,-12,0.0,-12.0,Kevin,2019Kevin25802
+2019,Mark,Alshon Jeffery,WR,7,60,Alshon Jeffery,Alshon JefferyWR,25755,60.0,31,33,-2,0.0,-2.0,Mark,2019Mark25755
+2019,Krista,Brandin Cooks,WR,19,61,Brandin Cooks,Brandin CooksWR,27548,61.0,12,34,-22,0.0,-22.0,Krista,2019Krista27548
+2019,Benjamin,Adam Thielen,WR,26,62,Adam Thielen,Adam ThielenWR,27277,62.0,10,35,-25,0.0,-25.0,Benjamin,2019Benjamin27277
+2019,Luke,Corey Davis,WR,1,63,Corey Davis,Corey DavisWR,30118,63.0,41,36,5,0.0,5.0,Luke,2019Luke30118
+2019,David Casstevens,Juju Smith Schuster,WR,45,65,JuJu Smith-Schuster,JuJu Smith-SchusterWR,30175,65.0,4,37,-33,0.0,-33.0,David Casstevens,2019David Casstevens30175
+2019,David Casstevens,Mecole Hardman,WR,1,66,Mecole Hardman,Mecole HardmanWR,31888,66.0,41,38,3,0.0,3.0,David Casstevens,2019David Casstevens31888
+2019,Duncan,Anthony Miller,WR,1,67,Anthony Miller,Anthony MillerWR,31021,67.0,41,39,2,0.0,2.0,Duncan,2019Duncan31021
+2019,David Casstevens,Marquez Valdez-Scantling,WR,3,79,Marquez Valdes-Scantling,Marquez Valdes-ScantlingWR,31144,79.0,35,40,-5,0.0,-5.0,David Casstevens,2019David Casstevens31144
+2019,Scott Gunter,Josh Gordon,WR,11,89,Josh Gordon,Josh GordonWR,26561,89.0,23,41,-18,0.0,-18.0,Scott Gunter,2019Scott Gunter26561
+2019,Mark,Geronimo Allison,WR,3,91,Geronimo Allison,Geronimo AllisonWR,29719,91.0,35,42,-7,0.0,-7.0,Mark,2019Mark29719
+2019,Luke,DeSean Jackson,WR,1,126,DeSean Jackson,DeSean JacksonWR,8826,126.0,41,43,-2,0.0,-2.0,Luke,2019Luke8826
+2019,Kevin,Dante Pettis,WR,1,136,Dante Pettis,Dante PettisWR,31014,136.0,41,44,-3,0.0,-3.0,Kevin,2019Kevin31014
+2019,Bryan,Antonio Brown,WR,25,149,Antonio Brown,Antonio BrownWR,24171,149.0,11,45,-34,0.0,-34.0,Bryan,2019Bryan24171
+2019,Mark,AJ Green,WR,12,150,A.J. Green,A.J. GreenWR,24791,150.0,20,46,-26,0.0,-26.0,Mark,2019Mark24791
+2020,Krista,Pittsburgh,DEF,5,1,Pittsburgh,PittsburghDEF,pittsburgh,1.0,3,1,2,20.0,22.0,Krista,2020Kristapittsburgh
+2020,Scott Gunter,Los Angeles Rams,DEF,2,2,Los Angeles (LAR),Los Angeles (LAR)DEF,la-rams,2.0,6,2,4,19.0,23.0,Scott Gunter,2020Scott Gunterla-rams
+2020,Scott Gunter,Baltimore,DEF,6,3,Baltimore,BaltimoreDEF,baltimore,3.0,1,3,-2,18.0,16.0,Scott Gunter,2020Scott Gunterbaltimore
+2020,Luke,New Orleans,DEF,1,6,New Orleans,New OrleansDEF,new-orleans,6.0,10,4,6,15.0,21.0,Luke,2020Lukenew-orleans
+2020,Kevin,Indianapolis,DEF,1,7,Indianapolis,IndianapolisDEF,indianapolis,7.0,10,5,5,14.0,19.0,Kevin,2020Kevinindianapolis
+2020,David Casstevens,Philadelphia,DEF,3,10,Philadelphia,PhiladelphiaDEF,philadelphia,10.0,5,6,-1,11.0,10.0,David Casstevens,2020David Casstevensphiladelphia
+2020,Mark,Buffalo,DEF,5,12,Buffalo,BuffaloDEF,buffalo,12.0,3,7,-4,9.0,5.0,Mark,2020Markbuffalo
+2020,Krista,San Francisco,DEF,6,14,San Francisco,San FranciscoDEF,san-francisco,14.0,1,8,-7,7.0,0.0,Krista,2020Kristasan-francisco
+2020,Benjamin,New England,DEF,2,16,New England,New EnglandDEF,new-england,16.0,6,9,-3,5.0,2.0,Benjamin,2020Benjaminnew-england
+2020,David Casstevens,Chicago,DEF,2,17,Chicago,ChicagoDEF,chicago,17.0,6,10,-4,4.0,0.0,David Casstevens,2020David Casstevenschicago
+2020,Duncan,Kansas City,DEF,1,18,Kansas City,Kansas CityDEF,kansas-city,18.0,10,11,-1,3.0,2.0,Duncan,2020Duncankansas-city
+2020,Mark,Los Angeles Chargers,DEF,2,25,Los Angeles (LAC),Los Angeles (LAC)DEF,la-chargers,25.0,6,12,-6,0.0,-6.0,Mark,2020Markla-chargers
+2020,Duncan,Minnesota,DEF,1,28,Minnesota,MinnesotaDEF,minnesota,28.0,10,13,-3,0.0,-3.0,Duncan,2020Duncanminnesota
+2020,Benjamin,Josh Allen,QB,12,1,Josh Allen,Josh AllenQB,30977,1.0,10,1,9,20.0,29.0,Benjamin,2020Benjamin30977
+2020,Luke,Kyler Murray,QB,27,2,Kyler Murray,Kyler MurrayQB,31833,2.0,5,2,3,19.0,22.0,Luke,2020Luke31833
+2020,Scott Gunter,Aaron Rodgers,QB,17,3,Aaron Rodgers,Aaron RodgersQB,7200,3.0,7,3,4,18.0,22.0,Scott Gunter,2020Scott Gunter7200
+2020,David Casstevens,Patrick Mahomes,QB,50,4,Patrick Mahomes,Patrick MahomesQB,30123,4.0,2,4,-2,17.0,15.0,David Casstevens,2020David Casstevens30123
+2020,Mark,Deshaun Watson,QB,30,5,Deshaun Watson,Deshaun WatsonQB,30125,5.0,4,5,-1,16.0,15.0,Mark,2020Mark30125
+2020,Krista,Russell Wilson,QB,27,6,Russell Wilson,Russell WilsonQB,25785,6.0,5,6,-1,15.0,14.0,Krista,2020Krista25785
+2020,Patrick,Ryan Tannehill,QB,2,7,Ryan Tannehill,Ryan TannehillQB,25718,7.0,22,7,15,14.0,29.0,Patrick,2020Patrick25718
+2020,Krista,Lamar Jackson,QB,54,8,Lamar Jackson,Lamar JacksonQB,31002,8.0,1,8,-7,13.0,6.0,Krista,2020Krista31002
+2020,Patrick,Tom Brady,QB,11,9,Tom Brady,Tom BradyQB,5228,9.0,12,9,3,12.0,15.0,Patrick,2020Patrick5228
+2020,Bryan,Kirk Cousins,QB,1,11,Kirk Cousins,Kirk CousinsQB,25812,11.0,23,10,13,10.0,23.0,Bryan,2020Bryan25812
+2020,Kevin,Matt Ryan,QB,15,12,Matt Ryan,Matt RyanQB,8780,12.0,8,11,-3,9.0,6.0,Kevin,2020Kevin8780
+2020,Luke,Ben Roethlisberger,QB,8,14,Ben Roethlisberger,Ben RoethlisbergerQB,6770,14.0,15,12,3,7.0,10.0,Luke,2020Luke6770
+2020,Patrick,Matthew Stafford,QB,10,15,Matthew Stafford,Matthew StaffordQB,9265,15.0,13,13,0,6.0,6.0,Patrick,2020Patrick9265
+2020,Scott Gunter,Cam Newton,QB,8,16,Cam Newton,Cam NewtonQB,24788,16.0,15,14,1,5.0,6.0,Scott Gunter,2020Scott Gunter24788
+2020,Mark,Baker Mayfield,QB,4,17,Baker Mayfield,Baker MayfieldQB,30971,17.0,20,15,5,4.0,9.0,Mark,2020Mark30971
+2020,Benjamin,Jared Goff,QB,9,19,Jared Goff,Jared GoffQB,29235,19.0,14,16,-2,2.0,0.0,Benjamin,2020Benjamin29235
+2020,Krista,Philip Rivers,QB,1,20,Philip Rivers,Philip RiversQB,6763,20.0,23,17,6,1.0,7.0,Krista,2020Krista6763
+2020,Bryan,Drew Brees,QB,12,21,Drew Brees,Drew BreesQB,5479,21.0,10,18,-8,0.0,-8.0,Bryan,2020Bryan5479
+2020,David Casstevens,Carson Wentz,QB,13,22,Carson Wentz,Carson WentzQB,29236,22.0,9,19,-10,0.0,-10.0,David Casstevens,2020David Casstevens29236
+2020,Duncan,Daniel Jones,QB,5,23,Daniel Jones,Daniel JonesQB,31838,23.0,18,20,-2,0.0,-2.0,Duncan,2020Duncan31838
+2020,Kevin,Drew Lock,QB,1,24,Drew Lock,Drew LockQB,31874,24.0,23,21,2,0.0,2.0,Kevin,2020Kevin31874
+2020,Luke,Joe Burrow,QB,6,25,Joe Burrow,Joe BurrowQB,32671,25.0,17,22,-5,0.0,-5.0,Luke,2020Luke32671
+2020,David Casstevens,Gardner Minshew II,QB,3,26,Gardner Minshew II,Gardner Minshew IIQB,32010,26.0,21,23,-2,0.0,-2.0,David Casstevens,2020David Casstevens32010
+2020,Mark,Tua Tagovailoa,QB,5,32,Tua Tagovailoa,Tua TagovailoaQB,32675,32.0,18,24,-6,0.0,-6.0,Mark,2020Mark32675
+2020,Duncan,Dak Prescott,QB,35,33,Dak Prescott,Dak PrescottQB,29369,33.0,3,25,-22,0.0,-22.0,Duncan,2020Duncan29369
+2020,Duncan,Tyrod Taylor,QB,1,61,Tyrod Taylor,Tyrod TaylorQB,24967,61.0,23,26,-3,0.0,-3.0,Duncan,2020Duncan24967
+2020,Duncan,Alvin Kamara,RB,54,1,Alvin Kamara,Alvin KamaraRB,30180,1.0,4,1,3,20.0,23.0,Duncan,2020Duncan30180
+2020,Patrick,Derrick Henry,RB,49,2,Derrick Henry,Derrick HenryRB,29279,2.0,7,2,5,19.0,24.0,Patrick,2020Patrick29279
+2020,Kevin,Dalvin Cook,RB,51,3,Dalvin Cook,Dalvin CookRB,30154,3.0,6,3,3,18.0,21.0,Kevin,2020Kevin30154
+2020,Mark,David Montgomery,RB,3,4,David Montgomery,David MontgomeryRB,31905,4.0,29,4,25,17.0,42.0,Mark,2020Mark31905
+2020,Patrick,Aaron Jones,RB,26,5,Aaron Jones,Aaron JonesRB,30295,5.0,10,5,5,16.0,21.0,Patrick,2020Patrick30295
+2020,Luke,Jonathan Taylor,RB,21,6,Jonathan Taylor,Jonathan TaylorRB,32711,6.0,13,6,7,15.0,22.0,Luke,2020Luke32711
+2020,Benjamin,Josh Jacobs,RB,26,8,Josh Jacobs,Josh JacobsRB,31856,8.0,10,7,3,13.0,16.0,Benjamin,2020Benjamin31856
+2020,Duncan,Ezekiel Elliott,RB,59,9,Ezekiel Elliott,Ezekiel ElliottRB,29238,9.0,3,8,-5,12.0,7.0,Duncan,2020Duncan29238
+2020,Kevin,Nick Chubb,RB,41,10,Nick Chubb,Nick ChubbRB,31005,10.0,8,9,-1,11.0,10.0,Kevin,2020Kevin31005
+2020,Kevin,Kareem Hunt,RB,13,11,Kareem Hunt,Kareem HuntRB,30199,11.0,20,10,10,10.0,20.0,Kevin,2020Kevin30199
+2020,Scott Gunter,Melvin Gordon,RB,15,12,Melvin Gordon,Melvin GordonRB,28403,12.0,18,11,7,9.0,16.0,Scott Gunter,2020Scott Gunter28403
+2020,Patrick,Antonio Gibson,RB,4,13,Antonio Gibson,Antonio GibsonRB,32736,13.0,26,12,14,8.0,22.0,Patrick,2020Patrick32736
+2020,Mark,Kenyan Drake,RB,17,14,Kenyan Drake,Kenyan DrakeRB,29307,14.0,16,13,3,7.0,10.0,Mark,2020Mark29307
+2020,Krista,Chris Carson,RB,16,17,Chris Carson,Chris CarsonRB,30362,17.0,17,14,3,4.0,7.0,Krista,2020Krista30362
+2020,Kevin,D'Andre Swift,RB,1,18,D'Andre Swift,D'Andre SwiftRB,32705,18.0,36,15,21,3.0,24.0,Kevin,2020Kevin32705
+2020,Mark,David Johnson,RB,20,19,David Johnson,David JohnsonRB,28474,19.0,14,16,-2,2.0,0.0,Mark,2020Mark28474
+2020,Luke,Clyde Edwards-Helaire,RB,52,20,Clyde Edwards-Helaire,Clyde Edwards-HelaireRB,32702,20.0,5,17,-12,1.0,-11.0,Luke,2020Luke32702
+2020,David Casstevens,Miles Sanders,RB,24,22,Miles Sanders,Miles SandersRB,31885,22.0,12,18,-6,0.0,-6.0,David Casstevens,2020David Casstevens31885
+2020,Mark,J.K. Dobbins,RB,4,23,J.K. Dobbins,J.K. DobbinsRB,32725,23.0,26,19,7,0.0,7.0,Mark,2020Mark32725
+2020,Scott Gunter,Todd Gurley,RB,15,25,Todd Gurley,Todd GurleyRB,28398,25.0,18,20,-2,0.0,-2.0,Scott Gunter,2020Scott Gunter28398
+2020,Benjamin,James Conner,RB,13,26,James Conner,James ConnerRB,30218,26.0,20,21,-1,0.0,-1.0,Benjamin,2020Benjamin30218
+2020,Benjamin,Chase Edmonds,RB,1,28,Chase Edmonds,Chase EdmondsRB,31104,28.0,36,22,14,0.0,14.0,Benjamin,2020Benjamin31104
+2020,Scott Gunter,Austin Ekeler,RB,20,29,Austin Ekeler,Austin EkelerRB,30423,29.0,14,23,-9,0.0,-9.0,Scott Gunter,2020Scott Gunter30423
+2020,Bryan,Devin Singletary,RB,1,32,Devin Singletary,Devin SingletaryRB,31906,32.0,36,24,12,0.0,12.0,Bryan,2020Bryan31906
+2020,Duncan,Latavius Murray,RB,1,34,Latavius Murray,Latavius MurrayRB,26804,34.0,36,25,11,0.0,11.0,Duncan,2020Duncan26804
+2020,David Casstevens,Darrell Henderson,RB,4,36,Darrell Henderson,Darrell HendersonRB,31902,36.0,26,26,0,0.0,0.0,David Casstevens,2020David Casstevens31902
+2020,Scott Gunter,Leonard Fournette,RB,11,39,Leonard Fournette,Leonard FournetteRB,30117,39.0,22,27,-5,0.0,-5.0,Scott Gunter,2020Scott Gunter30117
+2020,Duncan,Tony Pollard,RB,3,41,Tony Pollard,Tony PollardRB,31960,41.0,29,28,1,0.0,1.0,Duncan,2020Duncan31960
+2020,Mark,Cam Akers,RB,2,42,Cam Akers,Cam AkersRB,32722,42.0,34,29,5,0.0,5.0,Mark,2020Mark32722
+2020,Krista,Zack Moss,RB,3,45,Zack Moss,Zack MossRB,32756,45.0,29,30,-1,0.0,-1.0,Krista,2020Krista32756
+2020,Benjamin,Raheem Mostert,RB,3,46,Raheem Mostert,Raheem MostertRB,28654,46.0,29,31,-2,0.0,-2.0,Benjamin,2020Benjamin28654
+2020,David Casstevens,Damien Harris,RB,2,47,Damien Harris,Damien HarrisRB,31919,47.0,34,32,2,0.0,2.0,David Casstevens,2020David Casstevens31919
+2020,David Casstevens,Joe Mixon,RB,39,50,Joe Mixon,Joe MixonRB,30161,50.0,9,33,-24,0.0,-24.0,David Casstevens,2020David Casstevens30161
+2020,Krista,Brian Hill,RB,1,51,Brian Hill,Brian HillRB,30269,51.0,36,34,2,0.0,2.0,Krista,2020Krista30269
+2020,Kevin,Alexander Mattison,RB,5,52,Alexander Mattison,Alexander MattisonRB,31934,52.0,24,35,-11,0.0,-11.0,Kevin,2020Kevin31934
+2020,David Casstevens,Boston Scott,RB,1,52,Boston Scott,Boston ScottRB,31171,52.0,36,35,1,0.0,1.0,David Casstevens,2020David Casstevens31171
+2020,Bryan,Christian McCaffrey,RB,83,54,Christian McCaffrey,Christian McCaffreyRB,30121,54.0,1,36,-35,0.0,-35.0,Bryan,2020Bryan30121
+2020,Scott Gunter,Le'Veon Bell,RB,9,63,Le'Veon Bell,Le'Veon BellRB,26671,63.0,23,37,-14,0.0,-14.0,Scott Gunter,2020Scott Gunter26671
+2020,Krista,Phillip Lindsay,RB,1,64,Phillip Lindsay,Phillip LindsayRB,31379,64.0,36,38,-2,0.0,-2.0,Krista,2020Krista31379
+2020,Krista,Mark Ingram II,RB,5,73,Mark Ingram II,Mark Ingram IIRB,24815,73.0,24,39,-15,0.0,-15.0,Krista,2020Krista24815
+2020,Bryan,Saquon Barkley,RB,68,120,Saquon Barkley,Saquon BarkleyRB,30972,120.0,2,40,-38,0.0,-38.0,Bryan,2020Bryan30972
+2020,David Casstevens,Marlon Mack,RB,3,133,Marlon Mack,Marlon MackRB,30256,133.0,29,41,-12,0.0,-12.0,David Casstevens,2020David Casstevens30256
+2020,Benjamin,Travis Kelce,TE,34,1,Travis Kelce,Travis KelceTE,26686,1.0,1,1,0,10.0,10.0,Benjamin,2020Benjamin26686
+2020,Patrick,T.J. Hockenson,TE,1,4,T.J. Hockenson,T.J. HockensonTE,31840,4.0,10,2,8,7.0,15.0,Patrick,2020Patrick31840
+2020,Luke,Mark Andrews,TE,24,5,Mark Andrews,Mark AndrewsTE,31056,5.0,3,3,0,6.0,6.0,Luke,2020Luke31056
+2020,Duncan,Mike Gesicki,TE,1,7,Mike Gesicki,Mike GesickiTE,31012,7.0,10,4,6,4.0,10.0,Duncan,2020Duncan31012
+2020,Scott Gunter,Rob Gronkowski,TE,7,8,Rob Gronkowski,Rob GronkowskiTE,24017,8.0,6,5,1,3.0,4.0,Scott Gunter,2020Scott Gunter24017
+2020,Kevin,Darren Waller,TE,6,8,Darren Waller,Darren WallerTE,28592,8.0,8,5,3,3.0,6.0,Kevin,2020Kevin28592
+2020,Scott Gunter,Hayden Hurst,TE,8,9,Hayden Hurst,Hayden HurstTE,30995,9.0,5,6,-1,2.0,1.0,Scott Gunter,2020Scott Gunter30995
+2020,Krista,Hunter Henry,TE,1,12,Hunter Henry,Hunter HenryTE,29269,12.0,10,7,3,0.0,3.0,Krista,2020Krista29269
+2020,Mark,Evan Engram,TE,3,16,Evan Engram,Evan EngramTE,30136,16.0,9,8,1,0.0,1.0,Mark,2020Mark30136
+2020,Duncan,Tyler Higbee,TE,7,18,Tyler Higbee,Tyler HigbeeTE,29344,18.0,6,9,-3,0.0,-3.0,Duncan,2020Duncan29344
+2020,Krista,George Kittle,TE,34,19,George Kittle,George KittleTE,30259,19.0,1,10,-9,0.0,-9.0,Krista,2020Krista30259
+2020,Bryan,Zach Ertz,TE,20,31,Zach Ertz,Zach ErtzTE,26658,31.0,4,11,-7,0.0,-7.0,Bryan,2020Bryan26658
+2020,David Casstevens,Chris Herndon IV,TE,1,35,Chris Herndon,Chris HerndonTE,31077,35.0,10,12,-2,0.0,-2.0,David Casstevens,2020David Casstevens31077
+2020,David Casstevens,O.J. Howard,TE,1,55,O.J. Howard,O.J. HowardTE,30132,55.0,10,13,-3,0.0,-3.0,David Casstevens,2020David Casstevens30132
+2020,Mark,Davante Adams,WR,47,1,Davante Adams,Davante AdamsWR,27581,1.0,2,1,1,30.0,31.0,Mark,2020Mark27581
+2020,Scott Gunter,Tyreek Hill,WR,42,2,Tyreek Hill,Tyreek HillWR,29399,2.0,3,2,1,29.0,30.0,Scott Gunter,2020Scott Gunter29399
+2020,Benjamin,Stefon Diggs,WR,6,3,Stefon Diggs,Stefon DiggsWR,28534,3.0,32,3,29,28.0,57.0,Benjamin,2020Benjamin28534
+2020,Luke,Calvin Ridley,WR,19,4,Calvin Ridley,Calvin RidleyWR,30996,4.0,12,4,8,27.0,35.0,Luke,2020Luke30996
+2020,Kevin,DeAndre Hopkins,WR,40,5,DeAndre Hopkins,DeAndre HopkinsWR,26650,5.0,5,5,0,26.0,26.0,Kevin,2020Kevin26650
+2020,Mark,D.K. Metcalf,WR,16,7,DK Metcalf,DK MetcalfWR,31896,7.0,15,6,9,24.0,33.0,Mark,2020Mark31896
+2020,Patrick,Allen Robinson,WR,20,9,Allen Robinson II,Allen Robinson IIWR,27589,9.0,11,7,4,22.0,26.0,Patrick,2020Patrick27589
+2020,Scott Gunter,Tyler Lockett,WR,9,10,Tyler Lockett,Tyler LockettWR,28457,10.0,23,8,15,21.0,36.0,Scott Gunter,2020Scott Gunter28457
+2020,Kevin,Adam Thielen,WR,25,11,Adam Thielen,Adam ThielenWR,27277,11.0,9,9,0,20.0,20.0,Kevin,2020Kevin27277
+2020,Patrick,AJ Brown,WR,15,12,A.J. Brown,A.J. BrownWR,31883,12.0,17,10,7,19.0,26.0,Patrick,2020Patrick31883
+2020,David Casstevens,Mike Evans,WR,26,13,Mike Evans,Mike EvansWR,27535,13.0,7,11,-4,18.0,14.0,David Casstevens,2020David Casstevens27535
+2020,Duncan,Robert Woods,WR,12,14,Robert Woods,Robert WoodsWR,26664,14.0,20,12,8,17.0,25.0,Duncan,2020Duncan26664
+2020,Scott Gunter,Brandin Cooks,WR,8,15,Brandin Cooks,Brandin CooksWR,27548,15.0,27,13,14,16.0,30.0,Scott Gunter,2020Scott Gunter27548
+2020,Krista,Keenan Allen,WR,11,16,Keenan Allen,Keenan AllenWR,26699,16.0,21,14,7,15.0,22.0,Krista,2020Krista26699
+2020,Bryan,Amari Cooper,WR,11,17,Amari Cooper,Amari CooperWR,28392,17.0,21,15,6,14.0,20.0,Bryan,2020Bryan28392
+2020,Mark,Marvin Jones,WR,1,18,Marvin Jones,Marvin JonesWR,25876,18.0,39,16,23,13.0,36.0,Mark,2020Mark25876
+2020,Duncan,Terry McLaurin,WR,9,19,Terry McLaurin,Terry McLaurinWR,31908,19.0,23,17,6,12.0,18.0,Duncan,2020Duncan31908
+2020,Patrick,D.J. Moore,WR,19,20,DJ Moore,DJ MooreWR,30994,20.0,12,18,-6,11.0,5.0,Patrick,2020Patrick30994
+2020,David Casstevens,JuJu Smith-Schuster,WR,16,21,JuJu Smith-Schuster,JuJu Smith-SchusterWR,30175,21.0,15,19,-4,10.0,6.0,David Casstevens,2020David Casstevens30175
+2020,Mark,CeeDee Lamb,WR,5,23,CeeDee Lamb,CeeDee LambWR,32687,23.0,34,20,14,8.0,22.0,Mark,2020Mark32687
+2020,Duncan,Diontae Johnson,WR,3,25,Diontae Johnson,Diontae JohnsonWR,31898,25.0,35,21,14,6.0,20.0,Duncan,2020Duncan31898
+2020,Scott Gunter,Cooper Kupp,WR,14,28,Cooper Kupp,Cooper KuppWR,30182,28.0,18,22,-4,3.0,-1.0,Scott Gunter,2020Scott Gunter30182
+2020,Mark,Will Fuller,WR,14,30,Will Fuller V,Will Fuller VWR,29255,30.0,18,23,-5,1.0,-4.0,Mark,2020Mark29255
+2020,Benjamin,Chris Godwin,WR,39,33,Chris Godwin,Chris GodwinWR,30197,33.0,6,24,-18,0.0,-18.0,Benjamin,2020Benjamin30197
+2020,Duncan,Tyler Boyd,WR,6,34,Tyler Boyd,Tyler BoydWR,29288,34.0,32,25,7,0.0,7.0,Duncan,2020Duncan29288
+2020,Duncan,Jarvis Landry,WR,2,36,Jarvis Landry,Jarvis LandryWR,27591,36.0,37,26,11,0.0,11.0,Duncan,2020Duncan27591
+2020,Krista,Marquise Brown,WR,9,37,Marquise Brown,Marquise BrownWR,31857,37.0,23,27,-4,0.0,-4.0,Krista,2020Krista31857
+2020,Scott Gunter,Michael Gallup,WR,7,39,Michael Gallup,Michael GallupWR,31051,39.0,29,28,1,0.0,1.0,Scott Gunter,2020Scott Gunter31051
+2020,Patrick,Jamison Crowder,WR,1,40,Jamison Crowder,Jamison CrowderWR,28493,40.0,39,29,10,0.0,10.0,Patrick,2020Patrick28493
+2020,Krista,T.Y. Hilton,WR,18,41,T.Y. Hilton,T.Y. HiltonWR,25802,41.0,14,30,-16,0.0,-16.0,Krista,2020Krista25802
+2020,Luke,DeVante Parker,WR,7,42,DeVante Parker,DeVante ParkerWR,28402,42.0,29,31,-2,0.0,-2.0,Luke,2020Luke28402
+2020,Bryan,Jerry Jeudy,WR,1,44,Jerry Jeudy,Jerry JeudyWR,32685,44.0,39,32,7,0.0,7.0,Bryan,2020Bryan32685
+2020,Kevin,Sterling Shepard,WR,1,47,Sterling Shepard,Sterling ShepardWR,29274,47.0,39,33,6,0.0,6.0,Kevin,2020Kevin29274
+2020,David Casstevens,D.J. Chark,WR,8,49,DJ Chark,DJ CharkWR,31031,49.0,27,34,-7,0.0,-7.0,David Casstevens,2020David Casstevens31031
+2020,Patrick,Julio Jones,WR,42,51,Julio Jones,Julio JonesWR,24793,51.0,3,35,-32,0.0,-32.0,Patrick,2020Patrick24793
+2020,Scott Gunter,Christian Kirk,WR,2,53,Christian Kirk,Christian KirkWR,31017,53.0,37,36,1,0.0,1.0,Scott Gunter,2020Scott Gunter31017
+2020,Bryan,Darius Slayton,WR,1,55,Darius Slayton,Darius SlaytonWR,32003,55.0,39,37,2,0.0,2.0,Bryan,2020Bryan32003
+2020,David Casstevens,Mecole Hardman,WR,3,59,Mecole Hardman,Mecole HardmanWR,31888,59.0,35,38,-3,0.0,-3.0,David Casstevens,2020David Casstevens31888
+2020,Luke,A.J. Green,WR,9,69,A.J. Green,A.J. GreenWR,24791,69.0,23,39,-16,0.0,-16.0,Luke,2020Luke24791
+2020,Luke,Odell Beckham Jr.,WR,26,112,Odell Beckham Jr.,Odell Beckham Jr.WR,27540,112.0,7,40,-33,0.0,-33.0,Luke,2020Luke27540
+2020,Benjamin,Michael Thomas,WR,55,122,Michael Thomas,Michael ThomasWR,29281,122.0,1,41,-40,0.0,-40.0,Benjamin,2020Benjamin29281
+2020,Bryan,Deebo Samuel,WR,1,123,Deebo Samuel,Deebo SamuelWR,31868,123.0,39,42,-3,0.0,-3.0,Bryan,2020Bryan31868
+2020,Mark,Kenny Golladay,WR,22,129,Kenny Golladay,Kenny GolladayWR,30209,129.0,10,43,-33,0.0,-33.0,Mark,2020Mark30209
+2020,Krista,Julian Edelman,WR,1,136,Julian Edelman,Julian EdelmanWR,9496,136.0,39,44,-5,0.0,-5.0,Krista,2020Krista9496
+2020,Bryan,DeSean Jackson,WR,1,147,DeSean Jackson,DeSean JacksonWR,8826,147.0,39,45,-6,0.0,-6.0,Bryan,2020Bryan8826
+2020,Krista,Courtland Sutton,WR,7,166,Courtland Sutton,Courtland SuttonWR,31010,166.0,29,46,-17,0.0,-17.0,Krista,2020Krista31010
+2021,Luke,Buffalo D,DEF,2,,Buffalo,BuffaloDEF,buffalo,1.0,8,1,7,20.0,27.0,Luke,2021Lukebuffalo
+2021,Patrick,NE Patriots,DEF,6,,New England,New EnglandDEF,new-england,4.0,1,2,-1,17.0,16.0,Patrick,2021Patricknew-england
+2021,Krista,Bucs D,DEF,3,,Tampa Bay,Tampa BayDEF,tampa-bay,5.0,7,3,4,16.0,20.0,Krista,2021Kristatampa-bay
+2021,Krista,Cardinals D,DEF,1,,Arizona,ArizonaDEF,arizona,6.0,10,4,6,15.0,21.0,Krista,2021Kristaarizona
+2021,Mark,Rams,DEF,4,,Los Angeles (LAR),Los Angeles (LAR)DEF,la-rams,7.0,5,5,0,14.0,14.0,Mark,2021Markla-rams
+2021,David Casstevens,49ers D,DEF,5,,San Francisco,San FranciscoDEF,san-francisco,8.0,3,6,-3,13.0,10.0,David Casstevens,2021David Casstevenssan-francisco
+2021,Bryan,Miami D,DEF,1,,Miami,MiamiDEF,miami,9.0,10,7,3,12.0,15.0,Bryan,2021Bryanmiami
+2021,Luke,Steelers D,DEF,4,,Pittsburgh,PittsburghDEF,pittsburgh,10.0,5,8,-3,11.0,8.0,Luke,2021Lukepittsburgh
+2021,Kevin,Broncos D,DEF,1,,Denver,DenverDEF,denver,11.0,10,9,1,10.0,11.0,Kevin,2021Kevindenver
+2021,Bryan,Indy D,DEF,1,,Indianapolis,IndianapolisDEF,indianapolis,12.0,10,10,0,9.0,9.0,Bryan,2021Bryanindianapolis
+2021,Patrick,Green Bay D,DEF,2,,Green Bay,Green BayDEF,green-bay,14.0,8,11,-3,7.0,4.0,Patrick,2021Patrickgreen-bay
+2021,Patrick,Chicago D,DEF,1,,Chicago,ChicagoDEF,chicago,21.0,10,12,-2,0.0,-2.0,Patrick,2021Patrickchicago
+2021,Benjamin,Carolina D,DEF,1,,Carolina,CarolinaDEF,carolina,22.0,10,13,-3,0.0,-3.0,Benjamin,2021Benjamincarolina
+2021,Duncan,Ravens D,DEF,5,,Baltimore,BaltimoreDEF,baltimore,23.0,3,14,-11,0.0,-11.0,Duncan,2021Duncanbaltimore
+2021,Duncan,Chargers,DEF,1,,Los Angeles (LAC),Los Angeles (LAC)DEF,la-chargers,25.0,10,15,-5,0.0,-5.0,Duncan,2021Duncanla-chargers
+2021,Mark,Washington,DEF,6,,Washington,WashingtonDEF,washington,26.0,1,16,-15,0.0,-15.0,Mark,2021Markwashington
+2021,Luke,Josh Allen,QB,45,,Josh Allen,Josh AllenQB,30977,1.0,2,1,1,20.0,21.0,Luke,2021Luke30977
+2021,Krista,Justin Herbert,QB,25,,Justin Herbert,Justin HerbertQB,32676,2.0,7,2,5,19.0,24.0,Krista,2021Krista32676
+2021,Bryan,Tom Brady,QB,17,,Tom Brady,Tom BradyQB,5228,3.0,10,3,7,18.0,25.0,Bryan,2021Bryan5228
+2021,Kevin,Patrick Mahomes,QB,48,,Patrick Mahomes,Patrick MahomesQB,30123,4.0,1,4,-3,17.0,14.0,Kevin,2021Kevin30123
+2021,David Casstevens,Matt Stafford,QB,20,,Matthew Stafford,Matthew StaffordQB,9265,5.0,8,5,3,16.0,19.0,David Casstevens,2021David Casstevens9265
+2021,Benjamin,Aaron Rodgers,QB,19,,Aaron Rodgers,Aaron RodgersQB,7200,6.0,9,6,3,15.0,18.0,Benjamin,2021Benjamin7200
+2021,Patrick,Dak Prescott,QB,30,,Dak Prescott,Dak PrescottQB,29369,7.0,5,7,-2,14.0,12.0,Patrick,2021Patrick29369
+2021,Duncan,Joe Burrow,QB,5,,Joe Burrow,Joe BurrowQB,32671,8.0,19,8,11,13.0,24.0,Duncan,2021Duncan32671
+2021,Duncan,Jalen Hurts,QB,12,,Jalen Hurts,Jalen HurtsQB,32723,9.0,12,9,3,12.0,15.0,Duncan,2021Duncan32723
+2021,Patrick,Kyler Murray,QB,40,,Kyler Murray,Kyler MurrayQB,31833,10.0,3,10,-7,11.0,4.0,Patrick,2021Patrick31833
+2021,Bryan,Kirk Cousins,QB,1,,Kirk Cousins,Kirk CousinsQB,25812,11.0,22,11,11,10.0,21.0,Bryan,2021Bryan25812
+2021,Benjamin,Ryan Tannehill,QB,13,,Ryan Tannehill,Ryan TannehillQB,25718,12.0,11,12,-1,9.0,8.0,Benjamin,2021Benjamin25718
+2021,Patrick,Derek Carr,QB,1,,Derek Carr,Derek CarrQB,27564,13.0,22,13,9,8.0,17.0,Patrick,2021Patrick27564
+2021,Scott Gunter,Lamar Jackson,QB,39,,Lamar Jackson,Lamar JacksonQB,31002,15.0,4,14,-10,6.0,-4.0,Scott Gunter,2021Scott Gunter31002
+2021,Luke,Russell Wilson,QB,28,,Russell Wilson,Russell WilsonQB,25785,16.0,6,15,-9,5.0,-4.0,Luke,2021Luke25785
+2021,Krista,Matt Ryan,QB,7,,Matt Ryan,Matt RyanQB,8780,19.0,15,16,-1,2.0,1.0,Krista,2021Krista8780
+2021,David Casstevens,Ben Rothelsburger,QB,1,,Ben Roethlisberger,Ben RoethlisbergerQB,6770,21.0,22,17,5,0.0,5.0,David Casstevens,2021David Casstevens6770
+2021,Mark,Trevor Lawrence,QB,8,,Trevor Lawrence,Trevor LawrenceQB,33389,22.0,14,18,-4,0.0,-4.0,Mark,2021Mark33389
+2021,Mark,Baker Mayfield,QB,5,,Baker Mayfield,Baker MayfieldQB,30971,25.0,19,19,0,0.0,0.0,Mark,2021Mark30971
+2021,Duncan,Tua Tagovailoa,QB,6,,Tua Tagovailoa,Tua TagovailoaQB,32675,26.0,17,20,-3,0.0,-3.0,Duncan,2021Duncan32675
+2021,David Casstevens,Sam Darnold,QB,1,,Sam Darnold,Sam DarnoldQB,30973,28.0,22,21,1,0.0,1.0,David Casstevens,2021David Casstevens30973
+2021,Mark,Justin Fields,QB,12,,Justin Fields,Justin FieldsQB,33399,31.0,12,22,-10,0.0,-10.0,Mark,2021Mark33399
+2021,David Casstevens,Jamies Winston,QB,1,,Jameis Winston,Jameis WinstonQB,28389,33.0,22,23,-1,0.0,-1.0,David Casstevens,2021David Casstevens28389
+2021,Kevin,Trey Lance,QB,7,,Trey Lance,Trey LanceQB,33391,40.0,15,24,-9,0.0,-9.0,Kevin,2021Kevin33391
+2021,Krista,Ryan Fitzpatrick,QB,3,,Ryan Fitzpatrick,Ryan FitzpatrickQB,7426,71.0,21,25,-4,0.0,-4.0,Krista,2021Krista7426
+2021,Krista,Deshaun Watson,QB,6,,Deshaun Watson,Deshaun WatsonQB,30125,97.0,17,26,-9,0.0,-9.0,Krista,2021Krista30125
+2021,Patrick,Jonathan Taylor,RB,26,,Jonathan Taylor,Jonathan TaylorRB,32711,1.0,13,1,12,20.0,32.0,Patrick,2021Patrick32711
+2021,Luke,Austin Ekeler,RB,34,,Austin Ekeler,Austin EkelerRB,30423,2.0,10,2,8,19.0,27.0,Luke,2021Luke30423
+2021,David Casstevens,Najee Harris,RB,41,,Najee Harris,Najee HarrisRB,33412,3.0,8,3,5,18.0,23.0,David Casstevens,2021David Casstevens33412
+2021,Mark,Joe Mixon,RB,27,,Joe Mixon,Joe MixonRB,30161,4.0,12,4,8,17.0,25.0,Mark,2021Mark30161
+2021,Kevin,Ezekiel Elliot,RB,51,,Ezekiel Elliott,Ezekiel ElliottRB,29238,6.0,5,5,0,15.0,15.0,Kevin,2021Kevin29238
+2021,Benjamin,Alvin Kamara,RB,60,,Alvin Kamara,Alvin KamaraRB,30180,8.0,4,6,-2,13.0,11.0,Benjamin,2021Benjamin30180
+2021,Kevin,Antonio Gibson,RB,32,,Antonio Gibson,Antonio GibsonRB,32736,9.0,11,7,4,12.0,16.0,Kevin,2021Kevin32736
+2021,Scott Gunter,Nick Chubb,RB,46,,Nick Chubb,Nick ChubbRB,31005,10.0,7,8,-1,11.0,10.0,Scott Gunter,2021Scott Gunter31005
+2021,Bryan,Aaron Jones,RB,41,,Aaron Jones,Aaron JonesRB,30295,12.0,8,9,-1,9.0,8.0,Bryan,2021Bryan30295
+2021,Luke,Josh Jacobs,RB,4,,Josh Jacobs,Josh JacobsRB,31856,13.0,28,10,18,8.0,26.0,Luke,2021Luke31856
+2021,Duncan,Damien Harris,RB,6,,Damien Harris,Damien HarrisRB,31919,14.0,23,11,12,7.0,19.0,Duncan,2021Duncan31919
+2021,Benjamin,Dalvin Cook,RB,66,,Dalvin Cook,Dalvin CookRB,30154,15.0,2,12,-10,6.0,-4.0,Benjamin,2021Benjamin30154
+2021,Mark,Javonte Williams,RB,9,,Javonte Williams,Javonte WilliamsRB,33423,16.0,19,13,6,5.0,11.0,Mark,2021Mark33423
+2021,Krista,Derrick Henry,RB,62,,Derrick Henry,Derrick HenryRB,29279,17.0,3,14,-11,4.0,-7.0,Krista,2021Krista29279
+2021,Patrick,DeAndre Swift,RB,9,,D'Andre Swift,D'Andre SwiftRB,32705,20.0,19,15,4,1.0,5.0,Patrick,2021Patrick32705
+2021,David Casstevens,David Montgomery,RB,15,,David Montgomery,David MontgomeryRB,31905,21.0,17,16,1,0.0,1.0,David Casstevens,2021David Casstevens31905
+2021,Duncan,AJ Dillon,RB,1,,AJ Dillon,AJ DillonRB,32732,23.0,34,17,17,0.0,17.0,Duncan,2021Duncan32732
+2021,Bryan,James Robinson,RB,15,,James Robinson,James RobinsonRB,33138,24.0,17,18,-1,0.0,-1.0,Bryan,2021Bryan33138
+2021,Duncan,Darrell Henderson,RB,3,,Darrell Henderson,Darrell HendersonRB,31902,26.0,31,19,12,0.0,12.0,Duncan,2021Duncan31902
+2021,Krista,Myles Gaskin,RB,9,,Myles Gaskin,Myles GaskinRB,32066,36.0,19,20,-1,0.0,-1.0,Krista,2021Krista32066
+2021,David Casstevens,Giovanni Bernard,RB,1,,Giovani Bernard,Giovani BernardRB,26660,38.0,34,21,13,0.0,13.0,David Casstevens,2021David Casstevens26660
+2021,Patrick,Zach Moss,RB,2,,Zack Moss,Zack MossRB,32756,47.0,33,22,11,0.0,11.0,Patrick,2021Patrick32756
+2021,Mark,Raheem Mostert,RB,5,,Raheem Mostert,Raheem MostertRB,28654,51.0,25,23,2,0.0,2.0,Mark,2021Mark28654
+2021,Kevin,Michael Carter,RB,1,,Michael Carter,Michael CarterRB,33495,55.0,34,24,10,0.0,10.0,Kevin,2021Kevin33495
+2021,Mark,Chris Carson,RB,23,,Chris Carson,Chris CarsonRB,30362,57.0,15,25,-10,0.0,-10.0,Mark,2021Mark30362
+2021,David Casstevens,Sony Michele,RB,1,,Sony Michel,Sony MichelRB,31001,64.0,34,26,8,0.0,8.0,David Casstevens,2021David Casstevens31001
+2021,Scott Gunter,Phillip Lindsay,RB,5,,Phillip Lindsay,Phillip LindsayRB,31379,66.0,25,27,-2,0.0,-2.0,Scott Gunter,2021Scott Gunter31379
+2021,Scott Gunter,Saquon Barkley,RB,47,,Saquon Barkley,Saquon BarkleyRB,30972,73.0,6,28,-22,0.0,-22.0,Scott Gunter,2021Scott Gunter30972
+2021,Duncan,Chubba Hubbard,RB,1,,Chuba Hubbard,Chuba HubbardRB,33514,100.0,34,29,5,0.0,5.0,Duncan,2021Duncan33514
+2021,Luke,Gus Edwards,RB,19,,Gus Edwards,Gus EdwardsRB,31424,108.0,16,30,-14,0.0,-14.0,Luke,2021Luke31424
+2021,Patrick,Chase Edmonds,RB,4,,Chase Edmonds,Chase EdmondsRB,31104,109.0,28,31,-3,0.0,-3.0,Patrick,2021Patrick31104
+2021,Benjamin,Mike Davis,RB,6,,Mike Davis,Mike DavisRB,28514,127.0,23,32,-9,0.0,-9.0,Benjamin,2021Benjamin28514
+2021,Duncan,Christian McCaffrey,RB,81,,Christian McCaffrey,Christian McCaffreyRB,30121,136.0,1,33,-32,0.0,-32.0,Duncan,2021Duncan30121
+2021,David Casstevens,Miles Sanders,RB,3,,Miles Sanders,Miles SandersRB,31885,154.0,31,34,-3,0.0,-3.0,David Casstevens,2021David Casstevens31885
+2021,Duncan,Ramandre Stevenson,RB,5,,Rhamondre Stevenson,Rhamondre StevensonRB,33508,163.0,25,35,-10,0.0,-10.0,Duncan,2021Duncan33508
+2021,Krista,Clyde Edwards-Helaire,RB,26,,Clyde Edwards-Helaire,Clyde Edwards-HelaireRB,32702,181.0,13,36,-23,0.0,-23.0,Krista,2021Krista32702
+2021,Mark,Trey Sermon,RB,7,,Trey Sermon,Trey SermonRB,33476,201.0,22,37,-15,0.0,-15.0,Mark,2021Mark33476
+2021,Mark,Kareem Hunt,RB,4,,Kareem Hunt,Kareem HuntRB,30199,235.0,28,38,-10,0.0,-10.0,Mark,2021Mark30199
+2021,Kevin,Mark Andrews,TE,9,,Mark Andrews,Mark AndrewsTE,31056,1.0,5,1,4,10.0,14.0,Kevin,2021Kevin31056
+2021,Bryan,Travis Kelce,TE,49,,Travis Kelce,Travis KelceTE,26686,2.0,1,2,-1,9.0,8.0,Bryan,2021Bryan26686
+2021,David Casstevens,George Kittle,TE,30,,George Kittle,George KittleTE,30259,4.0,3,3,0,7.0,7.0,David Casstevens,2021David Casstevens30259
+2021,Duncan,Kyle Pitts,TE,17,,Kyle Pitts,Kyle PittsTE,33392,5.0,4,4,0,6.0,6.0,Duncan,2021Duncan33392
+2021,Luke,Tyler Higbee,TE,5,,Tyler Higbee,Tyler HigbeeTE,29344,14.0,8,5,3,0.0,3.0,Luke,2021Luke29344
+2021,Patrick,T.J. Hockenson,TE,6,,T.J. Hockenson,T.J. HockensonTE,31840,15.0,6,6,0,0.0,0.0,Patrick,2021Patrick31840
+2021,Krista,Darren Waller,TE,35,,Darren Waller,Darren WallerTE,28592,17.0,2,7,-5,0.0,-5.0,Krista,2021Krista28592
+2021,Scott Gunter,Logan Thomas,TE,6,,Logan Thomas,Logan ThomasTE,27648,45.0,6,8,-2,0.0,-2.0,Scott Gunter,2021Scott Gunter27648
+2021,Bryan,Cooper Kupp,WR,18,,Cooper Kupp,Cooper KuppWR,30182,1.0,13,1,12,30.0,42.0,Bryan,2021Bryan30182
+2021,Bryan,Davante Adams,WR,47,,Davante Adams,Davante AdamsWR,27581,3.0,1,2,-1,28.0,27.0,Bryan,2021Bryan27581
+2021,Mark,Justin Jefferson,WR,29,,Justin Jefferson,Justin JeffersonWR,32692,4.0,8,3,5,27.0,32.0,Mark,2021Mark32692
+2021,Benjamin,Jamaar Chase,WR,1,,Ja'Marr Chase,Ja'Marr ChaseWR,33393,5.0,39,4,35,26.0,61.0,Benjamin,2021Benjamin33393
+2021,David Casstevens,Tyreek Hill,WR,43,,Tyreek Hill,Tyreek HillWR,29399,6.0,2,5,-3,25.0,22.0,David Casstevens,2021David Casstevens29399
+2021,Luke,Stefon Diggs,WR,39,,Stefon Diggs,Stefon DiggsWR,28534,7.0,4,6,-2,24.0,22.0,Luke,2021Luke28534
+2021,Scott Gunter,Mike Evans,WR,14,,Mike Evans,Mike EvansWR,27535,8.0,17,7,10,23.0,33.0,Scott Gunter,2021Scott Gunter27535
+2021,Kevin,Deonte Johnson,WR,4,,Diontae Johnson,Diontae JohnsonWR,31898,9.0,28,8,20,22.0,42.0,Kevin,2021Kevin31898
+2021,Luke,Tyler Lockett,WR,15,,Tyler Lockett,Tyler LockettWR,28457,12.0,16,9,7,19.0,26.0,Luke,2021Luke28457
+2021,Duncan,Keenan Allen,WR,23,,Keenan Allen,Keenan AllenWR,26699,14.0,11,10,1,17.0,18.0,Duncan,2021Duncan26699
+2021,Mark,DK Metcalfe,WR,35,,DK Metcalf,DK MetcalfWR,31896,15.0,7,11,-4,16.0,12.0,Mark,2021Mark31896
+2021,Duncan,CeeDee Lamb,WR,21,,CeeDee Lamb,CeeDee LambWR,32687,16.0,12,12,0,15.0,15.0,Duncan,2021Duncan32687
+2021,Patrick,Michael Pittman,WR,3,,Michael Pittman Jr.,Michael Pittman Jr.WR,32704,17.0,31,13,18,14.0,32.0,Patrick,2021Patrick32704
+2021,Benjamin,Chris Godwin,WR,10,,Chris Godwin,Chris GodwinWR,30197,18.0,18,14,4,13.0,17.0,Benjamin,2021Benjamin30197
+2021,Bryan,DJ Moore,WR,9,,DJ Moore,DJ MooreWR,30994,19.0,21,15,6,12.0,18.0,Bryan,2021Bryan30994
+2021,David Casstevens,Jaylen Waddle,WR,2,,Jaylen Waddle,Jaylen WaddleWR,33394,20.0,34,16,18,11.0,29.0,David Casstevens,2021David Casstevens33394
+2021,Luke,Brandin Cooks,WR,1,,Brandin Cooks,Brandin CooksWR,27548,21.0,39,17,22,10.0,32.0,Luke,2021Luke27548
+2021,Mark,Tee Higgens,WR,6,,Tee Higgins,Tee HigginsWR,32703,22.0,25,18,7,9.0,16.0,Mark,2021Mark32703
+2021,Patrick,Terry McLaurin,WR,25,,Terry McLaurin,Terry McLaurinWR,31908,26.0,9,19,-10,5.0,-5.0,Patrick,2021Patrick31908
+2021,Patrick,Amari Cooper,WR,17,,Amari Cooper,Amari CooperWR,28392,28.0,14,20,-6,3.0,-3.0,Patrick,2021Patrick28392
+2021,Kevin,Adam Thielen,WR,10,,Adam Thielen,Adam ThielenWR,27277,29.0,18,21,-3,2.0,-1.0,Kevin,2021Kevin27277
+2021,Krista,Devonte Smith,WR,4,,DeVonta Smith,DeVonta SmithWR,33398,30.0,28,22,6,1.0,7.0,Krista,2021Krista33398
+2021,Patrick,Tyler Boyd,WR,2,,Tyler Boyd,Tyler BoydWR,29288,32.0,34,23,11,0.0,11.0,Patrick,2021Patrick29288
+2021,David Casstevens,AJ Brown,WR,36,,A.J. Brown,A.J. BrownWR,31883,33.0,6,24,-18,0.0,-18.0,David Casstevens,2021David Casstevens31883
+2021,Duncan,Brandon Aiyuk,WR,7,,Brandon Aiyuk,Brandon AiyukWR,32695,37.0,24,25,-1,0.0,-1.0,Duncan,2021Duncan32695
+2021,Krista,Chase Claypool,WR,6,,Chase Claypool,Chase ClaypoolWR,32719,38.0,25,26,-1,0.0,-1.0,Krista,2021Krista32719
+2021,Duncan,Marquez Callaway,WR,2,,Marquez Callaway,Marquez CallawayWR,33109,43.0,34,27,7,0.0,7.0,Duncan,2021Duncan33109
+2021,Bryan,Courtland Sutton,WR,1,,Courtland Sutton,Courtland SuttonWR,31010,45.0,39,28,11,0.0,11.0,Bryan,2021Bryan31010
+2021,Kevin,DeAndre Hopkins,WR,37,,DeAndre Hopkins,DeAndre HopkinsWR,26650,46.0,5,29,-24,0.0,-24.0,Kevin,2021Kevin26650
+2021,Benjamin,Robert Woods,WR,17,,Robert Woods,Robert WoodsWR,26664,51.0,14,30,-16,0.0,-16.0,Benjamin,2021Benjamin26664
+2021,Krista,Robbie Anderson,WR,2,,Robbie Anderson,Robbie AndersonWR,29785,53.0,34,31,3,0.0,3.0,Krista,2021Krista29785
+2021,Luke,Jarvis Landry,WR,1,,Jarvis Landry,Jarvis LandryWR,27591,55.0,39,32,7,0.0,7.0,Luke,2021Luke27591
+2021,Mark,Odell Beckham Jr.,WR,8,,Odell Beckham Jr.,Odell Beckham Jr.WR,27540,57.0,23,33,-10,0.0,-10.0,Mark,2021Mark27540
+2021,Mark,Antonio Brown,WR,3,,Antonio Brown,Antonio BrownWR,24171,59.0,31,34,-3,0.0,-3.0,Mark,2021Mark24171
+2021,Duncan,L. Shenault,WR,4,,Laviska Shenault Jr.,Laviska Shenault Jr.WR,32712,60.0,28,35,-7,0.0,-7.0,Duncan,2021Duncan32712
+2021,Patrick,Bryan Edwards,WR,1,,Bryan Edwards,Bryan EdwardsWR,32751,65.0,39,36,3,0.0,3.0,Patrick,2021Patrick32751
+2021,Krista,Rondale Moore,WR,1,,Rondale Moore,Rondale MooreWR,33437,72.0,39,37,2,0.0,2.0,Krista,2021Krista33437
+2021,Benjamin,Kenny Golladay,WR,5,,Kenny Golladay,Kenny GolladayWR,30209,83.0,27,38,-11,0.0,-11.0,Benjamin,2021Benjamin30209
+2021,Patrick,Allen Robinson,WR,25,,Allen Robinson II,Allen Robinson IIWR,27589,87.0,9,39,-30,0.0,-30.0,Patrick,2021Patrick27589
+2021,Krista,Jerry Juedy,WR,10,,Jerry Jeudy,Jerry JeudyWR,32685,88.0,18,40,-22,0.0,-22.0,Krista,2021Krista32685
+2021,Mark,Julio Jones,WR,9,,Julio Jones,Julio JonesWR,24793,94.0,21,41,-20,0.0,-20.0,Mark,2021Mark24793
+2021,Scott Gunter,Calvin Ridley,WR,43,,Calvin Ridley,Calvin RidleyWR,30996,107.0,2,42,-40,0.0,-40.0,Scott Gunter,2021Scott Gunter30996
+2021,Luke,JuJu Smith-Shu,WR,3,,JuJu Smith-Schuster,JuJu Smith-SchusterWR,30175,142.0,31,43,-12,0.0,-12.0,Luke,2021Luke30175
+2021,Benjamin,Michael Thomas,WR,2,,Michael Thomas,Michael ThomasWR,29281,279.0,34,44,-10,0.0,-10.0,Benjamin,2021Benjamin29281
+2022,Mark,SF,DEF,7,,San Francisco,San FranciscoDEF,san-francisco,1.0,1,1,0,20.0,20.0,Mark,2022Marksan-francisco
+2022,Bryan,Patriots,DEF,1,,New England,New EnglandDEF,new-england,2.0,8,2,6,19.0,25.0,Bryan,2022Bryannew-england
+2022,Krista,PHI,DEF,1,,Philadelphia,PhiladelphiaDEF,philadelphia,4.0,8,3,5,17.0,22.0,Krista,2022Kristaphiladelphia
+2022,Scott Gunter,BUF,DEF,4,,Buffalo,BuffaloDEF,buffalo,5.0,3,4,-1,16.0,15.0,Scott Gunter,2022Scott Gunterbuffalo
+2022,Kevin,WAS,DEF,1,,Washington,WashingtonDEF,washington,7.0,8,5,3,14.0,17.0,Kevin,2022Kevinwashington
+2022,Krista,IND,DEF,2,,Indianapolis,IndianapolisDEF,indianapolis,11.0,5,6,-1,10.0,9.0,Krista,2022Kristaindianapolis
+2022,Bryan,TB,DEF,2,,Tampa Bay,Tampa BayDEF,tampa-bay,13.0,5,7,-2,8.0,6.0,Bryan,2022Bryantampa-bay
+2022,Duncan,Saints,DEF,1,,New Orleans,New OrleansDEF,new-orleans,15.0,8,8,0,6.0,6.0,Duncan,2022Duncannew-orleans
+2022,Mark,Packers,DEF,5,,Green Bay,Green BayDEF,green-bay,19.0,2,9,-7,2.0,-5.0,Mark,2022Markgreen-bay
+2022,David Casstevens,PIT,DEF,1,,Pittsburgh,PittsburghDEF,pittsburgh,20.0,8,10,-2,1.0,-1.0,David Casstevens,2022David Casstevenspittsburgh
+2022,Luke,Dolphins,DEF,1,,Miami,MiamiDEF,miami,21.0,8,11,-3,0.0,-3.0,Luke,2022Lukemiami
+2022,David Casstevens,Chargers,DEF,2,,Los Angeles (LAC),Los Angeles (LAC)DEF,la-chargers,23.0,5,12,-7,0.0,-7.0,David Casstevens,2022David Casstevensla-chargers
+2022,Luke,Broncos,DEF,1,,Denver,DenverDEF,denver,24.0,8,13,-5,0.0,-5.0,Luke,2022Lukedenver
+2022,Scott Gunter,Rams,DEF,3,,Los Angeles (LAR),Los Angeles (LAR)DEF,la-rams,27.0,4,14,-10,0.0,-10.0,Scott Gunter,2022Scott Gunterla-rams
+2022,Duncan,CLE,DEF,1,,Cleveland,ClevelandDEF,cleveland,28.0,8,15,-7,0.0,-7.0,Duncan,2022Duncancleveland
+2022,David Casstevens,Patrick Mahomes,QB,41,,Patrick Mahomes,Patrick MahomesQB,30123,1.0,3,1,2,20.0,22.0,David Casstevens,2022David Casstevens30123
+2022,Luke,Josh Allen,QB,58,,Josh Allen,Josh AllenQB,30977,2.0,1,2,-1,19.0,18.0,Luke,2022Luke30977
+2022,Luke,Jalen Hurts,QB,30,,Jalen Hurts,Jalen HurtsQB,32723,3.0,6,3,3,18.0,21.0,Luke,2022Luke32723
+2022,Patrick,Joe Burrow,QB,26,,Joe Burrow,Joe BurrowQB,32671,4.0,8,4,4,17.0,21.0,Patrick,2022Patrick32671
+2022,David Casstevens,Trevor Lawrence,QB,13,,Trevor Lawrence,Trevor LawrenceQB,33389,6.0,15,5,10,15.0,25.0,David Casstevens,2022David Casstevens33389
+2022,Mark,Justin Fields,QB,9,,Justin Fields,Justin FieldsQB,33399,7.0,18,6,12,14.0,26.0,Mark,2022Mark33399
+2022,Kevin,Kirk Cousins,QB,18,,Kirk Cousins,Kirk CousinsQB,25812,8.0,13,7,6,13.0,19.0,Kevin,2022Kevin25812
+2022,Patrick,Daniel Jones,QB,4,,Daniel Jones,Daniel JonesQB,31838,9.0,21,8,13,12.0,25.0,Patrick,2022Patrick31838
+2022,David Casstevens,Justin Herbert,QB,45,,Justin Herbert,Justin HerbertQB,32676,10.0,2,9,-7,11.0,4.0,David Casstevens,2022David Casstevens32676
+2022,Mark,Jared Goff,QB,2,,Jared Goff,Jared GoffQB,29235,11.0,22,10,12,10.0,22.0,Mark,2022Mark29235
+2022,Benjamin,Tom Brady,QB,22,,Tom Brady,Tom BradyQB,5228,12.0,9,11,-2,9.0,7.0,Benjamin,2022Benjamin5228
+2022,Benjamin,Aaron Rodgers,QB,16,,Aaron Rodgers,Aaron RodgersQB,7200,13.0,14,12,2,8.0,10.0,Benjamin,2022Benjamin7200
+2022,Scott Gunter,Lamar Jackson,QB,37,,Lamar Jackson,Lamar JacksonQB,31002,14.0,4,13,-9,7.0,-2.0,Scott Gunter,2022Scott Gunter31002
+2022,Bryan,Tua Tagovailoa,QB,10,,Tua Tagovailoa,Tua TagovailoaQB,32675,15.0,17,14,3,6.0,9.0,Bryan,2022Bryan32675
+2022,Mark,Russell Wilson,QB,27,,Russell Wilson,Russell WilsonQB,25785,16.0,7,15,-8,5.0,-3.0,Mark,2022Mark25785
+2022,Scott Gunter,Derek Carr,QB,20,,Derek Carr,Derek CarrQB,27564,17.0,10,16,-6,4.0,-2.0,Scott Gunter,2022Scott Gunter27564
+2022,Patrick,Kyler Murray,QB,35,,Kyler Murray,Kyler MurrayQB,31833,18.0,5,17,-12,3.0,-9.0,Patrick,2022Patrick31833
+2022,Kevin,Dak Prescott,QB,19,,Dak Prescott,Dak PrescottQB,29369,19.0,12,18,-6,2.0,-4.0,Kevin,2022Kevin29369
+2022,Krista,Mac Jones,QB,1,,Mac Jones,Mac JonesQB,33403,23.0,24,19,5,0.0,5.0,Krista,2022Krista33403
+2022,Krista,Matt Ryan,QB,9,,Matt Ryan,Matt RyanQB,8780,27.0,18,20,-2,0.0,-2.0,Krista,2022Krista8780
+2022,Bryan,Baker Mayfield,QB,2,,Baker Mayfield,Baker MayfieldQB,30971,30.0,22,21,1,0.0,1.0,Bryan,2022Bryan30971
+2022,Duncan,Matt Stafford,QB,13,,Matthew Stafford,Matthew StaffordQB,9265,33.0,15,22,-7,0.0,-7.0,Duncan,2022Duncan9265
+2022,Benjamin,Zach Wilson,QB,1,,Zach Wilson,Zach WilsonQB,33390,35.0,24,23,1,0.0,1.0,Benjamin,2022Benjamin33390
+2022,Duncan,Jameis Winston,QB,5,,Jameis Winston,Jameis WinstonQB,28389,44.0,20,24,-4,0.0,-4.0,Duncan,2022Duncan28389
+2022,Bryan,Trey Lance,QB,20,,Trey Lance,Trey LanceQB,33391,64.0,10,25,-15,0.0,-15.0,Bryan,2022Bryan33391
+2022,Duncan,Austin Ekeler,RB,60,,Austin Ekeler,Austin EkelerRB,30423,1.0,3,1,2,30.0,32.0,Duncan,2022Duncan30423
+2022,Bryan,Christian McCaffrey,RB,62,,Christian McCaffrey,Christian McCaffreyRB,30121,2.0,2,2,0,29.0,29.0,Bryan,2022Bryan30121
+2022,Scott Gunter,Josh Jacobs,RB,6,,Josh Jacobs,Josh JacobsRB,31856,3.0,28,3,25,28.0,53.0,Scott Gunter,2022Scott Gunter31856
+2022,Scott Gunter,Derrick Henry,RB,52,,Derrick Henry,Derrick HenryRB,29279,4.0,5,4,1,27.0,28.0,Scott Gunter,2022Scott Gunter29279
+2022,Krista,Nick Chubb,RB,21,,Nick Chubb,Nick ChubbRB,31005,5.0,13,5,8,26.0,34.0,Krista,2022Krista31005
+2022,Patrick,Saquon Barkley,RB,38,,Saquon Barkley,Saquon BarkleyRB,30972,6.0,9,6,3,25.0,28.0,Patrick,2022Patrick30972
+2022,David Casstevens,Tony Polard,RB,4,,Tony Pollard,Tony PollardRB,31960,7.0,32,7,25,24.0,49.0,David Casstevens,2022David Casstevens31960
+2022,Benjamin,Dalvin Cook,RB,52,,Dalvin Cook,Dalvin CookRB,30154,8.0,5,8,-3,23.0,20.0,Benjamin,2022Benjamin30154
+2022,Luke,Aaron Jones,RB,31,,Aaron Jones,Aaron JonesRB,30295,9.0,11,9,2,22.0,24.0,Luke,2022Luke30295
+2022,Luke,Rhamondre Stevenson,RB,4,,Rhamondre Stevenson,Rhamondre StevensonRB,33508,10.0,32,10,22,21.0,43.0,Luke,2022Luke33508
+2022,David Casstevens,Miles Sanders,RB,7,,Miles Sanders,Miles SandersRB,31885,12.0,25,11,14,19.0,33.0,David Casstevens,2022David Casstevens31885
+2022,Patrick,Joe Mixon,RB,46,,Joe Mixon,Joe MixonRB,30161,13.0,7,12,-5,18.0,13.0,Patrick,2022Patrick30161
+2022,Kevin,Najee Harris,RB,53,,Najee Harris,Najee HarrisRB,33412,14.0,4,13,-9,17.0,8.0,Kevin,2022Kevin33412
+2022,Mark,Travis Etienne,RB,15,,Travis Etienne Jr.,Travis Etienne Jr.RB,33413,15.0,17,14,3,16.0,19.0,Mark,2022Mark33413
+2022,Kevin,Leonard Fournette,RB,16,,Leonard Fournette,Leonard FournetteRB,30117,17.0,15,15,0,14.0,14.0,Kevin,2022Kevin30117
+2022,Bryan,Alvin Kamara,RB,34,,Alvin Kamara,Alvin KamaraRB,30180,18.0,10,16,-6,13.0,7.0,Bryan,2022Bryan30180
+2022,Scott Gunter,James Conner,RB,21,,James Conner,James ConnerRB,30218,19.0,13,17,-4,12.0,8.0,Scott Gunter,2022Scott Gunter30218
+2022,Kevin,Ezekiel Elliott,RB,16,,Ezekiel Elliott,Ezekiel ElliottRB,29238,20.0,15,18,-3,11.0,8.0,Kevin,2022Kevin29238
+2022,Mark,David Montgomery,RB,9,,David Montgomery,David MontgomeryRB,31905,21.0,22,19,3,10.0,13.0,Mark,2022Mark31905
+2022,Krista,DeAndre Swift,RB,40,,D'Andre Swift,D'Andre SwiftRB,32705,22.0,8,20,-12,9.0,-3.0,Krista,2022Krista32705
+2022,Mark,Devin Singletary,RB,6,,Devin Singletary,Devin SingletaryRB,31906,24.0,28,21,7,7.0,14.0,Mark,2022Mark31906
+2022,Krista,Dameon Pierce,RB,12,,Dameon Pierce,Dameon PierceRB,34063,26.0,18,22,-4,5.0,1.0,Krista,2022Krista34063
+2022,Duncan,AJ Dillon,RB,12,,AJ Dillon,AJ DillonRB,32732,28.0,18,23,-5,3.0,-2.0,Duncan,2022Duncan32732
+2022,Mark,Antonio Gibson,RB,3,,Antonio Gibson,Antonio GibsonRB,32736,30.0,34,24,10,1.0,11.0,Mark,2022Mark32736
+2022,Scott Gunter,Cordarrelle Patterson,RB,1,,Cordarrelle Patterson,Cordarrelle PattersonRB,26652,31.0,38,25,13,0.0,13.0,Scott Gunter,2022Scott Gunter26652
+2022,Mark,Cam Akers,RB,11,,Cam Akers,Cam AkersRB,32722,33.0,20,26,-6,0.0,-6.0,Mark,2022Mark32722
+2022,Benjamin,Jonathan Taylor,RB,70,,Jonathan Taylor,Jonathan TaylorRB,32711,34.0,1,27,-26,0.0,-26.0,Benjamin,2022Benjamin32711
+2022,Krista,Kareem Hunt,RB,7,,Kareem Hunt,Kareem HuntRB,30199,41.0,25,28,-3,0.0,-3.0,Krista,2022Krista30199
+2022,Bryan,Michael Carter,RB,1,,Michael Carter,Michael CarterRB,33495,42.0,38,29,9,0.0,9.0,Bryan,2022Bryan33495
+2022,Duncan,Breece Hall,RB,9,,Breece Hall,Breece HallRB,33991,43.0,22,30,-8,0.0,-8.0,Duncan,2022Duncan33991
+2022,Krista,CEH,RB,7,,Clyde Edwards-Helaire,Clyde Edwards-HelaireRB,32702,46.0,25,31,-6,0.0,-6.0,Krista,2022Krista32702
+2022,David Casstevens,Damien Harris,RB,3,,Damien Harris,Damien HarrisRB,31919,48.0,34,32,2,0.0,2.0,David Casstevens,2022David Casstevens31919
+2022,David Casstevens,James Robinson,RB,1,,James Robinson,James RobinsonRB,33138,49.0,38,33,5,0.0,5.0,David Casstevens,2022David Casstevens33138
+2022,Mark,JK Dobbins,RB,9,,J.K. Dobbins,J.K. DobbinsRB,32725,51.0,22,34,-12,0.0,-12.0,Mark,2022Mark32725
+2022,Luke,Alexander Mattison,RB,2,,Alexander Mattison,Alexander MattisonRB,31934,52.0,37,35,2,0.0,2.0,Luke,2022Luke31934
+2022,Bryan,Melvin Gordon,RB,1,,Melvin Gordon,Melvin GordonRB,28403,54.0,38,36,2,0.0,2.0,Bryan,2022Bryan28403
+2022,Patrick,Chase Edmonds,RB,5,,Chase Edmonds,Chase EdmondsRB,31104,57.0,31,37,-6,0.0,-6.0,Patrick,2022Patrick31104
+2022,Krista,Nyheim Hines,RB,3,,Nyheim Hines,Nyheim HinesRB,31074,60.0,34,38,-4,0.0,-4.0,Krista,2022Krista31074
+2022,Luke,Rashaad Penny,RB,6,,Rashaad Penny,Rashaad PennyRB,30997,67.0,28,39,-11,0.0,-11.0,Luke,2022Luke30997
+2022,Benjamin,Elijah Mitchell,RB,10,,Elijah Mitchell,Elijah MitchellRB,33582,74.0,21,40,-19,0.0,-19.0,Benjamin,2022Benjamin33582
+2022,Luke,Javonte Williams,RB,30,,Javonte Williams,Javonte WilliamsRB,33423,83.0,12,41,-29,0.0,-29.0,Luke,2022Luke33423
+2022,Duncan,Travis Kelce,TE,41,,Travis Kelce,Travis KelceTE,26686,1.0,1,1,0,10.0,10.0,Duncan,2022Duncan26686
+2022,Kevin,TJ Hockenson,TE,4,,T.J. Hockenson,T.J. HockensonTE,31840,2.0,8,2,6,9.0,15.0,Kevin,2022Kevin31840
+2022,David Casstevens,George Kittle,TE,16,,George Kittle,George KittleTE,30259,3.0,4,3,1,8.0,9.0,David Casstevens,2022David Casstevens30259
+2022,Mark,Mark Andrews,TE,34,,Mark Andrews,Mark AndrewsTE,31056,4.0,3,4,-1,7.0,6.0,Mark,2022Mark31056
+2022,Krista,Dallas Goedert,TE,5,,Dallas Goedert,Dallas GoedertTE,31019,10.0,7,5,2,1.0,3.0,Krista,2022Krista31019
+2022,Luke,Dalton Schultz,TE,9,,Dalton Schultz,Dalton SchultzTE,31107,11.0,6,6,0,0.0,0.0,Luke,2022Luke31107
+2022,Krista,Austin Hooper,TE,1,,Austin Hooper,Austin HooperTE,29315,25.0,9,7,2,0.0,2.0,Krista,2022Krista29315
+2022,Bryan,Darren Waller,TE,15,,Darren Waller,Darren WallerTE,28592,28.0,5,8,-3,0.0,-3.0,Bryan,2022Bryan28592
+2022,Scott Gunter,Kyle Pitts,TE,35,,Kyle Pitts,Kyle PittsTE,33392,32.0,2,9,-7,0.0,-7.0,Scott Gunter,2022Scott Gunter33392
+2022,Kevin,Justin Jefferson,WR,59,,Justin Jefferson,Justin JeffersonWR,32692,1.0,1,1,0,30.0,30.0,Kevin,2022Kevin32692
+2022,David Casstevens,Tyreek Hill,WR,30,,Tyreek Hill,Tyreek HillWR,29399,2.0,8,2,6,29.0,35.0,David Casstevens,2022David Casstevens29399
+2022,Krista,Davante Adams,WR,41,,Davante Adams,Davante AdamsWR,27581,3.0,5,3,2,28.0,30.0,Krista,2022Krista27581
+2022,Duncan,Stefon Diggs,WR,43,,Stefon Diggs,Stefon DiggsWR,28534,4.0,4,4,0,27.0,27.0,Duncan,2022Duncan28534
+2022,Patrick,AJ Brown,WR,30,,A.J. Brown,A.J. BrownWR,31883,5.0,8,5,3,26.0,29.0,Patrick,2022Patrick31883
+2022,Mark,CeeDee Lamb,WR,40,,CeeDee Lamb,CeeDee LambWR,32687,6.0,6,6,0,25.0,25.0,Mark,2022Mark32687
+2022,Scott Gunter,Jaylen Waddle,WR,15,,Jaylen Waddle,Jaylen WaddleWR,33394,7.0,20,7,13,24.0,37.0,Scott Gunter,2022Scott Gunter33394
+2022,Patrick,Amon-Ra St Brown,WR,7,,Amon-Ra St. Brown,Amon-Ra St. BrownWR,33500,8.0,31,8,23,23.0,46.0,Patrick,2022Patrick33500
+2022,Krista,DeVonta Smith,WR,4,,DeVonta Smith,DeVonta SmithWR,33398,9.0,38,9,29,22.0,51.0,Krista,2022Krista33398
+2022,Mark,Amari Cooper,WR,5,,Amari Cooper,Amari CooperWR,28392,10.0,36,10,26,21.0,47.0,Mark,2022Mark28392
+2022,David Casstevens,Christian Kirk,WR,6,,Christian Kirk,Christian KirkWR,31017,11.0,34,11,23,20.0,43.0,David Casstevens,2022David Casstevens31017
+2022,Krista,JaMarr Chase,WR,48,,Ja'Marr Chase,Ja'Marr ChaseWR,33393,12.0,3,12,-9,19.0,10.0,Krista,2022Krista33393
+2022,Bryan,Tyler Lockett,WR,1,,Tyler Lockett,Tyler LockettWR,28457,13.0,43,13,30,18.0,48.0,Bryan,2022Bryan28457
+2022,Benjamin,Terry McLaurin,WR,18,,Terry McLaurin,Terry McLaurinWR,31908,14.0,17,14,3,17.0,20.0,Benjamin,2022Benjamin31908
+2022,Duncan,Mike Evans,WR,28,,Mike Evans,Mike EvansWR,27535,15.0,11,15,-4,16.0,12.0,Duncan,2022Duncan27535
+2022,Krista,Brandon Aiyuk,WR,7,,Brandon Aiyuk,Brandon AiyukWR,32695,16.0,31,16,15,15.0,30.0,Krista,2022Krista32695
+2022,Luke,Tee Higgins,WR,20,,Tee Higgins,Tee HigginsWR,32703,17.0,14,17,-3,14.0,11.0,Luke,2022Luke32703
+2022,Mark,DK Metcalf,WR,7,,DK Metcalf,DK MetcalfWR,31896,18.0,31,18,13,13.0,26.0,Mark,2022Mark31896
+2022,Krista,Chris Godwin,WR,15,,Chris Godwin,Chris GodwinWR,30197,20.0,20,19,1,11.0,12.0,Krista,2022Krista30197
+2022,Mark,Jerry Jeudy,WR,8,,Jerry Jeudy,Jerry JeudyWR,32685,21.0,28,20,8,10.0,18.0,Mark,2022Mark32685
+2022,Benjamin,DJ Moore,WR,19,,DJ Moore,DJ MooreWR,30994,22.0,15,21,-6,9.0,3.0,Benjamin,2022Benjamin30994
+2022,Patrick,Michael Pittman,WR,29,,Michael Pittman Jr.,Michael Pittman Jr.WR,32704,23.0,10,22,-12,8.0,-4.0,Patrick,2022Patrick32704
+2022,Duncan,Chris Olave,WR,1,,Chris Olave,Chris OlaveWR,33966,24.0,43,23,20,7.0,27.0,Duncan,2022Duncan33966
+2022,Bryan,Cooper Kupp,WR,55,,Cooper Kupp,Cooper KuppWR,30182,25.0,2,24,-22,6.0,-16.0,Bryan,2022Bryan30182
+2022,Scott Gunter,JuJu Smith-Schuster,WR,9,,JuJu Smith-Schuster,JuJu Smith-SchusterWR,30175,27.0,26,25,1,4.0,5.0,Scott Gunter,2022Scott Gunter30175
+2022,Luke,Gabriel Davis,WR,16,,Gabe Davis,Gabe DavisWR,32798,28.0,19,26,-7,3.0,-4.0,Luke,2022Luke32798
+2022,Duncan,Drake London,WR,3,,Drake London,Drake LondonWR,33963,30.0,41,27,14,1.0,15.0,Duncan,2022Duncan33963
+2022,David Casstevens,Mike Williams,WR,21,,Mike Williams (LAC),Mike Williams (LAC)WR,30120,31.0,13,28,-15,0.0,-15.0,David Casstevens,2022David Casstevens30120
+2022,Bryan,Allen Lazard,WR,6,,Allen Lazard,Allen LazardWR,31268,33.0,34,29,5,0.0,5.0,Bryan,2022Bryan31268
+2022,Kevin,Deebo Samuel,WR,39,,Deebo Samuel,Deebo SamuelWR,31868,34.0,7,30,-23,0.0,-23.0,Kevin,2022Kevin31868
+2022,Bryan,Adam Thielen,WR,4,,Adam Thielen,Adam ThielenWR,27277,35.0,38,31,7,0.0,7.0,Bryan,2022Bryan27277
+2022,Krista,George Pickens,WR,1,,George Pickens,George PickensWR,34007,36.0,43,32,11,0.0,11.0,Krista,2022Krista34007
+2022,Mark,Diontae Johnson,WR,9,,Diontae Johnson,Diontae JohnsonWR,31898,38.0,26,33,-7,0.0,-7.0,Mark,2022Mark31898
+2022,Mark,Keenan Allen,WR,19,,Keenan Allen,Keenan AllenWR,26699,42.0,15,34,-19,0.0,-19.0,Mark,2022Mark26699
+2022,David Casstevens,Courtland Sutton,WR,25,,Courtland Sutton,Courtland SuttonWR,31010,43.0,12,35,-23,0.0,-23.0,David Casstevens,2022David Casstevens31010
+2022,Scott Gunter,Marquise Brown,WR,11,,Marquise Brown,Marquise BrownWR,31857,46.0,22,36,-14,0.0,-14.0,Scott Gunter,2022Scott Gunter31857
+2022,Bryan,DeAndre Hopkins,WR,11,,DeAndre Hopkins,DeAndre HopkinsWR,26650,47.0,22,37,-15,0.0,-15.0,Bryan,2022Bryan26650
+2022,Luke,Brandin Cooks,WR,11,,Brandin Cooks,Brandin CooksWR,27548,48.0,22,38,-16,0.0,-16.0,Luke,2022Luke27548
+2022,Duncan,Darnell Mooney,WR,8,,Darnell Mooney,Darnell MooneyWR,32843,73.0,28,39,-11,0.0,-11.0,Duncan,2022Duncan32843
+2022,Luke,Treylon Burks,WR,1,,Treylon Burks,Treylon BurksWR,33973,78.0,43,40,3,0.0,3.0,Luke,2022Luke33973
+2022,Patrick,Elijah Moore,WR,5,,Elijah Moore,Elijah MooreWR,33422,83.0,36,41,-5,0.0,-5.0,Patrick,2022Patrick33422
+2022,Benjamin,Allen Robinson,WR,17,,Allen Robinson II,Allen Robinson IIWR,27589,88.0,18,42,-24,0.0,-24.0,Benjamin,2022Benjamin27589
+2022,Luke,Hunter Renfrow,WR,4,,Hunter Renfrow,Hunter RenfrowWR,31981,93.0,38,43,-5,0.0,-5.0,Luke,2022Luke31981
+2022,Scott Gunter,Julio Jones,WR,3,,Julio Jones,Julio JonesWR,24793,96.0,41,44,-3,0.0,-3.0,Scott Gunter,2022Scott Gunter24793
+2022,Scott Gunter,Rashod Bateman,WR,8,,Rashod Bateman,Rashod BatemanWR,33415,110.0,28,45,-17,0.0,-17.0,Scott Gunter,2022Scott Gunter33415
+2022,David Casstevens,Michael Thomas,WR,10,,Michael Thomas,Michael ThomasWR,29281,117.0,25,46,-21,0.0,-21.0,David Casstevens,2022David Casstevens29281
+2022,Luke,Skyy Moore,WR,1,,Skyy Moore,Skyy MooreWR,34009,122.0,43,47,-4,0.0,-4.0,Luke,2022Luke34009
+2023,Mark,Dallas,DEF,3,,Dallas,DallasDEF,dallas,3.0,1,1,0,8.0,8.0,Mark,2023Markdallas
+2023,Pat,New York (NYJ),DEF,1,,New York (NYJ),New York (NYJ)DEF,ny-jets,4.0,5,2,3,7.0,10.0,Patrick,2023Patrickny-jets
+2023,KJ,Buffalo,DEF,2,,Buffalo,BuffaloDEF,buffalo,7.0,2,3,-1,4.0,3.0,Kevin,2023Kevinbuffalo
+2023,Luke,San Francisco,DEF,2,,San Francisco,San FranciscoDEF,san-francisco,8.0,2,4,-2,3.0,1.0,Luke,2023Lukesan-francisco
+2023,Bryan,New Orleans,DEF,1,,New Orleans,New OrleansDEF,new-orleans,10.0,5,5,0,1.0,1.0,Bryan,2023Bryannew-orleans
+2023,Ben,Philadelphia,DEF,2,,Philadelphia,PhiladelphiaDEF,philadelphia,28.0,2,6,-4,0.0,-4.0,Benjamin,2023Benjaminphiladelphia
+2023,Pat,Josh Allen,QB,50,,Josh Allen,Josh AllenQB,30977,1.0,3,1,2,20.0,22.0,Patrick,2023Patrick30977
+2023,Krista,Jalen Hurts,QB,56,,Jalen Hurts,Jalen HurtsQB,32723,2.0,1,2,-1,19.0,18.0,Krista,2023Krista32723
+2023,Ben,Dak Prescott,QB,13,,Dak Prescott,Dak PrescottQB,29369,3.0,13,3,10,18.0,28.0,Benjamin,2023Benjamin29369
+2023,Pat,Lamar Jackson,QB,45,,Lamar Jackson,Lamar JacksonQB,31002,4.0,4,4,0,17.0,17.0,Patrick,2023Patrick31002
+2023,KJ,Jordan Love,QB,1,,Jordan Love,Jordan LoveQB,32696,5.0,21,5,16,16.0,32.0,Kevin,2023Kevin32696
+2023,Scott,Brock Purdy,QB,1,,Brock Purdy,Brock PurdyQB,34218,6.0,21,6,15,15.0,30.0,Scott Gunter,2023Scott Gunter34218
+2023,Duncan,Jared Goff,QB,4,,Jared Goff,Jared GoffQB,29235,7.0,18,7,11,14.0,25.0,Duncan,2023Duncan29235
+2023,Bryan,Patrick Mahomes II,QB,56,,Patrick Mahomes,Patrick MahomesQB,30123,8.0,1,8,-7,13.0,6.0,Bryan,2023Bryan30123
+2023,Scott,Tua Tagovailoa,QB,20,,Tua Tagovailoa,Tua TagovailoaQB,32675,10.0,10,9,1,11.0,12.0,Scott Gunter,2023Scott Gunter32675
+2023,David,Trevor Lawrence,QB,35,,Trevor Lawrence,Trevor LawrenceQB,33389,12.0,6,10,-4,9.0,5.0,David Casstevens,2023David Casstevens33389
+2023,David,Sam Howell,QB,1,,Sam Howell,Sam HowellQB,34100,13.0,21,11,10,8.0,18.0,David Casstevens,2023David Casstevens34100
+2023,Mark,Russell Wilson,QB,5,,Russell Wilson,Russell WilsonQB,25785,14.0,17,12,5,7.0,12.0,Mark,2023Mark25785
+2023,Bryan,Derek Carr,QB,4,,Derek Carr,Derek CarrQB,27564,16.0,18,13,5,5.0,10.0,Bryan,2023Bryan27564
+2023,Mark,Justin Herbert,QB,34,,Justin Herbert,Justin HerbertQB,32676,17.0,8,14,-6,4.0,-2.0,Mark,2023Mark32676
+2023,Duncan,Geno Smith,QB,12,,Geno Smith,Geno SmithQB,26662,18.0,14,15,-1,3.0,2.0,Duncan,2023Duncan26662
+2023,Krista,Justin Fields,QB,39,,Justin Fields,Justin FieldsQB,33399,19.0,5,16,-11,2.0,-9.0,Krista,2023Krista33399
+2023,David,Bryce Young,QB,1,,Bryce Young,Bryce YoungQB,40029,23.0,21,17,4,0.0,4.0,David Casstevens,2023David Casstevens40029
+2023,KJ,Kirk Cousins,QB,10,,Kirk Cousins,Kirk CousinsQB,25812,24.0,16,18,-2,0.0,-2.0,Kevin,2023Kevin25812
+2023,Luke,Joe Burrow,QB,35,,Joe Burrow,Joe BurrowQB,32671,25.0,6,19,-13,0.0,-13.0,Luke,2023Luke32671
+2023,Duncan,Kenny Pickett,QB,4,,Kenny Pickett,Kenny PickettQB,33975,30.0,18,20,-2,0.0,-2.0,Duncan,2023Duncan33975
+2023,Mark,Deshaun Watson,QB,22,,Deshaun Watson,Deshaun WatsonQB,30125,36.0,9,21,-12,0.0,-12.0,Mark,2023Mark30125
+2023,KJ,Anthony Richardson,QB,19,,Anthony Richardson,Anthony RichardsonQB,40040,41.0,11,22,-11,0.0,-11.0,Kevin,2023Kevin40040
+2023,Luke,Daniel Jones,QB,15,,Daniel Jones,Daniel JonesQB,31838,44.0,12,23,-11,0.0,-11.0,Luke,2023Luke31838
+2023,Ben,Aaron Rodgers,QB,11,,Aaron Rodgers,Aaron RodgersQB,7200,97.0,15,24,-9,0.0,-9.0,Benjamin,2023Benjamin7200
+2023,Bryan,Christian McCaffrey,RB,66,,Christian McCaffrey,Christian McCaffreyRB,30121,1.0,1,1,0,30.0,30.0,Bryan,2023Bryan30121
+2023,Pat,Breece Hall,RB,12,,Breece Hall,Breece HallRB,33991,2.0,16,2,14,29.0,43.0,Patrick,2023Patrick33991
+2023,Mark,Travis Etienne Jr.,RB,20,,Travis Etienne Jr.,Travis Etienne Jr.RB,33413,3.0,10,3,7,28.0,35.0,Mark,2023Mark33413
+2023,Scott,Joe Mixon,RB,20,,Joe Mixon,Joe MixonRB,30161,5.0,10,4,6,26.0,32.0,Scott Gunter,2023Scott Gunter30161
+2023,Pat,Rachaad White,RB,8,,Rachaad White,Rachaad WhiteRB,34047,6.0,21,5,16,25.0,41.0,Patrick,2023Patrick34047
+2023,Scott,Derrick Henry,RB,35,,Derrick Henry,Derrick HenryRB,29279,8.0,7,6,1,23.0,24.0,Scott Gunter,2023Scott Gunter29279
+2023,Ben,Bijan Robinson,RB,62,,Bijan Robinson,Bijan RobinsonRB,40055,9.0,3,7,-4,22.0,18.0,Benjamin,2023Benjamin40055
+2023,KJ,Jahmyr Gibbs,RB,25,,Jahmyr Gibbs,Jahmyr GibbsRB,40059,10.0,8,8,0,21.0,21.0,Kevin,2023Kevin40059
+2023,Krista,James Cook,RB,14,,James Cook,James CookRB,34019,11.0,14,9,5,20.0,25.0,Krista,2023Krista34019
+2023,Scott,Saquon Barkley,RB,48,,Saquon Barkley,Saquon BarkleyRB,30972,12.0,6,10,-4,19.0,15.0,Scott Gunter,2023Scott Gunter30972
+2023,Pat,Alvin Kamara,RB,7,,Alvin Kamara,Alvin KamaraRB,30180,13.0,24,11,13,18.0,31.0,Patrick,2023Patrick30180
+2023,Krista,Tony Pollard,RB,56,,Tony Pollard,Tony PollardRB,31960,14.0,4,12,-8,17.0,9.0,Krista,2023Krista31960
+2023,David,David Montgomery,RB,8,,David Montgomery,David MontgomeryRB,31905,15.0,21,13,8,16.0,24.0,David Casstevens,2023David Casstevens31905
+2023,KJ,Isiah Pacheco,RB,5,,Isiah Pacheco,Isiah PachecoRB,34207,16.0,28,14,14,15.0,29.0,Kevin,2023Kevin34207
+2023,Pat,James Conner,RB,4,,James Conner,James ConnerRB,30218,18.0,29,15,14,13.0,27.0,Patrick,2023Patrick30218
+2023,Luke,Kenneth Walker III,RB,7,,Kenneth Walker III,Kenneth Walker IIIRB,33996,19.0,24,16,8,12.0,20.0,Luke,2023Luke33996
+2023,Luke,Najee Harris,RB,18,,Najee Harris,Najee HarrisRB,33412,22.0,13,17,-4,9.0,5.0,Luke,2023Luke33412
+2023,KJ,D'Andre Swift,RB,7,,D'Andre Swift,D'Andre SwiftRB,32705,23.0,24,18,6,8.0,14.0,Kevin,2023Kevin32705
+2023,Mark,De'Von Achane,RB,3,,De'Von Achane,De'Von AchaneRB,40118,24.0,34,19,15,7.0,22.0,Mark,2023Mark40118
+2023,Ben,Jaylen Warren,RB,2,,Jaylen Warren,Jaylen WarrenRB,34447,25.0,36,20,16,6.0,22.0,Benjamin,2023Benjamin34447
+2023,Ben,Austin Ekeler,RB,63,,Austin Ekeler,Austin EkelerRB,30423,26.0,2,21,-19,5.0,-14.0,Benjamin,2023Benjamin30423
+2023,Mark,Josh Jacobs,RB,25,,Josh Jacobs,Josh JacobsRB,31856,27.0,8,22,-14,4.0,-10.0,Mark,2023Mark31856
+2023,Bryan,Javonte Williams,RB,4,,Javonte Williams,Javonte WilliamsRB,33423,29.0,29,23,6,2.0,8.0,Bryan,2023Bryan33423
+2023,KJ,Jonathan Taylor,RB,8,,Jonathan Taylor,Jonathan TaylorRB,32711,33.0,21,24,-3,0.0,-3.0,Kevin,2023Kevin32711
+2023,David,Tyjae Spears,RB,1,,Tyjae Spears,Tyjae SpearsRB,40119,34.0,39,25,14,0.0,14.0,David Casstevens,2023David Casstevens40119
+2023,Scott,Tyler Allgeier,RB,2,,Tyler Allgeier,Tyler AllgeierRB,34107,35.0,36,26,10,0.0,10.0,Scott Gunter,2023Scott Gunter34107
+2023,Duncan,Rhamondre Stevenson,RB,20,,Rhamondre Stevenson,Rhamondre StevensonRB,33508,36.0,10,27,-17,0.0,-17.0,Duncan,2023Duncan33508
+2023,Luke,Aaron Jones,RB,14,,Aaron Jones,Aaron JonesRB,30295,37.0,14,28,-14,0.0,-14.0,Luke,2023Luke30295
+2023,Luke,Alexander Mattison,RB,10,,Alexander Mattison,Alexander MattisonRB,31934,38.0,18,29,-11,0.0,-11.0,Luke,2023Luke31934
+2023,Bryan,Antonio Gibson,RB,1,,Antonio Gibson,Antonio GibsonRB,32736,39.0,39,30,9,0.0,9.0,Bryan,2023Bryan32736
+2023,Luke,AJ Dillon,RB,4,,AJ Dillon,AJ DillonRB,32732,41.0,29,31,-2,0.0,-2.0,Luke,2023Luke32732
+2023,David,Samaje Perine,RB,1,,Samaje Perine,Samaje PerineRB,30227,42.0,39,32,7,0.0,7.0,David Casstevens,2023David Casstevens30227
+2023,Krista,Khalil Herbert,RB,9,,Khalil Herbert,Khalil HerbertRB,33605,43.0,20,33,-13,0.0,-13.0,Krista,2023Krista33605
+2023,David,Zach Charbonnet,RB,3,,Zach Charbonnet,Zach CharbonnetRB,40075,45.0,34,34,0,0.0,0.0,David Casstevens,2023David Casstevens40075
+2023,Mark,Roschon Johnson,RB,2,,Roschon Johnson,Roschon JohnsonRB,40162,48.0,36,35,1,0.0,1.0,Mark,2023Mark40162
+2023,Ben,Dameon Pierce,RB,12,,Dameon Pierce,Dameon PierceRB,34063,52.0,16,36,-20,0.0,-20.0,Benjamin,2023Benjamin34063
+2023,Bryan,Miles Sanders,RB,6,,Miles Sanders,Miles SandersRB,31885,53.0,27,37,-10,0.0,-10.0,Bryan,2023Bryan31885
+2023,Krista,Jamaal Williams,RB,1,,Jamaal Williams,Jamaal WilliamsRB,30247,61.0,39,38,1,0.0,1.0,Krista,2023Krista30247
+2023,Duncan,Cam Akers,RB,4,,Cam Akers,Cam AkersRB,32722,67.0,29,39,-10,0.0,-10.0,Duncan,2023Duncan32722
+2023,Ben,Dalvin Cook,RB,4,,Dalvin Cook,Dalvin CookRB,30154,78.0,29,40,-11,0.0,-11.0,Benjamin,2023Benjamin30154
+2023,Duncan,Nick Chubb,RB,50,,Nick Chubb,Nick ChubbRB,31005,88.0,5,41,-36,0.0,-36.0,Duncan,2023Duncan31005
+2023,David,J.K. Dobbins,RB,10,,J.K. Dobbins,J.K. DobbinsRB,32725,108.0,18,42,-24,0.0,-24.0,David Casstevens,2023David Casstevens32725
+2023,Duncan,Rashaad Penny,RB,1,,Rashaad Penny,Rashaad PennyRB,30997,123.0,39,43,-4,0.0,-4.0,Duncan,2023Duncan30997
+2023,Duncan,Travis Kelce,TE,57,,Travis Kelce,Travis KelceTE,26686,2.0,1,1,0,9.0,9.0,Duncan,2023Duncan26686
+2023,Bryan,George Kittle,TE,11,,George Kittle,George KittleTE,30259,4.0,5,2,3,7.0,10.0,Bryan,2023Bryan30259
+2023,Bryan,T.J. Hockenson,TE,17,,T.J. Hockenson,T.J. HockensonTE,31840,5.0,4,3,1,6.0,7.0,Bryan,2023Bryan31840
+2023,Mark,David Njoku,TE,3,,David Njoku,David NjokuTE,30142,6.0,8,4,4,5.0,9.0,Mark,2023Mark30142
+2023,Scott,Kyle Pitts,TE,11,,Kyle Pitts,Kyle PittsTE,33392,13.0,5,5,0,0.0,0.0,Scott Gunter,2023Scott Gunter33392
+2023,Luke,Mark Andrews,TE,25,,Mark Andrews,Mark AndrewsTE,31056,14.0,2,6,-4,0.0,-4.0,Luke,2023Luke31056
+2023,KJ,Dallas Goedert,TE,9,,Dallas Goedert,Dallas GoedertTE,31019,15.0,7,7,0,0.0,0.0,Kevin,2023Kevin31019
+2023,Ben,Darren Waller,TE,21,,Darren Waller,Darren WallerTE,28592,21.0,3,8,-5,0.0,-5.0,Benjamin,2023Benjamin28592
+2023,Krista,Chigoziem Okonkwo,TE,1,,Chigoziem Okonkwo,Chigoziem OkonkwoTE,34099,22.0,10,9,1,0.0,1.0,Krista,2023Krista34099
+2023,David,Pat Freiermuth,TE,3,,Pat Freiermuth,Pat FreiermuthTE,33443,30.0,8,10,-2,0.0,-2.0,David Casstevens,2023David Casstevens33443
+2023,Mark,CeeDee Lamb,WR,45,,CeeDee Lamb,CeeDee LambWR,32687,1.0,7,1,6,30.0,36.0,Mark,2023Mark32687
+2023,Duncan,Tyreek Hill,WR,57,,Tyreek Hill,Tyreek HillWR,29399,2.0,3,2,1,29.0,30.0,Duncan,2023Duncan29399
+2023,Pat,Amon-Ra St. Brown,WR,45,,Amon-Ra St. Brown,Amon-Ra St. BrownWR,33500,3.0,7,3,4,28.0,32.0,Patrick,2023Patrick33500
+2023,Ben,Mike Evans,WR,4,,Mike Evans,Mike EvansWR,27535,5.0,34,4,30,26.0,56.0,Benjamin,2023Benjamin27535
+2023,Scott,A.J. Brown,WR,49,,A.J. Brown,A.J. BrownWR,31883,6.0,6,5,1,25.0,26.0,Scott Gunter,2023Scott Gunter31883
+2023,Luke,DJ Moore,WR,10,,DJ Moore,DJ MooreWR,30994,7.0,23,6,17,24.0,41.0,Luke,2023Luke30994
+2023,Ben,Keenan Allen,WR,14,,Keenan Allen,Keenan AllenWR,26699,8.0,19,7,12,23.0,35.0,Benjamin,2023Benjamin26699
+2023,KJ,Stefon Diggs,WR,53,,Stefon Diggs,Stefon DiggsWR,28534,10.0,5,8,-3,21.0,18.0,Kevin,2023Kevin28534
+2023,Mark,Brandon Aiyuk,WR,6,,Brandon Aiyuk,Brandon AiyukWR,32695,11.0,30,9,21,20.0,41.0,Mark,2023Mark32695
+2023,David,Ja'Marr Chase,WR,64,,Ja'Marr Chase,Ja'Marr ChaseWR,33393,12.0,2,10,-8,19.0,11.0,David Casstevens,2023David Casstevens33393
+2023,Luke,Davante Adams,WR,45,,Davante Adams,Davante AdamsWR,27581,13.0,7,11,-4,18.0,14.0,Luke,2023Luke27581
+2023,KJ,Deebo Samuel,WR,13,,Deebo Samuel,Deebo SamuelWR,31868,14.0,20,12,8,17.0,25.0,Kevin,2023Kevin31868
+2023,Mark,Michael Pittman Jr.,WR,3,,Michael Pittman Jr.,Michael Pittman Jr.WR,32704,15.0,38,13,25,16.0,41.0,Mark,2023Mark32704
+2023,Mark,Amari Cooper,WR,17,,Amari Cooper,Amari CooperWR,28392,16.0,18,14,4,15.0,19.0,Mark,2023Mark28392
+2023,Mark,DK Metcalf,WR,24,,DK Metcalf,DK MetcalfWR,31896,17.0,15,15,0,14.0,14.0,Mark,2023Mark31896
+2023,Scott,Calvin Ridley,WR,27,,Calvin Ridley,Calvin RidleyWR,30996,18.0,13,16,-3,13.0,10.0,Scott Gunter,2023Scott Gunter30996
+2023,Luke,Chris Olave,WR,26,,Chris Olave,Chris OlaveWR,33966,19.0,14,17,-3,12.0,9.0,Luke,2023Luke33966
+2023,Pat,DeVonta Smith,WR,20,,DeVonta Smith,DeVonta SmithWR,33398,20.0,17,18,-1,11.0,10.0,Patrick,2023Patrick33398
+2023,Ben,DeAndre Hopkins,WR,9,,DeAndre Hopkins,DeAndre HopkinsWR,26650,21.0,24,19,5,10.0,15.0,Benjamin,2023Benjamin26650
+2023,Duncan,Jordan Addison,WR,2,,Jordan Addison,Jordan AddisonWR,40042,22.0,40,20,20,9.0,29.0,Duncan,2023Duncan40042
+2023,Mark,George Pickens,WR,7,,George Pickens,George PickensWR,34007,23.0,27,21,6,8.0,14.0,Mark,2023Mark34007
+2023,KJ,Justin Jefferson,WR,71,,Justin Jefferson,Justin JeffersonWR,32692,28.0,1,22,-21,3.0,-18.0,Kevin,2023Kevin32692
+2023,Ben,Terry McLaurin,WR,8,,Terry McLaurin,Terry McLaurinWR,31908,29.0,25,23,2,2.0,4.0,Benjamin,2023Benjamin31908
+2023,Bryan,Chris Godwin,WR,6,,Chris Godwin,Chris GodwinWR,30197,30.0,30,24,6,1.0,7.0,Bryan,2023Bryan30197
+2023,David,Garrett Wilson,WR,54,,Garrett Wilson,Garrett WilsonWR,33965,31.0,4,25,-21,0.0,-21.0,David Casstevens,2023David Casstevens33965
+2023,Krista,Zay Flowers,WR,1,,Zay Flowers,Zay FlowersWR,40039,32.0,44,26,18,0.0,18.0,Krista,2023Krista40039
+2023,David,Jaylen Waddle,WR,43,,Jaylen Waddle,Jaylen WaddleWR,33394,33.0,11,27,-16,0.0,-16.0,David Casstevens,2023David Casstevens33394
+2023,Bryan,Tyler Lockett,WR,7,,Tyler Lockett,Tyler LockettWR,28457,34.0,27,28,-1,0.0,-1.0,Bryan,2023Bryan28457
+2023,KJ,Courtland Sutton,WR,2,,Courtland Sutton,Courtland SuttonWR,31010,35.0,40,29,11,0.0,11.0,Kevin,2023Kevin31010
+2023,Krista,Drake London,WR,30,,Drake London,Drake LondonWR,33963,36.0,12,30,-18,0.0,-18.0,Krista,2023Krista33963
+2023,Krista,Brandin Cooks,WR,4,,Brandin Cooks,Brandin CooksWR,27548,37.0,34,31,3,0.0,3.0,Krista,2023Krista27548
+2023,Pat,Gabe Davis,WR,2,,Gabe Davis,Gabe DavisWR,32798,40.0,40,32,8,0.0,8.0,Patrick,2023Patrick32798
+2023,Bryan,Cooper Kupp,WR,45,,Cooper Kupp,Cooper KuppWR,30182,41.0,7,33,-26,0.0,-26.0,Bryan,2023Bryan30182
+2023,Pat,Diontae Johnson,WR,7,,Diontae Johnson,Diontae JohnsonWR,31898,44.0,27,34,-7,0.0,-7.0,Patrick,2023Patrick31898
+2023,Luke,Christian Kirk,WR,4,,Christian Kirk,Christian KirkWR,31017,47.0,34,35,-1,0.0,-1.0,Luke,2023Luke31017
+2023,Luke,Jaxon Smith-Njigba,WR,2,,Jaxon Smith-Njigba,Jaxon Smith-NjigbaWR,40041,48.0,40,36,4,0.0,4.0,Luke,2023Luke40041
+2023,Mark,Jerry Jeudy,WR,5,,Jerry Jeudy,Jerry JeudyWR,32685,49.0,33,37,-4,0.0,-4.0,Mark,2023Mark32685
+2023,Pat,Tee Higgins,WR,24,,Tee Higgins,Tee HigginsWR,32703,50.0,15,38,-23,0.0,-23.0,Patrick,2023Patrick32703
+2023,Scott,Marquise Brown,WR,4,,Marquise Brown,Marquise BrownWR,31857,53.0,34,39,-5,0.0,-5.0,Scott Gunter,2023Scott Gunter31857
+2023,Duncan,Elijah Moore,WR,1,,Elijah Moore,Elijah MooreWR,33422,54.0,44,40,4,0.0,4.0,Duncan,2023Duncan33422
+2023,Krista,Jahan Dotson,WR,11,,Jahan Dotson,Jahan DotsonWR,33971,57.0,22,41,-19,0.0,-19.0,Krista,2023Krista33971
+2023,Luke,Odell Beckham Jr.,WR,1,,Odell Beckham Jr.,Odell Beckham Jr.WR,27540,63.0,44,42,2,0.0,2.0,Luke,2023Luke27540
+2023,Duncan,Christian Watson,WR,12,,Christian Watson,Christian WatsonWR,33989,66.0,21,43,-22,0.0,-22.0,Duncan,2023Duncan33989
+2023,David,Quentin Johnston,WR,1,,Quentin Johnston,Quentin JohnstonWR,40051,75.0,44,44,0,0.0,0.0,David Casstevens,2023David Casstevens40051
+2023,Luke,Michael Thomas,WR,1,,Michael Thomas,Michael ThomasWR,29281,77.0,44,45,-1,0.0,-1.0,Luke,2023Luke29281
+2023,Duncan,Marvin Mims Jr.,WR,1,,Marvin Mims Jr.,Marvin Mims Jr.WR,40090,88.0,44,46,-2,0.0,-2.0,Duncan,2023Duncan40090
+2023,Bryan,Allen Lazard,WR,1,,Allen Lazard,Allen LazardWR,31268,98.0,44,47,-3,0.0,-3.0,Bryan,2023Bryan31268
+2023,Krista,Skyy Moore,WR,3,,Skyy Moore,Skyy MooreWR,34009,107.0,38,48,-10,0.0,-10.0,Krista,2023Krista34009
+2023,Scott,Mike Williams,WR,8,,Mike Williams (LAC),Mike Williams (LAC)WR,30120,110.0,25,49,-24,0.0,-24.0,Scott Gunter,2023Scott Gunter30120
+2023,Luke,Kadarius Toney,WR,6,,Kadarius Toney,Kadarius ToneyWR,33408,114.0,30,50,-20,0.0,-20.0,Luke,2023Luke33408
+2023,Mark,Justyn Ross,WR,1,,Justyn Ross,Justyn RossWR,34440,172.0,44,51,-7,0.0,-7.0,Mark,2023Mark34440
+2024,Duncan,Houston,DEF,1,,Houston,HoustonDEF,houston,4.0,5,1,4,7.0,11.0,Duncan,2024Duncanhouston
+2024,Scott,Pittsburgh,DEF,4,,Pittsburgh,PittsburghDEF,pittsburgh,6.0,1,2,-1,5.0,4.0,Scott Gunter,2024Scott Gunterpittsburgh
+2024,KJ,Kansas City,DEF,1,,Kansas City,Kansas CityDEF,kansas-city,12.0,5,3,2,0.0,2.0,Kevin,2024Kevinkansas-city
+2024,Patrick,New Orleans,DEF,1,,New Orleans,New OrleansDEF,new-orleans,15.0,5,4,1,0.0,1.0,Patrick,2024Patricknew-orleans
+2024,Mark,Cleveland,DEF,3,,Cleveland,ClevelandDEF,cleveland,16.0,2,5,-3,0.0,-3.0,Mark,2024Markcleveland
+2024,Duncan,Cincinnati,DEF,1,,Cincinnati,CincinnatiDEF,cincinnati,18.0,5,6,-1,0.0,-1.0,Duncan,2024Duncancincinnati
+2024,Krista,New York (NYJ),DEF,1,,New York (NYJ),New York (NYJ)DEF,ny-jets,25.0,5,7,-2,0.0,-2.0,Krista,2024Kristany-jets
+2024,Ben,Dallas,DEF,2,,Dallas,DallasDEF,dallas,26.0,3,8,-5,0.0,-5.0,Benjamin,2024Benjamindallas
+2024,Luke,San Francisco,DEF,2,,San Francisco,San FranciscoDEF,san-francisco,27.0,3,9,-6,0.0,-6.0,Luke,2024Lukesan-francisco
+2024,Patrick,Lamar Jackson,QB,40,,Lamar Jackson,Lamar JacksonQB,31002,1.0,6,1,5,20.0,25.0,Patrick,2024Patrick31002
+2024,Luke,Joe Burrow,QB,21,,Joe Burrow,Joe BurrowQB,32671,2.0,11,2,9,19.0,28.0,Luke,2024Luke32671
+2024,Duncan,Josh Allen,QB,51,,Josh Allen,Josh AllenQB,30977,3.0,2,3,-1,18.0,17.0,Duncan,2024Duncan30977
+2024,Luke,Baker Mayfield,QB,2,,Baker Mayfield,Baker MayfieldQB,30971,4.0,23,4,19,17.0,36.0,Luke,2024Luke30971
+2024,Ben,Jayden Daniels,QB,22,,Jayden Daniels,Jayden DanielsQB,40896,5.0,9,5,4,16.0,20.0,Benjamin,2024Benjamin40896
+2024,Bryan,Jared Goff,QB,4,,Jared Goff,Jared GoffQB,29235,6.0,19,6,13,15.0,28.0,Bryan,2024Bryan29235
+2024,KJ,Jalen Hurts,QB,48,,Jalen Hurts,Jalen HurtsQB,32723,9.0,3,7,-4,12.0,8.0,Kevin,2024Kevin32723
+2024,Mark,Kyler Murray,QB,42,,Kyler Murray,Kyler MurrayQB,31833,10.0,5,8,-3,11.0,8.0,Mark,2024Mark31833
+2024,Luke,Justin Herbert,QB,3,,Justin Herbert,Justin HerbertQB,32676,11.0,21,9,12,10.0,22.0,Luke,2024Luke32676
+2024,Krista,Patrick Mahomes II,QB,52,,Patrick Mahomes,Patrick MahomesQB,30123,12.0,1,10,-9,9.0,0.0,Krista,2024Krista30123
+2024,Mark,Geno Smith,QB,1,,Geno Smith,Geno SmithQB,26662,13.0,25,11,14,8.0,22.0,Mark,2024Mark26662
+2024,Scott,Brock Purdy,QB,8,,Brock Purdy,Brock PurdyQB,34218,14.0,14,12,2,7.0,9.0,Scott Gunter,2024Scott Gunter34218
+2024,Bryan,Aaron Rodgers,QB,3,,Aaron Rodgers,Aaron RodgersQB,7200,15.0,21,13,8,6.0,14.0,Bryan,2024Bryan7200
+2024,Krista,Caleb Williams,QB,19,,Caleb Williams,Caleb WilliamsQB,40900,16.0,12,14,-2,5.0,3.0,Krista,2024Krista40900
+2024,David,Jordan Love,QB,25,,Jordan Love,Jordan LoveQB,32696,17.0,8,15,-7,4.0,-3.0,David Casstevens,2024David Casstevens32696
+2024,David,C.J. Stroud,QB,47,,C.J. Stroud,C.J. StroudQB,40030,18.0,4,16,-12,3.0,-9.0,David Casstevens,2024David Casstevens40030
+2024,Duncan,Matthew Stafford,QB,4,,Matthew Stafford,Matthew StaffordQB,9265,19.0,19,17,2,2.0,4.0,Duncan,2024Duncan9265
+2024,KJ,Bryce Young,QB,1,,Bryce Young,Bryce YoungQB,40029,20.0,25,18,7,1.0,8.0,Kevin,2024Kevin40029
+2024,Scott,Kirk Cousins,QB,5,,Kirk Cousins,Kirk CousinsQB,25812,21.0,17,19,-2,0.0,-2.0,Scott Gunter,2024Scott Gunter25812
+2024,Duncan,Tua Tagovailoa,QB,6,,Tua Tagovailoa,Tua TagovailoaQB,32675,22.0,16,20,-4,0.0,-4.0,Duncan,2024Duncan32675
+2024,Patrick,Drake Maye,QB,1,,Drake Maye,Drake MayeQB,40881,23.0,25,21,4,0.0,4.0,Patrick,2024Patrick40881
+2024,Patrick,Anthony Richardson,QB,28,,Anthony Richardson,Anthony RichardsonQB,40040,25.0,7,22,-15,0.0,-15.0,Patrick,2024Patrick40040
+2024,Mark,Trevor Lawrence,QB,14,,Trevor Lawrence,Trevor LawrenceQB,33389,27.0,13,23,-10,0.0,-10.0,Mark,2024Mark33389
+2024,Patrick,Will Levis,QB,5,,Will Levis,Will LevisQB,40068,30.0,17,24,-7,0.0,-7.0,Patrick,2024Patrick40068
+2024,Bryan,Dak Prescott,QB,22,,Dak Prescott,Dak PrescottQB,29369,31.0,9,25,-16,0.0,-16.0,Bryan,2024Bryan29369
+2024,Scott,Justin Fields,QB,2,,Justin Fields,Justin FieldsQB,33399,32.0,23,26,-3,0.0,-3.0,Scott Gunter,2024Scott Gunter33399
+2024,Scott,Deshaun Watson,QB,7,,Deshaun Watson,Deshaun WatsonQB,30125,41.0,15,27,-12,0.0,-12.0,Scott Gunter,2024Scott Gunter30125
+2024,David,Jahmyr Gibbs,RB,47,,Jahmyr Gibbs,Jahmyr GibbsRB,40059,1.0,6,1,5,30.0,35.0,David Casstevens,2024David Casstevens40059
+2024,Scott,Saquon Barkley,RB,55,,Saquon Barkley,Saquon BarkleyRB,30972,2.0,4,2,2,29.0,31.0,Scott Gunter,2024Scott Gunter30972
+2024,Krista,Derrick Henry,RB,40,,Derrick Henry,Derrick HenryRB,29279,3.0,7,3,4,28.0,32.0,Krista,2024Krista29279
+2024,Scott,Bijan Robinson,RB,69,,Bijan Robinson,Bijan RobinsonRB,40055,4.0,2,4,-2,27.0,25.0,Scott Gunter,2024Scott Gunter40055
+2024,Krista,Josh Jacobs,RB,21,,Josh Jacobs,Josh JacobsRB,31856,5.0,12,5,7,26.0,33.0,Krista,2024Krista31856
+2024,Mark,De'Von Achane,RB,34,,De'Von Achane,De'Von AchaneRB,40118,6.0,8,6,2,25.0,27.0,Mark,2024Mark40118
+2024,Ben,Kyren Williams,RB,33,,Kyren Williams,Kyren WilliamsRB,34120,7.0,9,7,2,24.0,26.0,Benjamin,2024Benjamin34120
+2024,Krista,James Cook,RB,17,,James Cook,James CookRB,34019,8.0,14,8,6,23.0,29.0,Krista,2024Krista34019
+2024,Ben,Alvin Kamara,RB,15,,Alvin Kamara,Alvin KamaraRB,30180,9.0,16,9,7,22.0,29.0,Benjamin,2024Benjamin30180
+2024,Scott,James Conner,RB,10,,James Conner,James ConnerRB,30218,10.0,18,10,8,21.0,29.0,Scott Gunter,2024Scott Gunter30218
+2024,KJ,Jonathan Taylor,RB,52,,Jonathan Taylor,Jonathan TaylorRB,32711,11.0,5,11,-6,20.0,14.0,Kevin,2024Kevin32711
+2024,Mark,Chase Brown,RB,7,,Chase Brown,Chase BrownRB,40196,12.0,19,12,7,19.0,26.0,Mark,2024Mark40196
+2024,Luke,Joe Mixon,RB,19,,Joe Mixon,Joe MixonRB,30161,14.0,13,13,0,17.0,17.0,Luke,2024Luke30161
+2024,Duncan,Aaron Jones,RB,6,,Aaron Jones,Aaron JonesRB,30295,15.0,20,14,6,16.0,22.0,Duncan,2024Duncan30295
+2024,Luke,Breece Hall,RB,64,,Breece Hall,Breece HallRB,33991,16.0,3,15,-12,15.0,3.0,Luke,2024Luke33991
+2024,Duncan,David Montgomery,RB,5,,David Montgomery,David MontgomeryRB,31905,18.0,21,16,5,13.0,18.0,Duncan,2024Duncan31905
+2024,Luke,D'Andre Swift,RB,4,,D'Andre Swift,D'Andre SwiftRB,32705,19.0,26,17,9,12.0,21.0,Luke,2024Luke32705
+2024,Patrick,Najee Harris,RB,5,,Najee Harris,Najee HarrisRB,33412,20.0,21,18,3,11.0,14.0,Patrick,2024Patrick33412
+2024,Bryan,Tony Pollard,RB,3,,Tony Pollard,Tony PollardRB,31960,21.0,30,19,11,10.0,21.0,Bryan,2024Bryan31960
+2024,Luke,Rico Dowdle,RB,3,,Rico Dowdle,Rico DowdleRB,33100,22.0,30,20,10,9.0,19.0,Luke,2024Luke33100
+2024,KJ,Rachaad White,RB,13,,Rachaad White,Rachaad WhiteRB,34047,23.0,17,21,-4,8.0,4.0,Kevin,2024Kevin34047
+2024,Mark,J.K. Dobbins,RB,3,,J.K. Dobbins,J.K. DobbinsRB,32725,24.0,30,22,8,7.0,15.0,Mark,2024Mark32725
+2024,KJ,Kenneth Walker III,RB,16,,Kenneth Walker III,Kenneth Walker IIIRB,33996,27.0,15,23,-8,4.0,-4.0,Kevin,2024Kevin33996
+2024,Duncan,Rhamondre Stevenson,RB,4,,Rhamondre Stevenson,Rhamondre StevensonRB,33508,28.0,26,24,2,3.0,5.0,Duncan,2024Duncan33508
+2024,Duncan,Brian Robinson Jr.,RB,3,,Brian Robinson Jr.,Brian Robinson Jr.RB,34054,29.0,30,25,5,2.0,7.0,Duncan,2024Duncan34054
+2024,Bryan,Javonte Williams,RB,5,,Javonte Williams,Javonte WilliamsRB,33423,31.0,21,26,-5,0.0,-5.0,Bryan,2024Bryan33423
+2024,Patrick,Jerome Ford,RB,5,,Jerome Ford,Jerome FordRB,34112,35.0,21,27,-6,0.0,-6.0,Patrick,2024Patrick34112
+2024,Bryan,Travis Etienne Jr.,RB,30,,Travis Etienne Jr.,Travis Etienne Jr.RB,33413,36.0,11,28,-17,0.0,-17.0,Bryan,2024Bryan33413
+2024,Patrick,Jaylen Warren,RB,3,,Jaylen Warren,Jaylen WarrenRB,34447,38.0,30,29,1,0.0,1.0,Patrick,2024Patrick34447
+2024,Krista,Jordan Mason,RB,1,,Jordan Mason,Jordan MasonRB,34320,40.0,44,30,14,0.0,14.0,Krista,2024Krista34320
+2024,David,Tyjae Spears,RB,3,,Tyjae Spears,Tyjae SpearsRB,40119,42.0,30,31,-1,0.0,-1.0,David Casstevens,2024David Casstevens40119
+2024,Scott,Tyler Allgeier,RB,2,,Tyler Allgeier,Tyler AllgeierRB,34107,43.0,40,32,8,0.0,8.0,Scott Gunter,2024Scott Gunter34107
+2024,Ben,Devin Singletary,RB,2,,Devin Singletary,Devin SingletaryRB,31906,48.0,40,33,7,0.0,7.0,Benjamin,2024Benjamin31906
+2024,Duncan,Jaleel McLaughlin,RB,2,,Jaleel McLaughlin,Jaleel McLaughlinRB,40696,50.0,40,34,6,0.0,6.0,Duncan,2024Duncan40696
+2024,Krista,Samaje Perine,RB,3,,Samaje Perine,Samaje PerineRB,30227,52.0,30,35,-5,0.0,-5.0,Krista,2024Krista30227
+2024,David,Zack Moss,RB,5,,Zack Moss,Zack MossRB,32756,53.0,21,36,-15,0.0,-15.0,David Casstevens,2024David Casstevens32756
+2024,David,Raheem Mostert,RB,3,,Raheem Mostert,Raheem MostertRB,28654,57.0,30,37,-7,0.0,-7.0,David Casstevens,2024David Casstevens28654
+2024,Bryan,Nick Chubb,RB,3,,Nick Chubb,Nick ChubbRB,31005,59.0,30,38,-8,0.0,-8.0,Bryan,2024Bryan31005
+2024,Mark,Isiah Pacheco,RB,32,,Isiah Pacheco,Isiah PachecoRB,34207,64.0,10,39,-29,0.0,-29.0,Mark,2024Mark34207
+2024,Mark,Trey Benson,RB,2,,Trey Benson,Trey BensonRB,40958,69.0,40,40,0,0.0,0.0,Mark,2024Mark40958
+2024,Bryan,Christian McCaffrey,RB,72,,Christian McCaffrey,Christian McCaffreyRB,30121,70.0,1,41,-40,0.0,-40.0,Bryan,2024Bryan30121
+2024,Luke,Blake Corum,RB,4,,Blake Corum,Blake CorumRB,40962,81.0,26,42,-16,0.0,-16.0,Luke,2024Luke40962
+2024,Duncan,Zamir White,RB,3,,Zamir White,Zamir WhiteRB,34078,88.0,30,43,-13,0.0,-13.0,Duncan,2024Duncan34078
+2024,David,Jonathon Brooks,RB,4,,Jonathon Brooks,Jonathon BrooksRB,40926,115.0,26,44,-18,0.0,-18.0,David Casstevens,2024David Casstevens40926
+2024,Scott,Brock Bowers,TE,2,,Brock Bowers,Brock BowersTE,40878,1.0,9,1,8,10.0,18.0,Scott Gunter,2024Scott Gunter40878
+2024,Bryan,George Kittle,TE,11,,George Kittle,George KittleTE,30259,2.0,6,2,4,9.0,13.0,Bryan,2024Bryan30259
+2024,David,Trey McBride,TE,22,,Trey McBride,Trey McBrideTE,34010,3.0,3,3,0,8.0,8.0,David Casstevens,2024David Casstevens34010
+2024,Mark,Mark Andrews,TE,19,,Mark Andrews,Mark AndrewsTE,31056,5.0,4,4,0,6.0,6.0,Mark,2024Mark31056
+2024,Krista,Travis Kelce,TE,23,,Travis Kelce,Travis KelceTE,26686,6.0,2,5,-3,5.0,2.0,Krista,2024Krista26686
+2024,Ben,Sam LaPorta,TE,32,,Sam LaPorta,Sam LaPortaTE,40064,7.0,1,6,-5,4.0,-1.0,Benjamin,2024Benjamin40064
+2024,KJ,Kyle Pitts,TE,10,,Kyle Pitts,Kyle PittsTE,33392,15.0,7,7,0,0.0,0.0,Kevin,2024Kevin33392
+2024,Mark,Isaiah Likely,TE,1,,Isaiah Likely,Isaiah LikelyTE,34095,16.0,11,8,3,0.0,3.0,Mark,2024Mark34095
+2024,Luke,Dalton Kincaid,TE,13,,Dalton Kincaid,Dalton KincaidTE,40048,29.0,5,9,-4,0.0,-4.0,Luke,2024Luke40048
+2024,Duncan,Jake Ferguson,TE,2,,Jake Ferguson,Jake FergusonTE,34085,30.0,9,10,-1,0.0,-1.0,Duncan,2024Duncan34085
+2024,KJ,T.J. Hockenson,TE,1,,T.J. Hockenson,T.J. HockensonTE,31840,33.0,11,11,0,0.0,0.0,Kevin,2024Kevin31840
+2024,Patrick,Evan Engram,TE,6,,Evan Engram,Evan EngramTE,30136,34.0,8,12,-4,0.0,-4.0,Patrick,2024Patrick30136
+2024,Ben,Ja'Marr Chase,WR,54,,Ja'Marr Chase,Ja'Marr ChaseWR,33393,1.0,5,1,4,30.0,34.0,Benjamin,2024Benjamin33393
+2024,KJ,Justin Jefferson,WR,59,,Justin Jefferson,Justin JeffersonWR,32692,2.0,4,2,2,29.0,31.0,Kevin,2024Kevin32692
+2024,Ben,Amon-Ra St. Brown,WR,60,,Amon-Ra St. Brown,Amon-Ra St. BrownWR,33500,3.0,3,3,0,28.0,28.0,Benjamin,2024Benjamin33500
+2024,Luke,Brian Thomas Jr.,WR,3,,Brian Thomas Jr.,Brian Thomas Jr.WR,40883,4.0,40,4,36,27.0,63.0,Luke,2024Luke40883
+2024,Krista,Drake London,WR,33,,Drake London,Drake LondonWR,33963,5.0,9,5,4,26.0,30.0,Krista,2024Krista33963
+2024,Duncan,Terry McLaurin,WR,8,,Terry McLaurin,Terry McLaurinWR,31908,6.0,29,6,23,25.0,48.0,Duncan,2024Duncan31908
+2024,Mark,Malik Nabers,WR,16,,Malik Nabers,Malik NabersWR,40899,7.0,19,7,12,24.0,36.0,Mark,2024Mark40899
+2024,Patrick,CeeDee Lamb,WR,67,,CeeDee Lamb,CeeDee LambWR,32687,8.0,1,8,-7,23.0,16.0,Patrick,2024Patrick32687
+2024,Ben,Jaxon Smith-Njigba,WR,4,,Jaxon Smith-Njigba,Jaxon Smith-NjigbaWR,40041,9.0,39,9,30,22.0,52.0,Benjamin,2024Benjamin40041
+2024,Luke,Garrett Wilson,WR,43,,Garrett Wilson,Garrett WilsonWR,33965,10.0,7,10,-3,21.0,18.0,Luke,2024Luke33965
+2024,Mark,Ladd McConkey,WR,2,,Ladd McConkey,Ladd McConkeyWR,40908,11.0,45,11,34,20.0,54.0,Mark,2024Mark40908
+2024,Bryan,Mike Evans,WR,15,,Mike Evans,Mike EvansWR,27535,12.0,20,12,8,19.0,27.0,Bryan,2024Bryan27535
+2024,Luke,Courtland Sutton,WR,3,,Courtland Sutton,Courtland SuttonWR,31010,13.0,40,13,27,18.0,45.0,Luke,2024Luke31010
+2024,Patrick,Davante Adams,WR,19,,Davante Adams,Davante AdamsWR,27581,15.0,15,14,1,16.0,17.0,Patrick,2024Patrick27581
+2024,Scott,DJ Moore,WR,17,,DJ Moore,DJ MooreWR,30994,16.0,16,15,1,15.0,16.0,Scott Gunter,2024Scott Gunter30994
+2024,Duncan,A.J. Brown,WR,46,,A.J. Brown,A.J. BrownWR,31883,17.0,6,16,-10,14.0,4.0,Duncan,2024Duncan31883
+2024,David,Tee Higgins,WR,10,,Tee Higgins,Tee HigginsWR,32703,18.0,27,17,10,13.0,23.0,David Casstevens,2024David Casstevens32703
+2024,Luke,Jameson Williams,WR,1,,Jameson Williams,Jameson WilliamsWR,33967,19.0,47,18,29,12.0,41.0,Luke,2024Luke33967
+2024,Ben,Jordan Addison,WR,1,,Jordan Addison,Jordan AddisonWR,40042,20.0,47,19,28,11.0,39.0,Benjamin,2024Benjamin40042
+2024,Patrick,Nico Collins,WR,20,,Nico Collins,Nico CollinsWR,33477,21.0,14,20,-6,10.0,4.0,Patrick,2024Patrick33477
+2024,Duncan,Tyreek Hill,WR,67,,Tyreek Hill,Tyreek HillWR,29399,22.0,1,21,-20,9.0,-11.0,Duncan,2024Duncan29399
+2024,Bryan,Zay Flowers,WR,5,,Zay Flowers,Zay FlowersWR,40039,24.0,32,22,10,7.0,17.0,Bryan,2024Bryan40039
+2024,Luke,Calvin Ridley,WR,5,,Calvin Ridley,Calvin RidleyWR,30996,26.0,32,23,9,5.0,14.0,Luke,2024Luke30996
+2024,Bryan,Puka Nacua,WR,34,,Puka Nacua,Puka NacuaWR,40168,27.0,8,24,-16,4.0,-12.0,Bryan,2024Bryan40168
+2024,Krista,Jayden Reed,WR,5,,Jayden Reed,Jayden ReedWR,40063,28.0,32,25,7,3.0,10.0,Krista,2024Krista40063
+2024,Luke,Marvin Harrison Jr.,WR,33,,Marvin Harrison Jr.,Marvin Harrison Jr.WR,40893,29.0,9,26,-17,2.0,-15.0,Luke,2024Luke40893
+2024,KJ,DeVonta Smith,WR,15,,DeVonta Smith,DeVonta SmithWR,33398,30.0,20,27,-7,1.0,-6.0,Kevin,2024Kevin33398
+2024,Mark,DK Metcalf,WR,24,,DK Metcalf,DK MetcalfWR,31896,32.0,13,28,-15,0.0,-15.0,Mark,2024Mark31896
+2024,Mark,Xavier Worthy,WR,7,,Xavier Worthy,Xavier WorthyWR,40877,33.0,31,29,2,0.0,2.0,Mark,2024Mark40877
+2024,Luke,Keenan Allen,WR,2,,Keenan Allen,Keenan AllenWR,26699,35.0,45,30,15,0.0,15.0,Luke,2024Luke26699
+2024,David,Khalil Shakir,WR,3,,Khalil Shakir,Khalil ShakirWR,34104,37.0,40,31,9,0.0,9.0,David Casstevens,2024David Casstevens34104
+2024,Mark,Cooper Kupp,WR,17,,Cooper Kupp,Cooper KuppWR,30182,40.0,16,32,-16,0.0,-16.0,Mark,2024Mark30182
+2024,David,George Pickens,WR,9,,George Pickens,George PickensWR,34007,41.0,28,33,-5,0.0,-5.0,David Casstevens,2024David Casstevens34007
+2024,KJ,Michael Pittman Jr.,WR,8,,Michael Pittman Jr.,Michael Pittman Jr.WR,32704,43.0,29,34,-5,0.0,-5.0,Kevin,2024Kevin32704
+2024,Scott,Deebo Samuel Sr.,WR,15,,Deebo Samuel,Deebo SamuelWR,31868,44.0,20,35,-15,0.0,-15.0,Scott Gunter,2024Scott Gunter31868
+2024,David,Jaylen Waddle,WR,25,,Jaylen Waddle,Jaylen WaddleWR,33394,46.0,11,36,-25,0.0,-25.0,David Casstevens,2024David Casstevens33394
+2024,David,Rome Odunze,WR,5,,Rome Odunze,Rome OdunzeWR,40901,47.0,32,37,-5,0.0,-5.0,David Casstevens,2024David Casstevens40901
+2024,Mark,DeAndre Hopkins,WR,1,,DeAndre Hopkins,DeAndre HopkinsWR,26650,48.0,47,38,9,0.0,9.0,Mark,2024Mark26650
+2024,David,Tank Dell,WR,17,,Tank Dell,Tank DellWR,40097,50.0,16,39,-23,0.0,-23.0,David Casstevens,2024David Casstevens40097
+2024,Krista,Chris Godwin,WR,5,,Chris Godwin,Chris GodwinWR,30197,54.0,32,40,-8,0.0,-8.0,Krista,2024Krista30197
+2024,Scott,Amari Cooper,WR,14,,Amari Cooper,Amari CooperWR,28392,64.0,23,41,-18,0.0,-18.0,Scott Gunter,2024Scott Gunter28392
+2024,Scott,Stefon Diggs,WR,12,,Stefon Diggs,Stefon DiggsWR,28534,68.0,26,42,-16,0.0,-16.0,Scott Gunter,2024Scott Gunter28534
+2024,KJ,Keon Coleman,WR,1,,Keon Coleman,Keon ColemanWR,40911,69.0,47,43,4,0.0,4.0,Kevin,2024Kevin40911
+2024,Duncan,Christian Watson,WR,3,,Christian Watson,Christian WatsonWR,33989,70.0,40,44,-4,0.0,-4.0,Duncan,2024Duncan33989
+2024,Krista,Diontae Johnson,WR,5,,Diontae Johnson,Diontae JohnsonWR,31898,86.0,32,45,-13,0.0,-13.0,Krista,2024Krista31898
+2024,Patrick,Chris Olave,WR,25,,Chris Olave,Chris OlaveWR,33966,93.0,11,46,-35,0.0,-35.0,Patrick,2024Patrick33966
+2024,Bryan,Christian Kirk,WR,5,,Christian Kirk,Christian KirkWR,31017,95.0,32,47,-15,0.0,-15.0,Bryan,2024Bryan31017
+2024,Bryan,Rashee Rice,WR,13,,Rashee Rice,Rashee RiceWR,40084,98.0,24,48,-24,0.0,-24.0,Bryan,2024Bryan40084
+2024,Duncan,Brandon Aiyuk,WR,13,,Brandon Aiyuk,Brandon AiyukWR,32695,100.0,24,49,-25,0.0,-25.0,Duncan,2024Duncan32695
+2024,Scott,Marquise Brown,WR,3,,Marquise Brown,Marquise BrownWR,31857,145.0,40,50,-10,0.0,-10.0,Scott Gunter,2024Scott Gunter31857

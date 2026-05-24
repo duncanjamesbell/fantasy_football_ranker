@@ -1,0 +1,22 @@
+# credentials — never commit these
+.env
+oauth2.json
+
+# scraped intermediates — large, reproducible via pipeline
+data/raw/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# jupyter
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db
+Desktop.ini

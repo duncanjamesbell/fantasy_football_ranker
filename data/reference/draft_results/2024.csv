@@ -1,0 +1,284 @@
+Owner,Player,Position,Team,Price,conc,Standard Name
+Scott,Pittsburgh,DST,"
+DST (9)",4,Pittsburgh DST,PittsburghDST
+Mark,Cleveland,DST,"
+DST (10)",3,ClevelandDST,ClevelandDST
+Ben,Dallas,DST,"
+DST (7)",2,DallasDST,DallasDST
+Luke,San Francisco,DST,"
+DST (9)",2,San FranciscoDST,San FranciscoDST
+Krista,New York (NYJ),DST,"
+DST (12)",1,New York (NYJ)DST,New York (NYJ)DST
+Patrick,New Orleans,DST,"
+DST (12)",1,New OrleansDST,New OrleansDST
+Duncan,Cincinnati,DST,"
+DST (12)",1,CincinnatiDST,Cincinnati Bengals DST
+Duncan,Houston,DST,"
+DST (14)",1,HoustonDST,Houston Texans DST
+KJ,Kansas City,DST,"
+DST (6)",1,Kansas CityDST,Kansas CityDST
+Krista,Patrick Mahomes II,QB,"
+KC (6)",52,Patrick Mahomes IIQB,Patrick Mahomes IIQB
+Duncan,Josh Allen,QB,"
+BUF (12)",51,Josh AllenQB,Josh AllenQB
+KJ,Jalen Hurts,QB,"
+PHI (5)",48,Jalen HurtsQB,Jalen HurtsQB
+David,C.J. Stroud,QB,"
+HOU (14)",47,C.J. StroudQB,C.J. StroudQB
+Mark,Kyler Murray,QB,"
+ARI (11)",42,Kyler MurrayQB,Kyler MurrayQB
+Patrick,Lamar Jackson,QB,"
+BAL (14)",40,Lamar JacksonQB,Lamar JacksonQB
+Patrick,Anthony Richardson,QB,"
+IND (14)",28,Anthony RichardsonQB,Anthony RichardsonQB
+David,Jordan Love,QB,"
+GB (10)",25,Jordan LoveQB,Jordan LoveQB
+Bryan,Dak Prescott,QB,"
+DAL (7)",22,Dak PrescottQB,Dak PrescottQB
+Ben,Jayden Daniels,QB,"
+WAS (14)",22,Jayden DanielsQB,Jayden DanielsQB
+Luke,Joe Burrow,QB,"
+CIN (12)",21,Joe BurrowQB,Joe BurrowQB
+Krista,Caleb Williams,QB,"
+CHI (7)",19,Caleb WilliamsQB,Caleb WilliamsQB
+Mark,Trevor Lawrence,QB,"
+JAC (12)",14,Trevor LawrenceQB,Trevor LawrenceQB
+Scott,Brock Purdy,QB,"
+SF (9)",8,Brock PurdyQB,Brock PurdyQB
+Scott,Deshaun Watson,QB,"
+CLE (10)",7,Deshaun WatsonQB,Deshaun WatsonQB
+Duncan,Tua Tagovailoa,QB,"
+MIA (6)",6,Tua TagovailoaQB,Tua TagovailoaQB
+Scott,Kirk Cousins,QB,"
+ATL (12)",5,Kirk CousinsQB,Kirk CousinsQB
+Patrick,Will Levis,QB,"
+TEN (5)",5,Will LevisQB,Will LevisQB
+Bryan,Jared Goff,QB,"
+DET (5)",4,Jared GoffQB,Jared GoffQB
+Duncan,Matthew Stafford,QB,"
+LAR (6)",4,Matthew StaffordQB,Matthew StaffordQB
+Luke,Justin Herbert,QB,LAC (5),3,Justin HerbertQB,Justin HerbertQB
+Bryan,Aaron Rodgers,QB,"
+NYJ (12)",3,Aaron RodgersQB,Aaron RodgersQB
+Scott,Justin Fields,QB,"
+PIT (9)",2,Justin FieldsQB,Justin FieldsQB
+Luke,Baker Mayfield,QB,"
+TB (11)",2,Baker MayfieldQB,Baker MayfieldQB
+KJ,Bryce Young,QB,"
+CAR (11)",1,Bryce YoungQB,Bryce YoungQB
+Patrick,Drake Maye,QB,"
+NE (14)",1,Drake MayeQB,Drake MayeQB
+Mark,Geno Smith,QB,"
+SEA (10)",1,Geno SmithQB,Geno SmithQB
+Bryan,Christian McCaffrey,RB,"
+SF (9)",72,Christian McCaffreyRB,Christian McCaffreyRB
+Scott,Bijan Robinson,RB,"
+ATL (12)",69,Bijan RobinsonRB,Bijan RobinsonRB
+Luke,Breece Hall,RB,"
+NYJ (12)",64,Breece HallRB,Breece HallRB
+Scott,Saquon Barkley,RB,"
+PHI (5)",55,Saquon BarkleyRB,Saquon BarkleyRB
+KJ,Jonathan Taylor,RB,"
+IND (14)",52,Jonathan TaylorRB,Jonathan TaylorRB
+David,Jahmyr Gibbs,RB,"
+DET (5)",47,Jahmyr GibbsRB,Jahmyr GibbsRB
+Krista,Derrick Henry,RB,"
+BAL (14)",40,Derrick HenryRB,Derrick HenryRB
+Mark,De'Von Achane,RB,"
+MIA (6)",34,De'Von AchaneRB,De'Von AchaneRB
+Ben,Kyren Williams,RB,"
+LAR (6)",33,Kyren WilliamsRB,Kyren WilliamsRB
+Mark,Isiah Pacheco,RB,"
+KC (6)",32,Isiah PachecoRB,Isiah PachecoRB
+Bryan,Travis Etienne Jr.,RB,"
+JAC (12)",30,Travis Etienne Jr.RB,Travis Etienne Jr.RB
+Krista,Josh Jacobs,RB,"
+GB (10)",21,Josh JacobsRB,Josh JacobsRB
+Luke,Joe Mixon,RB,"
+HOU (14)",19,Joe MixonRB,Joe MixonRB
+Krista,James Cook,RB,"
+BUF (12)",17,James CookRB,James CookRB
+KJ,Kenneth Walker III,RB,"
+SEA (10)",16,Kenneth Walker IIIRB,Kenneth Walker IIIRB
+Ben,Alvin Kamara,RB,"
+NO (12)",15,Alvin KamaraRB,Alvin KamaraRB
+KJ,Rachaad White,RB,"
+TB (11)",13,Rachaad WhiteRB,Rachaad WhiteRB
+Scott,James Conner,RB,"
+ARI (11)",10,James ConnerRB,James ConnerRB
+Mark,Chase Brown,RB,"
+CIN (12)",7,Chase BrownRB,Chase BrownRB
+Duncan,Aaron Jones,RB,"
+MIN (6)",6,Aaron JonesRB,Aaron JonesRB
+David,Zack Moss,RB,"
+CIN (12)",5,Zack MossRB,Zack MossRB
+Patrick,Jerome Ford,RB,"
+CLE (10)",5,Jerome FordRB,Jerome FordRB
+Bryan,Javonte Williams,RB,"
+DEN (14)",5,Javonte WilliamsRB,Javonte WilliamsRB
+Duncan,David Montgomery,RB,"
+DET (5)",5,David MontgomeryRB,David MontgomeryRB
+Patrick,Najee Harris,RB,"
+PIT (9)",5,Najee HarrisRB,Najee HarrisRB
+David,Jonathon Brooks,RB,"
+CAR (11)",4,Jonathon BrooksRB,Jonathon BrooksRB
+Luke,D'Andre Swift,RB,"
+CHI (7)",4,D'Andre SwiftRB,D'Andre SwiftRB
+Luke,Blake Corum,RB,"
+LAR (6)",4,Blake CorumRB,Blake CorumRB
+Duncan,Rhamondre Stevenson,RB,"
+NE (14)",4,Rhamondre StevensonRB,Rhamondre StevensonRB
+Bryan,Nick Chubb,RB,"
+CLE (10)",3,Nick ChubbRB,Nick ChubbRB
+Luke,Rico Dowdle,RB,"
+DAL (7)",3,Rico DowdleRB,Rico DowdleRB
+Krista,Samaje Perine,RB,"
+KC (6)",3,Samaje PerineRB,Samaje PerineRB
+Mark,J.K. Dobbins,RB,"
+LAC (5)",3,J.K. DobbinsRB,J.K. DobbinsRB
+Duncan,Zamir White,RB,"
+LV (10)",3,Zamir WhiteRB,Zamir WhiteRB
+David,Raheem Mostert,RB,"
+MIA (6)",3,Raheem MostertRB,Raheem MostertRB
+Patrick,Jaylen Warren,RB,"
+PIT (9)",3,Jaylen WarrenRB,Jaylen WarrenRB
+Bryan,Tony Pollard,RB,"
+TEN (5)",3,Tony PollardRB,Tony PollardRB
+David,Tyjae Spears,RB,"
+TEN (5)",3,Tyjae SpearsRB,Tyjae SpearsRB
+Duncan,Brian Robinson Jr.,RB,"
+WAS (14)",3,Brian Robinson Jr.RB,Brian Robinson Jr.RB
+Mark,Trey Benson,RB,"
+ARI (11)",2,Trey BensonRB,Trey BensonRB
+Scott,Tyler Allgeier,RB,"
+ATL (12)",2,Tyler AllgeierRB,Tyler AllgeierRB
+Duncan,Jaleel McLaughlin,RB,"
+DEN (14)",2,Jaleel McLaughlinRB,Jaleel McLaughlinRB
+Ben,Devin Singletary,RB,"
+NYG (11)",2,Devin SingletaryRB,Devin SingletaryRB
+Krista,Jordan Mason,RB,"
+SF (9)",1,Jordan MasonRB,Jordan MasonRB
+Ben,Sam LaPorta,TE,"
+DET (5)",32,Sam LaPortaTE,Sam LaPortaTE
+Krista,Travis Kelce,TE,"
+KC (6)",23,Travis KelceTE,Travis KelceTE
+David,Trey McBride,TE,"
+ARI (11)",22,Trey McBrideTE,Trey McBrideTE
+Mark,Mark Andrews,TE,"
+BAL (14)",19,Mark AndrewsTE,Mark AndrewsTE
+Luke,Dalton Kincaid,TE,"
+BUF (12)",13,Dalton KincaidTE,Dalton KincaidTE
+Bryan,George Kittle,TE,"
+SF (9)",11,George KittleTE,George KittleTE
+KJ,Kyle Pitts,TE,"
+ATL (12)",10,Kyle PittsTE,Kyle PittsTE
+Patrick,Evan Engram,TE,"
+JAC (12)",6,Evan EngramTE,Evan EngramTE
+Duncan,Jake Ferguson,TE,"
+DAL (7)",2,Jake FergusonTE,Jake FergusonTE
+Scott,Brock Bowers,TE,"
+LV (10)",2,Brock BowersTE,Brock BowersTE
+Mark,Isaiah Likely,TE,"
+BAL (14)",1,Isaiah LikelyTE,Isaiah LikelyTE
+KJ,T.J. Hockenson,TE,"
+MIN (6)",1,T.J. HockensonTE,T.J. HockensonTE
+Patrick,CeeDee Lamb,WR,"
+DAL (7)",67,CeeDee LambWR,CeeDee LambWR
+Duncan,Tyreek Hill,WR,"
+MIA (6)",67,Tyreek HillWR,Tyreek HillWR
+Ben,Amon-Ra St. Brown,WR,"
+DET (5)",60,Amon-Ra St. BrownWR,Amon-Ra St. BrownWR
+KJ,Justin Jefferson,WR,"
+MIN (6)",59,Justin JeffersonWR,Justin JeffersonWR
+Ben,Ja'Marr Chase,WR,"
+CIN (12)",54,Ja'Marr ChaseWR,Ja'Marr ChaseWR
+Duncan,A.J. Brown,WR,"
+PHI (5)",46,A.J. BrownWR,A.J. BrownWR
+Luke,Garrett Wilson,WR,"
+NYJ (12)",43,Garrett WilsonWR,Garrett WilsonWR
+Bryan,Puka Nacua,WR,"
+LAR (6)",34,Puka NacuaWR,Puka NacuaWR
+Luke,Marvin Harrison Jr.,WR,"
+ARI (11)",33,Marvin Harrison Jr.WR,Marvin Harrison Jr.WR
+Krista,Drake London,WR,"
+ATL (12)",33,Drake LondonWR,Drake LondonWR
+David,Jaylen Waddle,WR,"
+MIA (6)",25,Jaylen WaddleWR,Jaylen WaddleWR
+Patrick,Chris Olave,WR,"
+NO (12)",25,Chris OlaveWR,Chris OlaveWR
+Mark,DK Metcalf,WR,"
+SEA (10)",24,DK MetcalfWR,DK MetcalfWR
+Patrick,Nico Collins,WR,"
+HOU (14)",20,Nico CollinsWR,Nico CollinsWR
+Patrick,Davante Adams,WR,"
+LV (10)",19,Davante AdamsWR,Davante AdamsWR
+Scott,DJ Moore,WR,"
+CHI (7)",17,DJ MooreWR,DJ MooreWR
+David,Tank Dell,WR,"
+HOU (14)",17,Tank DellWR,Tank DellWR
+Mark,Cooper Kupp,WR,"
+LAR (6)",17,Cooper KuppWR,Cooper KuppWR
+Mark,Malik Nabers,WR,"
+NYG (11)",16,Malik NabersWR,Malik NabersWR
+KJ,DeVonta Smith,WR,"
+PHI (5)",15,DeVonta SmithWR,DeVonta SmithWR
+Scott,Deebo Samuel Sr.,WR,"
+SF (9)",15,Deebo Samuel Sr.WR,Deebo Samuel Sr.WR
+Bryan,Mike Evans,WR,"
+TB (11)",15,Mike EvansWR,Mike EvansWR
+Scott,Amari Cooper,WR,"
+CLE (10)",14,Amari CooperWR,Amari CooperWR
+Bryan,Rashee Rice,WR,"
+KC (6)",13,Rashee RiceWR,Rashee RiceWR
+Duncan,Brandon Aiyuk,WR,"
+SF (9)",13,Brandon AiyukWR,Brandon AiyukWR
+Scott,Stefon Diggs,WR,"
+HOU (14)",12,Stefon DiggsWR,Stefon DiggsWR
+David,Tee Higgins,WR,"
+CIN (12)",10,Tee HigginsWR,Tee HigginsWR
+David,George Pickens,WR,"
+PIT (9)",9,George PickensWR,George PickensWR
+KJ,Michael Pittman Jr.,WR,"
+IND (14)",8,Michael Pittman Jr.WR,Michael Pittman Jr.WR
+Duncan,Terry McLaurin,WR,"
+WAS (14)",8,Terry McLaurinWR,Terry McLaurinWR
+Mark,Xavier Worthy,WR,"
+KC (6)",7,Xavier WorthyWR,Xavier WorthyWR
+Bryan,Zay Flowers,WR,"
+BAL (14)",5,Zay FlowersWR,Zay FlowersWR
+Krista,Diontae Johnson,WR,"
+CAR (11)",5,Diontae JohnsonWR,Diontae JohnsonWR
+David,Rome Odunze,WR,"
+CHI (7)",5,Rome OdunzeWR,Rome OdunzeWR
+Krista,Jayden Reed,WR,"
+GB (10)",5,Jayden ReedWR,Jayden ReedWR
+Bryan,Christian Kirk,WR,"
+JAC (12)",5,Christian KirkWR,Christian KirkWR
+Krista,Chris Godwin,WR,"
+TB (11)",5,Chris GodwinWR,Chris GodwinWR
+Luke,Calvin Ridley,WR,"
+TEN (5)",5,Calvin RidleyWR,Calvin RidleyWR
+Ben,Jaxon Smith-Njigba,WR,"
+SEA (10)",4,Jaxon Smith-NjigbaWR,Jaxon Smith-NjigbaWR
+David,Khalil Shakir,WR,"
+BUF (12)",3,Khalil ShakirWR,Khalil ShakirWR
+Luke,Courtland Sutton,WR,"
+DEN (14)",3,Courtland SuttonWR,Courtland SuttonWR
+Duncan,Christian Watson,WR,"
+GB (10)",3,Christian WatsonWR,Christian WatsonWR
+Luke,Brian Thomas Jr.,WR,"
+JAC (12)",3,Brian Thomas Jr.WR,Brian Thomas Jr.WR
+Scott,Marquise Brown,WR,"
+KC (6)",3,Marquise BrownWR,Marquise BrownWR
+Luke,Keenan Allen,WR,"
+CHI (7)",2,Keenan AllenWR,Keenan AllenWR
+Mark,Ladd McConkey,WR,"
+LAC (5)",2,Ladd McConkeyWR,Ladd McConkeyWR
+KJ,Keon Coleman,WR,"
+BUF (12)",1,Keon ColemanWR,Keon ColemanWR
+Luke,Jameson Williams,WR,"
+DET (5)",1,Jameson WilliamsWR,Jameson WilliamsWR
+Ben,Jordan Addison,WR,"
+MIN (6)",1,Jordan AddisonWR,Jordan AddisonWR
+Mark,DeAndre Hopkins,WR,"
+TEN (5)",1,DeAndre HopkinsWR,DeAndre HopkinsWR

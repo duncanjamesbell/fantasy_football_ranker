@@ -1,0 +1,160 @@
+============================================================
+Fantasy Football Migration  [LIVE]  2026-05-24 08:34:16
+============================================================
+  MKDIR  data\reference\draft_results
+
+--- Reference files -> data/reference/ ---
+  COPY   lkup_player.csv -> data\reference\lkup_player.csv
+  COPY   names_dict.csv -> data\reference\names_dict.csv
+
+--- Draft Results -> data/reference/draft_results/ ---
+  COPY   Draft Results/2012.csv -> data\reference\draft_results\2012.csv
+  COPY   Draft Results/2013.csv -> data\reference\draft_results\2013.csv
+  COPY   Draft Results/2014.csv -> data\reference\draft_results\2014.csv
+  COPY   Draft Results/2015.csv -> data\reference\draft_results\2015.csv
+  COPY   Draft Results/2016.csv -> data\reference\draft_results\2016.csv
+  COPY   Draft Results/2017.csv -> data\reference\draft_results\2017.csv
+  COPY   Draft Results/2018.csv -> data\reference\draft_results\2018.csv
+  COPY   Draft Results/2019.csv -> data\reference\draft_results\2019.csv
+  COPY   Draft Results/2020.csv -> data\reference\draft_results\2020.csv
+  COPY   Draft Results/2021 for draft research.xlsx -> data\reference\draft_results\2021 for draft research.xlsx
+  COPY   Draft Results/2021.xlsx -> data\reference\draft_results\2021.xlsx
+  COPY   Draft Results/2022.xlsx -> data\reference\draft_results\2022.xlsx
+  COPY   Draft Results/2023.xlsx -> data\reference\draft_results\2023.xlsx
+  COPY   Draft Results/2024.csv -> data\reference\draft_results\2024.csv
+  COPY   Draft Results/Historical draft.xlsx -> data\reference\draft_results\Historical draft.xlsx
+  COPY   Draft Results/~$2021.xlsx -> data\reference\draft_results\~$2021.xlsx
+  COPY   Draft Results/~$2022.xlsx -> data\reference\draft_results\~$2022.xlsx
+  COPY   Draft Results/~$Historical draft.xlsx -> data\reference\draft_results\~$Historical draft.xlsx
+
+--- Master files -> data/processed/ ---
+  COPY   consolidated_master.csv -> data\processed\consolidated_master.csv
+  COPY   standings_master_latest.csv -> data\processed\standings_master_latest.csv
+  COPY   league_df_master.csv -> data\processed\league_df_master.csv
+  COPY   managers_df_master.csv -> data\processed\managers_df_master.csv
+  COPY   all_regular_season_thru_2024.csv -> data\processed\all_regular_season_thru_2024.csv
+  COPY   all_playoffs_thru_2024.csv -> data\processed\all_playoffs_thru_2024.csv
+  COPY   position_ranks_thru_2024.csv -> data\processed\position_ranks_thru_2024.csv
+  COPY   faab_thru_2024.csv -> data\processed\faab_thru_2024.csv
+
+--- Draft master -> data/processed/full_seasons_draft_df.csv ---
+  COPY   full_seasons_draft_df_20250806.csv -> data\processed\full_seasons_draft_df.csv
+
+--- Year-specific intermediates -> data/raw/ ---
+  COPY   2007_pre_matchups.csv -> data\raw\2007_pre_matchups.csv
+  COPY   2007_pre_playoffs.csv -> data\raw\2007_pre_playoffs.csv
+  COPY   2007_position_scores.csv -> data\raw\2007_position_scores.csv
+  SKIP   2007_faab.csv (not found)
+  COPY   2009_pre_matchups.csv -> data\raw\2009_pre_matchups.csv
+  COPY   2009_pre_playoffs.csv -> data\raw\2009_pre_playoffs.csv
+  COPY   2009_position_scores.csv -> data\raw\2009_position_scores.csv
+  SKIP   2009_faab.csv (not found)
+  COPY   2010_pre_matchups.csv -> data\raw\2010_pre_matchups.csv
+  COPY   2010_pre_playoffs.csv -> data\raw\2010_pre_playoffs.csv
+  COPY   2010_position_scores.csv -> data\raw\2010_position_scores.csv
+  SKIP   2010_faab.csv (not found)
+  COPY   2011_pre_matchups.csv -> data\raw\2011_pre_matchups.csv
+  COPY   2011_pre_playoffs.csv -> data\raw\2011_pre_playoffs.csv
+  COPY   2011_position_scores.csv -> data\raw\2011_position_scores.csv
+  SKIP   2011_faab.csv (not found)
+  COPY   2012_pre_matchups.csv -> data\raw\2012_pre_matchups.csv
+  COPY   2012_pre_playoffs.csv -> data\raw\2012_pre_playoffs.csv
+  COPY   2012_position_scores.csv -> data\raw\2012_position_scores.csv
+  SKIP   2012_faab.csv (not found)
+  COPY   2013_pre_matchups.csv -> data\raw\2013_pre_matchups.csv
+  COPY   2013_pre_playoffs.csv -> data\raw\2013_pre_playoffs.csv
+  COPY   2013_position_scores.csv -> data\raw\2013_position_scores.csv
+  SKIP   2013_faab.csv (not found)
+  COPY   2014_pre_matchups.csv -> data\raw\2014_pre_matchups.csv
+  COPY   2014_pre_playoffs.csv -> data\raw\2014_pre_playoffs.csv
+  COPY   2014_position_scores.csv -> data\raw\2014_position_scores.csv
+  SKIP   2014_faab.csv (not found)
+  COPY   2015_pre_matchups.csv -> data\raw\2015_pre_matchups.csv
+  COPY   2015_pre_playoffs.csv -> data\raw\2015_pre_playoffs.csv
+  COPY   2015_position_scores.csv -> data\raw\2015_position_scores.csv
+  SKIP   2015_faab.csv (not found)
+  COPY   2016_pre_matchups.csv -> data\raw\2016_pre_matchups.csv
+  COPY   2016_pre_playoffs.csv -> data\raw\2016_pre_playoffs.csv
+  COPY   2016_position_scores.csv -> data\raw\2016_position_scores.csv
+  SKIP   2016_faab.csv (not found)
+  COPY   2017_pre_matchups.csv -> data\raw\2017_pre_matchups.csv
+  COPY   2017_pre_playoffs.csv -> data\raw\2017_pre_playoffs.csv
+  COPY   2017_position_scores.csv -> data\raw\2017_position_scores.csv
+  COPY   2017_faab.csv -> data\raw\2017_faab.csv
+  COPY   2018_pre_matchups.csv -> data\raw\2018_pre_matchups.csv
+  COPY   2018_pre_playoffs.csv -> data\raw\2018_pre_playoffs.csv
+  COPY   2018_position_scores.csv -> data\raw\2018_position_scores.csv
+  COPY   2018_faab.csv -> data\raw\2018_faab.csv
+  COPY   2019_pre_matchups.csv -> data\raw\2019_pre_matchups.csv
+  COPY   2019_pre_playoffs.csv -> data\raw\2019_pre_playoffs.csv
+  COPY   2019_position_scores.csv -> data\raw\2019_position_scores.csv
+  COPY   2019_faab.csv -> data\raw\2019_faab.csv
+  COPY   2020_pre_matchups.csv -> data\raw\2020_pre_matchups.csv
+  COPY   2020_pre_playoffs.csv -> data\raw\2020_pre_playoffs.csv
+  COPY   2020_position_scores.csv -> data\raw\2020_position_scores.csv
+  COPY   2020_faab.csv -> data\raw\2020_faab.csv
+  COPY   2021_pre_matchups.csv -> data\raw\2021_pre_matchups.csv
+  COPY   2021_pre_playoffs.csv -> data\raw\2021_pre_playoffs.csv
+  COPY   2021_position_scores.csv -> data\raw\2021_position_scores.csv
+  COPY   2021_faab.csv -> data\raw\2021_faab.csv
+  COPY   2022_pre_matchups.csv -> data\raw\2022_pre_matchups.csv
+  COPY   2022_pre_playoffs.csv -> data\raw\2022_pre_playoffs.csv
+  COPY   2022_position_scores.csv -> data\raw\2022_position_scores.csv
+  COPY   2022_faab.csv -> data\raw\2022_faab.csv
+  COPY   2023_pre_matchups.csv -> data\raw\2023_pre_matchups.csv
+  COPY   2023_pre_playoffs.csv -> data\raw\2023_pre_playoffs.csv
+  COPY   2023_position_scores.csv -> data\raw\2023_position_scores.csv
+  COPY   2023_faab.csv -> data\raw\2023_faab.csv
+  COPY   2024_pre_matchups.csv -> data\raw\2024_pre_matchups.csv
+  COPY   2024_pre_playoffs.csv -> data\raw\2024_pre_playoffs.csv
+  COPY   2024_position_scores.csv -> data\raw\2024_position_scores.csv
+  COPY   2024_faab.csv -> data\raw\2024_faab.csv
+
+--- Archiving superseded files -> data/archive/ ---
+  ARCHIVE consolidated_master_revised.csv -> data\archive\consolidated_master_revised.csv
+  ARCHIVE consolidated_master_revised_2023.csv -> data\archive\consolidated_master_revised_2023.csv
+  ARCHIVE consolidated_master_revised_2023_v2.csv -> data\archive\consolidated_master_revised_2023_v2.csv
+  ARCHIVE consolidated_master_revised_2024_20250729.csv -> data\archive\consolidated_master_revised_2024_20250729.csv
+  ARCHIVE consolidated_master_revised_2024_20250809.csv -> data\archive\consolidated_master_revised_2024_20250809.csv
+  ARCHIVE consolidated_master w consolation 20250729.csv -> data\archive\consolidated_master w consolation 20250729.csv
+  ARCHIVE consolidated_master w consolation.csv -> data\archive\consolidated_master w consolation.csv
+  ARCHIVE all_regular_season_thru_2022.csv -> data\archive\all_regular_season_thru_2022.csv
+  ARCHIVE all_playoffs_thru_2022.csv -> data\archive\all_playoffs_thru_2022.csv
+  ARCHIVE all_playoffs_thru_2022_revised.csv -> data\archive\all_playoffs_thru_2022_revised.csv
+  ARCHIVE position_ranks_thru_2022.csv -> data\archive\position_ranks_thru_2022.csv
+  ARCHIVE faab_thru_2022.csv -> data\archive\faab_thru_2022.csv
+  ARCHIVE all_regular_season_thru_2023.csv -> data\archive\all_regular_season_thru_2023.csv
+  ARCHIVE all_playoffs_thru_2023 w consolation.csv -> data\archive\all_playoffs_thru_2023 w consolation.csv
+  ARCHIVE all_playoffs_thru_2023.csv -> data\archive\all_playoffs_thru_2023.csv
+  ARCHIVE all_playoffs_thru_2023_revised.csv -> data\archive\all_playoffs_thru_2023_revised.csv
+  ARCHIVE all_playoffs_thru_2023_revised_v2.csv -> data\archive\all_playoffs_thru_2023_revised_v2.csv
+  ARCHIVE position_ranks_thru_2023.csv -> data\archive\position_ranks_thru_2023.csv
+  ARCHIVE faab_thru_2023.csv -> data\archive\faab_thru_2023.csv
+  ARCHIVE full_seasons_draft_df_20250806.csv -> data\archive\full_seasons_draft_df_20250806.csv
+  ARCHIVE full_seasons_draft_df_thru_2023.csv -> data\archive\full_seasons_draft_df_thru_2023.csv
+  ARCHIVE full_seasons_draft_df_w_conc_20250806.csv -> data\archive\full_seasons_draft_df_w_conc_20250806.csv
+  ARCHIVE all_regular_season_thru_2024_w_is_drafted.csv -> data\archive\all_regular_season_thru_2024_w_is_drafted.csv
+  ARCHIVE all_playoffs_thru_2024_w_season.csv -> data\archive\all_playoffs_thru_2024_w_season.csv
+  EXISTS data\archive\all_playoffs_thru_2023 w consolation.csv — skipping archive
+  ARCHIVE all_rs_matchups.csv -> data\archive\all_rs_matchups.csv
+  ARCHIVE 2022_position_scores2.csv -> data\archive\2022_position_scores2.csv
+  ARCHIVE all_weeks_for_stats.csv -> data\archive\all_weeks_for_stats.csv
+  ARCHIVE names_dict_missing.csv -> data\archive\names_dict_missing.csv
+  ARCHIVE 2025 news for formatting.csv -> data\archive\2025 news for formatting.csv
+  ARCHIVE 2025_news_formatted.csv -> data\archive\2025_news_formatted.csv
+  ARCHIVE Untitled-1.txt -> data\archive\Untitled-1.txt
+  ARCHIVE 5c words.csv -> data\archive\5c words.csv
+  ARCHIVE 2020_pre_playoffs_old.csv -> data\archive\2020_pre_playoffs_old.csv
+  ARCHIVE 2022_pre_playoffs old.csv -> data\archive\2022_pre_playoffs old.csv
+  EXISTS data\archive\2022_position_scores2.csv — skipping archive
+
+--- Deleting junk files ---
+  DELETE lkup_player (version 1).csv
+  DELETE p_2020.csv
+  DELETE playoff_wins_testing.csv
+  DELETE transformed_pre_fanasy_data.csv
+  DELETE draft_players_needing_cleanup.csv
+
+============================================================
+Migration complete.
+Log written to: C:\Data Science\Fantasy Football\migration.log

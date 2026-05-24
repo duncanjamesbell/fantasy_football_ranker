@@ -1,0 +1,92 @@
+# overrides.yaml
+# Manual corrections applied on top of the automated pipeline output.
+# The pipeline reads this file and applies these overrides so that the
+# canonical consolidated_master.csv is always reproducible — no more
+# date-stamped "revised" CSV variants.
+
+# ---------------------------------------------------------------------------
+# League size overrides
+# Auto-detection uses manager count from standings. These force specific values
+# for seasons where the roster was smaller (affects playoff win calculation
+# and rank weight lookup in metrics/composite.py).
+# ---------------------------------------------------------------------------
+league_sizes:
+  2007: 6
+  2009: 8
+  # 2010+ default: 10
+
+# ---------------------------------------------------------------------------
+# Manager/team exclusions
+# Entries in standings that should be ignored entirely (co-managers counted
+# under another manager, test entries, etc.)
+# ---------------------------------------------------------------------------
+exclude_manager_seasons:
+  - season: 2010
+    team_name: "Oober Gey"
+    reason: "Scott co-manager on Luke's account; counted under Luke"
+
+# ---------------------------------------------------------------------------
+# Playoff score (p_score) corrections
+# Scraping occasionally produces wrong playoff totals. These are the manually
+# verified correct values. Sourced from consolidated_master_revised_2024_20250809.csv.
+# Format: season, manager_key, corrected_value
+# ---------------------------------------------------------------------------
+p_score_overrides:
+  - season: 2020
+    manager_key: "523631.7"
+    manager: "Patrick"
+    original: 358.33
+    corrected: 514.05
+    note: "Manual correction from 2020 revised file"
+
+  - season: 2020
+    manager_key: "523631.1"
+    manager: "Scott Gunter"
+    original: 428.37
+    corrected: 314.59
+    note: "Manual correction from 2020 revised file"
+
+  - season: 2022
+    manager_key: "709240.1"
+    manager: "Scott Gunter"
+    original: 447.12
+    corrected: 465.42
+    note: "Manual correction from 2022 revised file"
+
+  - season: 2022
+    manager_key: "709240.7"
+    manager: "Patrick"
+    original: 360.84
+    corrected: 407.73
+    note: "Manual correction from 2022 revised file"
+
+  - season: 2022
+    manager_key: "709240.2"
+    manager: "Benjamin"
+    original: 331.25
+    corrected: 341.00
+    note: "Manual correction from 2022 revised file"
+
+  - season: 2022
+    manager_key: "709240.4"
+    manager: "Luke"
+    original: 241.34
+    corrected: 302.66
+    note: "Manual correction from 2022 revised file"
+
+  - season: 2024
+    manager_key: "710941.1"
+    manager: "Luke"
+    original: 336.01
+    corrected: 466.58
+    note: "Manual correction from 2024 revised file"
+
+# ---------------------------------------------------------------------------
+# Team name character fixes
+# Yahoo sometimes stores team names with Unicode right-single-quote (U+2019)
+# which breaks string matching. These substitutions are applied before any
+# name-based joins.
+# ---------------------------------------------------------------------------
+team_name_fixes:
+  - raw: "’"      # right single quotation mark '
+    replace: "'"       # standard apostrophe
