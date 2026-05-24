@@ -417,7 +417,7 @@ def calculate_composite_ranks(
                     if compile_raw:
                         raw_seasons.append(row['season']); raw_managers.append(manager)
                         raw_metrics.append('playoff_win_percentage'); raw_values.append(row['playoff_win_percent'])
-            playoff_wins_dict[manager] = sum(p_values) / len(p_values)
+            playoff_wins_dict[manager] = sum(p_values) / len(p_values) if p_values else 0.0
 
         pwp_score_dict = create_metric_dict(metrics_dict, playoff_wins_dict.values(), 'playoff_win_percentage', False)
         final_scores_df['avg_p_win_percent']  = final_scores_df.index.map(playoff_wins_dict)
@@ -535,7 +535,7 @@ def calculate_composite_ranks(
                     (season_matchups.manager_name == manager) & (season_matchups.is_drafted == 0)
                 ].copy()
                 cleaned = [0 if s == '�' else s for s in m_non_drafted.score]
-                m_non_drafted['score'] = pd.to_numeric(cleaned, errors='coerce').fillna(0)
+                m_non_drafted['score'] = pd.Series(pd.to_numeric(cleaned, errors='coerce')).fillna(0).values
                 avg_score = m_non_drafted.score.sum() / m_non_drafted.shape[0]
                 manager_avg_scores[manager] = avg_score
             nd_df = pd.DataFrame(index=manager_avg_scores.keys(), data=manager_avg_scores.values(), columns=['avg_non_draft_score'])
