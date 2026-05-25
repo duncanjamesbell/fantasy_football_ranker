@@ -102,13 +102,79 @@ def create_metric_dict(metrics_dict: dict, values, metric: str, ascending: bool)
 # Internal helpers
 # ---------------------------------------------------------------------------
 
+def _preprocess_master(master_df: pd.DataFrame, overrides: dict) -> pd.DataFrame:
+    """
+    Deduplicate co-manager rows and apply manual corrections before computation.
+
+    Steps (in order):
+    1. Generic dedup: for each (season, manager) with >1 row keep the one with
+       the lowest rank value (best final standing).
+    2. Row reattributions: relabel manager on rows the scraper misattributed.
+    3. Rank corrections: fix rank values that are still wrong after dedup.
+    4. p_score corrections: overwrite revised_p_score with known-good values.
+    """
+    original = master_df.copy()
+    df       = master_df.copy()
+    cfg      = overrides.get('co_manager_dedup', {})
+
+    # ---- 1. Generic dedup --------------------------------------------------
+    if cfg.get('enabled', False):
+        # idxmin() gives one index per group — the row with the smallest rank.
+        keep_idx = df.groupby(['season', 'manager'])['rank'].idxmin()
+        df = df.loc[keep_idx].reset_index(drop=True)
+
+    # ---- 2. Row reattributions ---------------------------------------------
+    for entry in cfg.get('row_reattributions', []):
+        season   = entry['season']
+        from_mgr = entry['from_manager']
+        from_rnk = entry['from_rank']
+        to_mgr   = entry['to_manager']
+
+        # Only act if to_manager is absent from this season after dedup
+        if df[(df.season == season) & (df.manager == to_mgr)].empty:
+            source = original[
+                (original.season  == season) &
+                (original.manager == from_mgr) &
+                (original['rank'] == from_rnk)
+            ].copy()
+            if not source.empty:
+                source['manager'] = to_mgr
+                df = pd.concat([df, source], ignore_index=True)
+
+    # ---- 3. Rank corrections -----------------------------------------------
+    for entry in cfg.get('rank_corrections', []):
+        mask = (df.season == entry['season']) & (df.manager == entry['manager'])
+        if mask.any():
+            df.loc[mask, 'rank'] = entry['correct_rank']
+
+    # ---- 4. p_score corrections --------------------------------------------
+    for entry in overrides.get('p_score_overrides', []):
+        manager   = entry.get('manager')
+        season    = entry.get('season')
+        corrected = entry.get('corrected')
+        if manager and season and corrected is not None:
+            mask = (df.season == season) & (df.manager == manager)
+            if mask.any():
+                df.loc[mask, 'revised_p_score'] = corrected
+
+    return df
+
+
 def _intersection(lst1: list, lst2: list) -> list:
     return [v for v in lst1 if v in lst2]
 
 
 def _get_league_size(season: int, observed_count: int, overrides: dict) -> int:
-    """Return league size, preferring overrides.yaml over observed manager count."""
-    return overrides.get('league_sizes', {}).get(season, observed_count)
+    """Return league size, preferring overrides.yaml over observed manager count.
+
+    Supports a special '_default' key for seasons not explicitly listed.
+    Co-manager seasons have fewer rows after dedup, so the default (10) ensures
+    the correct playoff match structure is used.
+    """
+    sizes = overrides.get('league_sizes', {})
+    if season in sizes:
+        return sizes[season]
+    return sizes.get('_default', observed_count)
 
 
 # ---------------------------------------------------------------------------
@@ -165,7 +231,7 @@ def calculate_composite_ranks(
     if overrides is None:
         overrides = {}
 
-    Master            = master_df.copy()
+    Master            = _preprocess_master(master_df, overrides)
     full_rs_matchups_df = rs_df.copy()
     full_seasons_draft_df = draft_df.copy()
     full_faab         = faab_df.copy()
@@ -263,7 +329,8 @@ def calculate_composite_ranks(
     # Playoff match counts per manager per season
     playoff_match_counts = []
     for _, row in Master.iterrows():
-        num_mgrs = Master[Master.season == row['season']].shape[0]
+        observed = Master[Master.season == row['season']].shape[0]
+        num_mgrs = _get_league_size(int(row['season']), observed, overrides)
         if math.isnan(row['playoff_seed']):
             playoff_match_counts.append(np.nan)
             continue
@@ -465,8 +532,9 @@ def calculate_composite_ranks(
         for manager in season_managers:
             wr_values = []
             for _, row in master[master.manager == manager].iterrows():
-                num_mgrs    = master[master.season == row['season']].shape[0]
-                raw_wr      = rank_weights_dict[num_mgrs][row['rank']]
+                observed = master[master.season == row['season']].shape[0]
+                num_mgrs = _get_league_size(int(row['season']), observed, overrides)
+                raw_wr   = rank_weights_dict[num_mgrs][row['rank']]
                 if row['season'] < (latest_season - recency_window):
                     wr_values.append(raw_wr)
                 else:
@@ -611,7 +679,7 @@ def calculate_composite_ranks(
             if season in list(full_faab_m.season):
                 s_df = full_faab_m[full_faab_m.season == season]
                 mgr_faab: dict = {}
-                for manager in s_df.manager_name.unique():
+                for manager in s_df.manager_name.dropna().unique():
                     m_df       = s_df[s_df.manager_name == manager]
                     avg_diff   = m_df.bid_differential.sum() / m_df.shape[0]
                     unused     = 100 - m_df.faab_dollars.sum()

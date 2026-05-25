@@ -11,9 +11,9 @@
 # and rank weight lookup in metrics/composite.py).
 # ---------------------------------------------------------------------------
 league_sizes:
+  _default: 10  # applied to any season not explicitly listed
   2007: 6
   2009: 8
-  # 2010+ default: 10
 
 # ---------------------------------------------------------------------------
 # Manager/team exclusions
@@ -32,6 +32,41 @@ exclude_manager_seasons:
 # Format: season, manager_key, corrected_value
 # ---------------------------------------------------------------------------
 p_score_overrides:
+  - season: 2014
+    manager: "Patrick"
+    corrected: 154.74
+    note: "Old revised master correction (co-manager season; scraped value was wrong)"
+
+  - season: 2015
+    manager: "Patrick"
+    corrected: 208.28
+    note: "Old revised master correction (co-manager season)"
+
+  - season: 2016
+    manager: "Krista"
+    corrected: 300.95
+    note: "Old revised master correction (row reattributed from Scott co-manager account)"
+
+  - season: 2017
+    manager: "Krista"
+    corrected: 247.30
+    note: "Old revised master correction (co-manager season)"
+
+  - season: 2018
+    manager: "Krista"
+    corrected: 245.12
+    note: "Old revised master correction (row reattributed from Scott co-manager account)"
+
+  - season: 2019
+    manager: "Krista"
+    corrected: 439.64
+    note: "Old revised master correction (co-manager season)"
+
+  - season: 2020
+    manager: "Krista"
+    corrected: 257.24
+    note: "Krista's team in 2020 was labeled as Scott Gunter by the scraper; correct playoff total is 257.24"
+
   - season: 2020
     manager_key: "523631.7"
     manager: "Patrick"
@@ -45,6 +80,16 @@ p_score_overrides:
     original: 428.37
     corrected: 314.59
     note: "Manual correction from 2020 revised file"
+
+  - season: 2021
+    manager: "Krista"
+    corrected: 296.55
+    note: "Old revised master correction (co-manager season)"
+
+  - season: 2022
+    manager: "Krista"
+    corrected: 312.13
+    note: "Old revised master correction (row reattributed from Scott co-manager account)"
 
   - season: 2022
     manager_key: "709240.1"
@@ -80,6 +125,81 @@ p_score_overrides:
     original: 336.01
     corrected: 466.58
     note: "Manual correction from 2024 revised file"
+
+# ---------------------------------------------------------------------------
+# Co-manager deduplication
+# When a manager appears twice in a season (Yahoo stored both primary manager
+# and co-manager as separate team entries), the scraper creates duplicate rows.
+# Generic rule: keep the row with the lowest rank value per (season, manager).
+# Special cases below handle rows that need manager relabeling or rank fixes.
+# ---------------------------------------------------------------------------
+co_manager_dedup:
+  enabled: true
+
+  # Rows where the scraper attributed the wrong manager name.
+  # The from_manager+from_rank row is actually the to_manager's team.
+  # Pattern: Patrick was co-manager on Scott's team in 2014–2015;
+  #          Scott was co-manager on Krista's team in 2016–2022 (even years).
+  row_reattributions:
+    - season: 2014
+      from_manager: "Patrick"
+      from_rank: 7
+      to_manager: "Scott Gunter"
+      note: "Patrick was co-manager on Scott's account in 2014; rank-7 row is Scott's team"
+    - season: 2015
+      from_manager: "Patrick"
+      from_rank: 5
+      to_manager: "Scott Gunter"
+      note: "Patrick was co-manager on Scott's account in 2015; rank-5 row is Scott's team"
+    - season: 2016
+      from_manager: "Scott Gunter"
+      from_rank: 2
+      to_manager: "Krista"
+      note: "Scott was co-manager on Krista's account in 2016; rank-2 row is Krista's team"
+    - season: 2017
+      from_manager: "Krista"
+      from_rank: 10
+      to_manager: "Scott Gunter"
+      note: "In 2017 both entries were labeled Krista; rank-10 row is Scott's team"
+    - season: 2018
+      from_manager: "Scott Gunter"
+      from_rank: 9
+      to_manager: "Krista"
+      note: "Scott was co-manager on Krista's account in 2018; rank-9 row is Krista's team"
+    - season: 2019
+      from_manager: "Krista"
+      from_rank: 7
+      to_manager: "Scott Gunter"
+      note: "In 2019 both entries were labeled Krista; rank-7 row is Scott's team"
+    - season: 2020
+      from_manager: "Scott Gunter"
+      from_rank: 10
+      to_manager: "Krista"
+      note: "Scott was co-manager on Krista's account in 2020; rank-10 row is Krista's team"
+    - season: 2021
+      from_manager: "Krista"
+      from_rank: 10
+      to_manager: "Scott Gunter"
+      note: "In 2021 both entries were labeled Krista; rank-10 row is Scott's team"
+    - season: 2022
+      from_manager: "Scott Gunter"
+      from_rank: 3
+      to_manager: "Krista"
+      note: "Scott was co-manager on Krista's account in 2022; rank-3 row is Krista's team"
+
+  # Rank corrections applied after dedup+reattribution.
+  # 2020 needs full correction because the co-manager mix-up scrambled all ranks.
+  rank_corrections:
+    - {season: 2020, manager: "Patrick",          correct_rank: 1}
+    - {season: 2020, manager: "Kevin",             correct_rank: 2}
+    - {season: 2020, manager: "Mark",              correct_rank: 3}
+    - {season: 2020, manager: "Luke",              correct_rank: 4}
+    - {season: 2020, manager: "Benjamin",          correct_rank: 5}
+    - {season: 2020, manager: "Scott Gunter",      correct_rank: 6}
+    - {season: 2020, manager: "David Casstevens",  correct_rank: 7}
+    - {season: 2020, manager: "Duncan",            correct_rank: 8}
+    - {season: 2020, manager: "Bryan",             correct_rank: 9}
+    - {season: 2020, manager: "Krista",            correct_rank: 10}
 
 # ---------------------------------------------------------------------------
 # Team name character fixes
