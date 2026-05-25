@@ -107,15 +107,30 @@ def _preprocess_master(master_df: pd.DataFrame, overrides: dict) -> pd.DataFrame
     Deduplicate co-manager rows and apply manual corrections before computation.
 
     Steps (in order):
+    0. Exclusions: remove rows listed in exclude_manager_seasons (invalid
+       season artifacts, duplicate co-manager accounts).
     1. Generic dedup: for each (season, manager) with >1 row keep the one with
        the lowest rank value (best final standing).
     2. Row reattributions: relabel manager on rows the scraper misattributed.
     3. Rank corrections: fix rank values that are still wrong after dedup.
     4. p_score corrections: overwrite revised_p_score with known-good values.
+       corrected: null in overrides.yaml → sets value to NaN.
+    5. playoff_wins corrections: overwrite playoff_wins with known-good values.
+    6. playoff_seed corrections: overwrite playoff_seed with known-good values.
     """
     original = master_df.copy()
     df       = master_df.copy()
     cfg      = overrides.get('co_manager_dedup', {})
+
+    # ---- 0. Excluded manager-seasons ---------------------------------------
+    for entry in overrides.get('exclude_manager_seasons', []):
+        season  = entry.get('season')
+        manager = entry.get('manager')
+        tn      = entry.get('team_name')
+        if season and manager:
+            df = df[~((df.season == season) & (df.manager == manager))].copy()
+        elif season and tn and 'team_name' in df.columns:
+            df = df[~((df.season == season) & (df.team_name == tn))].copy()
 
     # ---- 1. Generic dedup --------------------------------------------------
     if cfg.get('enabled', False):
@@ -148,14 +163,37 @@ def _preprocess_master(master_df: pd.DataFrame, overrides: dict) -> pd.DataFrame
             df.loc[mask, 'rank'] = entry['correct_rank']
 
     # ---- 4. p_score corrections --------------------------------------------
+    # corrected: null in YAML → None in Python → NaN in the DataFrame.
     for entry in overrides.get('p_score_overrides', []):
+        manager = entry.get('manager')
+        season  = entry.get('season')
+        if not manager or not season or 'corrected' not in entry:
+            continue
+        corrected = entry.get('corrected')
+        value = corrected if corrected is not None else np.nan
+        mask = (df.season == season) & (df.manager == manager)
+        if mask.any():
+            df.loc[mask, 'revised_p_score'] = value
+
+    # ---- 5. playoff_wins corrections ---------------------------------------
+    for entry in overrides.get('playoff_wins_overrides', []):
         manager   = entry.get('manager')
         season    = entry.get('season')
         corrected = entry.get('corrected')
         if manager and season and corrected is not None:
             mask = (df.season == season) & (df.manager == manager)
             if mask.any():
-                df.loc[mask, 'revised_p_score'] = corrected
+                df.loc[mask, 'playoff_wins'] = corrected
+
+    # ---- 6. playoff_seed corrections ---------------------------------------
+    for entry in overrides.get('playoff_seed_overrides', []):
+        manager   = entry.get('manager')
+        season    = entry.get('season')
+        corrected = entry.get('corrected')
+        if manager and season and corrected is not None:
+            mask = (df.season == season) & (df.manager == manager)
+            if mask.any():
+                df.loc[mask, 'playoff_seed'] = float(corrected)
 
     return df
 
@@ -501,7 +539,7 @@ def calculate_composite_ranks(
                     if compile_raw:
                         raw_seasons.append(row['season']); raw_managers.append(manager)
                         raw_metrics.append('playoff_points'); raw_values.append(z)
-            playoff_pts_dict[manager] = sum(z_scores) / len(z_scores)
+            playoff_pts_dict[manager] = sum(z_scores) / len(z_scores) if z_scores else 0.0
 
         pp_score_dict = create_metric_dict(metrics_dict, playoff_pts_dict.values(), 'playoff_points', False)
         final_scores_df['p_points_z_score'] = final_scores_df.index.map(playoff_pts_dict)
@@ -518,7 +556,7 @@ def calculate_composite_ranks(
                     if compile_raw:
                         raw_seasons.append(row['season']); raw_managers.append(manager)
                         raw_metrics.append('playoff_points_against'); raw_values.append(z)
-            p_pta_z[manager] = sum(z_scores) / len(z_scores)
+            p_pta_z[manager] = sum(z_scores) / len(z_scores) if z_scores else 0.0
 
         ppa_score_dict = create_metric_dict(metrics_dict, p_pta_z.values(), 'playoff_points_against', True)
         final_scores_df['p_points_against_z_score'] = final_scores_df.index.map(p_pta_z)
@@ -587,7 +625,7 @@ def calculate_composite_ranks(
                 if compile_raw:
                     raw_seasons.append(season); raw_managers.append(manager)
                     raw_metrics.append('draft_efficiency'); raw_values.append(z)
-            draft_efficiency_dict[manager] = sum(z_scores) / len(z_scores)
+            draft_efficiency_dict[manager] = sum(z_scores) / len(z_scores) if z_scores else 0.0
 
         de_score_dict = create_metric_dict(metrics_dict, draft_efficiency_dict.values(), 'draft_efficiency', False)
         final_scores_df['draft_efficiency']       = final_scores_df.index.map(draft_efficiency_dict)

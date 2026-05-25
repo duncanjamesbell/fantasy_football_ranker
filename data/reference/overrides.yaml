@@ -25,6 +25,10 @@ exclude_manager_seasons:
     team_name: "Oober Gey"
     reason: "Scott co-manager on Luke's account; counted under Luke"
 
+  - season: 2009
+    manager: "David Casstevens (Invalid Season)"
+    reason: "Yahoo API artifact; not a real season entry for David"
+
 # ---------------------------------------------------------------------------
 # Playoff score (p_score) corrections
 # Scraping occasionally produces wrong playoff totals. These are the manually
@@ -32,6 +36,21 @@ exclude_manager_seasons:
 # Format: season, manager_key, corrected_value
 # ---------------------------------------------------------------------------
 p_score_overrides:
+  - season: 2007
+    manager: "Ryan"
+    corrected: 68.0
+    note: "Scraped value was 0; old canonical has 68.0"
+
+  - season: 2007
+    manager: "Mark"
+    corrected: 66.0
+    note: "Scraped value was 0; old canonical has 66.0"
+
+  - season: 2009
+    manager: "Scott Gunter"
+    corrected: null
+    note: "Scott did not make playoffs in 2009; p_score should be NaN not 0"
+
   - season: 2014
     manager: "Patrick"
     corrected: 154.74
@@ -118,6 +137,26 @@ p_score_overrides:
     original: 241.34
     corrected: 302.66
     note: "Manual correction from 2022 revised file"
+
+  - season: 2023
+    manager: "Krista"
+    corrected: 280.79
+    note: "Scraped value was NaN; correct playoff total from old revised master"
+
+  - season: 2023
+    manager: "Kevin"
+    corrected: 299.13
+    note: "Scraped value was NaN; correct playoff total from old revised master"
+
+  - season: 2023
+    manager: "Luke"
+    corrected: 316.71
+    note: "Scraped value was NaN; correct playoff total from old revised master"
+
+  - season: 2023
+    manager: "David Casstevens"
+    corrected: 245.80
+    note: "Scraped value was NaN; correct playoff total from old revised master"
 
   - season: 2024
     manager_key: "710941.1"
@@ -207,6 +246,84 @@ co_manager_dedup:
 # which breaks string matching. These substitutions are applied before any
 # name-based joins.
 # ---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
+# Playoff wins corrections
+# Scraped playoff_wins values are wrong for certain seasons. These override
+# the scraped values with manually verified correct totals.
+# ---------------------------------------------------------------------------
+playoff_wins_overrides:
+  - season: 2009
+    manager: "Scott Gunter"
+    corrected: 0
+    note: "Scott did not make playoffs in 2009; scraped value was 1"
+
+  - season: 2020
+    manager: "Patrick"
+    corrected: 3
+    note: "Co-manager scraping mix-up scrambled 2020 playoff wins"
+
+  - season: 2020
+    manager: "Kevin"
+    corrected: 1
+    note: "Co-manager scraping mix-up scrambled 2020 playoff wins"
+
+  - season: 2020
+    manager: "Benjamin"
+    corrected: 1
+    note: "Co-manager scraping mix-up scrambled 2020 playoff wins"
+
+  - season: 2020
+    manager: "Scott Gunter"
+    corrected: 0
+    note: "Co-manager scraping mix-up scrambled 2020 playoff wins"
+
+  - season: 2020
+    manager: "David Casstevens"
+    corrected: 2
+    note: "Co-manager scraping mix-up scrambled 2020 playoff wins"
+
+  - season: 2020
+    manager: "Duncan"
+    corrected: 1
+    note: "Co-manager scraping mix-up scrambled 2020 playoff wins"
+
+# ---------------------------------------------------------------------------
+# Playoff seed corrections
+# Scraped playoff_seed values are wrong for 2020 due to co-manager row
+# mix-up. These override with manually verified correct seeds.
+# ---------------------------------------------------------------------------
+playoff_seed_overrides:
+  - season: 2020
+    manager: "Patrick"
+    corrected: 5
+    note: "Co-manager scraping mix-up scrambled 2020 playoff seeds"
+
+  - season: 2020
+    manager: "Benjamin"
+    corrected: 4
+    note: "Co-manager scraping mix-up scrambled 2020 playoff seeds"
+
+  - season: 2020
+    manager: "Scott Gunter"
+    corrected: 3
+    note: "Co-manager scraping mix-up scrambled 2020 playoff seeds"
+
+  - season: 2020
+    manager: "David Casstevens"
+    corrected: 10
+    note: "Co-manager scraping mix-up scrambled 2020 playoff seeds"
+
+  - season: 2020
+    manager: "Bryan"
+    corrected: 9
+    note: "Co-manager scraping mix-up scrambled 2020 playoff seeds"
+
+# ---------------------------------------------------------------------------
+# Team name character fixes
+# Yahoo sometimes stores team names with Unicode right-single-quote (U+2019)
+# which breaks string matching. These substitutions are applied before any
+# name-based joins.
+# ---------------------------------------------------------------------------
 team_name_fixes:
-  - raw: "’"      # right single quotation mark '
-    replace: "'"       # standard apostrophe
+  - raw: "’"      # right single quotation mark ‘
+    replace: "’"       # standard apostrophe
