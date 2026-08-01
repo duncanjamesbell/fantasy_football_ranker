@@ -517,7 +517,7 @@ def calculate_composite_ranks(
                         p_values.append(row['playoff_win_percent'])
                     else:
                         z = (row['playoff_win_percent'] - season_data_dict[row['season']]['p_win_percents_mean']) / season_data_dict[row['season']]['p_win_percents_stdev']
-                        modified = (z + z * recency_bonus) * season_data_dict[row['season']]['p_win_percents_mean'] + season_data_dict[row['season']]['p_win_percents_stdev']
+                        modified = (z + z * recency_bonus) * season_data_dict[row['season']]['p_win_percents_stdev'] + season_data_dict[row['season']]['p_win_percents_mean']
                         p_values.append(modified)
                     if compile_raw:
                         raw_seasons.append(row['season']); raw_managers.append(manager)
