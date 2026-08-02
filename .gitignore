@@ -20,3 +20,54 @@ venv/
 # OS
 Thumbs.db
 Desktop.ini
+
+# Excel temp/lock files (open-file artifacts, never meaningful)
+~$*.xlsx
+
+# Log files
+*.log
+
+# Machine-specific external tools
+chromedriver/
+nfl-fantasy-football/
+
+# Pipeline debug output
+names_dict_missing.csv
+
+# Root-level year-specific raw files
+# (canonical copies live in data/raw/, which is already gitignored)
+[0-9][0-9][0-9][0-9]_pre_matchups.csv
+[0-9][0-9][0-9][0-9]_pre_playoffs.csv
+[0-9][0-9][0-9][0-9]_position_scores.csv
+[0-9][0-9][0-9][0-9]_faab.csv
+all_rs_matchups.csv
+all_rs_matchups worksheet.xlsx
+all_weeks_for_stats.csv
+
+# Root-level compiled master files
+# (canonical copies live in data/processed/)
+all_regular_season_thru_*.csv
+all_playoffs_thru_*.csv
+faab_thru_*.csv
+position_ranks_thru_*.csv
+standings_master*.csv
+
+# Dated / superseded master variants
+# (canonical is data/processed/consolidated_master.csv)
+consolidated_master w consolation*.csv
+consolidated_master_revised*.csv
+consolidated_master_revised_2024*.csv
+all_playoffs_thru_*revised*.csv
+all_playoffs_thru_* w consolation.csv
+
+# Dated draft df variants (canonical is data/processed/full_seasons_draft_df.csv)
+full_seasons_draft_df_[0-9]*.csv
+full_seasons_draft_df_w_*.csv
+full_seasons_draft_df_thru_*.csv
+
+# Old archive directories at root
+Final Files from Previous Years/
+
+# Scratch / formatting intermediates
+2025 news for formatting.csv
+2025_news_formatted.csv
