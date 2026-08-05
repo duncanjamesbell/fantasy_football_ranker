@@ -497,11 +497,14 @@ def scrape_schedule_results(
 
     rows = []
     for manager, sched_url in manager_schedule_urls:
-        # manager_id is the team number at the end of the schedule URL
-        # e.g. .../532435/1  →  "1"
-        manager_id = sched_url.rstrip("/").split("/")[-1]
+        # Extract the numeric team ID.
+        # Nav URLs use ?scmid=N; fallback URLs use path segment /{N}.
+        if "scmid=" in sched_url:
+            manager_id = sched_url.split("scmid=")[1].split("&")[0]
+        else:
+            manager_id = sched_url.rstrip("/").split("/")[-1]
 
-        print(f"  Schedule: {manager}")
+        print(f"  Schedule: {manager} (id={manager_id})")
         driver.get(sched_url)
         try:
             _wait(driver).until(EC.presence_of_element_located(SEL_SCHEDULE_TABLE))
@@ -533,25 +536,27 @@ def scrape_schedule_results(
             except Exception:
                 continue  # skip rows where we can't parse the URL
 
-            # Extract all decimal numbers from table cells as potential scores
-            decimals = []
+            # Parse result and scores from table cells.
+            # Score cell shows "129.72 - 149.14" as combined link text; split on " - ".
             result = None
+            team_score = None
+            opp_score = None
             for cell in tr.find_all("td"):
                 text = cell.get_text(strip=True)
                 if text in ("W", "L", "T"):
                     result = text
                 elif text.lower() in ("win", "loss", "tie"):
                     result = text[0].upper()
-                else:
+                elif " - " in text:
+                    parts = text.split(" - ", 1)
                     try:
-                        val = float(text.replace(",", ""))
-                        if 0 < val < 1000:  # plausible fantasy score
-                            decimals.append(val)
+                        v1 = float(parts[0].replace(",", ""))
+                        v2 = float(parts[1].replace(",", ""))
+                        if 0 < v1 < 1000 and 0 < v2 < 1000:
+                            team_score = v1
+                            opp_score = v2
                     except ValueError:
                         pass
-
-            team_score = decimals[0] if decimals else None
-            opp_score = decimals[1] if len(decimals) > 1 else None
 
             rows.append({
                 "manager": manager,
