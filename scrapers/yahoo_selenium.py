@@ -17,6 +17,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select, WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 
 load_dotenv()
 
@@ -200,9 +201,20 @@ def scrape_regular_season_matchups(
 
     driver.get(league_url)
     check_and_handle_login(driver)
-    tab = _wait(driver).until(EC.presence_of_element_located(SEL_SCHEDULE_TAB))
-    tab.click()
-    _wait(driver).until(EC.presence_of_element_located(SEL_SCHEDULE_NAV))
+    try:
+        tab = _wait(driver).until(EC.presence_of_element_located(SEL_SCHEDULE_TAB))
+        tab.click()
+        _wait(driver).until(EC.presence_of_element_located(SEL_SCHEDULE_NAV))
+    except TimeoutException:
+        if done_urls:
+            print(
+                "  WARNING: Schedule nav not found (completed season layout?). "
+                f"Returning {len(done_urls)} URLs already in checkpoint."
+            )
+            if checkpoint_path and os.path.exists(checkpoint_path):
+                return pd.read_csv(checkpoint_path), 0
+            raise RuntimeError("checkpoint_path required — pass rs_out.")
+        raise
 
     nav_html = driver.find_element(*SEL_SCHEDULE_NAV).get_attribute("innerHTML")
     nav_soup = BeautifulSoup(nav_html, "html.parser")
@@ -434,6 +446,260 @@ def scrape_playoff_matchups(
             "_bracket_urls() is finding matchup elements."
         )
     raise RuntimeError("checkpoint_path required — pass po_out.")
+
+
+# ---------------------------------------------------------------------------
+# Schedule results (W/L + weekly scores)
+# ---------------------------------------------------------------------------
+
+def scrape_schedule_results(
+    driver: webdriver.Chrome,
+    league_url: str,
+    manager_ids: list[str] | None = None,
+) -> pd.DataFrame:
+    """Scrape weekly W/L results and scores from each team's schedule page.
+
+    Navigates to the Schedule tab and visits every manager's schedule page.
+    Each completed week's row yields: manager, manager_id, week, score (team),
+    opponent_id, opponent_score, result (W/L/T).
+
+    If the schedule subnav is unavailable (completed-season layout), pass
+    manager_ids as a fallback; schedule URLs are constructed directly.
+
+    Returns a DataFrame with one row per (manager, week).
+    """
+    driver.get(league_url)
+    check_and_handle_login(driver)
+    manager_schedule_urls = None
+    try:
+        tab = _wait(driver).until(EC.presence_of_element_located(SEL_SCHEDULE_TAB))
+        tab.click()
+        _wait(driver).until(EC.presence_of_element_located(SEL_SCHEDULE_NAV))
+        nav_html = driver.find_element(*SEL_SCHEDULE_NAV).get_attribute("innerHTML")
+        nav_soup = BeautifulSoup(nav_html, "html.parser")
+        manager_schedule_urls = [
+            (li.text.strip(), _abs_url(li.find("a")["href"]))
+            for li in nav_soup.find_all("li")
+        ]
+    except TimeoutException:
+        if manager_ids:
+            print(
+                "  WARNING: Schedule subnav not found; using provided manager_ids "
+                "to construct schedule URLs directly."
+            )
+            base = league_url.rstrip("/")
+            manager_schedule_urls = [(mid, f"{base}/{mid}") for mid in manager_ids]
+        else:
+            raise
+
+    if not manager_schedule_urls:
+        raise ValueError("No manager schedule URLs could be determined.")
+
+    rows = []
+    for manager, sched_url in manager_schedule_urls:
+        # manager_id is the team number at the end of the schedule URL
+        # e.g. .../532435/1  →  "1"
+        manager_id = sched_url.rstrip("/").split("/")[-1]
+
+        print(f"  Schedule: {manager}")
+        driver.get(sched_url)
+        try:
+            _wait(driver).until(EC.presence_of_element_located(SEL_SCHEDULE_TABLE))
+        except Exception:
+            print(f"  WARNING: schedule table not found for {manager} — skipping.")
+            continue
+
+        table_html = driver.find_element(*SEL_SCHEDULE_TABLE).get_attribute("innerHTML")
+        table_soup = BeautifulSoup(table_html, "html.parser")
+
+        for tr in table_soup.find_all("tr"):
+            # Find the matchup link in this row
+            matchup_href = None
+            for a in tr.find_all("a"):
+                href = a.get("href", "")
+                if "matchup" in href and "week=" in href:
+                    matchup_href = _abs_url(href)
+                    break
+            if not matchup_href:
+                continue
+
+            # Derive week and opponent from URL params
+            try:
+                week = int(matchup_href.split("week=")[1].split("&")[0])
+                mid1 = matchup_href.split("mid1=")[1].split("&")[0]
+                mid2_raw = matchup_href.split("mid2=")[1]
+                mid2 = mid2_raw.split("&")[0] if "&" in mid2_raw else mid2_raw
+                opponent_id = mid2 if mid1 == manager_id else mid1
+            except Exception:
+                continue  # skip rows where we can't parse the URL
+
+            # Extract all decimal numbers from table cells as potential scores
+            decimals = []
+            result = None
+            for cell in tr.find_all("td"):
+                text = cell.get_text(strip=True)
+                if text in ("W", "L", "T"):
+                    result = text
+                elif text.lower() in ("win", "loss", "tie"):
+                    result = text[0].upper()
+                else:
+                    try:
+                        val = float(text.replace(",", ""))
+                        if 0 < val < 1000:  # plausible fantasy score
+                            decimals.append(val)
+                    except ValueError:
+                        pass
+
+            team_score = decimals[0] if decimals else None
+            opp_score = decimals[1] if len(decimals) > 1 else None
+
+            rows.append({
+                "manager": manager,
+                "manager_id": manager_id,
+                "week": week,
+                "score": team_score,
+                "opponent_id": opponent_id,
+                "opponent_score": opp_score,
+                "result": result,
+                "matchup_url": matchup_href,
+            })
+
+    df = pd.DataFrame(rows)
+    print(f"  Schedule results collected: {len(df)} rows across {len(manager_schedule_urls)} managers")
+    return df
+
+
+# ---------------------------------------------------------------------------
+# Playoff seeds
+# ---------------------------------------------------------------------------
+
+def _mid_from_url(url: str) -> tuple[str, str]:
+    """Extract (mid1, mid2) from a playoff/matchup URL."""
+    try:
+        mid1 = url.split("mid1=")[1].split("&")[0]
+        mid2_raw = url.split("mid2=")[1]
+        mid2 = mid2_raw.split("&")[0] if "&" in mid2_raw else mid2_raw
+        return mid1, mid2
+    except Exception:
+        return "", ""
+
+
+def scrape_playoff_seeds(
+    driver: webdriver.Chrome,
+    league_url: str,
+) -> dict[str, int]:
+    """Return {manager_id (str): playoff_seed (int)} for all teams.
+
+    Reads the playoff bracket page (championship + consolation).  Seeds are
+    assigned positionally from the first-round bracket elements:
+
+    Championship bracket (mod==0, has quarterfinals):
+      QF element 0: mid1 → seed 3, mid2 → seed 6
+      QF element 1: mid1 → seed 4, mid2 → seed 5
+      Teams in SF/Final but NOT in QF → seeds 1 & 2 (bye teams)
+
+    Championship bracket (mod==1, no quarterfinals, 4-team):
+      SF element 0: mid1 → seed 1, mid2 → seed 4
+      SF element 1: mid1 → seed 2, mid2 → seed 3
+
+    Consolation bracket:
+      SF element 0: mid1 → seed 1, mid2 → seed 4  (within consolation)
+      SF element 1: mid1 → seed 2, mid2 → seed 3
+      Consolation seeds are offset by number of championship teams.
+
+    These seeding conventions assume Yahoo's standard bracket ordering
+    (higher seed = mid1).  Verify the output against the actual bracket.
+    """
+    driver.get(league_url)
+    check_and_handle_login(driver)
+    driver.execute_script("window.scrollTo(0, 700)")
+    time.sleep(2)
+
+    panes, mod = _get_bracket_panes(driver)
+    if not panes:
+        print("  WARNING: playoff bracket panes not found — cannot extract seeds.")
+        return {}
+
+    seed_map: dict[str, int] = {}
+
+    def _elems(pane, round_name: str):
+        full = f"Linkable Bdr Bdr-radius Bg-shade Ta-start yfa-matchup bracket {round_name}"
+        return pane.find_elements(By.XPATH, f".//div[@class='{full}']")
+
+    def _urls_from_pane(pane, round_name: str) -> list[str]:
+        return [
+            _YAHOO_BASE + e.get_attribute("data-target")
+            for e in _elems(pane, round_name)
+        ]
+
+    if mod == 0:
+        # 6-team championship: pane 0 = quarterfinals, pane 1 = semis, pane 2 = final
+        qf_urls = _urls_from_pane(panes[0], "quarterfinal")
+        # QF pair 0: seeds 3 vs 6  |  QF pair 1: seeds 4 vs 5
+        qf_seeds = [(3, 6), (4, 5)]
+        for i, (hi, lo) in enumerate(qf_seeds):
+            if i < len(qf_urls):
+                mid1, mid2 = _mid_from_url(qf_urls[i])
+                if mid1:
+                    seed_map[mid1] = hi
+                if mid2:
+                    seed_map[mid2] = lo
+
+        # Bye teams (seeds 1 & 2): appear in SF but not in QF.
+        # Check both mid1 and mid2 per SF URL; take the first non-QF team per match.
+        sf_urls = _urls_from_pane(panes[1], "semifinal")
+        qf_teams = set(seed_map.keys())
+        seen_bye: set[str] = set()
+        bye_teams: list[str] = []
+        for url in sf_urls:
+            for mid in _mid_from_url(url):
+                if mid and mid not in qf_teams and mid not in seen_bye:
+                    bye_teams.append(mid)
+                    seen_bye.add(mid)
+                    break  # at most one bye team per SF matchup
+        for i, mid in enumerate(bye_teams):
+            seed_map[mid] = i + 1  # seeds 1, 2
+
+    else:
+        # 4-team championship: pane 0 = semis, pane 1 = final
+        sf_urls = _urls_from_pane(panes[0], "semifinal")
+        sf_seeds = [(1, 4), (2, 3)]
+        for i, (hi, lo) in enumerate(sf_seeds):
+            if i < len(sf_urls):
+                mid1, mid2 = _mid_from_url(sf_urls[i])
+                if mid1:
+                    seed_map[mid1] = hi
+                if mid2:
+                    seed_map[mid2] = lo
+
+    champ_count = len(seed_map)
+
+    # Consolation bracket
+    try:
+        consolation_elem = driver.find_element(By.CSS_SELECTOR, "span[id='selectlist_nav']")
+        consolation_elem.click()
+        time.sleep(1)
+        action = webdriver.ActionChains(driver)
+        action.move_to_element(consolation_elem).move_by_offset(0, 75).click().perform()
+        time.sleep(1)
+
+        con_panes, con_mod = _get_bracket_panes(driver)
+        con_sf_urls = _urls_from_pane(con_panes[1 - con_mod], "semifinal")
+        # Within consolation: SF pair 0 = seeds 1 vs 4, pair 1 = seeds 2 vs 3
+        con_seeds = [(1, 4), (2, 3)]
+        for i, (hi, lo) in enumerate(con_seeds):
+            if i < len(con_sf_urls):
+                mid1, mid2 = _mid_from_url(con_sf_urls[i])
+                if mid1 and mid1 not in seed_map:
+                    seed_map[mid1] = champ_count + hi
+                if mid2 and mid2 not in seed_map:
+                    seed_map[mid2] = champ_count + lo
+
+    except Exception as exc:
+        print(f"  WARNING: consolation bracket seed extraction failed ({exc!s:.120})")
+
+    print(f"  Playoff seeds: {seed_map}")
+    return seed_map
 
 
 # ---------------------------------------------------------------------------

@@ -310,13 +310,20 @@ def step_scrape(year: int, dry_run: bool = False) -> None:
     # --- Build consolidated_master ---
     if use_selenium_standings:
         from scrapers.driver import get_driver, quit_driver
-        from scrapers.yahoo_selenium import scrape_standings
+        from scrapers.yahoo_selenium import (
+            scrape_standings,
+            scrape_schedule_results,
+            scrape_playoff_seeds,
+        )
         from scrapers.yahoo_api import compute_playoff_wins
 
-        print("[scrape] Opening Chrome for standings...")
+        print("[scrape] Opening Chrome for standings, schedule results, and playoff seeds...")
         driver = get_driver()
         try:
             raw_std = scrape_standings(driver, league_url)
+            manager_ids = raw_std["manager_id"].astype(str).tolist()
+            sched_df = scrape_schedule_results(driver, league_url, manager_ids=manager_ids)
+            seed_map = scrape_playoff_seeds(driver, league_url)
         finally:
             quit_driver(driver)
 
@@ -337,12 +344,53 @@ def step_scrape(year: int, dry_run: bool = False) -> None:
         raw_std["team_key"]     = raw_std["manager_id"].apply(
             lambda m: f"{game_id}.l.{league_id_str}.t.{m}" if game_id else ""
         )
-        raw_std["playoff_seed"] = raw_std["rank"]
+
+        # --- Playoff seeds from bracket scraper ---
+        raw_std["playoff_seed"] = raw_std["manager_id"].astype(str).map(seed_map).fillna(raw_std["rank"])
+        raw_std["playoff_seed"] = raw_std["playoff_seed"].astype(int)
+
+        # --- W/L/PA/percentage/rs_score from schedule results ---
+        if not sched_df.empty:
+            sched_df["manager_id"] = sched_df["manager_id"].astype(str)
+            # W/L/T counted from any row with a result (even if score is missing)
+            wlt_agg = (
+                sched_df.groupby("manager_id")
+                .agg(
+                    wins=("result", lambda x: (x == "W").sum()),
+                    losses=("result", lambda x: (x == "L").sum()),
+                    ties=("result", lambda x: (x == "T").sum()),
+                )
+                .reset_index()
+            )
+            wlt_agg["percentage"] = wlt_agg.apply(
+                lambda r: round(r.wins / (r.wins + r.losses + r.ties), 4)
+                if (r.wins + r.losses + r.ties) > 0 else 0.0,
+                axis=1,
+            )
+            # Scores only from rows where both values parsed
+            score_agg = (
+                sched_df.dropna(subset=["score", "opponent_score"])
+                .groupby("manager_id")
+                .agg(rs_score=("score", "sum"), points_against=("opponent_score", "sum"))
+                .reset_index()
+            )
+            score_agg["rs_score"] = score_agg["rs_score"].round(2)
+            score_agg["points_against"] = score_agg["points_against"].round(2)
+
+            sched_agg = wlt_agg.merge(score_agg, on="manager_id", how="left")
+            raw_std["manager_id"] = raw_std["manager_id"].astype(str)
+            raw_std = raw_std.merge(sched_agg, on="manager_id", how="left")
+        else:
+            print("[scrape] WARNING: no schedule results collected — W/L/PA/rs_score will be empty.")
+            for _col in ("wins", "losses", "ties", "points_against", "percentage", "rs_score"):
+                if _col not in raw_std.columns:
+                    raw_std[_col] = ""
+
         raw_std["playoff_wins"] = raw_std.apply(
             lambda r: compute_playoff_wins(n_teams, int(r["rank"]), int(r["playoff_seed"])),
             axis=1,
         )
-        for _col in ("outcome_totals", "streak", "percentage", "moves", "faab_balance", "diff", "ties"):
+        for _col in ("outcome_totals", "streak", "moves", "faab_balance", "diff"):
             if _col not in raw_std.columns:
                 raw_std[_col] = ""
 
@@ -437,20 +485,23 @@ def _append_season_to_master(
     rs_year = rs_all[rs_all["season"].astype(str) == str(year)]
     po_year = po_all[po_all["season"].astype(str) == str(year)] if "season" in po_all.columns else po_all
 
-    rs_agg = (
-        rs_year.groupby("manager_key")["score"].sum()
-        .reset_index().rename(columns={"score": "rs_score"})
-    )
     po_agg = (
         po_year.groupby("manager_key")["score"].sum()
         .reset_index().rename(columns={"score": "revised_p_score"})
     )
 
-    new_rows = (
-        standings.copy()
-        .merge(rs_agg, on="manager_key", how="left")
-        .merge(po_agg, on="manager_key", how="left")
-    )
+    new_rows = standings.copy()
+
+    # Only recompute rs_score from matchup data if it wasn't already populated
+    # (e.g. from scrape_schedule_results in the Selenium standings path).
+    if "rs_score" not in new_rows.columns or new_rows["rs_score"].isna().all():
+        rs_agg = (
+            rs_year.groupby("manager_key")["score"].sum()
+            .reset_index().rename(columns={"score": "rs_score"})
+        )
+        new_rows = new_rows.merge(rs_agg, on="manager_key", how="left")
+
+    new_rows = new_rows.merge(po_agg, on="manager_key", how="left")
 
     if os.path.exists(CONSOLIDATED_MASTER_PATH):
         existing = pd.read_csv(CONSOLIDATED_MASTER_PATH)
