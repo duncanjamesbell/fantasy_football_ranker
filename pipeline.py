@@ -379,6 +379,9 @@ def step_scrape(year: int, dry_run: bool = False) -> None:
 
             sched_agg = wlt_agg.merge(score_agg, on="manager_id", how="left")
             raw_std["manager_id"] = raw_std["manager_id"].astype(str)
+            # Drop stub columns from standings scraper before merging real values in
+            _stub_cols = [c for c in ("wins", "losses", "ties", "points_against") if c in raw_std.columns]
+            raw_std = raw_std.drop(columns=_stub_cols)
             raw_std = raw_std.merge(sched_agg, on="manager_id", how="left")
         else:
             print("[scrape] WARNING: no schedule results collected — W/L/PA/rs_score will be empty.")
@@ -509,6 +512,9 @@ def _append_season_to_master(
         combined = pd.concat([existing, new_rows], ignore_index=True)
     else:
         combined = new_rows
+
+    # Drop any merge-artifact _x/_y columns left from a previous bad run
+    combined = combined.drop(columns=[c for c in combined.columns if c.endswith("_x") or c.endswith("_y")], errors="ignore")
 
     combined.to_csv(CONSOLIDATED_MASTER_PATH, index=False)
     print(f"[scrape] consolidated_master saved → {CONSOLIDATED_MASTER_PATH}  ({len(combined)} rows)")
