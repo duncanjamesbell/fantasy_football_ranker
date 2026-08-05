@@ -137,6 +137,11 @@ def get_or_update_managers(
 # Standings
 # ---------------------------------------------------------------------------
 
+def compute_playoff_wins(num_managers: int, rank: int, seed: int) -> int | str:
+    """Public wrapper — used by the Selenium standings fallback in pipeline.py."""
+    return _playoff_wins(num_managers, rank, seed)
+
+
 def _playoff_wins(num_managers: int, rank: int, seed: int) -> int | str:
     seed_bucket = "top" if seed <= 2 else "other"
     result = _PLAYOFF_WINS.get((num_managers, rank, seed_bucket))

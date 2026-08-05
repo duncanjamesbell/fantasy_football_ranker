@@ -161,6 +161,9 @@ def _read_draft_file(year: int) -> pd.DataFrame:
             f"No draft file found for {year} in '{DRAFT_RESULTS_DIR}'"
         )
 
+    if "Player Raw" in df.columns and "Player" not in df.columns:
+        df = df.rename(columns={"Player Raw": "Player"})
+
     if "Year" not in df.columns:
         df["Year"] = year
     if "Actual" not in df.columns:

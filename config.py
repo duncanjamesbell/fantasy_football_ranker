@@ -25,6 +25,7 @@ LEAGUE_URLS: dict[int, str] = {
     2022: "https://football.fantasysports.yahoo.com/2022/f1/709240",
     2023: "https://football.fantasysports.yahoo.com/2023/f1/199957",
     2024: "https://football.fantasysports.yahoo.com/2024/f1/710941",
+    2025: "https://football.fantasysports.yahoo.com/2025/f1/532435",
 }
 
 SEASONS = sorted(LEAGUE_URLS.keys())

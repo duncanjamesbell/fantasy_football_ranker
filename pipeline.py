@@ -27,6 +27,7 @@ Steps (run in this order):
 import argparse
 import sys
 import os
+import traceback
 import pandas as pd
 
 import config
@@ -48,7 +49,41 @@ from config import (
     year_faab_path,
 )
 
-STEP_ORDER = ["scrape", "positions", "faab", "players", "draft", "composite"]
+STEP_ORDER = ["pre_auth", "scrape", "positions", "faab", "players", "draft", "composite"]
+
+LOG_PATH = "pipeline.log"
+
+
+# ---------------------------------------------------------------------------
+# Logging setup
+# ---------------------------------------------------------------------------
+
+class _Tee:
+    """Write to both the original stream and a log file simultaneously."""
+    def __init__(self, stream, log_file):
+        self._stream = stream
+        self._log = log_file
+
+    def write(self, data):
+        self._stream.write(data)
+        self._log.write(data)
+        self._log.flush()
+
+    def flush(self):
+        self._stream.flush()
+        self._log.flush()
+
+    def __getattr__(self, attr):
+        return getattr(self._stream, attr)
+
+
+def _setup_logging() -> None:
+    """Redirect stdout/stderr to pipeline.log (appends; timestamped header per run)."""
+    log_file = open(LOG_PATH, "a", encoding="utf-8", buffering=1)
+    import datetime
+    log_file.write(f"\n{'='*70}\nPipeline run: {datetime.datetime.now()}\n{'='*70}\n")
+    sys.stdout = _Tee(sys.__stdout__, log_file)
+    sys.stderr = _Tee(sys.__stderr__, log_file)
 
 
 # ---------------------------------------------------------------------------
@@ -82,6 +117,53 @@ def _append_and_save(existing_path: str, new_df: pd.DataFrame, key_col: str = No
 
 
 # ---------------------------------------------------------------------------
+# Step: pre_auth
+# ---------------------------------------------------------------------------
+
+def step_pre_auth(year: int, dry_run: bool = False) -> None:
+    """
+    Open Chrome and navigate to the Yahoo Fantasy league page for manual login.
+
+    Yahoo requires authentication before any Selenium scraping can proceed.
+    Run this step once in your own terminal, log in when the browser opens,
+    then press Enter. The Chrome profile saves the session so that all
+    subsequent Selenium steps (scrape, positions, faab) skip the login page.
+
+    This step MUST be run in a terminal where you can type (not via Claude Code),
+    because it calls input() to wait for your confirmation.
+
+    Usage:
+        py pipeline.py --year 2025 --steps pre_auth
+    """
+    if year not in LEAGUE_URLS:
+        print(f"[pre_auth] ERROR: no league URL configured for {year}.")
+        sys.exit(1)
+
+    league_url = LEAGUE_URLS[year]
+
+    print(f"\n[pre_auth] Opening Chrome to: {league_url}")
+
+    if dry_run:
+        print("[pre_auth] DRY RUN — no browser opened.")
+        return
+
+    from scrapers.driver import get_driver, quit_driver
+
+    driver = get_driver()
+    driver.get(league_url)
+
+    print("\n[pre_auth] Browser is open.")
+    print("  1. Log in to Yahoo if prompted")
+    print("  2. Confirm you can see the fantasy league page")
+    print("  3. Press Enter here to save the session and close the browser")
+    input()
+
+    quit_driver(driver)
+    print("[pre_auth] Session saved to Chrome profile.")
+    print("  You can now run scrape/positions/faab without re-authenticating.")
+
+
+# ---------------------------------------------------------------------------
 # Step: scrape
 # ---------------------------------------------------------------------------
 
@@ -110,7 +192,30 @@ def step_scrape(year: int, dry_run: bool = False) -> None:
 
     print("[scrape] Connecting to Yahoo API...")
     football = connect()
-    leagues = get_leagues(football)
+
+    # yahoo_fantasy_api's league_ids() calls users;use_login=1/games/teams which
+    # can fail with auth errors unrelated to the OAuth token itself. Fall back to
+    # the local league_df_master.csv cache, then to a single known key derived
+    # from the league URL + the cache entry for this year.
+    try:
+        leagues = get_leagues(football)
+    except RuntimeError as exc:
+        print(f"[scrape] WARNING: league_ids() failed ({exc!s:.120})")
+        print("[scrape] Falling back to local league key cache...")
+        if os.path.exists(LEAGUE_DF_PATH):
+            import pandas as _pd
+            _ldf = _pd.read_csv(LEAGUE_DF_PATH)
+            _keys = _ldf[_ldf['season'] == year]['league_key'].tolist()
+            if _keys:
+                leagues = _keys
+                print(f"[scrape] Using cached league key(s): {leagues}")
+            else:
+                print(f"[scrape] ERROR: no league key found in {LEAGUE_DF_PATH} for {year}.")
+                print("  Run the API once with a working token, or add the key manually.")
+                sys.exit(1)
+        else:
+            print(f"[scrape] ERROR: {LEAGUE_DF_PATH} not found. Cannot determine league key.")
+            sys.exit(1)
 
     print("[scrape] Fetching league settings...")
     get_or_update_league_settings(football, leagues, LEAGUE_DF_PATH)
@@ -119,43 +224,41 @@ def step_scrape(year: int, dry_run: bool = False) -> None:
     manager_df = get_or_update_managers(football, leagues, MANAGERS_DF_PATH)
 
     print("[scrape] Fetching standings...")
-    standings = get_standings(football, leagues, manager_df)
-    standings.to_csv(STANDINGS_PATH, index=False)
-    print(f"[scrape] Standings saved → {STANDINGS_PATH}")
+    use_selenium_standings = False
+    try:
+        standings = get_standings(football, leagues, manager_df)
+        standings.to_csv(STANDINGS_PATH, index=False)
+        print(f"[scrape] Standings saved → {STANDINGS_PATH}")
+    except RuntimeError as exc:
+        print(f"[scrape] WARNING: API standings failed ({exc!s:.80})")
+        print("[scrape] Will scrape standings via Selenium after matchup scraping.")
+        standings = None
+        use_selenium_standings = True
 
     # --- Selenium: regular season matchups ---
     rs_out = year_rs_path(year)
-    if os.path.exists(rs_out):
-        print(f"[scrape] {rs_out} already exists — skipping RS scrape.")
-    else:
-        from scrapers.driver import get_driver, quit_driver
-        from scrapers.yahoo_selenium import scrape_regular_season_matchups
+    from scrapers.driver import get_driver, quit_driver
+    from scrapers.yahoo_selenium import scrape_regular_season_matchups
 
-        print("[scrape] Opening Chrome for regular season matchups...")
-        driver = get_driver()
-        try:
-            rs_df = scrape_regular_season_matchups(driver, league_url)
-            rs_df.to_csv(rs_out, index=False)
-            print(f"[scrape] RS matchups saved → {rs_out}")
-        finally:
-            quit_driver(driver)
+    print("[scrape] Opening Chrome for regular season matchups...")
+    driver = get_driver()
+    try:
+        _, rs_fails = scrape_regular_season_matchups(driver, league_url, checkpoint_path=rs_out)
+        print(f"[scrape] RS matchups saved → {rs_out}")
+    finally:
+        quit_driver(driver)
 
     # --- Selenium: playoff matchups ---
     po_out = year_playoffs_path(year)
-    if os.path.exists(po_out):
-        print(f"[scrape] {po_out} already exists — skipping playoff scrape.")
-    else:
-        from scrapers.driver import get_driver, quit_driver
-        from scrapers.yahoo_selenium import scrape_playoff_matchups
+    from scrapers.yahoo_selenium import scrape_playoff_matchups
 
-        print("[scrape] Opening Chrome for playoff matchups...")
-        driver = get_driver()
-        try:
-            po_df = scrape_playoff_matchups(driver, league_url)
-            po_df.to_csv(po_out, index=False)
-            print(f"[scrape] Playoff matchups saved → {po_out}")
-        finally:
-            quit_driver(driver)
+    print("[scrape] Opening Chrome for playoff matchups...")
+    driver = get_driver()
+    try:
+        _, po_fails = scrape_playoff_matchups(driver, league_url, checkpoint_path=po_out)
+        print(f"[scrape] Playoff matchups saved → {po_out}")
+    finally:
+        quit_driver(driver)
 
     # --- Compile: append to all-season master files ---
     _require_file(rs_out, "scrape")
@@ -205,7 +308,59 @@ def step_scrape(year: int, dry_run: bool = False) -> None:
         print(f"[scrape] {po_master_out} already exists — not overwriting.")
 
     # --- Build consolidated_master ---
-    _build_consolidated_master(year, standings, rs_master_out, po_master_out)
+    if use_selenium_standings:
+        from scrapers.driver import get_driver, quit_driver
+        from scrapers.yahoo_selenium import scrape_standings
+        from scrapers.yahoo_api import compute_playoff_wins
+
+        print("[scrape] Opening Chrome for standings...")
+        driver = get_driver()
+        try:
+            raw_std = scrape_standings(driver, league_url)
+        finally:
+            quit_driver(driver)
+
+        # Derive all columns needed by the composite rank pipeline.
+        league_id_str = league_url.rstrip("/").split("/")[-1]
+        game_id = ""
+        if os.path.exists(LEAGUE_DF_PATH):
+            _ldf = pd.read_csv(LEAGUE_DF_PATH)
+            _match = _ldf[_ldf["season"] == year]
+            if not _match.empty:
+                game_id = str(_match.iloc[0]["league_key"]).split(".")[0]
+
+        n_teams = len(raw_std)
+        raw_std["season"]       = year
+        raw_std["league_id"]    = league_id_str
+        raw_std["manager_key"]  = league_id_str + "." + raw_std["manager_id"].astype(str)
+        raw_std["league_key"]   = f"{game_id}.l.{league_id_str}" if game_id else ""
+        raw_std["team_key"]     = raw_std["manager_id"].apply(
+            lambda m: f"{game_id}.l.{league_id_str}.t.{m}" if game_id else ""
+        )
+        raw_std["playoff_seed"] = raw_std["rank"]
+        raw_std["playoff_wins"] = raw_std.apply(
+            lambda r: compute_playoff_wins(n_teams, int(r["rank"]), int(r["playoff_seed"])),
+            axis=1,
+        )
+        for _col in ("outcome_totals", "streak", "percentage", "moves", "faab_balance", "diff", "ties"):
+            if _col not in raw_std.columns:
+                raw_std[_col] = ""
+
+        standings = raw_std
+        _append_season_to_master(year, standings, rs_master_out, po_master_out)
+    else:
+        _build_consolidated_master(year, standings, rs_master_out, po_master_out)
+
+    # --- Scrape step summary ---
+    total_fails = rs_fails + po_fails
+    print(f"\n[scrape] ── Scrape summary for {year} ──────────────────────────────")
+    print(f"[scrape]   RS matchup failures:      {rs_fails}")
+    print(f"[scrape]   Playoff matchup failures:  {po_fails}")
+    if total_fails == 0:
+        print(f"[scrape]   Result: CLEAN — no failures, no re-run needed.")
+    else:
+        print(f"[scrape]   Result: {total_fails} failure(s) due to rate limiting — re-run scrape to fill gaps.")
+    print(f"[scrape] ────────────────────────────────────────────────────────────")
 
 
 def _build_consolidated_master(
@@ -257,6 +412,61 @@ def _build_consolidated_master(
     )
 
 
+def _append_season_to_master(
+    year: int,
+    standings: pd.DataFrame,
+    rs_master_path: str,
+    po_master_path: str,
+) -> None:
+    """
+    Append one season's rows to consolidated_master.csv (Selenium standings path).
+
+    Used when only the current year's standings are available (API fallback).
+    Loads the existing master, removes any stale rows for this year, computes
+    rs_score and revised_p_score from the cumulative RS/playoff files, then
+    saves the combined result.
+    """
+    print("[scrape] Building consolidated_master (append mode)...")
+
+    rs_all = pd.read_csv(rs_master_path)
+    po_all = pd.read_csv(po_master_path)
+
+    for df in (rs_all, po_all):
+        df["manager_key"] = df["league_id"].astype(str) + "." + df["manager_id"].astype(str)
+
+    rs_year = rs_all[rs_all["season"].astype(str) == str(year)]
+    po_year = po_all[po_all["season"].astype(str) == str(year)] if "season" in po_all.columns else po_all
+
+    rs_agg = (
+        rs_year.groupby("manager_key")["score"].sum()
+        .reset_index().rename(columns={"score": "rs_score"})
+    )
+    po_agg = (
+        po_year.groupby("manager_key")["score"].sum()
+        .reset_index().rename(columns={"score": "revised_p_score"})
+    )
+
+    new_rows = (
+        standings.copy()
+        .merge(rs_agg, on="manager_key", how="left")
+        .merge(po_agg, on="manager_key", how="left")
+    )
+
+    if os.path.exists(CONSOLIDATED_MASTER_PATH):
+        existing = pd.read_csv(CONSOLIDATED_MASTER_PATH)
+        existing = existing[existing["season"].astype(str) != str(year)]
+        combined = pd.concat([existing, new_rows], ignore_index=True)
+    else:
+        combined = new_rows
+
+    combined.to_csv(CONSOLIDATED_MASTER_PATH, index=False)
+    print(f"[scrape] consolidated_master saved → {CONSOLIDATED_MASTER_PATH}  ({len(combined)} rows)")
+    print(
+        "  NOTE: Review for manual overrides (playoff point corrections, co-manager "
+        "duplicates) before running composite_ranks."
+    )
+
+
 # ---------------------------------------------------------------------------
 # Step: positions
 # ---------------------------------------------------------------------------
@@ -278,6 +488,8 @@ def step_positions(year: int, dry_run: bool = False) -> None:
         print("[positions] DRY RUN — no network calls or file writes.")
         return
 
+    pos_fails: list[str] = []
+
     if os.path.exists(out_year):
         print(f"[positions] {out_year} already exists — skipping scrape.")
     else:
@@ -287,7 +499,7 @@ def step_positions(year: int, dry_run: bool = False) -> None:
         print("[positions] Opening Chrome...")
         driver = get_driver()
         try:
-            pos_df = scrape_position_scores(driver, league_url)
+            pos_df, pos_fails = scrape_position_scores(driver, league_url)
             pos_df["season"] = year
             pos_df.to_csv(out_year, index=False)
             print(f"[positions] Saved → {out_year}")
@@ -320,6 +532,14 @@ def step_positions(year: int, dry_run: bool = False) -> None:
     else:
         print(f"[positions] {master_out} already exists — not overwriting.")
 
+    print(f"\n[positions] ── Positions summary for {year} ────────────────────────")
+    if pos_fails:
+        print(f"[positions]   Failed positions: {pos_fails}")
+        print(f"[positions]   Result: INCOMPLETE — re-run positions to retry failed positions.")
+    else:
+        print(f"[positions]   Result: CLEAN — all positions scraped successfully.")
+    print(f"[positions] ─────────────────────────────────────────────────────────")
+
 
 # ---------------------------------------------------------------------------
 # Step: faab
@@ -345,6 +565,8 @@ def step_faab(year: int, dry_run: bool = False) -> None:
         print("[faab] DRY RUN — no network calls or file writes.")
         return
 
+    faab_warnings: list[str] = []
+
     if os.path.exists(out_year):
         print(f"[faab] {out_year} already exists — skipping scrape.")
     else:
@@ -354,7 +576,7 @@ def step_faab(year: int, dry_run: bool = False) -> None:
         print("[faab] Opening Chrome...")
         driver = get_driver()
         try:
-            faab_df = scrape_faab(driver, league_url)
+            faab_df, faab_warnings = scrape_faab(driver, league_url)
             faab_df.to_csv(out_year, index=False)
             print(f"[faab] Saved → {out_year}")
         finally:
@@ -375,6 +597,15 @@ def step_faab(year: int, dry_run: bool = False) -> None:
         print(f"[faab] Master saved → {master_out}  ({len(combined)} rows)")
     else:
         print(f"[faab] {master_out} already exists — not overwriting.")
+
+    print(f"\n[faab] ── FAAB summary for {year} ──────────────────────────────────")
+    if faab_warnings:
+        for w in faab_warnings:
+            print(f"[faab]   WARNING: {w}")
+        print(f"[faab]   Result: CHECK WARNINGS — data may be incomplete.")
+    else:
+        print(f"[faab]   Result: CLEAN — {len(new_faab)} records collected.")
+    print(f"[faab] ──────────────────────────────────────────────────────────────")
 
 
 # ---------------------------------------------------------------------------
@@ -401,11 +632,14 @@ def step_players(year: int, dry_run: bool = False) -> None:
     draft_file_xlsx = os.path.join(config.DRAFT_RESULTS_DIR, f"{year}.xlsx")
     if os.path.exists(draft_file_csv):
         draft_df = pd.read_csv(draft_file_csv)
-        new_players += list(
-            draft_df[["Player", "Position"]].drop_duplicates().itertuples(index=False, name=None)
-        )
     elif os.path.exists(draft_file_xlsx):
         draft_df = pd.read_excel(draft_file_xlsx)
+    else:
+        draft_df = None
+
+    if draft_df is not None:
+        if "Player Raw" in draft_df.columns and "Player" not in draft_df.columns:
+            draft_df = draft_df.rename(columns={"Player Raw": "Player"})
         new_players += list(
             draft_df[["Player", "Position"]].drop_duplicates().itertuples(index=False, name=None)
         )
@@ -628,12 +862,16 @@ def main(argv=None):
     else:
         steps = STEP_ORDER
 
+    if not dry_run:
+        _setup_logging()
+
     print(f"Fantasy Football Pipeline — {year}")
     print(f"Steps: {' -> '.join(steps)}")
     if dry_run:
         print("DRY RUN MODE")
 
     step_fns = {
+        "pre_auth":  step_pre_auth,
         "scrape":    step_scrape,
         "positions": step_positions,
         "faab":      step_faab,
@@ -650,6 +888,7 @@ def main(argv=None):
             sys.exit(0)
         except Exception as exc:
             print(f"\n[{step}] FAILED: {exc}")
+            traceback.print_exc()
             raise
 
     print(f"\nPipeline complete for {year}.")
