@@ -911,7 +911,77 @@ def scrape_standings(driver: webdriver.Chrome, league_url: str) -> pd.DataFrame:
         )
 
     print(f"  Scraped {len(records)} standings rows.")
-    return pd.DataFrame(records)
+    df = pd.DataFrame(records)
+
+    # Enrich with FAAB balance from the main league standings tab (?lhst=stand).
+    faab_map = _scrape_faab_from_stand_tab(driver, league_url)
+    if faab_map:
+        df["faab_balance"] = df["manager_id"].map(faab_map)
+        print(f"  FAAB balances scraped: {faab_map}")
+    else:
+        df["faab_balance"] = ""
+
+    return df
+
+
+def _scrape_faab_from_stand_tab(
+    driver: webdriver.Chrome,
+    league_url: str,
+) -> dict[str, str]:
+    """
+    Scrape FAAB (Waiver Bdgt) balances from the main league ?lhst=stand page.
+
+    Returns {manager_id: faab_balance_str} or {} if the column is not found.
+    """
+    stand_url = league_url.rstrip("/") + "?lhst=stand"
+    driver.get(stand_url)
+    time.sleep(2)
+
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+
+    # The W-L standings section is anchored at #leaguehomestandings.
+    section = soup.find(id="leaguehomestandings")
+    if section is None:
+        print("  WARNING: #leaguehomestandings not found — FAAB balance unavailable.")
+        return {}
+
+    table = section.find("table")
+    if table is None:
+        print("  WARNING: no table in #leaguehomestandings — FAAB balance unavailable.")
+        return {}
+
+    # Identify column indices from the header row.
+    header_row = table.find("thead")
+    if not header_row:
+        return {}
+    headers = [th.get_text(strip=True) for th in header_row.find_all("th")]
+
+    # Locate the "Waiver Bdgt" column (case-insensitive substring match).
+    waiver_idx = next(
+        (i for i, h in enumerate(headers) if "waiver" in h.lower() or "bdgt" in h.lower()),
+        None,
+    )
+    if waiver_idx is None:
+        print(f"  WARNING: 'Waiver Bdgt' column not found in headers {headers} — FAAB unavailable.")
+        return {}
+
+    league_path_frag = "/" + "/".join(league_url.rstrip("/").split("/")[-3:])
+    faab_map: dict[str, str] = {}
+    for row in table.select("tbody tr"):
+        cells = row.find_all("td")
+        if len(cells) <= waiver_idx:
+            continue
+        team_link = row.find("a", href=lambda h: h and league_path_frag in h)
+        if not team_link:
+            continue
+        href_parts = team_link["href"].rstrip("/").split("/")
+        manager_id = href_parts[-1] if href_parts and href_parts[-1].isdigit() else ""
+        if not manager_id:
+            continue
+        faab_text = cells[waiver_idx].get_text(strip=True).replace("$", "").strip()
+        faab_map[manager_id] = faab_text
+
+    return faab_map
 
 
 # ---------------------------------------------------------------------------
