@@ -945,23 +945,25 @@ def _scrape_stand_tab_extras(
     stand_url = league_url.rstrip("/") + "?lhst=stand"
     driver.get(stand_url)
 
-    # Wait for the standings section to appear.
+    # The section shell (#leaguehomestandings) is in static HTML but its table
+    # is loaded dynamically (data-dynamic="true").  Wait for the table itself.
     try:
-        _wait(driver).until(
-            EC.presence_of_element_located((By.ID, "leaguehomestandings"))
+        _wait(driver, timeout=30).until(
+            EC.presence_of_element_located(
+                (By.CSS_SELECTOR, "#leaguehomestandings table")
+            )
         )
     except TimeoutException:
-        print("  WARNING: #leaguehomestandings did not appear — FAAB/moves unavailable.")
+        print("  WARNING: standings table inside #leaguehomestandings did not load — FAAB/moves unavailable.")
         return {}
 
-    soup = BeautifulSoup(driver.page_source, "html.parser")
-    section = soup.find(id="leaguehomestandings")
-    if section is None:
-        return {}
+    # Read innerHTML from the live element to get dynamically loaded content.
+    section_elem = driver.find_element(By.ID, "leaguehomestandings")
+    soup = BeautifulSoup(section_elem.get_attribute("innerHTML"), "html.parser")
 
-    table = section.find("table")
+    table = soup.find("table")
     if table is None:
-        print("  WARNING: no table in #leaguehomestandings.")
+        print("  WARNING: no table in #leaguehomestandings innerHTML.")
         return {}
 
     header_row = table.find("thead")
