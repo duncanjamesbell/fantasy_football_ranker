@@ -937,58 +937,72 @@ def _scrape_stand_tab_extras(
     """
     Scrape 'Waiver Bdgt' (FAAB) and 'Moves' from the main league ?lhst=stand page.
 
-    Navigates to the Standings tab, waits for #leaguehomestandings, then reads
-    every column by header name.
+    Navigates to the old-style league home (Standings tab), waits for any table
+    containing 'Waiver'/'Bdgt'/'Moves' headers, and reads FAAB + moves by column
+    index. Falls back to a page-wide table scan if #leaguehomestandings is absent.
 
     Returns {manager_id: {"faab_balance": "...", "moves": "..."}} or {} on failure.
     """
     stand_url = league_url.rstrip("/") + "?lhst=stand"
     driver.get(stand_url)
+    print(f"  [faab-scrape] navigated to: {driver.current_url}")
 
-    # The section shell (#leaguehomestandings) is in static HTML but its table
-    # is loaded dynamically (data-dynamic="true").  Wait for the table itself.
+    # Give JS time to render dynamic content.  Try the specific section first,
+    # then fall back to a page-wide scan.
+    section_elem = None
     try:
         _wait(driver, timeout=30).until(
             EC.presence_of_element_located(
                 (By.CSS_SELECTOR, "#leaguehomestandings table")
             )
         )
+        section_elem = driver.find_element(By.ID, "leaguehomestandings")
+        print("  [faab-scrape] found #leaguehomestandings table")
     except TimeoutException:
-        print("  WARNING: standings table inside #leaguehomestandings did not load — FAAB/moves unavailable.")
+        print("  [faab-scrape] #leaguehomestandings table not found — will scan all tables")
+
+    if section_elem is not None:
+        html = section_elem.get_attribute("innerHTML")
+    else:
+        html = driver.page_source
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Locate a table whose <thead> contains "Waiver"/"Bdgt" or "Moves".
+    target_table = waiver_idx = moves_idx = None
+    for tbl in soup.find_all("table"):
+        thead = tbl.find("thead")
+        if not thead:
+            continue
+        hdrs = [th.get_text(strip=True) for th in thead.find_all("th")]
+        w = next((i for i, h in enumerate(hdrs) if "waiver" in h.lower() or "bdgt" in h.lower()), None)
+        m = next((i for i, h in enumerate(hdrs) if "move" in h.lower()), None)
+        if w is not None or m is not None:
+            target_table, waiver_idx, moves_idx = tbl, w, m
+            print(f"  [faab-scrape] found FAAB table with headers: {hdrs}")
+            break
+
+    if target_table is None:
+        # Summarise all table headers to help debug future changes.
+        all_hdrs = []
+        for i, tbl in enumerate(soup.find_all("table")):
+            th = tbl.find("thead")
+            if th:
+                all_hdrs.append(f"table[{i}]: {[x.get_text(strip=True) for x in th.find_all('th')]}")
+        print(f"  [faab-scrape] no FAAB table found. Tables on page: {all_hdrs}")
+        debug_path = "faab_debug.html"
+        with open(debug_path, "w", encoding="utf-8") as _f:
+            _f.write(html)
+        print(f"  [faab-scrape] HTML saved to {debug_path}")
         return {}
 
-    # Read innerHTML from the live element to get dynamically loaded content.
-    section_elem = driver.find_element(By.ID, "leaguehomestandings")
-    soup = BeautifulSoup(section_elem.get_attribute("innerHTML"), "html.parser")
+    # Match team rows using the last two URL path segments ("/f1/532435") so the
+    # year prefix is irrelevant (handles both /f1/532435/N and /2025/f1/532435/N).
+    url_parts = league_url.rstrip("/").split("/")
+    league_path_frag = "/" + "/".join(url_parts[-2:])   # "/f1/532435"
 
-    table = soup.find("table")
-    if table is None:
-        print("  WARNING: no table in #leaguehomestandings innerHTML.")
-        return {}
-
-    header_row = table.find("thead")
-    if not header_row:
-        return {}
-    headers = [th.get_text(strip=True) for th in header_row.find_all("th")]
-    print(f"  Standings tab headers: {headers}")
-
-    waiver_idx = next(
-        (i for i, h in enumerate(headers) if "waiver" in h.lower() or "bdgt" in h.lower()),
-        None,
-    )
-    moves_idx = next(
-        (i for i, h in enumerate(headers) if "move" in h.lower()),
-        None,
-    )
-
-    if waiver_idx is None and moves_idx is None:
-        print(f"  WARNING: neither 'Waiver Bdgt' nor 'Moves' found in {headers}.")
-        return {}
-
-    league_path_frag = "/" + "/".join(league_url.rstrip("/").split("/")[-3:])
     result: dict[str, dict] = {}
-
-    for row in table.select("tbody tr"):
+    for row in target_table.select("tbody tr"):
         cells = row.find_all("td")
         team_link = row.find("a", href=lambda h: h and league_path_frag in h)
         if not team_link:
@@ -1004,6 +1018,9 @@ def _scrape_stand_tab_extras(
         if moves_idx is not None and len(cells) > moves_idx:
             row_data["moves"] = cells[moves_idx].get_text(strip=True)
         result[manager_id] = row_data
+
+    if not result:
+        print(f"  [faab-scrape] table found but no rows matched league_path_frag={league_path_frag!r}")
 
     return result
 
