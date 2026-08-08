@@ -57,6 +57,8 @@ SEL_MATCHUP_TABLE = (By.XPATH, "//table[@id='statTable1']")
 SEL_PLAYER_DIV_CLASS = "ysf-player-name Nowrap Relative Lh-xs"
 SEL_LEFT_SCORE_CLASS = "Pend-lg Ta-end Fw-b Nowrap Va-top"
 SEL_RIGHT_SCORE_CLASS = "Ta-end Fw-b Nowrap Va-top"
+# Center roster-slot column (new in ~2025; was inside span.D-b in earlier seasons)
+SEL_POS_TD_CLASS = "Va-top Bg-shade F-shade Bdrstart Bdrend Ta-c"
 
 # Player / position page
 SEL_STATUS_SELECT = (By.XPATH, "//select[@id='statusselect']")
@@ -152,14 +154,33 @@ def _parse_matchup_page(driver: webdriver.Chrome, matchup_url: str) -> pd.DataFr
         "html.parser",
     )
 
+    # Positions: new (2025+) format stores them in a center <td>; older seasons
+    # kept them inside span.D-b inside the player div.  Build a list of positions
+    # indexed by row so both formats work.
+    pos_tds = [
+        td.get_text(strip=True)
+        for td in soup.find_all("td", {"class": SEL_POS_TD_CLASS})
+        if td.get_text(strip=True) not in ("TOTAL", "")
+    ]
+
     left_players, right_players = [], []
     for i, p in enumerate(soup.find_all("div", {"class": SEL_PLAYER_DIV_CLASS})):
         try:
             name = p.find("a").text
             url = p.find("a").get("href")
-            pos = p.find("span", {"class": "D-b"}).text.split(" - ")[1]
         except Exception:
-            name, url, pos = "", "", ""
+            name, url = "", ""
+
+        # Row index: two player divs per row (left at even i, right at odd i).
+        row_idx = i // 2
+        if pos_tds and row_idx < len(pos_tds):
+            pos = pos_tds[row_idx]
+        else:
+            try:
+                pos = p.find("span", {"class": "D-b"}).text.split(" - ")[1]
+            except Exception:
+                pos = ""
+
         (left_players if i % 2 == 0 else right_players).append((name, url, pos))
 
     left_scores = [s.text for s in soup.find_all("td", {"class": SEL_LEFT_SCORE_CLASS})][:-1]
@@ -313,14 +334,29 @@ def _parse_playoff_matchup(driver: webdriver.Chrome, matchup_url: str) -> pd.Dat
         "html.parser",
     )
 
+    pos_tds = [
+        td.get_text(strip=True)
+        for td in soup.find_all("td", {"class": SEL_POS_TD_CLASS})
+        if td.get_text(strip=True) not in ("TOTAL", "")
+    ]
+
     left_players, right_players = [], []
     for i, p in enumerate(soup.find_all("div", {"class": SEL_PLAYER_DIV_CLASS})):
         try:
             name = p.find("a").text
             url = p.find("a").get("href")
-            pos = p.find("span", {"class": "D-b"}).text.split(" - ")[1]
         except Exception:
-            name, url, pos = "", "", ""
+            name, url = "", ""
+
+        row_idx = i // 2
+        if pos_tds and row_idx < len(pos_tds):
+            pos = pos_tds[row_idx]
+        else:
+            try:
+                pos = p.find("span", {"class": "D-b"}).text.split(" - ")[1]
+            except Exception:
+                pos = ""
+
         (left_players if i % 2 == 0 else right_players).append((name, url, pos))
 
     left_scores = [s.text for s in soup.find_all("td", {"class": SEL_LEFT_SCORE_CLASS})][:-1]
