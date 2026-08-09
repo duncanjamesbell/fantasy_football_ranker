@@ -15,10 +15,13 @@ Each season, run the pipeline to collect new data, reconcile player names, compi
 ## Running the Pipeline
 
 ```bash
+# Log in to Yahoo once, before any scrape/positions/faab step (see pre_auth below)
+py pipeline.py --year 2025 --steps pre_auth
+
 # Run all steps for a new season
 py pipeline.py --year 2025
 
-# Run specific steps only
+# Run specific steps only (comma-separated, no leading -- on step names)
 py pipeline.py --year 2025 --steps scrape,positions
 
 # Resume from a specific step (runs that step and all after)
@@ -28,8 +31,12 @@ py pipeline.py --year 2025 --from-step players
 py pipeline.py --year 2025 --dry-run
 ```
 
-`--steps` and `--from-step` both take step names from `STEP_ORDER` in `pipeline.py`:
-`pre_auth, scrape, positions, faab, players, draft, composite`. There is no
+`--year` is always required. `--steps` and `--from-step` both take step names
+from `STEP_ORDER` in `pipeline.py`:
+`pre_auth, scrape, positions, faab, players, draft, composite`. Pass the step
+name itself as the value — `--steps pre_auth`, not `--steps --pre_auth`
+(argparse treats a second `--flag`-shaped token as a new flag, not a value,
+and errors with "argument --steps: expected one argument"). There is no
 finer-grained flag for "just the playoffs" or "just regular season" — both are
 scraped together inside the `scrape` step (see below for how to target one).
 
@@ -78,6 +85,27 @@ steps.
 ---
 
 ## Steps
+
+### 0. `pre_auth` *(run first, interactive)*
+Opens Chrome to the league URL for `--year` so you can log in to Yahoo
+manually. Yahoo requires a logged-in session before any Selenium scraping
+(`scrape`, `positions`, `faab`) can proceed — those steps do not handle login
+themselves and will fail or hang on the login page without this.
+
+```bash
+py pipeline.py --year 2025 --steps pre_auth
+```
+
+**Must be run from your own terminal (PowerShell/cmd), not through Claude
+Code.** This step calls Python's `input()` and waits for you to press Enter
+after logging in; a non-interactive shell has no stdin to satisfy that, so
+the step will error or hang immediately.
+
+The session is saved to the Chrome profile directory (`CHROME_PROFILE_DIR` in
+`.env`, defaults to `C:/chrome_profile`), so you only need to re-run
+`pre_auth` when that session expires — not every time you run the pipeline.
+If Chrome fails to launch with a "user data directory is already in use"
+error, close any other Chrome windows using that same profile first.
 
 ### 1. `scrape`
 Connects to the Yahoo Fantasy API and Selenium to collect:

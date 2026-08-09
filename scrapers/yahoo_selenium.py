@@ -33,6 +33,14 @@ def _norm_url(url: str) -> str:
     return url.replace(_YAHOO_BASE + "//", _YAHOO_BASE + "/")
 
 
+def _atomic_to_csv(df: pd.DataFrame, path: str) -> None:
+    """Write df to path via a temp file + os.replace, so a killed/crashed
+    process leaves the previous checkpoint intact instead of a zero-filled file."""
+    tmp_path = f"{path}.tmp"
+    df.to_csv(tmp_path, index=False)
+    os.replace(tmp_path, path)
+
+
 YAHOO_USERNAME = os.getenv("YAHOO_USERNAME", "")
 YAHOO_PASSWORD = os.getenv("YAHOO_PASSWORD", "")
 YAHOO_PROFILE_ID = os.getenv("YAHOO_PROFILE_ID", "")
@@ -216,7 +224,7 @@ def scrape_regular_season_matchups(
             lambda u: _norm_url(u) if isinstance(u, str) else u
         )
         existing.drop_duplicates(subset=["matchup_url", "manager_id", "player", "position"], inplace=True)
-        existing.to_csv(checkpoint_path, index=False)
+        _atomic_to_csv(existing, checkpoint_path)
         done_urls = set(existing["matchup_url"].dropna())
         print(f"  Resuming: {len(done_urls)} matchup URLs already in checkpoint.")
 
@@ -317,7 +325,7 @@ def _get_bracket_panes(driver: webdriver.Chrome) -> tuple[list, int]:
 
 def _bracket_urls(pane, css_class: str) -> list[str]:
     base = "https://football.fantasysports.yahoo.com"
-    elems = pane.find_elements(By.XPATH, f"div[@class='{css_class}']")
+    elems = pane.find_elements(By.XPATH, f".//div[@class='{css_class}']")
     return [base + e.get_attribute("data-target") for e in elems]
 
 
@@ -394,15 +402,22 @@ def scrape_playoff_matchups(
             lambda u: _norm_url(u) if isinstance(u, str) else u
         )
         existing.drop_duplicates(subset=["matchup_url", "manager_id", "player", "position"], inplace=True)
-        existing.to_csv(checkpoint_path, index=False)
+        _atomic_to_csv(existing, checkpoint_path)
         done_urls = set(existing["matchup_url"].dropna())
         print(f"  Resuming: {len(done_urls)} playoff matchup URLs already in checkpoint.")
 
     driver.get(league_url)
     check_and_handle_login(driver)
     driver.execute_script("window.scrollTo(0, 700)")
+    time.sleep(2)
 
     panes, mod = _get_bracket_panes(driver)
+    if not panes:
+        raise ValueError(
+            "No playoff bracket panes found on the league home page. "
+            "The bracket section may not have rendered — check that the season "
+            "is complete and that the page loaded correctly."
+        )
 
     bracket_classes = [
         ("quarterfinal", 0),
