@@ -28,6 +28,53 @@ py pipeline.py --year 2025 --from-step players
 py pipeline.py --year 2025 --dry-run
 ```
 
+`--steps` and `--from-step` both take step names from `STEP_ORDER` in `pipeline.py`:
+`pre_auth, scrape, positions, faab, players, draft, composite`. There is no
+finer-grained flag for "just the playoffs" or "just regular season" — both are
+scraped together inside the `scrape` step (see below for how to target one).
+
+### Re-running just the `scrape` step (retry failures / fill gaps)
+
+The `scrape` step is checkpoint-resumable per matchup URL, so re-running it
+after a partial/failed run only retries what's missing — it will not
+re-download data it already has:
+
+```bash
+# Re-run scrape for a specific year (e.g. after rate-limit failures)
+py pipeline.py --year 2023 --steps scrape
+```
+
+This scrapes **both** regular season and playoff matchups for that year using
+the raw checkpoint files:
+- `data/raw/2023_pre_matchups.csv` (regular season)
+- `data/raw/2023_pre_playoffs.csv` (playoffs)
+
+Rows already present in a checkpoint are skipped; only missing/failed matchups
+are fetched. Watch the `[scrape]` summary at the end — it tells you whether
+the run was CLEAN or whether failures remain to retry.
+
+### Forcing a full re-scrape of one data type for a past year
+
+If the checkpoint or master file is wrong (not just incomplete — e.g. a
+parsing bug corrupted the data) and you need a clean re-scrape rather than a
+resume, delete the relevant files first, then re-run `scrape`. For example,
+to force a clean re-scrape of **playoffs data for 2023**:
+
+```bash
+# 1. Remove the raw checkpoint and the compiled master file for playoffs
+rm data/raw/2023_pre_playoffs.csv
+rm data/processed/all_playoffs_thru_2023.csv
+
+# 2. Re-run the scrape step — it rebuilds both from scratch
+py pipeline.py --year 2023 --steps scrape
+```
+
+Note: `all_playoffs_thru_2023.csv` is a running total built from the prior
+year's master (`all_playoffs_thru_2022.csv`) plus 2023's new rows, and
+`consolidated_master.csv` is derived from it — so after a forced re-scrape,
+re-check `consolidated_master.csv` for that season before moving on to later
+steps.
+
 ---
 
 ## Steps
