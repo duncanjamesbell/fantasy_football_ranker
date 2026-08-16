@@ -36,6 +36,7 @@ from config import (
     LKUP_PLAYER_PATH,
     NAMES_DICT_PATH,
     CONSOLIDATED_MASTER_PATH,
+    DRAFT_DF_PATH,
     STANDINGS_PATH,
     LEAGUE_DF_PATH,
     MANAGERS_DF_PATH,
@@ -746,7 +747,7 @@ def step_draft(year: int, dry_run: bool = False) -> None:
     Compile draft data for this year, score it, and append to full_seasons_draft_df.csv.
     Also adds is_drafted flag to the regular season master file.
     """
-    DRAFT_OUT = "full_seasons_draft_df.csv"
+    DRAFT_OUT = DRAFT_DF_PATH
     rs_master = rs_matchups_path(year)
 
     print(f"\n[draft] Year: {year}")
@@ -800,24 +801,37 @@ def step_draft(year: int, dry_run: bool = False) -> None:
     print("[draft] Adding is_drafted flag to regular season data...")
     rs_df = pd.read_csv(rs_master)
 
-    # Need player_id in rs_df
+    # Need player_id in rs_df. Same persistence issue as manager_name below --
+    # check for missing values, not just column presence, or newly-appended
+    # rows for a later year never get populated.
     if "player_id" not in rs_df.columns:
-        rs_df["player_id"] = rs_df["player_url"].apply(
+        rs_df["player_id"] = pd.NA
+
+    missing_pid = rs_df["player_id"].isna() | (rs_df["player_id"].astype(str) == "")
+    if missing_pid.any():
+        rs_df.loc[missing_pid, "player_id"] = rs_df.loc[missing_pid, "player_url"].apply(
             lambda url: str(url).rstrip("/").split("/")[-1] if pd.notna(url) else ""
         )
 
-    # Need manager_name in rs_df (canonical, not team name)
+    # Need manager_name in rs_df (canonical, not team name). The column persists
+    # across years once added, so check for missing *values*, not just column
+    # presence -- otherwise newly-appended rows for a later year never get
+    # backfilled (only the very first year this column was created would).
     if "manager_name" not in rs_df.columns:
+        rs_df["manager_name"] = pd.NA
+
+    if rs_df["manager_name"].isna().any():
         if os.path.exists(CONSOLIDATED_MASTER_PATH):
             master = pd.read_csv(CONSOLIDATED_MASTER_PATH)
             name_map = master[["league_id", "name", "manager"]].drop_duplicates()
-            rs_df = rs_df.merge(
-                name_map, left_on=["league_id", "manager"], right_on=["league_id", "name"], how="left"
+            lookup = rs_df[["league_id", "manager"]].merge(
+                name_map, left_on=["league_id", "manager"], right_on=["league_id", "name"],
+                how="left", suffixes=("_team", "_canonical"),
             )
-            rs_df.rename(columns={"manager_x": "manager", "manager_y": "manager_name"}, inplace=True)
+            rs_df["manager_name"] = rs_df["manager_name"].fillna(lookup["manager_canonical"])
         else:
             print("[draft] WARNING: consolidated_master.csv not found — is_drafted may be incomplete.")
-            rs_df["manager_name"] = rs_df.get("manager", "")
+            rs_df["manager_name"] = rs_df["manager_name"].fillna(rs_df["manager"])
 
     rs_df = add_is_drafted(rs_df, combined)
     rs_df.to_csv(rs_master, index=False)
