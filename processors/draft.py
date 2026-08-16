@@ -12,7 +12,7 @@ Main entry point:
 
 import os
 import pandas as pd
-from config import MANAGER_NAME_MAP, POSITION_ALIASES, DRAFT_RESULTS_DIR
+from config import MANAGER_NAME_MAP, POSITION_ALIASES, DRAFT_RESULTS_DIR, DEF_TEAM_IDS
 from processors.players import PlayerLookup
 
 
@@ -21,12 +21,19 @@ from processors.players import PlayerLookup
 # ---------------------------------------------------------------------------
 
 def add_position_rank_ids(position_ranks: pd.DataFrame) -> pd.DataFrame:
-    """Extract a player_id column from the player_url column."""
+    """Extract a player_id column from the player_url column.
+
+    DEF rows link to a team page (e.g. .../nfl/teams/pittsburgh/) whose URL
+    slug is a city name, not the Yahoo player_id names_dict.csv uses for that
+    team's defense (e.g. "100023") -- translate it via DEF_TEAM_IDS.
+    """
     position_ranks = position_ranks.copy()
     ids = []
-    for url in position_ranks["player_url"]:
-        parts = str(url).rstrip("/").split("/")
-        ids.append(parts[-1])
+    for position, url in zip(position_ranks["position"], position_ranks["player_url"]):
+        slug = str(url).rstrip("/").split("/")[-1]
+        if position == "DEF":
+            slug = DEF_TEAM_IDS.get(slug, slug)
+        ids.append(slug)
     position_ranks["player_id"] = ids
     return position_ranks
 

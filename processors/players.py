@@ -40,6 +40,16 @@ def _normalize(name: str) -> str:
     return re.sub(r"\s+", " ", name).strip()
 
 
+def _read_csv(path: str) -> pd.DataFrame:
+    """pd.read_csv with pandas' default NA-sentinel list disabled.
+
+    lkup_player.csv uses the literal string "#N/A" as a manual placeholder in
+    an unused column; pandas treats that as a null by default and rewrites it
+    as blank on every save, silently corrupting the file over repeated saves.
+    """
+    return pd.read_csv(path, keep_default_na=False, na_values=[])
+
+
 # ---------------------------------------------------------------------------
 # PlayerLookup
 # ---------------------------------------------------------------------------
@@ -66,7 +76,7 @@ class PlayerLookup:
     # ------------------------------------------------------------------
 
     def _load(self) -> None:
-        lkup_df = pd.read_csv(self.lkup_path)
+        lkup_df = _read_csv(self.lkup_path)
         # Key: Name + Position  →  Standard Name
         self._lkup: dict[str, str] = {}
         for _, row in lkup_df.iterrows():
@@ -75,7 +85,7 @@ class PlayerLookup:
 
         # Also track normalized form for fuzzy matching
         self._known_standards: list[tuple[str, str, str]] = []  # (standard_name, position, player_id)
-        names_df = pd.read_csv(self.names_dict_path)
+        names_df = _read_csv(self.names_dict_path)
         self._names_dict: dict[str, str] = {}
         for _, row in names_df.iterrows():
             self._names_dict[str(row["player_conc"])] = str(row["player_id"])
@@ -163,7 +173,7 @@ class PlayerLookup:
             if pos == position
         ]
         # Also pull from lkup Standard Name column to catch existing variants
-        lkup_df = pd.read_csv(self.lkup_path)
+        lkup_df = _read_csv(self.lkup_path)
         for _, row in lkup_df[lkup_df["Position"] == position].iterrows():
             std = str(row["Standard Name"])
             pid = str(row.get("player_id", ""))
@@ -216,7 +226,7 @@ class PlayerLookup:
     def _save_lkup_entry(
         self, name: str, position: str, standard_name: str, player_id: str
     ) -> None:
-        lkup_df = pd.read_csv(self.lkup_path)
+        lkup_df = _read_csv(self.lkup_path)
         conc = standard_name + position
         new_row = {
             "Name": name,
@@ -240,7 +250,7 @@ class PlayerLookup:
     ) -> None:
         if not player_id:
             return
-        names_df = pd.read_csv(self.names_dict_path)
+        names_df = _read_csv(self.names_dict_path)
         conc = standard_name + position
         if conc in names_df["player_conc"].values:
             return  # already present
