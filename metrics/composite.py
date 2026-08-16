@@ -598,14 +598,18 @@ def calculate_composite_ranks(
         draft_scores_dfs = []
         for season in assessment_draft_df.Year.unique():
             s_df         = assessment_draft_df[assessment_draft_df.Year == season]
-            roster_spots = s_df.Owner.value_counts().max()
+            roster_spots = s_df.owner_normalized.value_counts().max()
             owners, draft_scores = [], []
-            for owner in s_df.Owner.unique():
-                owner_df       = s_df[s_df.Owner == owner]
+            # Group by owner_normalized, not the raw Owner string -- draft sheets
+            # spell the same manager differently across years (e.g. "Benjamin" vs
+            # "Ben"), which silently dropped that manager's recent years entirely
+            # when matched against the raw column.
+            for owner in s_df.owner_normalized.unique():
+                owner_df       = s_df[s_df.owner_normalized == owner]
                 penalty        = (roster_spots - owner_df.shape[0]) * 0.3
                 draft_score    = owner_df.draft_score.sum() / owner_df.shape[0] - penalty
                 owners.append(owner); draft_scores.append(draft_score)
-            d_df            = pd.DataFrame({'Owner': owners, 'Year': season, 'draft_score': draft_scores})
+            d_df            = pd.DataFrame({'owner_normalized': owners, 'Year': season, 'draft_score': draft_scores})
             draft_scores_dfs.append(d_df)
         full_draft_scores_df = pd.concat(draft_scores_dfs)
 
@@ -616,7 +620,7 @@ def calculate_composite_ranks(
 
         draft_efficiency_dict: dict = {}
         for manager in season_managers:
-            m_draft_df  = full_draft_scores_df[full_draft_scores_df.Owner == manager]
+            m_draft_df  = full_draft_scores_df[full_draft_scores_df.owner_normalized == manager]
             z_scores    = []
             for season in m_draft_df.Year.unique():
                 raw_eff = m_draft_df[m_draft_df.Year == season].draft_score.mean()
