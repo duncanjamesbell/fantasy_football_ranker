@@ -15,7 +15,7 @@ Amahd Bradshaw,RB,Ahmad Bradshaw,Ahmad BradshawRB,RB,8504,Ahmad BradshawRB,8504
 Aidan O'Connell,QB,Aidan O'Connell,Aidan O'ConnellQB,QB,40138,,40138
 AJ Dillon,RB,AJ Dillon,AJ DillonRB,RB,32732,AJ DillonRB,32732
 Alex Collins,RB,Alex Collins,Alex CollinsRB,RB,29405,Alex CollinsRB,29405
-Alex Henry ,K,Alex Henery,Alex HeneryK,K,24907,#N/A,24907
+Alex Henry ,K,Alex Henery,Alex HeneryK,K,24907,,24907
 Alex Smith,QB,Alex Smith,Alex SmithQB,QB,7177,Alex SmithQB,7177
 Alexander Mattison,RB,Alexander Mattison,Alexander MattisonRB,RB,31934,Alexander MattisonRB,31934
 Alfred Blue,RB,Alfred Blue,Alfred BlueRB,RB,27709,Alfred BlueRB,27709
@@ -46,20 +46,20 @@ Antonio Callaway,WR,Antonio Callaway,Antonio CallawayWR,WR,31075,Antonio Callawa
 Antonio Gates,TE,Antonio Gates,Antonio GatesTE,TE,6663,Antonio GatesTE,6663
 Antonio Gibson,RB,Antonio Gibson,Antonio GibsonRB,RB,32736,Antonio GibsonRB,32736
 Arian Foster,RB,Arian Foster,Arian FosterRB,RB,9527,Arian FosterRB,9527
-Arizona,DEF,Arizona,ArizonaDEF,DEF,100022,#N/A,100022
-Arizona Cardinals,DEF,Arizona,ArizonaDEF,DEF,100022,#N/A,100022
-Cardinals,DEF,Arizona,ArizonaDEF,DEF,100022,#N/A,100022
-Cardinals D,DEF,Arizona,ArizonaDEF,DEF,100022,#N/A,100022
-Atlanta,DEF,Atlanta,AtlantaDEF,DEF,100001,#N/A,100001
-Atlanta (ATL),DEF,Atlanta,AtlantaDEF,DEF,100001,#N/A,100001
-Atlanta D,DEF,Atlanta,AtlantaDEF,DEF,100001,#N/A,100001
-Atlanta Falcons,DEF,Atlanta,AtlantaDEF,DEF,100001,#N/A,100001
+Arizona,DEF,Arizona,ArizonaDEF,DEF,100022,,100022
+Arizona Cardinals,DEF,Arizona,ArizonaDEF,DEF,100022,,100022
+Cardinals,DEF,Arizona,ArizonaDEF,DEF,100022,,100022
+Cardinals D,DEF,Arizona,ArizonaDEF,DEF,100022,,100022
+Atlanta,DEF,Atlanta,AtlantaDEF,DEF,100001,,100001
+Atlanta (ATL),DEF,Atlanta,AtlantaDEF,DEF,100001,,100001
+Atlanta D,DEF,Atlanta,AtlantaDEF,DEF,100001,,100001
+Atlanta Falcons,DEF,Atlanta,AtlantaDEF,DEF,100001,,100001
 Austin Ekeler,RB,Austin Ekeler,Austin EkelerRB,RB,30423,Austin EkelerRB,30423
 Austin Hooper,TE,Austin Hooper,Austin HooperTE,TE,29315,Austin HooperTE,29315
 Baker Mayfield,QB,Baker Mayfield,Baker MayfieldQB,QB,30971,Baker MayfieldQB,30971
-Baltimore,DEF,Baltimore,BaltimoreDEF,DEF,100033,#N/A,100033
-Baltimore DST,DEF,Baltimore,BaltimoreDEF,DEF,100033,#N/A,100033
-Ravens D,DEF,Baltimore,BaltimoreDEF,DEF,100033,#N/A,100033
+Baltimore,DEF,Baltimore,BaltimoreDEF,DEF,100033,,100033
+Baltimore DST,DEF,Baltimore,BaltimoreDEF,DEF,100033,,100033
+Ravens D,DEF,Baltimore,BaltimoreDEF,DEF,100033,,100033
 Beanie Wells,RB,Beanie Wells,Beanie WellsRB,RB,9295,Beanie WellsRB,9295
 Ben Rapelessburger,QB,Ben Roethlisberger,Ben RoethlisbergerQB,QB,6770,Ben RoethlisbergerQB,6770
 Ben Roethlisberg,QB,Ben Roethlisberger,Ben RoethlisbergerQB,QB,6770,Ben RoethlisbergerQB,6770
@@ -97,10 +97,10 @@ Brock Purdy,QB,Brock Purdy,Brock PurdyQB,QB,34218,,34218
 Bryan Edwards,WR,Bryan Edwards,Bryan EdwardsWR,WR,32751,Bryan EdwardsWR,32751
 Bryce Young,QB,Bryce Young,Bryce YoungQB,QB,40029,,40029
 BUF,DEF,Buffalo,BuffaloDEF,DEF,100002,,100002
-Buffalo,DEF,Buffalo,BuffaloDEF,DEF,100002,#N/A,100002
-Buffalo Bills,DEF,Buffalo,BuffaloDEF,DEF,100002,#N/A,100002
+Buffalo,DEF,Buffalo,BuffaloDEF,DEF,100002,,100002
+Buffalo Bills,DEF,Buffalo,BuffaloDEF,DEF,100002,,100002
 Buffalo Bills ,DST,Buffalo,BuffaloDST,DST,100002,,100002
-Buffalo D,DEF,Buffalo,BuffaloDEF,DEF,100002,#N/A,100002
+Buffalo D,DEF,Buffalo,BuffaloDEF,DEF,100002,,100002
 C.J. Anderson,RB,C.J. Anderson,C.J. AndersonRB,RB,26878,C.J. AndersonRB,26878
 CJ Anderson,RB,C.J. Anderson,C.J. AndersonRB,RB,26878,C.J. AndersonRB,26878
 C.J. Fiedorowicz,TE,C.J. Fiedorowicz,C.J. FiedorowiczTE,TE,27593,C.J. FiedorowiczTE,27593
@@ -117,10 +117,10 @@ Cameron Artis-Payne,RB,Cameron Artis-Payne,Cameron Artis-PayneRB,RB,28562,Camero
 Cameron Brate,TE,Cameron Brate,Cameron BrateTE,TE,28267,Cameron BrateTE,28267
 Cameron Meredith,WR,Cameron Meredith,Cameron MeredithWR,WR,28697,Cameron MeredithWR,28697
 Carlos Hyde,RB,Carlos Hyde,Carlos HydeRB,RB,27585,Carlos HydeRB,27585
-Carolina,DEF,Carolina,CarolinaDEF,DEF,100029,#N/A,100029
-Carolina (CAR),DEF,Carolina,CarolinaDEF,DEF,100029,#N/A,100029
-Carolina D,DEF,Carolina,CarolinaDEF,DEF,100029,#N/A,100029
-Panthers D,DEF,Carolina,CarolinaDEF,DEF,100029,#N/A,100029
+Carolina,DEF,Carolina,CarolinaDEF,DEF,100029,,100029
+Carolina (CAR),DEF,Carolina,CarolinaDEF,DEF,100029,,100029
+Carolina D,DEF,Carolina,CarolinaDEF,DEF,100029,,100029
+Panthers D,DEF,Carolina,CarolinaDEF,DEF,100029,,100029
 Carson Palmer,QB,Carson Palmer,Carson PalmerQB,QB,6337,Carson PalmerQB,6337
 Carson Wentz,QB,Carson Wentz,Carson WentzQB,QB,29236,Carson WentzQB,29236
 Case Keenum,QB,Case Keenum,Case KeenumQB,QB,26483,Case KeenumQB,26483
@@ -135,10 +135,10 @@ Charles Sims,RB,Charles Sims,Charles SimsRB,RB,27597,Charles SimsRB,27597
 Chase Brown,RB,Chase Brown,Chase BrownRB,RB,40196,,40196
 Chase Claypool,WR,Chase Claypool,Chase ClaypoolWR,WR,32719,Chase ClaypoolWR,32719
 Chase Edmonds,RB,Chase Edmonds,Chase EdmondsRB,RB,31104,Chase EdmondsRB,31104
-Bears Defense,DEF,Chicago,ChicagoDEF,DEF,100003,#N/A,100003
-Chicago,DEF,Chicago,ChicagoDEF,DEF,100003,#N/A,100003
-Chicago Bears,DEF,Chicago,ChicagoDEF,DEF,100003,#N/A,100003
-Chicago D,DEF,Chicago,ChicagoDEF,DEF,100003,#N/A,100003
+Bears Defense,DEF,Chicago,ChicagoDEF,DEF,100003,,100003
+Chicago,DEF,Chicago,ChicagoDEF,DEF,100003,,100003
+Chicago Bears,DEF,Chicago,ChicagoDEF,DEF,100003,,100003
+Chicago D,DEF,Chicago,ChicagoDEF,DEF,100003,,100003
 Chigoziem Okonkwo,TE,Chigoziem Okonkwo,Chigoziem OkonkwoTE,TE,34099,,34099
 Chris Carson,RB,Chris Carson,Chris CarsonRB,RB,30362,Chris CarsonRB,30362
 Chris Conley,WR,Chris Conley,Chris ConleyWR,WR,28464,Chris ConleyWR,28464
@@ -156,12 +156,12 @@ Christian Michael,RB,Christine Michael,Christine MichaelRB,RB,26685,Christine Mi
 Christine Michael,RB,Christine Michael,Christine MichaelRB,RB,26685,Christine MichaelRB,26685
 Chuba Hubbard,RB,Chuba Hubbard,Chuba HubbardRB,RB,33514,Chuba HubbardRB,33514
 Chubba Hubbard,RB,Chuba Hubbard,Chuba HubbardRB,RB,33514,Chuba HubbardRB,33514
-Bengals,DEF,Cincinnati,CincinnatiDEF,DEF,100004,#N/A,100004
-Cincinnati,DEF,Cincinnati,CincinnatiDEF,DEF,100004,#N/A,100004
+Bengals,DEF,Cincinnati,CincinnatiDEF,DEF,100004,,100004
+Cincinnati,DEF,Cincinnati,CincinnatiDEF,DEF,100004,,100004
 Cincinnati Bengals ,DST,Cincinnati,CincinnatiDST,DST,100004,,100004
 CLE,DEF,Cleveland,ClevelandDEF,DEF,100005,,100005
-Cleveland,DEF,Cleveland,ClevelandDEF,DEF,100005,#N/A,100005
-Cleveland DST,DEF,Cleveland,ClevelandDEF,DEF,100005,#N/A,100005
+Cleveland,DEF,Cleveland,ClevelandDEF,DEF,100005,,100005
+Cleveland DST,DEF,Cleveland,ClevelandDEF,DEF,100005,,100005
 Cleveland Browns ,DST,Cleveland,ClevelandDST,DST,100005,,100005
 CEH,RB,Clyde Edwards-Helaire,Clyde Edwards-HelaireRB,RB,32702,,32702
 Clyde Edwards-Helaire,RB,Clyde Edwards-Helaire,Clyde Edwards-HelaireRB,RB,32702,Clyde Edwards-HelaireRB,32702
@@ -181,9 +181,9 @@ Courtland Sutton,WR,Courtland Sutton,Courtland SuttonWR,WR,31010,Courtland Sutto
 Curtis Samuel,WR,Curtis Samuel,Curtis SamuelWR,WR,30153,Curtis SamuelWR,30153
 Dak Prescot,QB,Dak Prescott,Dak PrescottQB,QB,29369,Dak PrescottQB,29369
 Dak Prescott,QB,Dak Prescott,Dak PrescottQB,QB,29369,Dak PrescottQB,29369
-Dallas,DEF,Dallas,DallasDEF,DEF,100006,#N/A,100006
+Dallas,DEF,Dallas,DallasDEF,DEF,100006,,100006
 Dallas Cowboys ,DST,Dallas,DallasDST,DST,100006,,100006
-Dallas DST,DEF,Dallas,DallasDEF,DEF,100006,#N/A,100006
+Dallas DST,DEF,Dallas,DallasDEF,DEF,100006,,100006
 Dallas Cowboys ,DST,Dallas,DallasDST,DST,100006,,100006
 Dallas Goedert,TE,Dallas Goedert,Dallas GoedertTE,TE,31019,Dallas GoedertTE,31019
 Dalton Kincaid,TE,Dalton Kincaid,Dalton KincaidTE,TE,40048,,40048
@@ -236,21 +236,21 @@ Denard Robinson,RB,Denard Robinson,Denard RobinsonRB,RB,26758,Denard RobinsonWR,
 Denarius Moore,WR,Denarius Moore,Denarius MooreWR,WR,24935,Denarius MooreWR,24935
 Dennis Johnson,RB,Dennis Johnson,Dennis JohnsonRB,RB,27311,Dennis JohnsonRB,27311
 Dennis Pitta,TE,Dennis Pitta,Dennis PittaTE,TE,24089,Dennis PittaTE,24089
-Broncos,DEF,Denver,DenverDEF,DEF,100007,#N/A,100007
-Broncos D,DEF,Denver,DenverDEF,DEF,100007,#N/A,100007
-DEN,DEF,Denver,DenverDEF,DEF,100007,#N/A,100007
-Denver,DEF,Denver,DenverDEF,DEF,100007,#N/A,100007
-Denver D,DEF,Denver,DenverDEF,DEF,100007,#N/A,100007
+Broncos,DEF,Denver,DenverDEF,DEF,100007,,100007
+Broncos D,DEF,Denver,DenverDEF,DEF,100007,,100007
+DEN,DEF,Denver,DenverDEF,DEF,100007,,100007
+Denver,DEF,Denver,DenverDEF,DEF,100007,,100007
+Denver D,DEF,Denver,DenverDEF,DEF,100007,,100007
 Derek Carr,QB,Derek Carr,Derek CarrQB,QB,27564,Derek CarrQB,27564
 Derick Henry,RB,Derrick Henry,Derrick HenryRB,RB,29279,Derrick HenryRB,29279
 Derrick Henry,RB,Derrick Henry,Derrick HenryRB,RB,29279,Derrick HenryRB,29279
-Darrius Guice,RB,Derrius Guice,Derrius GuiceRB,RB,31029,#N/A,31029
-Derrius Guice,RB,Derrius Guice,Derrius GuiceRB,RB,31029,#N/A,31029
+Darrius Guice,RB,Derrius Guice,Derrius GuiceRB,RB,31029,,31029
+Derrius Guice,RB,Derrius Guice,Derrius GuiceRB,RB,31029,,31029
 DeSean Jackson,WR,DeSean Jackson,DeSean JacksonWR,WR,8826,DeSean JacksonWR,8826
 Deshaun Watson,QB,Deshaun Watson,Deshaun WatsonQB,QB,30125,Deshaun WatsonQB,30125
 Desmond Ridder,QB,Desmond Ridder,Desmond RidderQB,QB,34030,,34030
-Detroit,DEF,Detroit,DetroitDEF,DEF,100008,#N/A,100008
-Lions Defense,DEF,Detroit,DetroitDEF,DEF,100008,#N/A,100008
+Detroit,DEF,Detroit,DetroitDEF,DEF,100008,,100008
+Lions Defense,DEF,Detroit,DetroitDEF,DEF,100008,,100008
 Davante Parker,WR,DeVante Parker,DeVante ParkerWR,WR,28402,DeVante ParkerWR,28402
 DeVante Parker,WR,DeVante Parker,DeVante ParkerWR,WR,28402,DeVante ParkerWR,28402
 Devin Funchess,WR,Devin Funchess,Devin FunchessWR,WR,28429,Devin FunchessWR,28429
@@ -294,7 +294,7 @@ Eli Rogers,WR,Eli Rogers,Eli RogersWR,WR,28669,Eli RogersWR,28669
 Elijah McGuire,RB,Elijah McGuire,Elijah McGuireRB,RB,30301,Elijah McGuireRB,30301
 Elijah Mitchell,RB,Elijah Mitchell,Elijah MitchellRB,RB,33582,,33582
 Elijah Moore,WR,Elijah Moore,Elijah MooreWR,WR,33422,,33422
-Elijhaa Penny,RB,Elijhaa Penny,Elijhaa PennyRB,RB,29906,#N/A,29906
+Elijhaa Penny,RB,Elijhaa Penny,Elijhaa PennyRB,RB,29906,,29906
 Emari Demercado,RB,Emari Demercado,Emari DemercadoRB,RB,40430,,40430
 Emmanuel Sanders,WR,Emmanuel Sanders,Emmanuel SandersWR,WR,24057,Emmanuel SandersWR,24057
 Eric Decker,WR,Eric Decker,Eric DeckerWR,WR,24062,Eric DeckerWR,24062
@@ -325,9 +325,9 @@ Giovani Bernard,RB,Giovani Bernard,Giovani BernardRB,RB,26660,Giovani BernardRB,
 Giovanni Bernard,RB,Giovani Bernard,Giovani BernardRB,RB,26660,Giovani BernardRB,26660
 Golden Tate,WR,Golden Tate,Golden TateWR,WR,24035,Golden TateWR,24035
 Graham Gano,K,Graham Gano,Graham GanoK,K,9526,Graham GanoK,9526
-Green Bay,DEF,Green Bay,Green BayDEF,DEF,100009,#N/A,100009
-Green Bay D,DEF,Green Bay,Green BayDEF,DEF,100009,#N/A,100009
-Packers,DEF,Green Bay,Green BayDEF,DEF,100009,#N/A,100009
+Green Bay,DEF,Green Bay,Green BayDEF,DEF,100009,,100009
+Green Bay D,DEF,Green Bay,Green BayDEF,DEF,100009,,100009
+Packers,DEF,Green Bay,Green BayDEF,DEF,100009,,100009
 Greg Jennings,WR,Greg Jennings,Greg JenningsWR,WR,7801,Greg JenningsWR,7801
 Greg Olsen,TE,Greg Olsen,Greg OlsenTE,TE,8285,Greg OlsenTE,8285
 Gus Edwards,RB,Gus Edwards,Gus EdwardsRB,RB,31424,Gus EdwardsRB,31424
@@ -335,17 +335,17 @@ Hakeem Nicks,WR,Hakeem Nicks,Hakeem NicksWR,WR,9293,Hakeem NicksWR,9293
 Harry Douglas,WR,Harry Douglas,Harry DouglasWR,WR,8861,Harry DouglasWR,8861
 Hayden Hurst,TE,Hayden Hurst,Hayden HurstTE,TE,30995,Hayden HurstTE,30995
 Heath Miller,TE,Heath Miller,Heath MillerTE,TE,7206,Heath MillerTE,7206
-HOU,DEF,Houston,HoustonDEF,DEF,100034,#N/A,100034
-Houston,DEF,Houston,HoustonDEF,DEF,100034,#N/A,100034
-Houston D,DEF,Houston,HoustonDEF,DEF,100034,#N/A,100034
-Houston DST,DEF,Houston,HoustonDEF,DEF,100034,#N/A,100034
-Houston Texans,DEF,Houston,HoustonDEF,DEF,100034,#N/A,100034
+HOU,DEF,Houston,HoustonDEF,DEF,100034,,100034
+Houston,DEF,Houston,HoustonDEF,DEF,100034,,100034
+Houston D,DEF,Houston,HoustonDEF,DEF,100034,,100034
+Houston DST,DEF,Houston,HoustonDEF,DEF,100034,,100034
+Houston Texans,DEF,Houston,HoustonDEF,DEF,100034,,100034
 Houston Texans ,DST,Houston,HoustonDST,DST,100034,,100034
 Hunter Henry,TE,Hunter Henry,Hunter HenryTE,TE,29269,Hunter HenryTE,29269
 Hunter Renfrow,WR,Hunter Renfrow,Hunter RenfrowWR,WR,31981,,31981
 IND,DEF,Indianapolis,IndianapolisDEF,DEF,100011,,100011
-Indianapolis,DEF,Indianapolis,IndianapolisDEF,DEF,100011,#N/A,100011
-Indy D,DEF,Indianapolis,IndianapolisDEF,DEF,100011,#N/A,100011
+Indianapolis,DEF,Indianapolis,IndianapolisDEF,DEF,100011,,100011
+Indy D,DEF,Indianapolis,IndianapolisDEF,DEF,100011,,100011
 Isaac Redman,RB,Isaac Redman,Isaac RedmanRB,RB,9674,Isaac RedmanRB,9674
 Isaiah Crowell,RB,Isaiah Crowell,Isaiah CrowellRB,RB,28014,Isaiah CrowellRB,28014
 Isiah Crowell,RB,Isaiah Crowell,Isaiah CrowellRB,RB,28014,Isaiah CrowellRB,28014
@@ -358,8 +358,8 @@ J.K. Dobbins,RB,J.K. Dobbins,J.K. DobbinsRB,RB,32725,J.K. DobbinsRB,32725
 JK Dobbins,RB,J.K. Dobbins,J.K. DobbinsRB,RB,32725,,32725
 Jack Doyle,TE,Jack Doyle,Jack DoyleTE,TE,27299,Jack DoyleTE,27299
 Jackie Battle,RB,Jackie Battle,Jackie BattleRB,RB,8739,Jackie BattleRB,8739
-Jacksonville,DEF,Jacksonville,JacksonvilleDEF,DEF,100030,#N/A,100030
-Jacksonville DST,DEF,Jacksonville,JacksonvilleDEF,DEF,100030,#N/A,100030
+Jacksonville,DEF,Jacksonville,JacksonvilleDEF,DEF,100030,,100030
+Jacksonville DST,DEF,Jacksonville,JacksonvilleDEF,DEF,100030,,100030
 Jacob Hollister,TE,Jacob Hollister,Jacob HollisterTE,TE,30661,Jacob HollisterTE,30661
 Jacoby Brisset,QB,Jacoby Brissett,Jacoby BrissettQB,QB,29325,Jacoby BrissettQB,29325
 Jacoby Brissett,QB,Jacoby Brissett,Jacoby BrissettQB,QB,29325,Jacoby BrissettQB,29325
@@ -479,9 +479,9 @@ K.J. Osborn,WR,K.J. Osborn,K.J. OsbornWR,WR,32846,,32846
 Kadarius Toney,WR,Kadarius Toney,Kadarius ToneyWR,WR,33408,,33408
 Kalen Ballage,RB,Kalen Ballage,Kalen BallageRB,RB,31100,Kalen BallageRB,31100
 Kamar Aiken,WR,Kamar Aiken,Kamar AikenWR,WR,25379,Kamar AikenWR,25379
-Kansas City,DEF,Kansas City,Kansas CityDEF,DEF,100012,#N/A,100012
-Kansas City (KC),DEF,Kansas City,Kansas CityDEF,DEF,100012,#N/A,100012
-Kansas City D,DEF,Kansas City,Kansas CityDEF,DEF,100012,#N/A,100012
+Kansas City,DEF,Kansas City,Kansas CityDEF,DEF,100012,,100012
+Kansas City (KC),DEF,Kansas City,Kansas CityDEF,DEF,100012,,100012
+Kansas City D,DEF,Kansas City,Kansas CityDEF,DEF,100012,,100012
 Kansas City Chiefs ,DST,Kansas City,Kansas CityDST,DST,100012,,100012
 Kapri Bibbs,RB,Kapri Bibbs,Kapri BibbsRB,RB,27821,Kapri BibbsRB,27821
 Kareem Hunt,RB,Kareem Hunt,Kareem HuntRB,RB,30199,Kareem HuntRB,30199
@@ -524,8 +524,8 @@ Lance Moore,WR,Lance Moore,Lance MooreWR,WR,7544,Lance MooreWR,7544
 Larry Fitz,WR,Larry Fitzgerald,Larry FitzgeraldWR,WR,6762,Larry FitzgeraldWR,6762
 Larry Fitzgerald,WR,Larry Fitzgerald,Larry FitzgeraldWR,WR,6762,Larry FitzgeraldWR,6762
 Larry Fitzgerald ,WR,Larry Fitzgerald,Larry FitzgeraldWR,WR,6762,Larry FitzgeraldWR,6762
-Las Vegas,DEF,Las Vegas,Las VegasDEF,DEF,100013,#N/A,100013
-Oakland DST,DEF,Las Vegas,Las VegasDEF,DEF,100013,#N/A,100013
+Las Vegas,DEF,Las Vegas,Las VegasDEF,DEF,100013,,100013
+Oakland DST,DEF,Las Vegas,Las VegasDEF,DEF,100013,,100013
 Latavius Murray,RB,Latavius Murray,Latavius MurrayRB,RB,26804,Latavius MurrayRB,26804
 L. Shenault,WR,Laviska Shenault Jr.,Laviska Shenault Jr.WR,WR,32712,Laviska Shenault Jr.WR,32712
 Laviska Shenault,WR,Laviska Shenault Jr.,Laviska Shenault Jr.WR,WR,32712,Laviska Shenault Jr.WR,32712
@@ -540,15 +540,15 @@ LeVeon Bell,RB,Le'Veon Bell,Le'Veon BellRB,RB,26671,Le'Veon BellRB,26671
 Le'Veon Bell,RB,Le'Veon Bell,Le'Veon BellRB,RB,26671,Le'Veon BellRB,26671
 Le'Veon Bell*,RB,Le'Veon Bell,Le'Veon BellRB,RB,26671,Le'Veon BellRB,26671
 Logan Thomas,TE,Logan Thomas,Logan ThomasTE,TE,27648,Logan ThomasQB,27648
-Chargers,DEF,Los Angeles (LAC),Los Angeles (LAC)DEF,DEF,100024,#N/A,100024
-LA Chargers DEF,DEF,Los Angeles (LAC),Los Angeles (LAC)DEF,DEF,100024,#N/A,100024
-Los Angeles,DEF,Los Angeles (LAC),Los Angeles (LAC)DEF,DEF,100024,#N/A,100024
-Los Angeles (LAC),DEF,Los Angeles (LAC),Los Angeles (LAC)DEF,DEF,100024,#N/A,100024
-Los Angeles Chargers,DEF,Los Angeles (LAC),Los Angeles (LAC)DEF,DEF,100024,#N/A,100024
-LA Rams,DEF,Los Angeles (LAR),Los Angeles (LAR)DEF,DEF,100014,#N/A,100014
-Los Angeles (LAR),DEF,Los Angeles (LAR),Los Angeles (LAR)DEF,DEF,100014,#N/A,100014
-Los Angeles Rams,DEF,Los Angeles (LAR),Los Angeles (LAR)DEF,DEF,100014,#N/A,100014
-Rams,DEF,Los Angeles (LAR),Los Angeles (LAR)DEF,DEF,100014,#N/A,100014
+Chargers,DEF,Los Angeles (LAC),Los Angeles (LAC)DEF,DEF,100024,,100024
+LA Chargers DEF,DEF,Los Angeles (LAC),Los Angeles (LAC)DEF,DEF,100024,,100024
+Los Angeles,DEF,Los Angeles (LAC),Los Angeles (LAC)DEF,DEF,100024,,100024
+Los Angeles (LAC),DEF,Los Angeles (LAC),Los Angeles (LAC)DEF,DEF,100024,,100024
+Los Angeles Chargers,DEF,Los Angeles (LAC),Los Angeles (LAC)DEF,DEF,100024,,100024
+LA Rams,DEF,Los Angeles (LAR),Los Angeles (LAR)DEF,DEF,100014,,100014
+Los Angeles (LAR),DEF,Los Angeles (LAR),Los Angeles (LAR)DEF,DEF,100014,,100014
+Los Angeles Rams,DEF,Los Angeles (LAR),Los Angeles (LAR)DEF,DEF,100014,,100014
+Rams,DEF,Los Angeles (LAR),Los Angeles (LAR)DEF,DEF,100014,,100014
 Mac Jones,QB,Mac Jones,Mac JonesQB,QB,33403,,33403
 Malcolm Mitchell,WR,Malcolm Mitchell,Malcolm MitchellWR,WR,29346,Malcolm MitchellWR,29346
 Malcom Floyd,WR,Malcom Floyd,Malcom FloydWR,WR,7149,Malcom FloydWR,7149
@@ -594,17 +594,17 @@ Mecole Hardman,WR,Mecole Hardman,Mecole HardmanWR,WR,31888,Mecole HardmanWR,3188
 Melvin Gordon,RB,Melvin Gordon,Melvin GordonRB,RB,28403,Melvin GordonRB,28403
 Melvin Gordon III,RB,Melvin Gordon III,Melvin Gordon IIIRB,RB,28403,Melvin GordonRB,28403
 Dolphins,DEF,Miami,MiamiDEF,DEF,100015,,100015
-Miami,DEF,Miami,MiamiDEF,DEF,100015,#N/A,100015
-Miami D,DEF,Miami,MiamiDEF,DEF,100015,#N/A,100015
+Miami,DEF,Miami,MiamiDEF,DEF,100015,,100015
+Miami D,DEF,Miami,MiamiDEF,DEF,100015,,100015
 Michael Bush,RB,Michael Bush,Michael BushRB,RB,8354,Michael BushRB,8354
 Michael Carter,RB,Michael Carter,Michael CarterRB,RB,33495,Michael CarterRB,33495
 Michael Crabtree,WR,Michael Crabtree,Michael CrabtreeWR,WR,9274,Michael CrabtreeWR,9274
 Michael Floyd,WR,Michael Floyd,Michael FloydWR,WR,25723,Michael FloydWR,25723
 Michael Gallup,WR,Michael Gallup,Michael GallupWR,WR,31051,Michael GallupWR,31051
 Michael Mayer,TE,Michael Mayer,Michael MayerTE,TE,40065,,40065
-Michael PIttman,WR,Michael Pittman Jr.,Michael Pittman Jr.WR,WR,4326,#N/A,32704
-Michael Pittman,WR,Michael Pittman Jr.,Michael Pittman Jr.WR,WR,4326,#N/A,32704
-Michael Pittman Jr.,WR,Michael Pittman Jr.,Michael Pittman Jr.WR,WR,4326,#N/A,32704
+Michael PIttman,WR,Michael Pittman Jr.,Michael Pittman Jr.WR,WR,4326,,32704
+Michael Pittman,WR,Michael Pittman Jr.,Michael Pittman Jr.WR,WR,4326,,32704
+Michael Pittman Jr.,WR,Michael Pittman Jr.,Michael Pittman Jr.WR,WR,4326,,32704
 Michael Thomas,WR,Michael Thomas,Michael ThomasWR,WR,29281,Michael ThomasWR,29281
 Michael Turner,RB,Michael Turner,Michael TurnerRB,RB,6913,Michael TurnerRB,6913
 Michael Williams,WR,Michael Williams,Michael WilliamsWR,WR,24076,Mike WilliamsWR,24076
@@ -616,7 +616,7 @@ Mike Gesicki,TE,Mike Gesicki,Mike GesickiTE,TE,31012,Mike GesickiTE,31012
 Mike Gillislee,RB,Mike Gillislee,Mike GillisleeRB,RB,26787,Mike GillisleeRB,26787
 Mike Nugent,K,Mike Nugent,Mike NugentK,K,7223,Mike NugentK,7223
 Mike Tolbert,RB,Mike Tolbert,Mike TolbertRB,RB,9043,Mike TolbertRB,9043
-Michael Vick,QB,Mike Vick,Mike VickQB,QB,5448,#N/A,5448
+Michael Vick,QB,Mike Vick,Mike VickQB,QB,5448,,5448
 Mike Vick,QB,Mike Vick,Mike VickQB,QB,5448,Mike VickQB,5448
 Mike Wallace,WR,Mike Wallace,Mike WallaceWR,WR,9348,Mike WallaceWR,9348
 Mike Williams (TBB),WR,Mike Williams,Mike WilliamsWR,WR,30120,Mike WilliamsWR,30120
@@ -625,10 +625,10 @@ Mike Williams Seahawks,WR,Mike Williams Seahawks,Mike Williams SeahawksWR,WR,718
 Mikel Leshoure,RB,Mikel Leshoure,Mikel LeshoureRB,RB,24844,Mikel LeshoureRB,24844
 Miles Austin,WR,Miles Austin,Miles AustinWR,WR,8021,Miles AustinWR,8021
 Miles Sanders,RB,Miles Sanders,Miles SandersRB,RB,31885,Miles SandersRB,31885
-Minnesota,DEF,Minnesota,MinnesotaDEF,DEF,100016,#N/A,100016
-Minnesota DST,DEF,Minnesota,MinnesotaDEF,DEF,100016,#N/A,100016
-Vikings,DEF,Minnesota,MinnesotaDEF,DEF,100016,#N/A,100016
-Vikings D,DEF,Minnesota,MinnesotaDEF,DEF,100016,#N/A,100016
+Minnesota,DEF,Minnesota,MinnesotaDEF,DEF,100016,,100016
+Minnesota DST,DEF,Minnesota,MinnesotaDEF,DEF,100016,,100016
+Vikings,DEF,Minnesota,MinnesotaDEF,DEF,100016,,100016
+Vikings D,DEF,Minnesota,MinnesotaDEF,DEF,100016,,100016
 Mitch Trubisky,QB,Mitch Trubisky,Mitch TrubiskyQB,QB,30115,Mitch TrubiskyQB,30115
 Mitchell Trubisky,QB,Mitch Trubisky,Mitch TrubiskyQB,QB,30115,Mitch TrubiskyQB,30115
 Mohamed Sanu,WR,Mohamed Sanu,Mohamed SanuWR,WR,25793,Mohamed SanuWR,25793
@@ -640,19 +640,19 @@ Najee Harris,RB,Najee Harris,Najee HarrisRB,RB,33412,Najee HarrisRB,33412
 Nate Burleson,WR,Nate Burleson,Nate BurlesonWR,WR,6407,Nate BurlesonWR,6407
 Nelson Agholor,WR,Nelson Agholor,Nelson AgholorWR,WR,28408,Nelson AgholorWR,28408
 Nelson Algalor,WR,Nelson Agholor,Nelson AgholorWR,WR,28408,Nelson AgholorWR,28408
-NE Patriots,DEF,New England,New EnglandDEF,DEF,100017,#N/A,100017
-New England,DEF,New England,New EnglandDEF,DEF,100017,#N/A,100017
-New England (NE),DEF,New England,New EnglandDEF,DEF,100017,#N/A,100017
-New England DST,DEF,New England,New EnglandDEF,DEF,100017,#N/A,100017
+NE Patriots,DEF,New England,New EnglandDEF,DEF,100017,,100017
+New England,DEF,New England,New EnglandDEF,DEF,100017,,100017
+New England (NE),DEF,New England,New EnglandDEF,DEF,100017,,100017
+New England DST,DEF,New England,New EnglandDEF,DEF,100017,,100017
 Patriots,DEF,New England,New EnglandDEF,DEF,100017,,100017
-New Orleans,DEF,New Orleans,New OrleansDEF,DEF,100018,#N/A,100018
-New Orleans (NO),DEF,New Orleans,New OrleansDEF,DEF,100018,#N/A,100018
-New Orleans DST,DEF,New Orleans,New OrleansDEF,DEF,100018,#N/A,100018
+New Orleans,DEF,New Orleans,New OrleansDEF,DEF,100018,,100018
+New Orleans (NO),DEF,New Orleans,New OrleansDEF,DEF,100018,,100018
+New Orleans DST,DEF,New Orleans,New OrleansDEF,DEF,100018,,100018
 New Orleans Saints ,DST,New Orleans,New OrleansDST,DST,100018,,100018
 Saints,DEF,New Orleans,New OrleansDEF,DEF,100018,,100018
 New Orleans Saints ,DST,New Orleans,New OrleansDST,DST,100018,,100018
-New York,DEF,New York,New YorkDEF,DEF,100019,#N/A,100019
-New York (NYJ),DEF,New York (NYJ),New York (NYJ)DEF,DEF,100020,#N/A,100020
+New York,DEF,New York,New YorkDEF,DEF,100019,,100019
+New York (NYJ),DEF,New York (NYJ),New York (NYJ)DEF,DEF,100020,,100020
 New York Jets ,DST,New York (NYJ),New York (NYJ)DST,DST,100020,,100020
 New York Jets ,DST,New York (NYJ),New York (NYJ)DST,DST,100020,,100020
 Nick Chubb,RB,Nick Chubb,Nick ChubbRB,RB,31005,Nick ChubbRB,31005
@@ -682,17 +682,17 @@ Peyton Manning,QB,Peyton Manning,Peyton ManningQB,QB,4256,Peyton ManningQB,4256
 Peyton Manning*,QB,Peyton Manning,Peyton ManningQB,QB,4256,Peyton ManningQB,4256
 Phil Dawson,K,Phil Dawson,Phil DawsonK,K,4269,Phil DawsonK,4269
 PHI,DEF,Philadelphia,PhiladelphiaDEF,DEF,100021,,100021
-Philadelphia,DEF,Philadelphia,PhiladelphiaDEF,DEF,100021,#N/A,100021
-Philadelphia DST,DEF,Philadelphia,PhiladelphiaDEF,DEF,100021,#N/A,100021
+Philadelphia,DEF,Philadelphia,PhiladelphiaDEF,DEF,100021,,100021
+Philadelphia DST,DEF,Philadelphia,PhiladelphiaDEF,DEF,100021,,100021
 Philadelphia Eagles ,DST,Philadelphia,PhiladelphiaDST,DST,100021,,100021
-Philly Defense,DEF,Philadelphia,PhiladelphiaDEF,DEF,100021,#N/A,100021
+Philly Defense,DEF,Philadelphia,PhiladelphiaDEF,DEF,100021,,100021
 Philip Rivers,QB,Philip Rivers,Philip RiversQB,QB,6763,Philip RiversQB,6763
 Phillip Lindsay,RB,Phillip Lindsay,Phillip LindsayRB,RB,31379,Phillip LindsayRB,31379
 Pierre Garcon,WR,Pierre Garcon,Pierre GarconWR,WR,8982,Pierre GarconWR,8982
 Pierre Thomas,RB,Pierre Thomas,Pierre ThomasRB,RB,8561,Pierre ThomasRB,8561
 PIT,DEF,Pittsburgh,PittsburghDEF,DEF,100023,,100023
-Pittsburgh,DEF,Pittsburgh,PittsburghDEF,DEF,100023,#N/A,100023
-Steelers D,DEF,Pittsburgh,PittsburghDEF,DEF,100023,#N/A,100023
+Pittsburgh,DEF,Pittsburgh,PittsburghDEF,DEF,100023,,100023
+Steelers D,DEF,Pittsburgh,PittsburghDEF,DEF,100023,,100023
 Pittsburgh Steelers ,DST,Pittsburgh,PittsburghDST,DST,100023,,100023
 Puka Nacua,WR,Puka Nacua,Puka NacuaWR,WR,40168,,40168
 Puka Nacua,WR,Puka Nacua,Puka NacuaWR,WR,40168,,40168
@@ -730,7 +730,7 @@ RG3,QB,Robert Griffin III,Robert Griffin IIIQB,QB,25712,Robert Griffin IIIQB,257
 Robert Meachem,WR,Robert Meachem,Robert MeachemWR,WR,8281,Robert MeachemWR,8281
 Robert Tonyan,TE,Robert Tonyan,Robert TonyanTE,TE,30777,Robert TonyanWR,30777
 Robert Woods,WR,Robert Woods,Robert WoodsWR,WR,26664,Robert WoodsWR,26664
-Rod Smith,RB,Rod Smith,Rod SmithRB,RB,3328,#N/A,3328
+Rod Smith,RB,Rod Smith,Rod SmithRB,RB,3328,,3328
 Roddy White,WR,Roddy White,Roddy WhiteWR,WR,7203,Roddy WhiteWR,7203
 Rome Odunze,WR,Rome Odunze,Rome OdunzeWR,WR,40901,,40901
 Romeo Doubs,WR,Romeo Doubs,Romeo DoubsWR,WR,34088,,34088
@@ -756,21 +756,21 @@ Sam LaPorta,TE,Sam LaPorta,Sam LaPortaTE,TE,40064,,40064
 Sam LaPorta,TE,Sam LaPorta,Sam LaPortaTE,TE,40064,,40064
 Samaje Perine,RB,Samaje Perine,Samaje PerineRB,RB,30227,,30227
 Sammy Watkins,WR,Sammy Watkins,Sammy WatkinsWR,WR,27532,Sammy WatkinsWR,27532
-49ers D,DEF,San Francisco,San FranciscoDEF,DEF,100025,#N/A,100025
-49ers Defense,DEF,San Francisco,San FranciscoDEF,DEF,100025,#N/A,100025
-San Francisco,DEF,San Francisco,San FranciscoDEF,DEF,100025,#N/A,100025
-San Francisco 49ers,DEF,San Francisco,San FranciscoDEF,DEF,100025,#N/A,100025
+49ers D,DEF,San Francisco,San FranciscoDEF,DEF,100025,,100025
+49ers Defense,DEF,San Francisco,San FranciscoDEF,DEF,100025,,100025
+San Francisco,DEF,San Francisco,San FranciscoDEF,DEF,100025,,100025
+San Francisco 49ers,DEF,San Francisco,San FranciscoDEF,DEF,100025,,100025
 San Francisco 49ers ,DST,San Francisco,San FranciscoDST,DST,100025,,100025
-SF,DEF,San Francisco,San FranciscoDEF,DEF,100025,#N/A,100025
+SF,DEF,San Francisco,San FranciscoDEF,DEF,100025,,100025
 San Francisco 49ers ,DST,San Francisco,San FranciscoDST,DST,100025,,100025
 Saquon Barkley,RB,Saquon Barkley,Saquon BarkleyRB,RB,30972,Saquon BarkleyRB,30972
 Scott Chandler,TE,Scott Chandler,Scott ChandlerTE,TE,8383,Scott ChandlerTE,8383
-SEA,DEF,Seattle,SeattleDEF,DEF,100026,#N/A,100026
-Seahawks,DEF,Seattle,SeattleDEF,DEF,100026,#N/A,100026
-Seattle,DEF,Seattle,SeattleDEF,DEF,100026,#N/A,100026
-Seattle D,DEF,Seattle,SeattleDEF,DEF,100026,#N/A,100026
-Seattle DST,DEF,Seattle,SeattleDEF,DEF,100026,#N/A,100026
-Seattle Seahawks,DEF,Seattle,SeattleDEF,DEF,100026,#N/A,100026
+SEA,DEF,Seattle,SeattleDEF,DEF,100026,,100026
+Seahawks,DEF,Seattle,SeattleDEF,DEF,100026,,100026
+Seattle,DEF,Seattle,SeattleDEF,DEF,100026,,100026
+Seattle D,DEF,Seattle,SeattleDEF,DEF,100026,,100026
+Seattle DST,DEF,Seattle,SeattleDEF,DEF,100026,,100026
+Seattle Seahawks,DEF,Seattle,SeattleDEF,DEF,100026,,100026
 "Janiikowski, Sebastien",K,Sebastian Janikowski,Sebastian JanikowskiK,K,5046,Sebastian JanikowskiK,5046
 Shane Vereen,RB,Shane Vereen,Shane VereenRB,RB,24843,Shane VereenRB,24843
 Shaun Draughn,RB,Shaun Draughn,Shaun DraughnRB,RB,25481,Shaun DraughnRB,25481
@@ -781,7 +781,7 @@ Skyy Moore,WR,Skyy Moore,Skyy MooreWR,WR,34009,,34009
 Sony Michel,RB,Sony Michel,Sony MichelRB,RB,31001,Sony MichelRB,31001
 Sony Michele,RB,Sony Michel,Sony MichelRB,RB,31001,Sony MichelRB,31001
 Spencer Ware,RB,Spencer Ware,Spencer WareRB,RB,26817,Spencer WareRB,26817
-St. Louis,DEF,St. Louis,St. LouisDEF,DEF,5239,#N/A,5239
+St. Louis,DEF,St. Louis,St. LouisDEF,DEF,5239,,5239
 Stefon Diggs,WR,Stefon Diggs,Stefon DiggsWR,WR,28534,Stefon DiggsWR,28534
 Stephen Anderson,TE,Stephen Anderson,Stephen AndersonTE,TE,29789,Stephen AndersonTE,29789
 Stephen Gostkoswki,K,Stephen Gostkowski,Stephen GostkowskiK,K,7867,Stephen GostkowskiK,7867
@@ -795,16 +795,16 @@ Steve Smith,WR,Steve Smith Sr.,Steve Smith Sr.WR,WR,5521,Steve Smith Sr.WR,5521
 Steve Smith (CAR),WR,Steve Smith Sr.,Steve Smith Sr.WR,WR,5521,Steve Smith Sr.WR,5521
 Steve Smith Sr.,WR,Steve Smith Sr.,Steve Smith Sr.WR,WR,5521,Steve Smith Sr.WR,5521
 Steven Jackson,RB,Steven Jackson,Steven JacksonRB,RB,6783,Steven JacksonRB,6783
-Steve Johnson,WR,Stevie Johnson,Stevie JohnsonWR,WR,9001,#N/A,9001
+Steve Johnson,WR,Stevie Johnson,Stevie JohnsonWR,WR,9001,,9001
 Stevie Johnson,WR,Stevie Johnson,Stevie JohnsonWR,WR,9001,Stevie JohnsonWR,9001
 T.J. Hockenson,TE,T.J. Hockenson,T.J. HockensonTE,TE,31840,T.J. HockensonTE,31840
 TJ Hockenson,TE,T.J. Hockenson,T.J. HockensonTE,TE,31840,,31840
 TJ Yeldon,RB,T.J. Yeldon,T.J. YeldonRB,RB,28424,T.J. YeldonRB,28424
 T.Y. Hilton,WR,T.Y. Hilton,T.Y. HiltonWR,WR,25802,T.Y. HiltonWR,25802
 TY Hilton,WR,T.Y. Hilton,T.Y. HiltonWR,WR,25802,T.Y. HiltonWR,25802
-Bucs D,DEF,Tampa Bay,Tampa BayDEF,DEF,100027,#N/A,100027
-Tampa,DEF,Tampa Bay,Tampa BayDEF,DEF,100027,#N/A,100027
-Tampa Bay,DEF,Tampa Bay,Tampa BayDEF,DEF,100027,#N/A,100027
+Bucs D,DEF,Tampa Bay,Tampa BayDEF,DEF,100027,,100027
+Tampa,DEF,Tampa Bay,Tampa BayDEF,DEF,100027,,100027
+Tampa Bay,DEF,Tampa Bay,Tampa BayDEF,DEF,100027,,100027
 TB,DEF,Tampa Bay,Tampa BayDEF,DEF,100027,,100027
 Tank Bigsby,RB,Tank Bigsby,Tank BigsbyRB,RB,40095,,40095
 Tank Dell,WR,Tank Dell,Tank DellWR,WR,40097,,40097
@@ -818,7 +818,7 @@ Ted Ginn Jr.,WR,Ted Ginn Jr.,Ted Ginn Jr.WR,WR,8263,Ted Ginn Jr.WR,8263
 Teddy Bridgewater,QB,Teddy Bridgewater,Teddy BridgewaterQB,QB,27560,Teddy BridgewaterQB,27560
 Tee Higgens,WR,Tee Higgins,Tee HigginsWR,WR,32703,Tee HigginsWR,32703
 Tee Higgins,WR,Tee Higgins,Tee HigginsWR,WR,32703,Tee HigginsWR,32703
-Tennessee,DEF,Tennessee,TennesseeDEF,DEF,100010,#N/A,100010
+Tennessee,DEF,Tennessee,TennesseeDEF,DEF,100010,,100010
 Terrance West,RB,Terrance West,Terrance WestRB,RB,27622,Terrance WestRB,27622
 Terrence West,RB,Terrance West,Terrance WestRB,RB,27622,Terrance WestRB,27622
 Terrence Williams,WR,Terrance Williams,Terrance WilliamsWR,WR,26697,Terrance WilliamsWR,26697
@@ -880,7 +880,7 @@ Victor Cruz,WR,Victor Cruz,Victor CruzWR,WR,24553,Victor CruzWR,24553
 Vincent Brown,WR,Vincent Brown,Vincent BrownWR,WR,24869,Vincent BrownWR,24869
 VIncent Jackson,WR,Vincent Jackson,Vincent JacksonWR,WR,7237,Vincent JacksonWR,7237
 WAS,DEF,Washington,WashingtonDEF,DEF,100028,,100028
-Washington,DEF,Washington,WashingtonDEF,DEF,100028,#N/A,100028
+Washington,DEF,Washington,WashingtonDEF,DEF,100028,,100028
 Wayne Gallman Jr.,RB,Wayne Gallman Jr.,Wayne Gallman Jr.RB,RB,30253,Wayne GallmanRB,30253
 Wes Welker,WR,Wes Welker,Wes WelkerWR,WR,7027,Wes WelkerWR,7027
 Will Fuller,WR,Will Fuller V,Will Fuller VWR,WR,29255,Will Fuller VWR,29255
@@ -932,3 +932,71 @@ Jalen Tolbert,WR,Jalen TolbertWR,Jalen Tolbert,WR,34044,,34044
 Kimani Vidal,RB,Kimani VidalRB,Kimani Vidal,RB,41052,,41052
 Jauan Jennings,WR,Jauan JenningsWR,Jauan Jennings,WR,32887,,32887
 Wan'Dale Robinson,WR,Wan'Dale RobinsonWR,Wan'Dale Robinson,WR,33998,,33998
+Kyle Pitts Sr.,TE,Kyle Pitts,Kyle PittsTE,,33392,,
+New York Jets ,DEF,New York (NYJ),New York (NYJ)DEF,,100020,,
+Houston Texans ,DEF,Houston,HoustonDEF,,100034,,
+Philadelphia Eagles ,DEF,Philadelphia,PhiladelphiaDEF,,100021,,
+Pittsburgh Steelers ,DEF,Pittsburgh,PittsburghDEF,,100023,,
+Aaron Jones Sr.,RB,Aaron Jones,Aaron JonesRB,,30295,,
+Baltimore Ravens ,DEF,Baltimore,BaltimoreDEF,,100033,,
+Minnesota Vikings ,DEF,Minnesota,MinnesotaDEF,,100016,,
+Denver Broncos ,DEF,Denver,DenverDEF,,100007,,
+Atlanta Falcons DST,DEF,Atlanta,AtlantaDEF,,100001,,
+Green Bay Packers ,DEF,Green Bay,Green BayDEF,,100009,,
+Chris Godwin Jr.,WR,Chris Godwin,Chris GodwinWR,,30197,,
+Arizona Cardinals ,DEF,Arizona,ArizonaDEF,,100022,,
+Ashton Jeanty,RB,Ashton Jeanty,Ashton JeantyRB,,41791,,
+Bam Knight,RB,Bam Knight,Bam KnightRB,,34357,,
+Bears,DEF,Chicago,ChicagoDEF,,100003,,
+Bills,DEF,Buffalo,BuffaloDEF,,100002,,
+Brenton Strange,TE,Brenton Strange,Brenton StrangeTE,,40078,,
+Browns,DEF,Cleveland,ClevelandDEF,,100005,,
+Cam Skattebo,RB,Cam Skattebo,Cam SkatteboRB,,41922,,
+Cam Ward,QB,Cam Ward,Cam WardQB,,41786,,
+Chris Rodriguez Jr.,RB,Chris Rodriguez Jr.,Chris Rodriguez Jr.RB,,40231,,
+Colby Parkinson,TE,Colby Parkinson,Colby ParkinsonTE,,32803,,
+Colston Loveland,TE,Colston Loveland,Colston LovelandTE,,41795,,
+Colts,DEF,Indianapolis,IndianapolisDEF,,100011,,
+Commanders,DEF,Washington,WashingtonDEF,,100028,,
+Cowboys,DEF,Dallas,DallasDEF,,100006,,
+Dylan Sampson,RB,Dylan Sampson,Dylan SampsonRB,,41907,,
+Eagles,DEF,Philadelphia,PhiladelphiaDEF,,100021,,
+Emeka Egbuka,WR,Emeka Egbuka,Emeka EgbukaWR,,41804,,
+Giants,DEF,New York,New YorkDEF,,100019,,
+Harold Fannin Jr.,TE,Harold Fannin Jr.,Harold Fannin Jr.TE,,41877,,
+Hassan Haskins,RB,Hassan Haskins,Hassan HaskinsRB,,34087,,
+Hollywood Brown,WR,Hollywood Brown,Hollywood BrownWR,,31857,,
+J.J. McCarthy,QB,J.J. McCarthy,J.J. McCarthyQB,,40905,,
+Jacory Croskey-Merritt,RB,Jacory Croskey-Merritt,Jacory Croskey-MerrittRB,,42010,,
+Jayden Higgins,WR,Jayden Higgins,Jayden HigginsWR,,41819,,
+Jaydon Blue,RB,Jaydon Blue,Jaydon BlueRB,,41935,,
+Juwan Johnson,TE,Juwan Johnson,Juwan JohnsonTE,,33113,,
+Kaleb Johnson,RB,Kaleb Johnson,Kaleb JohnsonRB,,41881,,
+Kayshon Boutte,WR,Kayshon Boutte,Kayshon BoutteWR,,40224,,
+Kyle Monangai,RB,Kyle Monangai,Kyle MonangaiRB,,42025,,
+Lions,DEF,Detroit,DetroitDEF,,100008,,
+Malik Washington,WR,Malik Washington,Malik WashingtonWR,,41058,,
+Mason Taylor,TE,Mason Taylor,Mason TaylorTE,,41827,,
+Matthew Golden,WR,Matthew Golden,Matthew GoldenWR,,41808,,
+Michael Penix Jr.,QB,Michael Penix Jr.,Michael Penix Jr.QB,,40889,,
+Ollie Gordon II,RB,Ollie Gordon II,Ollie Gordon IIRB,,41969,,
+Omarion Hampton,RB,Omarion Hampton,Omarion HamptonRB,,41807,,
+Oronde Gadsden,TE,Oronde Gadsden,Oronde GadsdenTE,,41951,,
+Panthers,DEF,Carolina,CarolinaDEF,,100029,,
+Quinshon Judkins,RB,Quinshon Judkins,Quinshon JudkinsRB,,41821,,
+RJ Harvey,RB,RJ Harvey,RJ HarveyRB,,41845,,
+Raheim Sanders,RB,Raheim Sanders,Raheim SandersRB,,42139,,
+Raiders,DEF,Las Vegas,Las VegasDEF,,100013,,
+Ray Davis,RB,Ray Davis,Ray DavisRB,,40980,,
+Ricky Pearsall,WR,Ricky Pearsall,Ricky PearsallWR,,40892,,
+Tetairoa McMillan,WR,Tetairoa McMillan,Tetairoa McMillanWR,,41793,,
+Tez Johnson,WR,Tez Johnson,Tez JohnsonWR,,42030,,
+Titans,DEF,Tennessee,TennesseeDEF,,100010,,
+Travis Hunter,WR,Travis Hunter,Travis HunterWR,,41787,,
+Tre Tucker,WR,Tre Tucker,Tre TuckerWR,,40114,,
+TreVeyon Henderson,RB,TreVeyon Henderson,TreVeyon HendersonRB,,41823,,
+Troy Franklin,WR,Troy Franklin,Troy FranklinWR,,41009,,
+Tutu Atwell,WR,Tutu Atwell,Tutu AtwellWR,,33445,,
+Tyler Shough,QB,Tyler Shough,Tyler ShoughQB,,41825,,
+Tyler Warren,TE,Tyler Warren,Tyler WarrenTE,,41799,,
+Will Shipley,RB,Will Shipley,Will ShipleyRB,,41002,,
