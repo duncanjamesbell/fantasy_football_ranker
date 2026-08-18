@@ -240,6 +240,15 @@ co_manager_dedup:
     - {season: 2020, manager: "Bryan",             correct_rank: 9}
     - {season: 2020, manager: "Krista",            correct_rank: 10}
 
+  # 2022: rank field had two pairs swapped vs. the actual bracket outcome
+  # and Duncan-confirmed correct standings (verified against real per-player
+  # scores: Patrick beat Krista 214.26-167.95 in their week-17 placement game,
+  # Luke beat Bryan 203.46-156.78 in theirs -- both contradicted the stored rank).
+    - {season: 2022, manager: "Patrick", correct_rank: 3}
+    - {season: 2022, manager: "Krista",  correct_rank: 4}
+    - {season: 2022, manager: "Luke",    correct_rank: 9}
+    - {season: 2022, manager: "Bryan",   correct_rank: 10}
+
 # ---------------------------------------------------------------------------
 # Team name character fixes
 # Yahoo sometimes stores team names with Unicode right-single-quote (U+2019)
