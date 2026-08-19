@@ -48,6 +48,19 @@ DEFAULT_WIN_PERCENTAGES_WEIGHT        = 0.12
 DEFAULT_POINTS_AGAINST_WEIGHT         = 0.13
 DEFAULT_SEASON_RANK_WEIGHT            = 15
 
+# score_method='cascade' (original) is bounded to [0, weight] and asymmetric:
+# rank #1 always claims the full metric weight regardless of margin, and even
+# the worst performer keeps a substantial floor well above zero -- good
+# performance is rewarded on a steep curve concentrated at the top, poor
+# performance is barely distinguished from average. score_method=
+# 'capped_linear' is a symmetric alternative: score = clip(z, -cap, cap) /
+# cap * weight, where z is the metric's own population z-score. An average
+# performer scores 0; above/below average is rewarded/penalized
+# symmetrically, and no single outlier can run away with more than the cap.
+DEFAULT_SCORE_METHOD                  = 'cascade'
+DEFAULT_CAPPED_LINEAR_CAP             = 2.0
+DEFAULT_SCORE_OFFSET                  = 0.0
+
 
 # ---------------------------------------------------------------------------
 # Public helpers
@@ -59,7 +72,7 @@ def load_overrides(path: str) -> dict:
         return yaml.safe_load(f) or {}
 
 
-def create_metric_dict(metrics_dict: dict, values, metric: str, ascending: bool) -> dict:
+def _create_metric_dict_cascade(metrics_dict: dict, values, metric: str, ascending: bool) -> dict:
     """
     Map each unique metric value to a weighted score using variance-based
     cascading for all metrics except points_against (which uses linear scaling).
@@ -96,6 +109,52 @@ def create_metric_dict(metrics_dict: dict, values, metric: str, ascending: bool)
             metric_dict[value] = value * metrics_dict[metric]
 
     return metric_dict
+
+
+def _create_metric_dict_capped_linear(
+    metrics_dict: dict, values, metric: str, ascending: bool, cap: float,
+) -> dict:
+    """
+    Symmetric, capped, linear alternative to the cascade method.
+    score = clip(z, -cap, cap) / cap * weight, where z is this metric's own
+    population z-score (mean/stdev of the values passed in -- the same pool
+    of managers being scored this iteration). `ascending=True` means a lower
+    raw value is better, so z is sign-flipped for those metrics before
+    capping/scaling.
+    """
+    df = pd.DataFrame(list(values), columns=['value']).drop_duplicates().reset_index(drop=True)
+    weight = metrics_dict[metric]
+    mean   = df['value'].mean()
+    stdev  = df['value'].std(ddof=1)
+    if not stdev or math.isnan(stdev):
+        stdev = 1.0
+
+    metric_dict = {}
+    for v in df['value']:
+        z = (v - mean) / stdev
+        if ascending:
+            z = -z
+        z_capped = max(-cap, min(cap, z))
+        metric_dict[v] = (z_capped / cap) * weight
+    return metric_dict
+
+
+def create_metric_dict(
+    metrics_dict: dict, values, metric: str, ascending: bool,
+    score_method: str = DEFAULT_SCORE_METHOD,
+    capped_linear_cap: float = DEFAULT_CAPPED_LINEAR_CAP,
+) -> dict:
+    """
+    Map each unique metric value to a weighted score.
+
+    score_method='cascade' (default): see _create_metric_dict_cascade --
+    bounded [0, weight], asymmetric, rank-#1-takes-full-weight.
+    score_method='capped_linear': see _create_metric_dict_capped_linear --
+    bounded [-weight, weight], symmetric around the population mean.
+    """
+    if score_method == 'capped_linear':
+        return _create_metric_dict_capped_linear(metrics_dict, values, metric, ascending, capped_linear_cap)
+    return _create_metric_dict_cascade(metrics_dict, values, metric, ascending)
 
 
 # ---------------------------------------------------------------------------
@@ -277,6 +336,9 @@ def calculate_composite_ranks(
     points_against_overall_weight:     float = DEFAULT_POINTS_AGAINST_WEIGHT,
     season_rank_weight: float = DEFAULT_SEASON_RANK_WEIGHT,
     Metrics_dict: dict | None = None,
+    score_method: str = DEFAULT_SCORE_METHOD,
+    capped_linear_cap: float = DEFAULT_CAPPED_LINEAR_CAP,
+    score_offset: float = DEFAULT_SCORE_OFFSET,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Compute composite fantasy football rankings.
@@ -301,6 +363,13 @@ def calculate_composite_ranks(
     overrides   : dict from load_overrides(); used for league_sizes.
     pre_managers: all managers ever in the league (full canonical names).
                   Defaults to all unique managers in master_df.
+    score_method: 'cascade' (default, original behavior) or 'capped_linear'
+                  (symmetric alternative) -- see create_metric_dict.
+    capped_linear_cap: z-score cap in standard deviations, only used when
+                  score_method='capped_linear'.
+    score_offset: flat amount added to total_score after all metrics are
+                  summed (e.g. 50 to keep capped_linear scores positive).
+                  Does not affect individual metric scores or rank order.
 
     Returns
     -------
@@ -563,7 +632,7 @@ def calculate_composite_ranks(
                     raw_metrics.append('avg_rs_win_percent'); raw_values.append(value)
             win_percent_dict[manager] = sum(values_list) / len(values_list)
 
-        wp_score_dict = create_metric_dict(metrics_dict, win_percent_dict.values(), 'rs_win_percentage', False)
+        wp_score_dict = create_metric_dict(metrics_dict, win_percent_dict.values(), 'rs_win_percentage', False, score_method, capped_linear_cap)
         final_scores_df = pd.DataFrame(index=win_percent_dict.keys(), data=win_percent_dict.values(), columns=['avg_rs_win_percent'])
         final_scores_df['rs_win_percent_score'] = final_scores_df.avg_rs_win_percent.map(wp_score_dict)
 
@@ -579,7 +648,7 @@ def calculate_composite_ranks(
                     raw_metrics.append('rs_points'); raw_values.append(z)
             rs_pts_z[manager] = sum(z_scores) / len(z_scores)
 
-        pts_score_dict = create_metric_dict(metrics_dict, rs_pts_z.values(), 'rs_points', False)
+        pts_score_dict = create_metric_dict(metrics_dict, rs_pts_z.values(), 'rs_points', False, score_method, capped_linear_cap)
         final_scores_df['rs_points_z_score'] = final_scores_df.index.map(rs_pts_z)
         final_scores_df['rs_points_score']   = final_scores_df.rs_points_z_score.map(pts_score_dict)
 
@@ -595,7 +664,14 @@ def calculate_composite_ranks(
                     raw_metrics.append('rs_points_against'); raw_values.append(z)
             rs_pta_z[manager] = sum(z_scores) / len(z_scores)
 
-        pta_score_dict = create_metric_dict(metrics_dict, rs_pta_z.values(), 'rs_points_against', True)
+        # ascending=False: this is a deliberate luck-adjustment, not a
+        # measure to minimize -- a HIGHER than average points-against is
+        # rewarded (tougher draw/bad luck despite a good record), a LOWER
+        # than average points-against is penalized (easier draw/good luck).
+        # The cascade method's linear branch ignores `ascending` entirely so
+        # this has no effect there; it only matters for score_method=
+        # 'capped_linear', which respects it.
+        pta_score_dict = create_metric_dict(metrics_dict, rs_pta_z.values(), 'rs_points_against', False, score_method, capped_linear_cap)
         final_scores_df['rs_points_against_z_score'] = final_scores_df.index.map(rs_pta_z)
         final_scores_df['rs_points_against_score']   = final_scores_df.rs_points_against_z_score.map(pta_score_dict)
 
@@ -616,7 +692,7 @@ def calculate_composite_ranks(
                         raw_metrics.append('playoff_win_percentage'); raw_values.append(value)
             playoff_wins_dict[manager] = sum(p_values) / len(p_values) if p_values else 0.0
 
-        pwp_score_dict = create_metric_dict(metrics_dict, playoff_wins_dict.values(), 'playoff_win_percentage', False)
+        pwp_score_dict = create_metric_dict(metrics_dict, playoff_wins_dict.values(), 'playoff_win_percentage', False, score_method, capped_linear_cap)
         final_scores_df['avg_p_win_percent']  = final_scores_df.index.map(playoff_wins_dict)
         final_scores_df['p_win_percent_score'] = final_scores_df.avg_p_win_percent.map(pwp_score_dict)
 
@@ -633,7 +709,7 @@ def calculate_composite_ranks(
                         raw_metrics.append('playoff_points'); raw_values.append(z)
             playoff_pts_dict[manager] = sum(z_scores) / len(z_scores) if z_scores else 0.0
 
-        pp_score_dict = create_metric_dict(metrics_dict, playoff_pts_dict.values(), 'playoff_points', False)
+        pp_score_dict = create_metric_dict(metrics_dict, playoff_pts_dict.values(), 'playoff_points', False, score_method, capped_linear_cap)
         final_scores_df['p_points_z_score'] = final_scores_df.index.map(playoff_pts_dict)
         final_scores_df['p_points_score']   = final_scores_df.p_points_z_score.map(pp_score_dict)
 
@@ -650,7 +726,9 @@ def calculate_composite_ranks(
                         raw_metrics.append('playoff_points_against'); raw_values.append(z)
             p_pta_z[manager] = sum(z_scores) / len(z_scores) if z_scores else 0.0
 
-        ppa_score_dict = create_metric_dict(metrics_dict, p_pta_z.values(), 'playoff_points_against', True)
+        # See the ascending=False note on rs_points_against above -- same
+        # deliberate luck-adjustment applies here.
+        ppa_score_dict = create_metric_dict(metrics_dict, p_pta_z.values(), 'playoff_points_against', False, score_method, capped_linear_cap)
         final_scores_df['p_points_against_z_score'] = final_scores_df.index.map(p_pta_z)
         final_scores_df['p_points_against_score']   = final_scores_df.p_points_against_z_score.map(ppa_score_dict)
 
@@ -677,7 +755,7 @@ def calculate_composite_ranks(
                     raw_metrics.append('season_rank'); raw_values.append(raw_wr)
             weighted_rank_dict[manager] = sum(wr_values) / len(wr_values)
 
-        wr_score_dict = create_metric_dict(metrics_dict, weighted_rank_dict.values(), 'season_rank', False)
+        wr_score_dict = create_metric_dict(metrics_dict, weighted_rank_dict.values(), 'season_rank', False, score_method, capped_linear_cap)
         final_scores_df['weighted_rank']       = final_scores_df.index.map(weighted_rank_dict)
         final_scores_df['weighted_rank_score'] = final_scores_df.weighted_rank.map(wr_score_dict)
 
@@ -723,7 +801,7 @@ def calculate_composite_ranks(
                     raw_metrics.append('draft_efficiency'); raw_values.append(z)
             draft_efficiency_dict[manager] = sum(z_scores) / len(z_scores) if z_scores else 0.0
 
-        de_score_dict = create_metric_dict(metrics_dict, draft_efficiency_dict.values(), 'draft_efficiency', False)
+        de_score_dict = create_metric_dict(metrics_dict, draft_efficiency_dict.values(), 'draft_efficiency', False, score_method, capped_linear_cap)
         final_scores_df['draft_efficiency']       = final_scores_df.index.map(draft_efficiency_dict)
         final_scores_df['draft_efficiency_score'] = final_scores_df.draft_efficiency.map(de_score_dict)
 
@@ -760,7 +838,7 @@ def calculate_composite_ranks(
                     raw_metrics.append('undrafted_savvy'); raw_values.append(z)
             rs_non_drafted_dict[manager] = sum(z_scores) / len(z_scores)
 
-        nd_score_dict = create_metric_dict(metrics_dict, rs_non_drafted_dict.values(), 'undrafted_savvy', False)
+        nd_score_dict = create_metric_dict(metrics_dict, rs_non_drafted_dict.values(), 'undrafted_savvy', False, score_method, capped_linear_cap)
         final_scores_df['undrafted_avg_z_score']  = final_scores_df.index.map(rs_non_drafted_dict)
         final_scores_df['undrafted_savvy_score']  = final_scores_df.undrafted_avg_z_score.map(nd_score_dict)
 
@@ -853,7 +931,7 @@ def calculate_composite_ranks(
                     raw_metrics.append('faab_efficiency'); raw_values.append(z)
             faab_efficiency_dict[manager] = sum(z_scores) / len(z_scores)
 
-        fe_score_dict = create_metric_dict(metrics_dict, faab_efficiency_dict.values(), 'faab_efficiency', True)
+        fe_score_dict = create_metric_dict(metrics_dict, faab_efficiency_dict.values(), 'faab_efficiency', True, score_method, capped_linear_cap)
         final_scores_df['avg_faab_efficiency'] = final_scores_df.index.map(faab_efficiency_dict)
         final_scores_df['faab_efficiency_score'] = final_scores_df.avg_faab_efficiency.map(fe_score_dict)
 
@@ -864,7 +942,7 @@ def calculate_composite_ranks(
             'p_points_against_score', 'weighted_rank_score', 'undrafted_savvy_score',
             'faab_efficiency_score',
         ]
-        final_scores_df['total_score'] = final_scores_df[score_cols].sum(axis=1)
+        final_scores_df['total_score'] = final_scores_df[score_cols].sum(axis=1) + score_offset
         final_scores_df.sort_values('total_score', ascending=False, inplace=True)
         final_scores_df['thru'] = current_max
         final_score_dfs.append(final_scores_df)
