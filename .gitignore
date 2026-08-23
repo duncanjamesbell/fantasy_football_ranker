@@ -71,3 +71,11 @@ Final Files from Previous Years/
 # Scratch / formatting intermediates
 2025 news for formatting.csv
 2025_news_formatted.csv
+
+# Streamlit app: real passphrase, per-machine/per-deployment, never committed
+# (.streamlit/secrets.toml.example is the committed placeholder showing the shape)
+.streamlit/secrets.toml
+
+# Virtual environment for the Streamlit app (isolated from the global
+# interpreter used by the rest of this project's scripts/notebooks)
+.venv-streamlit/
