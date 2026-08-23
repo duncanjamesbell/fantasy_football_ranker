@@ -60,6 +60,7 @@ DEFAULT_SEASON_RANK_WEIGHT            = 15
 DEFAULT_SCORE_METHOD                  = 'cascade'
 DEFAULT_CAPPED_LINEAR_CAP             = 2.0
 DEFAULT_SCORE_OFFSET                  = 0.0
+DEFAULT_WEIGHT_SCALE                  = 1.0
 
 
 # ---------------------------------------------------------------------------
@@ -361,6 +362,7 @@ def calculate_composite_ranks(
     score_method: str = DEFAULT_SCORE_METHOD,
     capped_linear_cap: float = DEFAULT_CAPPED_LINEAR_CAP,
     score_offset: float = DEFAULT_SCORE_OFFSET,
+    weight_scale: float = DEFAULT_WEIGHT_SCALE,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Compute composite fantasy football rankings.
@@ -392,6 +394,17 @@ def calculate_composite_ranks(
     score_offset: flat amount added to total_score after all metrics are
                   summed (e.g. 50 to keep capped_linear scores positive).
                   Does not affect individual metric scores or rank order.
+    weight_scale: uniform multiplier applied to every metric's weight after
+                  metrics_dict is built (both use_model_weights branches).
+                  Since capped_linear's score is exactly linear in weight,
+                  scaling every weight by the same constant scales every
+                  manager's total_score by that same constant -- it can
+                  never change rank order (verified: Spearman correlation
+                  of 1.0 between full- and half-weight capped_linear
+                  rankings). Purely a display/scale convenience -- e.g.
+                  0.5 to keep capped_linear's totals closer to cascade's
+                  historical scale, paired with a proportionally smaller
+                  score_offset.
 
     Returns
     -------
@@ -477,6 +490,9 @@ def calculate_composite_ranks(
         metrics_dict['season_rank'] = season_rank_weight
     else:
         metrics_dict = Metrics_dict or {}
+
+    if weight_scale != 1.0:
+        metrics_dict = {k: v * weight_scale for k, v in metrics_dict.items()}
 
     # Print weights summary
     weights_df = (

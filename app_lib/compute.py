@@ -32,6 +32,7 @@ def get_composite_ranks(
     score_method: str,
     capped_linear_cap: float,
     score_offset: float,
+    weight_scale: float,
 ):
     """
     Returns (compiled_final_scores, raw_scores), exactly as
@@ -63,4 +64,5 @@ def get_composite_ranks(
             score_method=score_method,
             capped_linear_cap=capped_linear_cap,
             score_offset=score_offset,
+            weight_scale=weight_scale,
         )

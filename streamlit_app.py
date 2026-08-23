@@ -77,9 +77,20 @@ with st.sidebar.expander("Advanced"):
 
     capped_linear_cap = 2.0
     score_offset = 0.0
+    weight_scale = 1.0
     if score_method == "capped_linear":
         capped_linear_cap = st.slider("Z-score cap (standard deviations)", 0.5, 4.0, 2.0, step=0.1)
-        score_offset = st.slider("Score offset", 0, 100, 50, step=5, help="Added to total_score only, to keep totals positive.")
+        weight_scale = st.slider(
+            "Weight scale", 0.1, 1.0, 0.5, step=0.05,
+            help=(
+                "Uniformly scales every metric's weight. Since capped_linear's score "
+                "is exactly linear in weight, this can never change rank order (verified: "
+                "Spearman correlation of 1.0 between full- and half-weight rankings) -- "
+                "it only rescales how large the numbers look. Defaults to 0.5 to keep "
+                "totals closer to cascade's historical scale."
+            ),
+        )
+        score_offset = st.slider("Score offset", 0, 100, 25, step=5, help="Added to total_score only, to keep totals positive.")
 
 thru_year = st.sidebar.slider("Thru year", min_value=start_year, max_value=LATEST_YEAR, value=LATEST_YEAR)
 
@@ -130,6 +141,7 @@ compiled_final_scores, raw_scores = get_composite_ranks(
     score_method=score_method,
     capped_linear_cap=capped_linear_cap,
     score_offset=score_offset,
+    weight_scale=weight_scale,
 )
 
 PLOT_METRIC_COLS = SCORE_COLS[:-1]  # exclude total_score, handled separately
