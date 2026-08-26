@@ -18,8 +18,12 @@ def require_passphrase() -> None:
         return
 
     st.title("PRE Fantasy Football Composite Ranks")
-    entered = st.text_input("Passphrase", type="password")
-    submitted = st.button("Enter")
+    # st.form makes Enter-to-submit native: pressing Enter while focused in a
+    # form's text_input submits the form, same as clicking its submit button
+    # -- a plain st.button alongside a bare text_input doesn't get that.
+    with st.form("passphrase_form"):
+        entered = st.text_input("Passphrase", type="password")
+        submitted = st.form_submit_button("Enter")
 
     if submitted:
         expected = st.secrets.get("APP_PASSPHRASE", "")
