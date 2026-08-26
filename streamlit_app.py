@@ -169,7 +169,7 @@ with tab_rankings:
     st.plotly_chart(build_ranking_bar(compiled_final_scores, thru_year, PLOT_METRIC_COLS), use_container_width=True)
     scoreboard = metric_scoreboard(compiled_final_scores, thru_year)
     score_cols = [c for c in scoreboard.columns if c != "rank"]
-    st.dataframe(style_signed(scoreboard, subset=score_cols, force_black_cols=["Total Score"]), use_container_width=True)
+    st.dataframe(style_signed(scoreboard, subset=score_cols, exclude_cols=["Total Score"]), use_container_width=True)
 
 with tab_manager:
     manager = st.selectbox("Manager", sorted(compiled_final_scores.index.unique()))
@@ -185,7 +185,7 @@ with tab_manager:
                 "(to keep totals positive) -- the metric rows above it will not sum to it exactly; "
                 f"they sum to Total Score minus {score_offset:.0f}."
             )
-        st.dataframe(style_signed(view["score_breakdown"], force_black_rows=["Total Score"]), use_container_width=True)
+        st.dataframe(style_signed(view["score_breakdown"], exclude_rows=["Total Score"]), use_container_width=True)
         st.subheader("Z-scores by metric x season")
         st.caption("The recency-adjusted z-score that actually feeds the weighting.")
         zscore_display = view["zscore_pivot"].rename(index=METRIC_DISPLAY_NAMES)
@@ -237,7 +237,7 @@ with tab_comparison:
             st.dataframe(
                 style_signed(
                     cmp["comparison"], subset=[manager_a, manager_b, cmp["diff_col"]],
-                    force_black_rows=["Total Score"], force_black_rows_cols=[manager_a, manager_b],
+                    exclude_rows=["Total Score"], exclude_rows_cols=[manager_a, manager_b],
                 ),
                 use_container_width=True,
             )

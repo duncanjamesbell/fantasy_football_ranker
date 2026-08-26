@@ -71,35 +71,56 @@ def _signed_font_color(val) -> str:
 def style_signed(
     df: pd.DataFrame,
     subset=None,
-    force_black_cols=None,
-    force_black_rows=None,
-    force_black_rows_cols=None,
+    exclude_cols=None,
+    exclude_rows=None,
+    exclude_rows_cols=None,
 ) -> "pd.io.formats.style.Styler":
     """Green font for positive values, red for negative, default (blank) font
     color at exactly 0 -- makes it obvious at a glance which values are
     helping vs. hurting a manager's score. Also rounds the displayed value to
-    two decimal places -- a Styler ignores a DataFrame's own .round() and
-    shows full float precision unless told otherwise. `subset` restricts both
-    the coloring and the number formatting to specific columns (e.g. to
-    exclude a non-score 'rank' column). `force_black_cols`/`force_black_rows`
-    override the sign-based color back to black for specific columns/index
-    labels (e.g. 'Total Score', which -- unlike a per-metric score -- isn't
-    itself a signal of something helping or hurting). `force_black_rows_cols`
-    narrows `force_black_rows` to only specific columns within those rows
-    (default: every column) -- e.g. a comparison table's difference column
-    should stay sign-colored even on the 'Total Score' row, while the two
-    managers' own raw Total Score values there go black."""
-    styler = (
+    two decimal places -- a Styler ignores a DataFrame's own .round()
+    otherwise. `subset` restricts both the coloring and the number formatting
+    to specific columns (e.g. to exclude a non-score 'rank' column).
+
+    `exclude_cols`/`exclude_rows`/`exclude_rows_cols` withhold the sign-based
+    color from specific columns/index labels (e.g. 'Total Score', which --
+    unlike a per-metric score -- isn't itself a signal of something helping
+    or hurting) by leaving those cells with NO color style at all, rather
+    than hardcoding black: st.dataframe's grid renders in a canvas, not real
+    HTML, so a CSS trick like `color: inherit` isn't guaranteed to be
+    understood -- an absent style is the one mechanism already proven to
+    render as the viewer's theme default (dark background -> light text,
+    light background -> dark text), same as this function's own 0-value
+    cells already do. `exclude_rows_cols` narrows `exclude_rows` to only
+    specific columns within those rows (default: every column) -- e.g. a
+    comparison table's difference column should stay sign-colored even on
+    the 'Total Score' row, while the two managers' own raw Total Score
+    values there go theme-default."""
+    color_cols = set(subset) if subset is not None else set(df.columns)
+    exclude_cols = set(exclude_cols or [])
+    exclude_rows = set(exclude_rows or [])
+    # None means "every column" on an excluded row; otherwise only these
+    # columns are excluded there (others in color_cols still get colored).
+    row_excluded_cols = set(exclude_rows_cols) if exclude_rows_cols is not None else None
+
+    def _cell_style(row_label, col_label, val) -> str:
+        if col_label not in color_cols or col_label in exclude_cols:
+            return ""
+        if row_label in exclude_rows and (row_excluded_cols is None or col_label in row_excluded_cols):
+            return ""
+        return _signed_font_color(val)
+
+    def _style_frame(frame: pd.DataFrame) -> pd.DataFrame:
+        return pd.DataFrame(
+            {c: [_cell_style(r, c, frame.loc[r, c]) for r in frame.index] for c in frame.columns},
+            index=frame.index,
+        )
+
+    return (
         df.style
-        .map(_signed_font_color, subset=subset)
+        .apply(_style_frame, axis=None)
         .format("{:.2f}", subset=subset, na_rep="")
     )
-    if force_black_cols:
-        styler = styler.map(lambda v: "color: black", subset=force_black_cols)
-    if force_black_rows:
-        cols = force_black_rows_cols if force_black_rows_cols is not None else slice(None)
-        styler = styler.map(lambda v: "color: black", subset=pd.IndexSlice[force_black_rows, cols])
-    return styler
 
 
 def metric_scoreboard(compiled_final_scores: pd.DataFrame, thru_year: int | None = None) -> pd.DataFrame:
