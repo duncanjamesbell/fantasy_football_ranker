@@ -91,14 +91,14 @@ def style_signed(
     managers' own raw Total Score values there go black."""
     styler = (
         df.style
-        .applymap(_signed_font_color, subset=subset)
+        .map(_signed_font_color, subset=subset)
         .format("{:.2f}", subset=subset, na_rep="")
     )
     if force_black_cols:
-        styler = styler.applymap(lambda v: "color: black", subset=force_black_cols)
+        styler = styler.map(lambda v: "color: black", subset=force_black_cols)
     if force_black_rows:
         cols = force_black_rows_cols if force_black_rows_cols is not None else slice(None)
-        styler = styler.applymap(lambda v: "color: black", subset=pd.IndexSlice[force_black_rows, cols])
+        styler = styler.map(lambda v: "color: black", subset=pd.IndexSlice[force_black_rows, cols])
     return styler
 
 
