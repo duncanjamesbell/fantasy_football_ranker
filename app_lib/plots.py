@@ -24,6 +24,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
+from app_lib.reporting import METRIC_DISPLAY_NAMES
 from metrics.composite import MANAGER_DISPLAY_NAMES
 
 # Consistent color per manager across every chart, keyed by alphabetical
@@ -58,11 +59,12 @@ def build_ranking_bar(compiled_final_scores: pd.DataFrame, thru_year: int, score
 
     fig = go.Figure()
     for metric in score_cols:
+        label = METRIC_DISPLAY_NAMES.get(metric, metric)
         fig.add_trace(go.Bar(
             x=order,
             y=snap.loc[order, metric],
-            name=metric,
-            hovertemplate="%{x}<br>" + metric + ": %{y:.2f}<extra></extra>",
+            name=label,
+            hovertemplate="%{x}<br>" + label + ": %{y:.2f}<extra></extra>",
         ))
     fig.update_layout(
         barmode="relative",
@@ -110,25 +112,70 @@ def build_trend(
     return fig
 
 
+# Red (worst) -> white (average) -> green (best), diverging around 0 so a
+# manager's below/above-average seasons for a metric are visible at a glance
+# without reading the axis.
+_RED_GREEN_SCALE = [[0, "#d73027"], [0.5, "#f7f7f7"], [1, "#1a9850"]]
+
+
 def build_manager_metric_trend(manager: str, raw_scores: pd.DataFrame, metric: str):
     """
     One manager's normalized_score (the recency-adjusted z-score that
     actually feeds the weighting) for a single metric, over every season
     they have data for -- the same numbers as the z-score pivot table in
     Manager Lookup, one row of it turned into a chart. A dashed line at 0
-    marks league-average for that metric/season.
+    marks league-average for that metric/season. Markers are colored on a
+    red (worst season shown) -> white (average) -> green (best season shown)
+    scale, symmetric around 0, so performance reads at a glance.
     """
     m_data = raw_scores[(raw_scores.manager == manager) & (raw_scores.metric == metric)].sort_values("season")
+
+    cap = max(abs(m_data["normalized_score"].min()), abs(m_data["normalized_score"].max()), 0.01)
 
     fig = go.Figure()
     fig.add_trace(go.Scatter(
         x=m_data["season"], y=m_data["normalized_score"], mode="lines+markers",
-        line=dict(width=3), marker=dict(size=9),
+        line=dict(width=2, color="rgba(140,140,140,0.55)"),
+        marker=dict(
+            size=11,
+            color=m_data["normalized_score"],
+            colorscale=_RED_GREEN_SCALE,
+            cmin=-cap, cmax=cap,
+            line=dict(width=1, color="rgba(0,0,0,0.35)"),
+        ),
         hovertemplate="Season: %{x}<br>Z-score: %{y:.2f}<extra></extra>",
     ))
     fig.add_hline(y=0, line_dash="dash", line_color="grey")
     fig.update_layout(
-        xaxis_title="Season", yaxis_title="Z-score", title=metric,
+        xaxis_title="Season", yaxis_title="Z-score", title=METRIC_DISPLAY_NAMES.get(metric, metric),
         hovermode="closest", height=350,
+    )
+    return fig
+
+
+def build_metric_comparison_trend(managers: list, raw_scores: pd.DataFrame, metric: str, color_map: dict):
+    """
+    Two (or more) managers' normalized_score for a single metric, overlaid on
+    one chart, one line per manager in their app-wide color -- the Manager
+    Comparison tab's answer to "why is X higher/lower than me on this
+    metric": lets you see whether a gap is a recent trend or long-standing.
+    """
+    fig = go.Figure()
+    for manager in managers:
+        m_data = raw_scores[(raw_scores.manager == manager) & (raw_scores.metric == metric)].sort_values("season")
+        if m_data.empty:
+            continue
+        color = color_map.get(manager)
+        fig.add_trace(go.Scatter(
+            x=m_data["season"], y=m_data["normalized_score"], mode="lines+markers", name=manager,
+            line=dict(width=3, color=color),
+            marker=dict(size=9, color=color),
+            hovertemplate=f"{manager}<br>Season: " + "%{x}<br>Z-score: %{y:.2f}<extra></extra>",
+        ))
+    fig.add_hline(y=0, line_dash="dash", line_color="grey")
+    fig.update_layout(
+        xaxis_title="Season", yaxis_title="Z-score", title=METRIC_DISPLAY_NAMES.get(metric, metric),
+        hovermode="closest", height=350,
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
     )
     return fig

@@ -13,8 +13,8 @@ from app_lib.auth import require_passphrase
 from app_lib.compute import get_composite_ranks
 from app_lib.data import load_all_data
 from app_lib.methodology import full_methodology_markdown
-from app_lib.plots import build_last_season_by_manager, build_manager_metric_trend, build_ranking_bar, build_trend, color_map_for
-from app_lib.reporting import SCORE_COLS, explain_manager_view, metric_scoreboard
+from app_lib.plots import build_last_season_by_manager, build_manager_metric_trend, build_metric_comparison_trend, build_ranking_bar, build_trend, color_map_for
+from app_lib.reporting import METRIC_DISPLAY_NAMES, RAW_METRIC_COLS, SCORE_COLS, compare_managers_view, explain_manager_view, metric_scoreboard, style_signed
 from config import SEASONS
 
 st.set_page_config(page_title="PRE Composite Ranks", layout="wide")
@@ -40,27 +40,34 @@ DEFAULT_METRIC_WEIGHTS = {
     "playoff_points_against": 5,
     "faab_efficiency": 3,
 }
-METRIC_LABELS = {
-    "rs_points": "RS Points",
-    "season_rank": "Season Rank",
-    "rs_points_against": "RS Points Against",
-    "playoff_points": "Playoff Points",
-    "draft_efficiency": "Draft Efficiency",
-    "undrafted_savvy": "Undrafted Savvy",
-    "playoff_win_percentage": "Playoff Win %",
-    "rs_win_percentage": "RS Win %",
-    "playoff_points_against": "Playoff Points Against",
-    "faab_efficiency": "FAAB Efficiency",
-}
-
 LATEST_YEAR = max(SEASONS)
 
 st.sidebar.header("Controls")
 
 with st.sidebar.expander("Advanced"):
     start_year = st.number_input("Start year", min_value=2007, max_value=LATEST_YEAR, value=2015)
-    recency_bonus = st.slider("Recency bonus", 0.0, 1.0, 0.25, step=0.01)
-    recency_window = st.slider("Recency window (years)", 1, 10, 4)
+    recency_bonus = st.slider(
+        "Recency bonus", 0.0, 1.0, 0.25, step=0.01,
+        help=(
+            "How much extra weight a manager's own most-recent seasons (see "
+            "'Recency window' below) get in their career average for every "
+            "metric. 0.25 means those seasons count 25% more than a plain "
+            "average would give them -- 0 disables the boost entirely."
+        ),
+    )
+    recency_window = st.slider(
+        "Recency window (years)", 1, 10, 4,
+        help=(
+            "How many of a manager's own most-recent *played* seasons get "
+            "the recency bonus -- anchored to that manager's own career, not "
+            "a shared calendar cutoff, and counted seasons played rather "
+            "than calendar span, so a break-and-return still lands on the "
+            "actual most-recent N seasons played (gaps skipped). Only "
+            "applies to managers with more career seasons than this window, "
+            "so a brand-new manager's whole (thin) history isn't entirely "
+            "boosted."
+        ),
+    )
 
     st.subheader("Scoring method")
     score_method_label = st.radio(
@@ -117,7 +124,7 @@ else:
     st.sidebar.caption("Recommended to sum to 100, not enforced.")
     for metric, default in DEFAULT_METRIC_WEIGHTS.items():
         metric_weights[metric] = st.sidebar.slider(
-            METRIC_LABELS[metric], min_value=0, max_value=50, value=default, key=f"weight_{metric}",
+            METRIC_DISPLAY_NAMES[metric], min_value=0, max_value=50, value=default, key=f"weight_{metric}",
         )
     season_rank_weight = metric_weights["season_rank"]
 
@@ -146,8 +153,8 @@ compiled_final_scores, raw_scores = get_composite_ranks(
 
 PLOT_METRIC_COLS = SCORE_COLS[:-1]  # exclude total_score, handled separately
 
-tab_rankings, tab_manager, tab_trends, tab_methodology = st.tabs(
-    ["Rankings", "Manager Lookup", "Trends", "Methodology"]
+tab_rankings, tab_manager, tab_comparison, tab_trends, tab_methodology = st.tabs(
+    ["Rankings", "Manager Lookup", "Manager Comparison", "Trends", "Methodology"]
 )
 
 with tab_rankings:
@@ -160,7 +167,9 @@ with tab_rankings:
     else:
         st.caption("Hover a segment for its metric and value.")
     st.plotly_chart(build_ranking_bar(compiled_final_scores, thru_year, PLOT_METRIC_COLS), use_container_width=True)
-    st.dataframe(metric_scoreboard(compiled_final_scores, thru_year), use_container_width=True)
+    scoreboard = metric_scoreboard(compiled_final_scores, thru_year)
+    score_cols = [c for c in scoreboard.columns if c != "rank"]
+    st.dataframe(style_signed(scoreboard, subset=score_cols, force_black_cols=["Total Score"]), use_container_width=True)
 
 with tab_manager:
     manager = st.selectbox("Manager", sorted(compiled_final_scores.index.unique()))
@@ -170,10 +179,17 @@ with tab_manager:
     else:
         st.metric("Rank", f"{view['rank']} of {view['of']}")
         st.subheader("Final weighted scores")
-        st.dataframe(view["score_breakdown"], use_container_width=True)
+        if score_offset:
+            st.caption(
+                f"Total Score includes a +{score_offset:.0f} offset applied only at the total "
+                "(to keep totals positive) -- the metric rows above it will not sum to it exactly; "
+                f"they sum to Total Score minus {score_offset:.0f}."
+            )
+        st.dataframe(style_signed(view["score_breakdown"], force_black_rows=["Total Score"]), use_container_width=True)
         st.subheader("Z-scores by metric x season")
         st.caption("The recency-adjusted z-score that actually feeds the weighting.")
-        st.dataframe(view["zscore_pivot"], use_container_width=True)
+        zscore_display = view["zscore_pivot"].rename(index=METRIC_DISPLAY_NAMES)
+        st.dataframe(style_signed(zscore_display), use_container_width=True)
 
         st.subheader("Metric trends")
         st.caption(f"Each chart is one row of the table above, {manager}'s z-score by season for that metric.")
@@ -183,6 +199,71 @@ with tab_manager:
             for col, metric in zip(cols, metric_names[i:i + 2]):
                 with col:
                     st.plotly_chart(build_manager_metric_trend(manager, raw_scores, metric), use_container_width=True)
+
+with tab_comparison:
+    all_managers = sorted(compiled_final_scores.index.unique())
+    cmp_color_map = color_map_for(all_managers)
+
+    st.caption("Compare two managers side by side to see exactly which metrics are driving the gap between them.")
+    col_a, col_b = st.columns(2)
+    with col_a:
+        manager_a = st.selectbox("Manager A", all_managers, index=0, key="cmp_manager_a")
+    with col_b:
+        default_b = 1 if len(all_managers) > 1 else 0
+        manager_b = st.selectbox("Manager B", all_managers, index=default_b, key="cmp_manager_b")
+
+    if manager_a == manager_b:
+        st.info("Select two different managers to compare.")
+    else:
+        cmp = compare_managers_view(manager_a, manager_b, compiled_final_scores, thru_year)
+        if cmp is None:
+            st.info(f"No data for {manager_a} and/or {manager_b} thru {thru_year}.")
+        else:
+            rank_col_a, rank_col_b = st.columns(2)
+            rank_col_a.metric(f"{manager_a} rank", f"{cmp['rank_a']} of {cmp['of']}")
+            rank_col_b.metric(f"{manager_b} rank", f"{cmp['rank_b']} of {cmp['of']}")
+
+            st.subheader("Score breakdown")
+            caption = (
+                f"Positive in '{cmp['diff_col']}' means {manager_a} scores higher on that metric; "
+                f"negative means {manager_b} does. Sorted by the size of the gap, biggest driver first."
+            )
+            if score_offset:
+                caption += (
+                    f" Total Score includes a +{score_offset:.0f} offset applied only at the total -- "
+                    "the metric rows above it don't include it."
+                )
+            st.caption(caption)
+            st.dataframe(
+                style_signed(
+                    cmp["comparison"], subset=[manager_a, manager_b, cmp["diff_col"]],
+                    force_black_rows=["Total Score"], force_black_rows_cols=[manager_a, manager_b],
+                ),
+                use_container_width=True,
+            )
+
+            st.subheader("Total Score over time")
+            master_df = load_all_data()["master"]
+            last_season_by_manager = build_last_season_by_manager(master_df)
+            cmp_axhline = score_offset if score_method == "capped_linear" else None
+            st.plotly_chart(
+                build_trend(
+                    compiled_final_scores, "total_score", last_season_by_manager, [manager_a, manager_b],
+                    cmp_color_map, "Score", f"{manager_a} vs {manager_b} -- Total Score Over Time", cmp_axhline,
+                ),
+                use_container_width=True,
+            )
+
+            st.subheader("Metric trends")
+            st.caption(f"Each chart overlays {manager_a} and {manager_b}'s z-score by season for that metric.")
+            for i in range(0, len(RAW_METRIC_COLS), 2):
+                cols = st.columns(2)
+                for col, metric in zip(cols, RAW_METRIC_COLS[i:i + 2]):
+                    with col:
+                        st.plotly_chart(
+                            build_metric_comparison_trend([manager_a, manager_b], raw_scores, metric, cmp_color_map),
+                            use_container_width=True,
+                        )
 
 with tab_trends:
     hue_order = sorted(compiled_final_scores.index.unique())
@@ -201,8 +282,9 @@ with tab_trends:
 
     metric_axhline = 0 if score_method == "capped_linear" else None
     for metric in PLOT_METRIC_COLS:
+        label = METRIC_DISPLAY_NAMES.get(metric, metric)
         st.plotly_chart(
-            build_trend(compiled_final_scores, metric, last_season_by_manager, hue_order, color_map, metric, f"{metric} Over Time", metric_axhline),
+            build_trend(compiled_final_scores, metric, last_season_by_manager, hue_order, color_map, label, f"{label} Over Time", metric_axhline),
             use_container_width=True,
         )
 
