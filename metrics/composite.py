@@ -276,23 +276,38 @@ def _get_league_size(season: int, observed_count: int, overrides: dict) -> int:
 
 
 def _recency_eligible(
-    manager: str, season: int, latest_season: int, recency_window: int,
-    manager_season_counts: dict,
+    manager: str, season: int, recency_window: int,
+    manager_season_counts: dict, manager_recent_seasons: dict,
 ) -> bool:
     """
     Whether this (manager, season) row should get the recency boost.
 
-    Two conditions, both required: the season itself must fall inside the
-    trailing recency_window, AND the manager's total season count (their
-    whole career-to-date as of this thru-year snapshot) must exceed
-    recency_window. Without the second condition, a manager with only 1-2
-    seasons of history gets every single one of them boosted (100% of their
-    career falls inside "recent" trivially), which combined with no longer
-    history to dilute it, gave brand-new managers (e.g. a debut co-managed
-    team) an outsized, undeserved edge on every recency-sensitive metric.
+    Two conditions, both required: `season` must be among this manager's own
+    most-recent `recency_window` seasons *played* (as of this thru-year
+    snapshot), AND the manager's total season count (their whole
+    career-to-date as of this snapshot) must exceed recency_window.
+
+    "Most-recent seasons played" is anchored to each manager's own
+    participation record, not a shared calendar cutoff off the overall
+    thru-year -- so a manager whose last season was 2024 keeps the same
+    boosted 2021-2024 seasons even when a later thru-year snapshot moves the
+    calendar past them (previously, a global `latest_season` meant every
+    manager's eligibility window silently shifted whenever thru_year changed,
+    even for managers with no data past their own last season). It's also
+    count-based rather than a calendar span, so a manager who takes a season
+    off and returns keeps counting their actual most-recent N played
+    seasons, gaps and all (e.g. 2022, 2023, 2024, 2026 for someone who
+    skipped 2025), rather than incorrectly including or excluding seasons
+    based on calendar distance alone.
+
+    Without the season-count condition, a manager with only 1-2 seasons of
+    history gets every single one of them boosted (100% of their career
+    falls inside "recent" trivially), which combined with no longer history
+    to dilute it, gave brand-new managers (e.g. a debut co-managed team) an
+    outsized, undeserved edge on every recency-sensitive metric.
     """
     return (
-        season >= (latest_season - recency_window)
+        season in manager_recent_seasons[manager]
         and manager_season_counts[manager] > recency_window
     )
 
@@ -649,6 +664,16 @@ def calculate_composite_ranks(
         # snapshot -- feeds _recency_eligible's "long enough history to have
         # a recency window at all" check.
         manager_season_counts = {m: master[master.manager == m].shape[0] for m in season_managers}
+        # Each manager's own most-recent recency_window seasons played, as of
+        # this snapshot -- feeds _recency_eligible's per-manager (not global
+        # calendar) eligibility check. Sourced from `master` (the authoritative
+        # manager-per-season roster), not any single metric's own season
+        # coverage, since eligibility is about career recency, not whether a
+        # given metric happens to have data for that season.
+        manager_recent_seasons = {
+            m: set(sorted(master[master.manager == m].season.unique())[-recency_window:])
+            for m in season_managers
+        }
 
         compile_raw = (master.season.max() == Master.season.max())
         if compile_raw:
@@ -659,7 +684,7 @@ def calculate_composite_ranks(
         for manager in season_managers:
             values_list = []
             for _, row in master[master.manager == manager].iterrows():
-                if not _recency_eligible(manager, row['season'], latest_season, recency_window, manager_season_counts):
+                if not _recency_eligible(manager, row['season'], recency_window, manager_season_counts, manager_recent_seasons):
                     value = row['rs_win_percentage']
                 else:
                     z = (row['rs_win_percentage'] - season_data_dict[row['season']]['win_percent_mean']) / season_data_dict[row['season']]['win_percent_stdev']
@@ -684,7 +709,7 @@ def calculate_composite_ranks(
             z_scores = []
             for _, row in master[master.manager == manager].iterrows():
                 z = (row['points_for'] - season_data_dict[row['season']]['rs_points_mean']) / season_data_dict[row['season']]['rs_points_stdev']
-                z_scores.append(z * (1 + recency_bonus) if _recency_eligible(manager, row['season'], latest_season, recency_window, manager_season_counts) else z)
+                z_scores.append(z * (1 + recency_bonus) if _recency_eligible(manager, row['season'], recency_window, manager_season_counts, manager_recent_seasons) else z)
                 if compile_raw:
                     raw_seasons.append(row['season']); raw_managers.append(manager)
                     raw_metrics.append('rs_points'); raw_values.append(z)
@@ -700,7 +725,7 @@ def calculate_composite_ranks(
             z_scores = []
             for _, row in master[master.manager == manager].iterrows():
                 z = (row['points_against'] - season_data_dict[row['season']]['rs_points_against_mean']) / season_data_dict[row['season']]['rs_points_against_stdev']
-                z_scores.append(z * (1 + recency_bonus) if _recency_eligible(manager, row['season'], latest_season, recency_window, manager_season_counts) else z)
+                z_scores.append(z * (1 + recency_bonus) if _recency_eligible(manager, row['season'], recency_window, manager_season_counts, manager_recent_seasons) else z)
                 if compile_raw:
                     raw_seasons.append(row['season']); raw_managers.append(manager)
                     raw_metrics.append('rs_points_against'); raw_values.append(z)
@@ -723,7 +748,7 @@ def calculate_composite_ranks(
             p_values = []
             for _, row in master[master.manager == manager].iterrows():
                 if not math.isnan(row['playoff_win_percent']):
-                    if not _recency_eligible(manager, row['season'], latest_season, recency_window, manager_season_counts):
+                    if not _recency_eligible(manager, row['season'], recency_window, manager_season_counts, manager_recent_seasons):
                         value = row['playoff_win_percent']
                     else:
                         z = (row['playoff_win_percent'] - season_data_dict[row['season']]['p_win_percents_mean']) / season_data_dict[row['season']]['p_win_percents_stdev']
@@ -745,7 +770,7 @@ def calculate_composite_ranks(
             for _, row in master[master.manager == manager].iterrows():
                 if not math.isnan(row['avg_playoff_points']):
                     z = (row['avg_playoff_points'] - season_data_dict[row['season']]['p_points_mean']) / season_data_dict[row['season']]['p_points_stdev']
-                    z_scores.append(z * (1 + recency_bonus) if _recency_eligible(manager, row['season'], latest_season, recency_window, manager_season_counts) else z)
+                    z_scores.append(z * (1 + recency_bonus) if _recency_eligible(manager, row['season'], recency_window, manager_season_counts, manager_recent_seasons) else z)
                     if compile_raw:
                         raw_seasons.append(row['season']); raw_managers.append(manager)
                         raw_metrics.append('playoff_points'); raw_values.append(z)
@@ -762,7 +787,7 @@ def calculate_composite_ranks(
             for _, row in master[master.manager == manager].iterrows():
                 if not math.isnan(row['avg_playoff_points']):
                     z = (row['avg_playoff_points_against'] - season_data_dict[row['season']]['p_points_against_mean']) / season_data_dict[row['season']]['p_points_against_stdev']
-                    z_scores.append(z * (1 + recency_bonus) if _recency_eligible(manager, row['season'], latest_season, recency_window, manager_season_counts) else z)
+                    z_scores.append(z * (1 + recency_bonus) if _recency_eligible(manager, row['season'], recency_window, manager_season_counts, manager_recent_seasons) else z)
                     if compile_raw:
                         raw_seasons.append(row['season']); raw_managers.append(manager)
                         raw_metrics.append('playoff_points_against'); raw_values.append(z)
@@ -785,7 +810,7 @@ def calculate_composite_ranks(
                 observed = master[master.season == row['season']].shape[0]
                 num_mgrs = _get_league_size(int(row['season']), observed, overrides)
                 raw_wr   = rank_weights_dict[num_mgrs][row['rank']]
-                if not _recency_eligible(manager, row['season'], latest_season, recency_window, manager_season_counts):
+                if not _recency_eligible(manager, row['season'], recency_window, manager_season_counts, manager_recent_seasons):
                     wr_values.append(raw_wr)
                 else:
                     avg_w = sum(rank_weights_dict[num_mgrs].values()) / num_mgrs
@@ -837,7 +862,7 @@ def calculate_composite_ranks(
             for season in m_draft_df.Year.unique():
                 raw_eff = m_draft_df[m_draft_df.Year == season].draft_score.mean()
                 z       = (raw_eff - season_data_dict[season]['draft_score_mean']) / season_data_dict[season]['draft_score_stdev']
-                z_scores.append(z * (1 + recency_bonus) if _recency_eligible(manager, season, latest_season, recency_window, manager_season_counts) else z)
+                z_scores.append(z * (1 + recency_bonus) if _recency_eligible(manager, season, recency_window, manager_season_counts, manager_recent_seasons) else z)
                 if compile_raw:
                     raw_seasons.append(season); raw_managers.append(manager)
                     raw_metrics.append('draft_efficiency'); raw_values.append(z)
@@ -874,7 +899,7 @@ def calculate_composite_ranks(
             z_scores = []
             for _, row in m_df.iterrows():
                 z = row['zscore_non_draft_scores']
-                z_scores.append(z * (1 + recency_bonus) if _recency_eligible(manager, row['season'], latest_season, recency_window, manager_season_counts) else z)
+                z_scores.append(z * (1 + recency_bonus) if _recency_eligible(manager, row['season'], recency_window, manager_season_counts, manager_recent_seasons) else z)
                 if compile_raw:
                     raw_seasons.append(row['season']); raw_managers.append(manager)
                     raw_metrics.append('undrafted_savvy'); raw_values.append(z)
@@ -961,7 +986,7 @@ def calculate_composite_ranks(
             z_scores = []
             for _, row in m_df.iterrows():
                 z = row['faab_efficiency_zscore']
-                if not _recency_eligible(manager, row['season'], latest_season, recency_window, manager_season_counts):
+                if not _recency_eligible(manager, row['season'], recency_window, manager_season_counts, manager_recent_seasons):
                     z_scores.append(z)
                 else:
                     f_stdev  = season_data_dict.get(row['season'], {}).get('faab_efficiency_stdev', 1)
