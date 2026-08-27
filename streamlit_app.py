@@ -153,8 +153,8 @@ compiled_final_scores, raw_scores = get_composite_ranks(
 
 PLOT_METRIC_COLS = SCORE_COLS[:-1]  # exclude total_score, handled separately
 
-tab_rankings, tab_manager, tab_comparison, tab_reference, tab_trends, tab_methodology = st.tabs(
-    ["Rankings", "Manager Lookup", "Manager Comparison", "Reference Data", "Trends", "Methodology"]
+tab_rankings, tab_trends, tab_manager, tab_comparison, tab_reference, tab_methodology = st.tabs(
+    ["Rankings", "Trends", "Manager Lookup", "Manager Comparison", "Reference Data", "Methodology"]
 )
 
 with tab_rankings:
@@ -173,6 +173,29 @@ with tab_rankings:
         style_signed(scoreboard, subset=score_cols, exclude_cols=["Total Score"]),
         use_container_width=True, height=full_table_height(scoreboard),
     )
+
+with tab_trends:
+    hue_order = sorted(compiled_final_scores.index.unique())
+    color_map = color_map_for(hue_order)
+    master_df = load_all_data()["master"]
+    last_season_by_manager = build_last_season_by_manager(master_df)
+
+    st.caption("Hover a line for the manager name and season value.")
+
+    axhline = score_offset if score_method == "capped_linear" else None
+    st.subheader("Composite Score Over Time")
+    st.plotly_chart(
+        build_trend(compiled_final_scores, "total_score", last_season_by_manager, hue_order, color_map, "Score", "Composite Over Time", axhline),
+        use_container_width=True,
+    )
+
+    metric_axhline = 0 if score_method == "capped_linear" else None
+    for metric in PLOT_METRIC_COLS:
+        label = METRIC_DISPLAY_NAMES.get(metric, metric)
+        st.plotly_chart(
+            build_trend(compiled_final_scores, metric, last_season_by_manager, hue_order, color_map, label, f"{label} Over Time", metric_axhline),
+            use_container_width=True,
+        )
 
 with tab_manager:
     manager = st.selectbox("Manager", sorted(compiled_final_scores.index.unique()))
@@ -304,41 +327,23 @@ with tab_reference:
         st.info("No data for the selected manager(s)/season range.")
     else:
         display_df = filtered.rename(columns=REFERENCE_TABLE_DISPLAY_NAMES)
+        # NumberColumn's named "percent" format is fixed at 2 decimals with no
+        # precision control -- a printf-style format string doesn't auto-scale
+        # by 100 the way the named preset does, so pre-scale the value here to
+        # get a whole-number percent (e.g. "54%") via a plain %.0f spec.
+        display_df["Win %"] = display_df["Win %"] * 100
         st.dataframe(
             display_df,
             use_container_width=True,
             hide_index=True,
             height=min(full_table_height(display_df), 600),
             column_config={
-                "Win %": st.column_config.NumberColumn(format="percent"),
+                "Win %": st.column_config.NumberColumn(format="%.0f%%"),
                 "Points For": st.column_config.NumberColumn(format="%.1f"),
                 "Points Against": st.column_config.NumberColumn(format="%.1f"),
                 "Playoff Points": st.column_config.NumberColumn(format="%.1f"),
                 "Playoff Points Against": st.column_config.NumberColumn(format="%.1f"),
             },
-        )
-
-with tab_trends:
-    hue_order = sorted(compiled_final_scores.index.unique())
-    color_map = color_map_for(hue_order)
-    master_df = load_all_data()["master"]
-    last_season_by_manager = build_last_season_by_manager(master_df)
-
-    st.caption("Hover a line for the manager name and season value.")
-
-    axhline = score_offset if score_method == "capped_linear" else None
-    st.subheader("Composite Score Over Time")
-    st.plotly_chart(
-        build_trend(compiled_final_scores, "total_score", last_season_by_manager, hue_order, color_map, "Score", "Composite Over Time", axhline),
-        use_container_width=True,
-    )
-
-    metric_axhline = 0 if score_method == "capped_linear" else None
-    for metric in PLOT_METRIC_COLS:
-        label = METRIC_DISPLAY_NAMES.get(metric, metric)
-        st.plotly_chart(
-            build_trend(compiled_final_scores, metric, last_season_by_manager, hue_order, color_map, label, f"{label} Over Time", metric_axhline),
-            use_container_width=True,
         )
 
 with tab_methodology:

@@ -482,8 +482,8 @@ def build_reference_table(
     Master['manager'] = [MANAGER_DISPLAY_NAMES.get(m, m) for m in Master.manager]
 
     cols = [
-        'season', 'manager', 'rank', 'wins', 'losses', 'ties', 'rs_win_percentage',
-        'points_for', 'points_against', 'playoff_seed', 'playoff_matches',
+        'season', 'manager', 'rank', 'rs_win_percentage',
+        'points_for', 'points_against', 'playoff_seed',
         'playoff_wins', 'revised_p_score', 'p_points_against',
     ]
     return Master[cols].rename(columns={'revised_p_score': 'playoff_points', 'p_points_against': 'playoff_points_against'}).sort_values(['season', 'rank']).reset_index(drop=True)
