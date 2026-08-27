@@ -352,6 +352,143 @@ def _derive_real_playoff_results(full_playoffs: pd.DataFrame) -> tuple[dict, dic
     return matches, wins
 
 
+def _enrich_master_with_derived_stats(Master: pd.DataFrame, full_playoffs: pd.DataFrame, overrides: dict) -> pd.DataFrame:
+    """
+    Adds rs_win_percentage and the corrected playoff columns (playoff_matches,
+    playoff_wins, avg_playoff_points, playoff_win_percent, p_points_against,
+    avg_playoff_points_against) to Master, deriving real playoff wins/matches
+    from per-player scores wherever trustworthy rather than the seed/rank
+    heuristic alone (see the inline comments below for exactly when each
+    source is trusted). Shared by calculate_composite_ranks and
+    build_reference_table so both use identical, already-verified
+    playoff-correction logic -- exactly one source of truth for "what really
+    happened," rather than two implementations that could drift apart.
+    """
+    Master['rs_win_percentage'] = Master.wins / (Master.losses + Master.wins)
+
+    # Playoff match counts & wins per manager per season -- derived directly
+    # from full_playoffs (real per-matchup scores) wherever available, since
+    # the old rank/seed-based heuristic was found to be wrong for ~5% of
+    # manager-seasons across league history (including at least one league
+    # champion under-credited a real playoff win).
+    #
+    # A real count is only trusted when it's >= the heuristic's expectation
+    # for that seed. A scraping gap (one side of a matchup missing entirely --
+    # observed for one 2020 case) can only ever make the real count too LOW,
+    # never too high, so a real count below the heuristic signals incomplete
+    # data rather than a genuinely shorter playoff run -- fall back to the
+    # heuristic in that case, and also for the handful of manager-seasons
+    # with no recoverable real data at all (2007, the first season scraped).
+    #
+    # Manager-seasons with an explicit playoff_wins_overrides entry are never
+    # replaced with derived-real data, even if the >= check above would pass.
+    # Those overrides exist specifically because the underlying scraped
+    # per-player rows are known-corrupted for that manager-season (e.g. the
+    # 2020 co-manager mix-up), so re-deriving from full_playoffs would just
+    # reintroduce the same corruption the override was written to fix.
+    real_matches, real_wins = _derive_real_playoff_results(full_playoffs)
+    manually_overridden_keys = {
+        (entry['season'], entry['manager'])
+        for entry in overrides.get('playoff_wins_overrides', [])
+        if entry.get('manager') and entry.get('season') is not None and entry.get('corrected') is not None
+    }
+
+    playoff_match_counts = []
+    playoff_win_counts = []
+    for _, row in Master.iterrows():
+        observed = Master[Master.season == row['season']].shape[0]
+        num_mgrs = _get_league_size(int(row['season']), observed, overrides)
+        if math.isnan(row['playoff_seed']):
+            playoff_match_counts.append(np.nan)
+            playoff_win_counts.append(np.nan)
+            continue
+
+        seed = row['playoff_seed']
+        rank = row['rank']
+        if num_mgrs == 6:
+            heuristic_matches = 2 if seed <= 4 else 1
+        elif num_mgrs in (8, 10):
+            if seed <= 2:
+                heuristic_matches = 2
+            elif seed <= 6:
+                heuristic_matches = 2 if rank in (5, 6) else 3
+            else:
+                heuristic_matches = 1 if num_mgrs == 8 else 2
+        else:
+            heuristic_matches = np.nan
+
+        manager_id = int(row['team_key'].split('.')[-1])
+        key = (row['season'], manager_id)
+        use_real = (
+            key in real_matches
+            and (pd.isna(heuristic_matches) or real_matches[key] >= heuristic_matches)
+            and (row['season'], row['manager']) not in manually_overridden_keys
+        )
+        if use_real:
+            playoff_match_counts.append(real_matches[key])
+            playoff_win_counts.append(real_wins.get(key, 0))
+        else:
+            playoff_match_counts.append(heuristic_matches)
+            playoff_win_counts.append(pd.to_numeric(row['playoff_wins'], errors='coerce'))
+
+    Master['playoff_matches']         = playoff_match_counts
+    Master['playoff_wins']            = playoff_win_counts
+    Master['avg_playoff_points']      = Master['revised_p_score'] / Master['playoff_matches']
+    Master['playoff_win_percent']     = Master['playoff_wins'] / Master['playoff_matches']
+
+    # Playoff points against per manager per season
+    sum_p_points_against = []
+    for _, row in Master.iterrows():
+        manager_id = int(row['team_key'].split('.')[-1])
+        season     = row['season']
+        p_df = full_playoffs[full_playoffs.season == season]
+        p_df = p_df[p_df.score != '�']
+        p_df = p_df.copy()
+        p_df['score'] = p_df['score'].astype(float)
+        opponent_scores = p_df[p_df.opponent_id == manager_id].score
+        sum_p_points_against.append(sum(opponent_scores))
+
+    Master['p_points_against']          = sum_p_points_against
+    Master['avg_playoff_points_against'] = Master['p_points_against'] / Master['playoff_matches']
+
+    return Master
+
+
+def build_reference_table(
+    master_df: pd.DataFrame,
+    full_playoffs: pd.DataFrame,
+    thru_year: int,
+    overrides: dict | None = None,
+    pre_managers: list | None = None,
+) -> pd.DataFrame:
+    """
+    One row per manager-season of raw, human-legible stats (final rank,
+    W-L-T, points for/against, playoff seed/wins/points) -- the same
+    corrected playoff data calculate_composite_ranks uses internally (via
+    _enrich_master_with_derived_stats), for users who want their actual
+    season numbers rather than the z-score/weighted-score abstraction the
+    rest of this module produces.
+    """
+    if overrides is None:
+        overrides = {}
+
+    Master = _preprocess_master(master_df, overrides)
+    Master = Master[Master.season <= thru_year]
+    if pre_managers is not None:
+        Master = Master[Master.manager.isin(pre_managers)]
+    Master = _enrich_master_with_derived_stats(Master, full_playoffs, overrides)
+
+    Master = Master.copy()
+    Master['manager'] = [MANAGER_DISPLAY_NAMES.get(m, m) for m in Master.manager]
+
+    cols = [
+        'season', 'manager', 'rank', 'wins', 'losses', 'ties', 'rs_win_percentage',
+        'points_for', 'points_against', 'playoff_seed', 'playoff_matches',
+        'playoff_wins', 'revised_p_score', 'p_points_against',
+    ]
+    return Master[cols].rename(columns={'revised_p_score': 'playoff_points', 'p_points_against': 'playoff_points_against'}).sort_values(['season', 'rank']).reset_index(drop=True)
+
+
 # ---------------------------------------------------------------------------
 # Main function
 # ---------------------------------------------------------------------------
@@ -529,92 +666,7 @@ def calculate_composite_ranks(
     # ------------------------------------------------------------------
     latest_season = Master.season.max()
 
-    Master['rs_win_percentage'] = Master.wins / (Master.losses + Master.wins)
-
-    # Playoff match counts & wins per manager per season -- derived directly
-    # from full_playoffs (real per-matchup scores) wherever available, since
-    # the old rank/seed-based heuristic was found to be wrong for ~5% of
-    # manager-seasons across league history (including at least one league
-    # champion under-credited a real playoff win).
-    #
-    # A real count is only trusted when it's >= the heuristic's expectation
-    # for that seed. A scraping gap (one side of a matchup missing entirely --
-    # observed for one 2020 case) can only ever make the real count too LOW,
-    # never too high, so a real count below the heuristic signals incomplete
-    # data rather than a genuinely shorter playoff run -- fall back to the
-    # heuristic in that case, and also for the handful of manager-seasons
-    # with no recoverable real data at all (2007, the first season scraped).
-    #
-    # Manager-seasons with an explicit playoff_wins_overrides entry are never
-    # replaced with derived-real data, even if the >= check above would pass.
-    # Those overrides exist specifically because the underlying scraped
-    # per-player rows are known-corrupted for that manager-season (e.g. the
-    # 2020 co-manager mix-up), so re-deriving from full_playoffs would just
-    # reintroduce the same corruption the override was written to fix.
-    real_matches, real_wins = _derive_real_playoff_results(full_playoffs)
-    manually_overridden_keys = {
-        (entry['season'], entry['manager'])
-        for entry in overrides.get('playoff_wins_overrides', [])
-        if entry.get('manager') and entry.get('season') is not None and entry.get('corrected') is not None
-    }
-
-    playoff_match_counts = []
-    playoff_win_counts = []
-    for _, row in Master.iterrows():
-        observed = Master[Master.season == row['season']].shape[0]
-        num_mgrs = _get_league_size(int(row['season']), observed, overrides)
-        if math.isnan(row['playoff_seed']):
-            playoff_match_counts.append(np.nan)
-            playoff_win_counts.append(np.nan)
-            continue
-
-        seed = row['playoff_seed']
-        rank = row['rank']
-        if num_mgrs == 6:
-            heuristic_matches = 2 if seed <= 4 else 1
-        elif num_mgrs in (8, 10):
-            if seed <= 2:
-                heuristic_matches = 2
-            elif seed <= 6:
-                heuristic_matches = 2 if rank in (5, 6) else 3
-            else:
-                heuristic_matches = 1 if num_mgrs == 8 else 2
-        else:
-            heuristic_matches = np.nan
-
-        manager_id = int(row['team_key'].split('.')[-1])
-        key = (row['season'], manager_id)
-        use_real = (
-            key in real_matches
-            and (pd.isna(heuristic_matches) or real_matches[key] >= heuristic_matches)
-            and (row['season'], row['manager']) not in manually_overridden_keys
-        )
-        if use_real:
-            playoff_match_counts.append(real_matches[key])
-            playoff_win_counts.append(real_wins.get(key, 0))
-        else:
-            playoff_match_counts.append(heuristic_matches)
-            playoff_win_counts.append(pd.to_numeric(row['playoff_wins'], errors='coerce'))
-
-    Master['playoff_matches']         = playoff_match_counts
-    Master['playoff_wins']            = playoff_win_counts
-    Master['avg_playoff_points']      = Master['revised_p_score'] / Master['playoff_matches']
-    Master['playoff_win_percent']     = Master['playoff_wins'] / Master['playoff_matches']
-
-    # Playoff points against per manager per season
-    sum_p_points_against = []
-    for _, row in Master.iterrows():
-        manager_id = int(row['team_key'].split('.')[-1])
-        season     = row['season']
-        p_df = full_playoffs[full_playoffs.season == season]
-        p_df = p_df[p_df.score != '�']
-        p_df = p_df.copy()
-        p_df['score'] = p_df['score'].astype(float)
-        opponent_scores = p_df[p_df.opponent_id == manager_id].score
-        sum_p_points_against.append(sum(opponent_scores))
-
-    Master['p_points_against']          = sum_p_points_against
-    Master['avg_playoff_points_against'] = Master['p_points_against'] / Master['playoff_matches']
+    Master = _enrich_master_with_derived_stats(Master, full_playoffs, overrides)
 
     # ------------------------------------------------------------------
     # Per-season stats dict (used for z-score and recency bonus calc)

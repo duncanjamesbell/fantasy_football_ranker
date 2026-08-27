@@ -13,7 +13,7 @@ import io
 import streamlit as st
 
 from app_lib.data import load_all_data
-from metrics.composite import calculate_composite_ranks
+from metrics.composite import build_reference_table, calculate_composite_ranks
 
 
 @st.cache_data
@@ -65,4 +65,22 @@ def get_composite_ranks(
             capped_linear_cap=capped_linear_cap,
             score_offset=score_offset,
             weight_scale=weight_scale,
+        )
+
+
+@st.cache_data
+def get_reference_table(thru_year: int, pre_managers: tuple):
+    """
+    Raw per-manager-season stats (final rank, W-L-T, points for/against,
+    playoff results) -- the same corrected playoff data
+    calculate_composite_ranks uses internally, for the Reference Data tab.
+    """
+    data = load_all_data()
+    with contextlib.redirect_stdout(io.StringIO()):
+        return build_reference_table(
+            master_df=data["master"],
+            full_playoffs=data["playoffs"],
+            thru_year=thru_year,
+            overrides=data["overrides"],
+            pre_managers=list(pre_managers),
         )

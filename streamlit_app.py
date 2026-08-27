@@ -10,11 +10,11 @@ iterating on the metric calculations themselves.
 import streamlit as st
 
 from app_lib.auth import require_passphrase
-from app_lib.compute import get_composite_ranks
+from app_lib.compute import get_composite_ranks, get_reference_table
 from app_lib.data import load_all_data
 from app_lib.methodology import full_methodology_markdown
 from app_lib.plots import build_last_season_by_manager, build_manager_metric_trend, build_metric_comparison_trend, build_ranking_bar, build_trend, color_map_for
-from app_lib.reporting import METRIC_DISPLAY_NAMES, RAW_METRIC_COLS, SCORE_COLS, compare_managers_view, explain_manager_view, full_table_height, metric_scoreboard, style_signed
+from app_lib.reporting import METRIC_DISPLAY_NAMES, RAW_METRIC_COLS, REFERENCE_TABLE_DISPLAY_NAMES, SCORE_COLS, compare_managers_view, explain_manager_view, full_table_height, metric_scoreboard, style_signed
 from config import SEASONS
 
 st.set_page_config(page_title="PRE Composite Ranks", layout="wide")
@@ -153,8 +153,8 @@ compiled_final_scores, raw_scores = get_composite_ranks(
 
 PLOT_METRIC_COLS = SCORE_COLS[:-1]  # exclude total_score, handled separately
 
-tab_rankings, tab_manager, tab_comparison, tab_trends, tab_methodology = st.tabs(
-    ["Rankings", "Manager Lookup", "Manager Comparison", "Trends", "Methodology"]
+tab_rankings, tab_manager, tab_comparison, tab_reference, tab_trends, tab_methodology = st.tabs(
+    ["Rankings", "Manager Lookup", "Manager Comparison", "Reference Data", "Trends", "Methodology"]
 )
 
 with tab_rankings:
@@ -276,6 +276,47 @@ with tab_comparison:
                             build_metric_comparison_trend([manager_a, manager_b], raw_scores, metric, cmp_color_map),
                             use_container_width=True,
                         )
+
+with tab_reference:
+    st.caption(
+        "Raw per-season stats for every manager -- final rank, record, points, and "
+        "playoff results, with none of the z-score/weighting abstraction the other "
+        "tabs use. Click a column header to sort."
+    )
+    reference_df = get_reference_table(thru_year=thru_year, pre_managers=CORE_MEMBERS)
+    ref_managers = sorted(reference_df.manager.unique())
+    ref_seasons = sorted(reference_df.season.unique())
+
+    filt_col1, filt_col2 = st.columns([2, 1])
+    with filt_col1:
+        selected_managers = st.multiselect("Manager", ref_managers, default=ref_managers)
+    with filt_col2:
+        season_range = st.select_slider(
+            "Season range", options=ref_seasons, value=(ref_seasons[0], ref_seasons[-1]),
+        )
+
+    filtered = reference_df[
+        reference_df.manager.isin(selected_managers)
+        & reference_df.season.between(season_range[0], season_range[1])
+    ]
+
+    if filtered.empty:
+        st.info("No data for the selected manager(s)/season range.")
+    else:
+        display_df = filtered.rename(columns=REFERENCE_TABLE_DISPLAY_NAMES)
+        st.dataframe(
+            display_df,
+            use_container_width=True,
+            hide_index=True,
+            height=min(full_table_height(display_df), 600),
+            column_config={
+                "Win %": st.column_config.NumberColumn(format="percent"),
+                "Points For": st.column_config.NumberColumn(format="%.1f"),
+                "Points Against": st.column_config.NumberColumn(format="%.1f"),
+                "Playoff Points": st.column_config.NumberColumn(format="%.1f"),
+                "Playoff Points Against": st.column_config.NumberColumn(format="%.1f"),
+            },
+        )
 
 with tab_trends:
     hue_order = sorted(compiled_final_scores.index.unique())

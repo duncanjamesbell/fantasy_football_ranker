@@ -244,3 +244,26 @@ def full_table_height(df: pd.DataFrame) -> int:
     manager joining the league).
     """
     return (len(df) + 1) * 35 + 3
+
+
+# Column labels for the Reference Data tab -- raw box-score-style stats, kept
+# short/plain (not METRIC_DISPLAY_NAMES' longer methodology wording) since
+# this table's whole purpose is showing numbers in the plainest form
+# available rather than the metric-scoring abstraction the rest of the app
+# uses.
+REFERENCE_TABLE_DISPLAY_NAMES = {
+    "season": "Season",
+    "manager": "Manager",
+    "rank": "Final Rank",
+    "wins": "Wins",
+    "losses": "Losses",
+    "ties": "Ties",
+    "rs_win_percentage": "Win %",
+    "points_for": "Points For",
+    "points_against": "Points Against",
+    "playoff_seed": "Playoff Seed",
+    "playoff_matches": "Playoff Matches",
+    "playoff_wins": "Playoff Wins",
+    "playoff_points": "Playoff Points",
+    "playoff_points_against": "Playoff Points Against",
+}
