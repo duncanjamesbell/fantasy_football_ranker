@@ -14,7 +14,7 @@ from app_lib.compute import get_composite_ranks
 from app_lib.data import load_all_data
 from app_lib.methodology import full_methodology_markdown
 from app_lib.plots import build_last_season_by_manager, build_manager_metric_trend, build_metric_comparison_trend, build_ranking_bar, build_trend, color_map_for
-from app_lib.reporting import METRIC_DISPLAY_NAMES, RAW_METRIC_COLS, SCORE_COLS, compare_managers_view, explain_manager_view, metric_scoreboard, style_signed
+from app_lib.reporting import METRIC_DISPLAY_NAMES, RAW_METRIC_COLS, SCORE_COLS, compare_managers_view, explain_manager_view, full_table_height, metric_scoreboard, style_signed
 from config import SEASONS
 
 st.set_page_config(page_title="PRE Composite Ranks", layout="wide")
@@ -169,7 +169,10 @@ with tab_rankings:
     st.plotly_chart(build_ranking_bar(compiled_final_scores, thru_year, PLOT_METRIC_COLS), use_container_width=True)
     scoreboard = metric_scoreboard(compiled_final_scores, thru_year)
     score_cols = [c for c in scoreboard.columns if c != "rank"]
-    st.dataframe(style_signed(scoreboard, subset=score_cols, exclude_cols=["Total Score"]), use_container_width=True)
+    st.dataframe(
+        style_signed(scoreboard, subset=score_cols, exclude_cols=["Total Score"]),
+        use_container_width=True, height=full_table_height(scoreboard),
+    )
 
 with tab_manager:
     manager = st.selectbox("Manager", sorted(compiled_final_scores.index.unique()))
@@ -185,7 +188,10 @@ with tab_manager:
                 "(to keep totals positive) -- the metric rows above it will not sum to it exactly; "
                 f"they sum to Total Score minus {score_offset:.0f}."
             )
-        st.dataframe(style_signed(view["score_breakdown"], exclude_rows=["Total Score"]), use_container_width=True)
+        st.dataframe(
+            style_signed(view["score_breakdown"], exclude_rows=["Total Score"]),
+            use_container_width=True, height=full_table_height(view["score_breakdown"]),
+        )
         st.subheader("Z-scores by metric x season")
         st.caption("The recency-adjusted z-score that actually feeds the weighting.")
         zscore_display = view["zscore_pivot"].rename(index=METRIC_DISPLAY_NAMES)
@@ -239,7 +245,7 @@ with tab_comparison:
                     cmp["comparison"], subset=[manager_a, manager_b, cmp["diff_col"]],
                     exclude_rows=["Total Score"], exclude_rows_cols=[manager_a, manager_b],
                 ),
-                use_container_width=True,
+                use_container_width=True, height=full_table_height(cmp["comparison"]),
             )
 
             st.subheader("Total Score over time")

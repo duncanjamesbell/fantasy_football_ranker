@@ -232,3 +232,15 @@ def compare_managers_view(
         "rank_b": rank_b,
         "of": len(ranked),
     }
+
+
+def full_table_height(df: pd.DataFrame) -> int:
+    """
+    Pixel height for st.dataframe that fits every row of `df` with no inner
+    scrollbar -- st.dataframe's default height only shows ~10 rows before
+    scrolling. 35px/row (Streamlit's default row height) + one header row +
+    a few px for the border, matching the row count exactly rather than a
+    fixed guess so it stays correct if a table's row count changes (e.g. a
+    manager joining the league).
+    """
+    return (len(df) + 1) * 35 + 3
