@@ -69,7 +69,7 @@ with st.sidebar.expander("Advanced"):
         ),
     )
 
-    st.subheader("Scoring method")
+    st.subheader("Scoring Method")
     score_method_label = st.radio(
         "Method", ["Capped linear (symmetric)", "Cascade (original)"],
         help=(
@@ -101,7 +101,7 @@ with st.sidebar.expander("Advanced"):
 
 thru_year = st.sidebar.slider("Thru year", min_value=start_year, max_value=LATEST_YEAR, value=LATEST_YEAR)
 
-st.sidebar.subheader("Metric weights")
+st.sidebar.subheader("Metric Weights")
 weight_mode = st.sidebar.radio("Weight mode", ["Manual per-metric weights", "Model-derived buckets"])
 use_model_weights = weight_mode == "Model-derived buckets"
 
@@ -181,7 +181,7 @@ with tab_manager:
         st.info(f"No data for {manager} thru {thru_year}.")
     else:
         st.metric("Rank", f"{view['rank']} of {view['of']}")
-        st.subheader("Final weighted scores")
+        st.subheader("Final Weighted Scores")
         if score_offset:
             st.caption(
                 f"Total Score includes a +{score_offset:.0f} offset applied only at the total "
@@ -191,13 +191,14 @@ with tab_manager:
         st.dataframe(
             style_signed(view["score_breakdown"], exclude_rows=["Total Score"]),
             use_container_width=True, height=full_table_height(view["score_breakdown"]),
+            column_config={"score": st.column_config.NumberColumn(alignment="center")},
         )
-        st.subheader("Z-scores by metric x season")
+        st.subheader("Raw Metric Scores by Season")
         st.caption("The recency-adjusted z-score that actually feeds the weighting.")
         zscore_display = view["zscore_pivot"].rename(index=METRIC_DISPLAY_NAMES)
         st.dataframe(style_signed(zscore_display), use_container_width=True)
 
-        st.subheader("Metric trends")
+        st.subheader("Metric Trends")
         st.caption(f"Each chart is one row of the table above, {manager}'s z-score by season for that metric.")
         metric_names = view["zscore_pivot"].index.tolist()
         for i in range(0, len(metric_names), 2):
@@ -229,7 +230,7 @@ with tab_comparison:
             rank_col_a.metric(f"{manager_a} rank", f"{cmp['rank_a']} of {cmp['of']}")
             rank_col_b.metric(f"{manager_b} rank", f"{cmp['rank_b']} of {cmp['of']}")
 
-            st.subheader("Score breakdown")
+            st.subheader("Score Breakdown")
             caption = (
                 f"Positive in '{cmp['diff_col']}' means {manager_a} scores higher on that metric; "
                 f"negative means {manager_b} does. Sorted by the size of the gap, biggest driver first."
@@ -246,9 +247,14 @@ with tab_comparison:
                     exclude_rows=["Total Score"], exclude_rows_cols=[manager_a, manager_b],
                 ),
                 use_container_width=True, height=full_table_height(cmp["comparison"]),
+                column_config={
+                    manager_a: st.column_config.NumberColumn(alignment="center"),
+                    manager_b: st.column_config.NumberColumn(alignment="center"),
+                    cmp["diff_col"]: st.column_config.NumberColumn(alignment="center"),
+                },
             )
 
-            st.subheader("Total Score over time")
+            st.subheader("Total Score Over Time")
             master_df = load_all_data()["master"]
             last_season_by_manager = build_last_season_by_manager(master_df)
             cmp_axhline = score_offset if score_method == "capped_linear" else None
@@ -260,7 +266,7 @@ with tab_comparison:
                 use_container_width=True,
             )
 
-            st.subheader("Metric trends")
+            st.subheader("Metric Trends")
             st.caption(f"Each chart overlays {manager_a} and {manager_b}'s z-score by season for that metric.")
             for i in range(0, len(RAW_METRIC_COLS), 2):
                 cols = st.columns(2)
