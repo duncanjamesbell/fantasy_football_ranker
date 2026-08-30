@@ -591,20 +591,40 @@ def calculate_composite_ranks(
     # ------------------------------------------------------------------
     # Build metrics_dict from model-derived or user-supplied weights
     # ------------------------------------------------------------------
+    # Refreshed 2026-08-30: retrained on 2007-2025 data (was 2007-2022) using
+    # the same methodology as the original notebook (pre_fantasy_pycaret.ipynb,
+    # root) -- three PyCaret regressions (avg of tuned
+    # Linear Regression + Bayesian Ridge |coef|) predicting season_rank,
+    # one per bucket. The raw single-fit refresh moved undrafted_savvy and
+    # faab_efficiency up sharply (e.g. undrafted_savvy 0.014 -> 0.065), but a
+    # 2000-iteration cluster bootstrap (resampling by manager, since seasons
+    # within a manager aren't independent draws) showed that estimate sat
+    # near the top of its own 90% interval. The values below are the
+    # bootstrap MEDIAN |coef| instead -- still a real increase in both
+    # metrics' weight vs. the pre-refresh numbers, just not as dramatic as
+    # the single point estimate. win_percentage_weights and
+    # points_against_weights barely moved and are well within their own
+    # bootstrap intervals. See _refresh_model_weights.py (root) and
+    # before_claude/transformed_pre_fantasy_data_refreshed.csv for the full
+    # rebuild. Un-refreshed original values, for reference:
+    #   manager_controlled: rs_points .151, playoff_points .103,
+    #     draft_efficiency .035, faab_efficiency .023, undrafted_savvy .014
+    #   win_percentages: rs_win_percentage .209, playoff_win_percentage .129
+    #   points_against: rs_points_against .146, playoff_points_against .033
     manager_controlled_weights = {
-        'rs_points':          0.151,
-        'playoff_points':     0.103,
-        'draft_efficiency':   0.035,
-        'faab_efficiency':    0.023,
-        'undrafted_savvy':    0.014,
+        'rs_points':          0.1986,
+        'playoff_points':     0.0705,
+        'draft_efficiency':   0.0164,
+        'faab_efficiency':    0.0418,
+        'undrafted_savvy':    0.0294,
     }
     win_percentage_weights = {
-        'rs_win_percentage':    0.209,
-        'playoff_win_percentage': 0.129,
+        'rs_win_percentage':    0.1976,
+        'playoff_win_percentage': 0.1210,
     }
     points_against_weights = {
-        'rs_points_against':    0.146,
-        'playoff_points_against': 0.033,
+        'rs_points_against':    0.1250,
+        'playoff_points_against': 0.0297,
     }
     invert_manager_uncontrolled_weights = False
 

@@ -23,6 +23,10 @@ Weights represent the maximum number of points a manager can earn on that dimens
 
 Weights can be overridden in the notebook. A model-based weight derivation is also available (`use_model_weights=True`), which distributes weights proportionally within three buckets (manager-controlled, win percentages, points-against) using configurable overall bucket weights.
 
+**Model-derived weights were refreshed 2026-08-30.** The original 2023 fit trained on `before_claude/transformed_pre_fanasy_data.csv` (2007-2022, since superseded by data-quality fixes -- playoff-win derivation, rank corrections, co-manager dedup). The refresh rebuilds that same input table from the current, corrected pipeline through 2025 (`before_claude/transformed_pre_fantasy_data_refreshed.csv`) and reruns the identical methodology (see below). A cluster bootstrap (2000 resamples by manager) was then used to sanity-check the single-fit result -- the values now in `metrics/composite.py` are bootstrap-median coefficients, not the raw single-fit output, because the single fit's `undrafted_savvy` and `faab_efficiency` jumps sat near the edge of their own 90% intervals. `win_percentage_weights` and `points_against_weights` barely moved and are unaffected by this distinction. Full rebuild + bootstrap code: `_refresh_model_weights.py` (root).
+
+A separate lagged-outcome experiment (season *N* metrics predicting season *N+1* rank, to sidestep `season_rank` being partly a mechanical function of its own predictors) was tried and abandoned -- it scored negative mean R² in every bucket, i.e. no detectable year-over-year predictive signal at this sample size (146 manager-year pairs across 14 managers). Its coefficients were not used for weighting.
+
 ---
 
 ## Scoring: `create_metric_dict`
