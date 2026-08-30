@@ -111,10 +111,43 @@ win_percentages_overall_weight = 0.12
 points_against_overall_weight = 0.13
 
 if use_model_weights:
-    season_rank_weight = st.sidebar.slider("Season rank weight", 0, 50, 15)
-    manager_controlled_overall_weight = st.sidebar.slider("Manager-controlled bucket", 0.0, 1.0, 0.75, step=0.01)
-    win_percentages_overall_weight = st.sidebar.slider("Win-percentage bucket", 0.0, 1.0, 0.12, step=0.01)
-    points_against_overall_weight = st.sidebar.slider("Points-against bucket", 0.0, 1.0, 0.13, step=0.01)
+    season_rank_weight = st.sidebar.slider(
+        "Season rank weight", 0, 50, 15,
+        help=(
+            "Points for final standing (1st place down to last), on its own -- "
+            "not part of any bucket below and not model-derived, just set "
+            "directly. The three bucket sliders below split whatever's left "
+            "(100 minus this value) across the model-derived metrics."
+        ),
+    )
+    manager_controlled_overall_weight = st.sidebar.slider(
+        "Manager-controlled bucket", 0.0, 1.0, 0.75, step=0.01,
+        help=(
+            "Share of the remaining weight given to metrics a manager most "
+            "directly controls: Regular Season Points, Playoff Points, Draft "
+            "Efficiency, Undrafted Savvy, FAAB Efficiency. This slider only "
+            "sets the bucket's total share -- how that share splits across "
+            "these 5 metrics is model-derived, not equal."
+        ),
+    )
+    win_percentages_overall_weight = st.sidebar.slider(
+        "Win-percentage bucket", 0.0, 1.0, 0.12, step=0.01,
+        help=(
+            "Share of the remaining weight given to: Regular Season Win % "
+            "and Playoff Win %. These reward winning individual matchups, "
+            "as distinct from how many points were scored."
+        ),
+    )
+    points_against_overall_weight = st.sidebar.slider(
+        "Points-against bucket", 0.0, 1.0, 0.13, step=0.01,
+        help=(
+            "Share of the remaining weight given to: Regular Season Points "
+            "Against and Playoff Points Against. A deliberate luck "
+            "adjustment -- a tougher schedule (more points scored against "
+            "you) is rewarded, an easier one is penalized -- not a measure "
+            "of defense."
+        ),
+    )
     st.sidebar.caption(
         "Bucket weights are proportions (not required to sum to 1) of the "
         f"weight remaining after season rank ({100 - season_rank_weight} pts); "
