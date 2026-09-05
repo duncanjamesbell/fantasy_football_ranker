@@ -26,6 +26,28 @@ require_passphrase()
 # point, so hide it rather than leave confusing no-op buttons on screen.
 PLOTLY_CONFIG = {"displayModeBar": False}
 
+# Belt-and-suspenders for the same mobile-swipe problem: dragmode=False and
+# fixedrange (in app_lib/plots._disable_touch_zoom) stop Plotly's own
+# zoom/select gesture, but Plotly's touch handler can still capture the
+# initial touchstart to decide whether a gesture is a tap/hover or a drag,
+# which can block the browser's native scroll before Plotly's own dragmode
+# logic ever comes into play. touch-action is a browser-level CSS property
+# that overrides this -- it tells the browser to treat vertical touch
+# gestures over these elements as a page scroll unconditionally, regardless
+# of what any JS handler does. `.js-plotly-plot`/`.plotly-graph-div` are
+# Plotly's own stable class names on every chart it renders, not
+# Streamlit-internal ones that could change across versions.
+st.markdown(
+    """
+    <style>
+    div[data-testid="stPlotlyChart"], .js-plotly-plot, .plotly-graph-div {
+        touch-action: pan-y !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 # Matches composite_ranks.ipynb's current pre_managers list: the 10 core
 # 2014-era league members plus the 2025 additions (Mark+David, Waidmann).
 CORE_MEMBERS = (
