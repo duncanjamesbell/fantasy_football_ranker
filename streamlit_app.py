@@ -28,19 +28,27 @@ PLOTLY_CONFIG = {"displayModeBar": False}
 
 # Belt-and-suspenders for the same mobile-swipe problem: dragmode=False and
 # fixedrange (in app_lib/plots._disable_touch_zoom) stop Plotly's own
-# zoom/select gesture, but Plotly's touch handler can still capture the
-# initial touchstart to decide whether a gesture is a tap/hover or a drag,
-# which can block the browser's native scroll before Plotly's own dragmode
-# logic ever comes into play. touch-action is a browser-level CSS property
-# that overrides this -- it tells the browser to treat vertical touch
-# gestures over these elements as a page scroll unconditionally, regardless
-# of what any JS handler does. `.js-plotly-plot`/`.plotly-graph-div` are
-# Plotly's own stable class names on every chart it renders, not
-# Streamlit-internal ones that could change across versions.
+# zoom/select gesture, but touch-action is what actually decides whether the
+# browser or Plotly's JS wins a swipe. The FIRST version of this rule only
+# targeted the outer chart container (.js-plotly-plot/.plotly-graph-div) --
+# verified live on Android Chrome that this was not enough: the element that
+# actually captures the drag is an invisible SVG <rect class="nsewdrag drag">
+# Plotly overlays on the plot specifically to catch pointer/touch gestures,
+# and its own computed touch-action stayed "auto" regardless of the
+# ancestor's rule (confirmed via getComputedStyle -- touch-action does not
+# reliably cascade through Plotly's SVG layer the way regular CSS
+# inheritance would). Targeting .nsewdrag/.drag directly removes that
+# ambiguity: touch-action set on the exact element the browser hit-tests is
+# unambiguous regardless of how any ancestor-intersection algorithm behaves.
 st.markdown(
     """
     <style>
-    div[data-testid="stPlotlyChart"], .js-plotly-plot, .plotly-graph-div {
+    div[data-testid="stPlotlyChart"],
+    .js-plotly-plot,
+    .plotly-graph-div,
+    .js-plotly-plot .draglayer,
+    .js-plotly-plot .drag,
+    .js-plotly-plot .nsewdrag {
         touch-action: pan-y !important;
     }
     </style>
