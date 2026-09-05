@@ -20,6 +20,12 @@ from config import SEASONS
 st.set_page_config(page_title="PRE Composite Ranks", layout="wide")
 require_passphrase()
 
+# Every chart already disables zoom/pan (see app_lib/plots._disable_touch_zoom)
+# so a mobile swipe scrolls the page instead of dragging the chart -- the
+# modebar's zoom/pan/autoscale buttons would just be dead controls at that
+# point, so hide it rather than leave confusing no-op buttons on screen.
+PLOTLY_CONFIG = {"displayModeBar": False}
+
 # Matches composite_ranks.ipynb's current pre_managers list: the 10 core
 # 2014-era league members plus the 2025 additions (Mark+David, Waidmann).
 CORE_MEMBERS = (
@@ -204,7 +210,10 @@ with tab_rankings:
         )
     else:
         st.caption("Hover a segment for its metric and value.")
-    st.plotly_chart(build_ranking_bar(compiled_final_scores, thru_year, PLOT_METRIC_COLS), use_container_width=True)
+    st.plotly_chart(
+        build_ranking_bar(compiled_final_scores, thru_year, PLOT_METRIC_COLS),
+        use_container_width=True, config=PLOTLY_CONFIG,
+    )
     scoreboard = metric_scoreboard(compiled_final_scores, thru_year)
     score_cols = [c for c in scoreboard.columns if c != "rank"]
     st.dataframe(
@@ -224,7 +233,7 @@ with tab_trends:
     st.subheader("Composite Score Over Time")
     st.plotly_chart(
         build_trend(compiled_final_scores, "total_score", last_season_by_manager, hue_order, color_map, "Score", "Composite Over Time", axhline),
-        use_container_width=True,
+        use_container_width=True, config=PLOTLY_CONFIG,
     )
 
     metric_axhline = 0 if score_method == "capped_linear" else None
@@ -232,7 +241,7 @@ with tab_trends:
         label = METRIC_DISPLAY_NAMES.get(metric, metric)
         st.plotly_chart(
             build_trend(compiled_final_scores, metric, last_season_by_manager, hue_order, color_map, label, f"{label} Over Time", metric_axhline),
-            use_container_width=True,
+            use_container_width=True, config=PLOTLY_CONFIG,
         )
 
 with tab_manager:
@@ -266,7 +275,10 @@ with tab_manager:
             cols = st.columns(2)
             for col, metric in zip(cols, metric_names[i:i + 2]):
                 with col:
-                    st.plotly_chart(build_manager_metric_trend(manager, raw_scores, metric), use_container_width=True)
+                    st.plotly_chart(
+                        build_manager_metric_trend(manager, raw_scores, metric),
+                        use_container_width=True, config=PLOTLY_CONFIG,
+                    )
 
 with tab_comparison:
     all_managers = sorted(compiled_final_scores.index.unique())
@@ -324,7 +336,7 @@ with tab_comparison:
                     compiled_final_scores, "total_score", last_season_by_manager, [manager_a, manager_b],
                     cmp_color_map, "Score", f"{manager_a} vs {manager_b} -- Total Score Over Time", cmp_axhline,
                 ),
-                use_container_width=True,
+                use_container_width=True, config=PLOTLY_CONFIG,
             )
 
             st.subheader("Metric Trends")
@@ -335,7 +347,7 @@ with tab_comparison:
                     with col:
                         st.plotly_chart(
                             build_metric_comparison_trend([manager_a, manager_b], raw_scores, metric, cmp_color_map),
-                            use_container_width=True,
+                            use_container_width=True, config=PLOTLY_CONFIG,
                         )
 
 with tab_reference:

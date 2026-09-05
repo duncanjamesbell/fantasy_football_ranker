@@ -47,6 +47,23 @@ def truncate_to_last_season(df: pd.DataFrame, last_season_by_manager: pd.Series)
     return df[df["thru"] <= cutoff]
 
 
+def _disable_touch_zoom(fig: go.Figure) -> go.Figure:
+    """
+    Plotly's default drag-to-zoom binds vertical touch-drags over the chart
+    for its own zoom/select gesture, which fights a mobile user just trying
+    to scroll the page past the chart. fixedrange on both axes blocks
+    zoom/pan via any input method (drag, scroll-wheel, pinch); dragmode=False
+    additionally stops the rubber-band select box from initiating on drag.
+    Together, a touch-drag over the plot area is no longer claimed by
+    Plotly, so it falls through to the browser's native scroll. Hover
+    tooltips are unaffected -- they don't depend on drag interactions.
+    """
+    fig.update_xaxes(fixedrange=True)
+    fig.update_yaxes(fixedrange=True)
+    fig.update_layout(dragmode=False)
+    return fig
+
+
 def build_ranking_bar(compiled_final_scores: pd.DataFrame, thru_year: int, score_cols: list):
     """
     Stacked bar chart for one thru-year snapshot, sorted left-to-right by
@@ -81,7 +98,7 @@ def build_ranking_bar(compiled_final_scores: pd.DataFrame, thru_year: int, score
         height=750,
         margin=dict(b=160),
     )
-    return fig
+    return _disable_touch_zoom(fig)
 
 
 def build_trend(
@@ -121,7 +138,7 @@ def build_trend(
         legend=dict(orientation="h", yanchor="top", y=-0.15, xanchor="center", x=0.5),
         margin=dict(b=180),
     )
-    return fig
+    return _disable_touch_zoom(fig)
 
 
 # Red (worst) -> white (average) -> green (best), diverging around 0 so a
@@ -162,7 +179,7 @@ def build_manager_metric_trend(manager: str, raw_scores: pd.DataFrame, metric: s
         xaxis_title="Season", yaxis_title="Z-score", title=METRIC_DISPLAY_NAMES.get(metric, metric),
         hovermode="closest", height=350,
     )
-    return fig
+    return _disable_touch_zoom(fig)
 
 
 def build_metric_comparison_trend(managers: list, raw_scores: pd.DataFrame, metric: str, color_map: dict):
@@ -190,4 +207,4 @@ def build_metric_comparison_trend(managers: list, raw_scores: pd.DataFrame, metr
         hovermode="closest", height=350,
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
     )
-    return fig
+    return _disable_touch_zoom(fig)
