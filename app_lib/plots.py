@@ -72,7 +72,14 @@ def build_ranking_bar(compiled_final_scores: pd.DataFrame, thru_year: int, score
         yaxis_title="Score",
         title=f"Composite Scores Thru {thru_year} (sorted by total_score)",
         legend_title="Metric",
-        height=600,
+        # Bottom (not top) placement: with up to 10 metrics this legend wraps
+        # to several rows on narrow widths, and a top legend of unknown
+        # wrapped height collides with the title above it. Bottom has no
+        # collision risk regardless of row count -- it just pushes further
+        # down, which the extra height below accommodates.
+        legend=dict(orientation="h", yanchor="top", y=-0.15, xanchor="center", x=0.5),
+        height=750,
+        margin=dict(b=160),
     )
     return fig
 
@@ -107,7 +114,12 @@ def build_trend(
         fig.add_hline(y=axhline, line_dash="dash", line_color="grey")
     fig.update_layout(
         xaxis_title="Season", yaxis_title=ylabel, title=title,
-        hovermode="closest", height=550,
+        hovermode="closest", height=750,
+        # See build_ranking_bar's comment: bottom placement avoids the
+        # title-collision risk a wrapped top legend has -- relevant here too,
+        # since this chart can have up to ~14 manager entries.
+        legend=dict(orientation="h", yanchor="top", y=-0.15, xanchor="center", x=0.5),
+        margin=dict(b=180),
     )
     return fig
 

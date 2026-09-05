@@ -101,70 +101,74 @@ with st.sidebar.expander("Advanced"):
 
 thru_year = st.sidebar.slider("Thru year", min_value=start_year, max_value=LATEST_YEAR, value=LATEST_YEAR)
 
-st.sidebar.subheader("Metric Weights")
-weight_mode = st.sidebar.radio("Weight mode", ["Manual per-metric weights", "Model-derived buckets"])
-use_model_weights = weight_mode == "Model-derived buckets"
-
 metric_weights = dict(DEFAULT_METRIC_WEIGHTS)
 manager_controlled_overall_weight = 0.75
 win_percentages_overall_weight = 0.12
 points_against_overall_weight = 0.13
 
-if use_model_weights:
-    season_rank_weight = st.sidebar.slider(
-        "Season rank weight", 0, 50, 15,
-        help=(
-            "Points for final standing (1st place down to last), on its own -- "
-            "not part of any bucket below and not model-derived, just set "
-            "directly. The three bucket sliders below split whatever's left "
-            "(100 minus this value) across the model-derived metrics."
-        ),
-    )
-    manager_controlled_overall_weight = st.sidebar.slider(
-        "Manager-controlled bucket", 0.0, 1.0, 0.75, step=0.01,
-        help=(
-            "Share of the remaining weight given to metrics a manager most "
-            "directly controls: Regular Season Points, Playoff Points, Draft "
-            "Efficiency, Undrafted Savvy, FAAB Efficiency. This slider only "
-            "sets the bucket's total share -- how that share splits across "
-            "these 5 metrics is model-derived, not equal."
-        ),
-    )
-    win_percentages_overall_weight = st.sidebar.slider(
-        "Win-percentage bucket", 0.0, 1.0, 0.12, step=0.01,
-        help=(
-            "Share of the remaining weight given to: Regular Season Win % "
-            "and Playoff Win %. These reward winning individual matchups, "
-            "as distinct from how many points were scored."
-        ),
-    )
-    points_against_overall_weight = st.sidebar.slider(
-        "Points-against bucket", 0.0, 1.0, 0.13, step=0.01,
-        help=(
-            "Share of the remaining weight given to: Regular Season Points "
-            "Against and Playoff Points Against. A deliberate luck "
-            "adjustment -- a tougher schedule (more points scored against "
-            "you) is rewarded, an easier one is penalized -- not a measure "
-            "of defense."
-        ),
-    )
-    st.sidebar.caption(
-        "Bucket weights are proportions (not required to sum to 1) of the "
-        f"weight remaining after season rank ({100 - season_rank_weight} pts); "
-        "each metric's individual weight within a bucket is model-derived."
-    )
-else:
-    st.sidebar.caption("Recommended to sum to 100, not enforced.")
-    for metric, default in DEFAULT_METRIC_WEIGHTS.items():
-        metric_weights[metric] = st.sidebar.slider(
-            METRIC_DISPLAY_NAMES[metric], min_value=0, max_value=50, value=default, key=f"weight_{metric}",
-        )
-    season_rank_weight = metric_weights["season_rank"]
+# expanded=True keeps desktop's current always-visible behavior unchanged;
+# this only adds a *collapse option* that didn't exist before (useful on
+# mobile, where the sidebar is an overlay and this section is the single
+# biggest thing filling it).
+with st.sidebar.expander("Metric Weights", expanded=True):
+    weight_mode = st.radio("Weight mode", ["Manual per-metric weights", "Model-derived buckets"])
+    use_model_weights = weight_mode == "Model-derived buckets"
 
-    weight_total = sum(metric_weights.values())
-    st.sidebar.metric("Weight total", weight_total, delta=weight_total - 100)
-    if weight_total != 100:
-        st.sidebar.warning(f"Weights sum to {weight_total}, not 100 -- scores will still compute, just not on a clean 0-100 scale.")
+    if use_model_weights:
+        season_rank_weight = st.slider(
+            "Season rank weight", 0, 50, 15,
+            help=(
+                "Points for final standing (1st place down to last), on its own -- "
+                "not part of any bucket below and not model-derived, just set "
+                "directly. The three bucket sliders below split whatever's left "
+                "(100 minus this value) across the model-derived metrics."
+            ),
+        )
+        manager_controlled_overall_weight = st.slider(
+            "Manager-controlled bucket", 0.0, 1.0, 0.75, step=0.01,
+            help=(
+                "Share of the remaining weight given to metrics a manager most "
+                "directly controls: Regular Season Points, Playoff Points, Draft "
+                "Efficiency, Undrafted Savvy, FAAB Efficiency. This slider only "
+                "sets the bucket's total share -- how that share splits across "
+                "these 5 metrics is model-derived, not equal."
+            ),
+        )
+        win_percentages_overall_weight = st.slider(
+            "Win-percentage bucket", 0.0, 1.0, 0.12, step=0.01,
+            help=(
+                "Share of the remaining weight given to: Regular Season Win % "
+                "and Playoff Win %. These reward winning individual matchups, "
+                "as distinct from how many points were scored."
+            ),
+        )
+        points_against_overall_weight = st.slider(
+            "Points-against bucket", 0.0, 1.0, 0.13, step=0.01,
+            help=(
+                "Share of the remaining weight given to: Regular Season Points "
+                "Against and Playoff Points Against. A deliberate luck "
+                "adjustment -- a tougher schedule (more points scored against "
+                "you) is rewarded, an easier one is penalized -- not a measure "
+                "of defense."
+            ),
+        )
+        st.caption(
+            "Bucket weights are proportions (not required to sum to 1) of the "
+            f"weight remaining after season rank ({100 - season_rank_weight} pts); "
+            "each metric's individual weight within a bucket is model-derived."
+        )
+    else:
+        st.caption("Recommended to sum to 100, not enforced.")
+        for metric, default in DEFAULT_METRIC_WEIGHTS.items():
+            metric_weights[metric] = st.slider(
+                METRIC_DISPLAY_NAMES[metric], min_value=0, max_value=50, value=default, key=f"weight_{metric}",
+            )
+        season_rank_weight = metric_weights["season_rank"]
+
+        weight_total = sum(metric_weights.values())
+        st.metric("Weight total", weight_total, delta=weight_total - 100)
+        if weight_total != 100:
+            st.warning(f"Weights sum to {weight_total}, not 100 -- scores will still compute, just not on a clean 0-100 scale.")
 
 compiled_final_scores, raw_scores = get_composite_ranks(
     thru_year=thru_year,
@@ -187,11 +191,12 @@ compiled_final_scores, raw_scores = get_composite_ranks(
 PLOT_METRIC_COLS = SCORE_COLS[:-1]  # exclude total_score, handled separately
 
 tab_rankings, tab_trends, tab_manager, tab_comparison, tab_reference, tab_methodology = st.tabs(
-    ["Rankings", "Trends", "Manager Lookup", "Manager Comparison", "Reference Data", "Methodology"]
+    ["Rankings", "Trends", "Lookup", "Compare", "Reference", "Methodology"]
 )
 
 with tab_rankings:
     st.subheader(f"Composite Rankings thru {thru_year}")
+    st.caption(f"Weight mode: {weight_mode} · Scoring method: {score_method_label}")
     if score_offset:
         st.caption(
             f"Bar segments sum to each manager's raw total (before the +{score_offset:.0f} "
@@ -343,13 +348,14 @@ with tab_reference:
     ref_managers = sorted(reference_df.manager.unique())
     ref_seasons = sorted(reference_df.season.unique())
 
-    filt_col1, filt_col2 = st.columns([2, 1])
-    with filt_col1:
-        selected_managers = st.multiselect("Manager", ref_managers, default=ref_managers)
-    with filt_col2:
-        season_range = st.select_slider(
-            "Season range", options=ref_seasons, value=(ref_seasons[0], ref_seasons[-1]),
-        )
+    with st.expander("Filters", expanded=True):
+        filt_col1, filt_col2 = st.columns([2, 1])
+        with filt_col1:
+            selected_managers = st.multiselect("Manager", ref_managers, default=ref_managers)
+        with filt_col2:
+            season_range = st.select_slider(
+                "Season range", options=ref_seasons, value=(ref_seasons[0], ref_seasons[-1]),
+            )
 
     filtered = reference_df[
         reference_df.manager.isin(selected_managers)
